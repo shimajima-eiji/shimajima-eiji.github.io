@@ -17,7 +17,8 @@
 [View on Github](https://github.com/shimajima-eiji/public_kh)
 
 ## [resume: Githubで履歴書・経歴書を作るリポジトリ](/resume)
-[View on Github](https://github.com/shimajima-eiji/resume)
+[page](https://github.com/shimajima-eiji/resume)
+[View on Github](https://shimajima-eiji.github.io/resume)
 後述
 
 # Githubプロジェクト
