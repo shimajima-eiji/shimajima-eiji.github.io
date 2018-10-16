@@ -32,10 +32,6 @@ function googleTranslateElementInit() {
 
 昔に書いたものをgithub用に書き直しています。
 
-# TODO
-- 多言語対応したいのでGitLocalizeに登録してます
-- ほか、CircleCIとかいい感じに使いたい
-
 # メディア
 - [Qiita](https://qiita.com/nomurasan)
 - [gist](https://gist.github.com/shimajima-eiji)
@@ -43,7 +39,3 @@ function googleTranslateElementInit() {
   - [技術情報速報](https://nomuraya.work/techzine/)
   - [開発ノウハウ](https://nomuraya.work/develop/)
   - [OSSコントリビューション](https://nomuraya.work/adiary/)
-
-SNS(LINEやFacebook、Twitter含む多数）は更新が大変なのと人付き合いに疲れたのでビジネスライクにやってます。
-
-ほとんどアカウント取って放置状態です。
