@@ -1,9 +1,14 @@
 # ごあいさつ
-色々なところで自己紹介を個別に書いているので、どこで何言ったかもう覚えていません…
+なんだかんだでgithubpageの可能性に気付いたので、できることを全部やってみよう！みたいなノリで色々拡張しています。
 
-履歴書や経歴書、スキルシートも大量に書いて個別に書き直しているからこのリポジトリを作ったので、自己紹介系もまとめて管理したい。
+元々の計画は後述のresumeリポジトリに移行しました。
 
-[今ある自己紹介まとめ](https://nomuraya.work/profile)
+# To be unable to read Japanese
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'ja', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true, gaId: 'UA-63549092-4'}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 # リポジトリ紹介
 ![image](https://grass-graph.moshimo.works/images/shimajima-eiji.png)
@@ -14,14 +19,12 @@
 執筆時点(2018-10)は業務でPythonメイン、個人でGoogleAppScriptメイン
 
 ## [public_kh: （旧）ブログで解説しているソースコードの管理リポジトリ](/public_kh/)
-[View on Github](https://github.com/shimajima-eiji/public_kh)
+執筆時点(2018-10)は業務でPythonメイン、個人でGoogleAppScriptメイン
 
-## [resume: Githubで履歴書・経歴書を作るリポジトリ](/resume)
-[Github page](https://shimajima-eiji.github.io/selfintro)
+## [resume: Githubで履歴書・経歴書を作るリポジトリ](/resume/)
+履歴書や経歴書、スキルシートも大量に書いて個別に書き直しているからこのリポジトリを作ったので、自己紹介系もまとめて管理したい。
 
-[View on Github](https://shimajima-eiji.github.io/resume)
-
-後述
+[今ある自己紹介まとめ](https://nomuraya.work/profile)
 
 # Githubプロジェクト
 ## githubで履歴書・経歴書を管理
