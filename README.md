@@ -1,5 +1,5 @@
 # Github Page /index
-[Github Page](https://shimajima-eiji.github.io/)
+[Github Page](http://github.nomuraya.work)
 
 # Repositories
 ## resume
