@@ -1,4 +1,5 @@
 # Github Page /index
+[Github Page](https://shimajima-eiji.github.io/)
 
 # Repositories
 ## resume
