@@ -1,0 +1,35 @@
+#!/bin/bash
+### Usage:
+# bash update.bsh "${commit}"
+# bash update.bsh "${commit}" https://gist.github.com/shimajima-eiji/(gist) (directory)
+
+commit=$1  #(message)
+gist=$2  #(url)
+directory=$3  #(path)
+rename_directory=$4  #(path)
+
+if [ $# = 0 ] ; then
+  echo "commit message here: (option) directory, gistURL"
+  exit 1
+fi
+if [ $# -eq 3 ] ; then
+  rename_directory=${directory}
+fi
+
+if [ $# -ge 3 ] ; then
+  # gitのindexとディレクトリを削除
+  if [ -e "${rename_directory}" ] ; then
+    git rm -r ${rename_directory}
+  fi
+
+  # 再度indexとディレクトリを登録
+  git submodule add ${gist} ${directory}
+
+else
+  # 全てのサブディレクトリをgit pull
+  git submodule foreach git pull origin master  
+fi
+
+git add -A
+git commit -m "${commit}"
+git push
