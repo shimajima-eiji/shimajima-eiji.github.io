@@ -1,4 +1,5 @@
 # Try and Error
 This directory is for weblog on tech
-[techzine](https://nomuraya.work/techzine/)
-
+- [description](https://nomuraya.work/techzine/)
+- [github page](https://github.nomuraya.work/tande/)
+  - add: filename
