@@ -1,6 +1,3 @@
-[submodule "resume"]
-	path = resume
-	url = https://github.com/shimajima-eiji/resume
 [submodule "blog"]
 	path = blog
 	url = https://github.com/shimajima-eiji/public_kh
@@ -10,3 +7,7 @@
 [submodule "gist"]
 	path = gist
 	url = https://github.com/shimajima-eiji/gist
+[submodule "resume"]
+	path = resume
+	url = https://github.com/shimajima-eiji/resume
+	branch = master
