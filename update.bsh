@@ -36,10 +36,10 @@ if [ $# -ge 3 ] ; then
   # この方法でダメなら.git/configや.git/module/を削除する
 else
   # 全てのサブディレクトリをgit pull
-  git submodule update --remote
+#  git submodule update --remote --merge  # --recursive
   git submodule foreach git pull origin master  
 fi
 
 git add -A
 git commit -m "${commit}"
-git push
+git push --recurse-submodules=check
