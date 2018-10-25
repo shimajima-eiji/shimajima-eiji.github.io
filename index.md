@@ -26,7 +26,22 @@ function googleTranslateElementInit() {
 
 [今ある自己紹介まとめ](https://nomuraya.work/profile)
 
+# 使い方
+サブモジュールも一括でcloneする場合は --recursiveを追加します。
+
+```
+git clone --recursive (https or ssh)shimajima-eiji/shimajima-eiji.github.io.git
+```
+
 # Githubプロジェクト
+## github submoduleを運用できるレベルにする
+使ってみてますがひっどい。
+
+とはいえ、メリットもあるのでうまーいことこねくり回して使えるようにします。
+
+- [update](https://github.com/shimajima-eiji/shimajima-eiji.github.io/blob/master/update.bsh)
+- [push](https://github.com/shimajima-eiji/shimajima-eiji.github.io/blob/master/push_submodules.sh)
+
 ## githubで履歴書・経歴書を管理
 当然公開できる範囲でしか書いていません。
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 ### Usage:
 # bash update.bsh "${commit}"
-# bash update.bsh "${commit}" https://gist.github.com/shimajima-eiji/(gist) (directory)
+# bash update.bsh "${commit}" https://gist.github.com/shimajima-eiji/(gist) (directory) ([rename_from])
 
 commit=$1  #(message)
 gist=$2  #(url)
@@ -36,10 +36,10 @@ if [ $# -ge 3 ] ; then
   # この方法でダメなら.git/configや.git/module/を削除する
 else
   # 全てのサブディレクトリをgit pull
-#  git submodule update --remote --merge  # --recursive
   git submodule foreach git pull origin master  
 fi
 
 git add -A
 git commit -m "${commit}"
-git push --recurse-submodules=check
+git push
+
