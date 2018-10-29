@@ -1,6 +1,12 @@
 # Github Page /index
 [Github Page](https://github.nomuraya.work)
 
+# Usage
+Also --recursive is added to clone all submodules at once.
+```
+git clone --recursive (https or ssh)shimajima-eiji/shimajima-eiji.github.io.git
+```
+
 # Repositories
 ## resume
 for self-introduction
