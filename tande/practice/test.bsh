@@ -1,0 +1,14 @@
+#!/bin/bash
+: <<COMMENT
+array=()
+array+=("srv01")
+# ...
+
+for srv in ${array[@]}
+do
+  echo "${cmd}"
+done
+COMMENT
+
+#cdls 
+
