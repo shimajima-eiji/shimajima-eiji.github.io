@@ -11,3 +11,6 @@
 	path = resume
 	url = https://github.com/shimajima-eiji/resume
 	branch = master
+[submodule "winsettings"]
+	path = winsettings
+	url = https://github.com/shimajima-eiji/WinSettings
