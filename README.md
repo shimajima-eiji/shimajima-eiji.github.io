@@ -24,4 +24,8 @@ test, and trial with github page
 - [gist](https://github.com/shimajima-eiji/resume)
 - github page: [resume](https://github.nomuraya.work/gist/resume)
 - description: [title](https://nomuraya.work/techzine/)
+# winsettings
+- [gist](https://github.com/shimajima-eiji/WinSettings)
+- github page: [winsettings](https://github.nomuraya.work/gist/winsettings)
+- description: [title](https://nomuraya.work/techzine/)
 
