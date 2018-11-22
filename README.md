@@ -29,3 +29,8 @@ test, and trial with github page
 - github page: [winsettings](https://github.nomuraya.work/gist/winsettings)
 - description: [title](https://nomuraya.work/techzine/)
 
+# nichinoken
+- [gist](https://github.com/shimajima-eiji/EntranceExam.git)
+- github page: [nichinoken](https://github.nomuraya.work/gist/nichinoken)
+- description: [title](https://nomuraya.work/techzine/)
+

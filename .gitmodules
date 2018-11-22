@@ -14,3 +14,6 @@
 [submodule "winsettings"]
 	path = winsettings
 	url = https://github.com/shimajima-eiji/WinSettings
+[submodule "nichinoken"]
+	path = nichinoken
+	url = https://github.com/shimajima-eiji/EntranceExam.git
