@@ -4,7 +4,11 @@
 # Usage
 Also --recursive is added to clone all submodules at once.
 ```
-git clone --recursive (https or ssh)shimajima-eiji/shimajima-eiji.github.io.git
+git clone --recursive git@github.com:shimajima-eiji/shimajima-eiji.github.io.git
+### git remote -v: git@github.com:shimajima-eiji/shimajima-eiji.github.io.git
+# or
+git clone --recursive https://github.com/shimajima-eiji/shimajima-eiji.github.io.git
+### git remote -v: https://github.com/shimajima-eiji/shimajima-eiji.github.io
 ```
 
 # Repositories
@@ -24,6 +28,7 @@ test, and trial with github page
 - [gist](https://github.com/shimajima-eiji/resume)
 - github page: [resume](https://github.nomuraya.work/gist/resume)
 - description: [title](https://nomuraya.work/techzine/)
+
 # winsettings
 - [gist](https://github.com/shimajima-eiji/WinSettings)
 - github page: [winsettings](https://github.nomuraya.work/gist/winsettings)
