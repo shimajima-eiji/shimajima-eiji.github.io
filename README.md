@@ -8,7 +8,7 @@ git clone --recursive git@github.com:shimajima-eiji/shimajima-eiji.github.io.git
 ### git remote -v: git@github.com:shimajima-eiji/shimajima-eiji.github.io.git
 # or
 git clone --recursive https://github.com/shimajima-eiji/shimajima-eiji.github.io.git
-### git remote -v: https://github.com/shimajima-eiji/shimajima-eiji.github.io
+### git remote -v: https://github.com/shimajima-eiji/shimajima-eiji.github.io.git
 ```
 
 # Repositories
