@@ -83,6 +83,16 @@ https://help.github.com/articles/troubleshooting-github-pages-builds/
 
 一個ずつ心当たりを潰していくしかありません…
 
+# Try and Error
+This directory is for weblog on tech
+- [description](https://nomuraya.work/techzine/)
+- [github page](https://github.nomuraya.work/tande/)
+  - add: filename
+
+# 戻る
+- [Githubページ](https://shimajima-eiji.github.io/)
+- [Githubリポジトリ](https://github.com/shimajima-eiji/)
+
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4313452092557553" data-ad-slot="9310870936" data-ad-format="link" data-full-width-responsive="true"></ins>
 <script>

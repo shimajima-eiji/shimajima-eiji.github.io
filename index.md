@@ -41,6 +41,10 @@ function googleTranslateElementInit() {
 }
 </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+# Github pageの試行錯誤
+[トライアンドエラー](/tande/)
+
+index.mdにやったこと、ハマったことをざっくりとまとめてますが、他にも細かいものをちょいちょいと。
 # リポジトリ紹介
 ![image](https://grass-graph.moshimo.works/images/shimajima-eiji.png)
 
@@ -57,7 +61,7 @@ function googleTranslateElementInit() {
 履歴書や経歴書、スキルシートも大量に書いて個別に書き直しているからこのリポジトリを作ったので、自己紹介系もまとめて管理したい。
 
 [今ある自己紹介まとめ](https://nomuraya.work/profile)
-## [EntranceExam: 日能研の問題をプログラムで解くシリーズ](/WinSettings/)
+## [WinSettings: Windowsの環境をGithubで管理したい](/WinSettings/)
 Windowsに限らず、開発環境構築をDockerではできないのでGithubで連携してみようという思想で始めたリポジトリ。
 
 Windows10 Pro 64bit Windows Sub-system LinuxとHyper-Vを併用する前提で作っています。
