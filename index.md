@@ -10,6 +10,8 @@ github-pageのindex.mdのタイトルは最初の#で決まるらしいので、
 
 scriptが使えるなら通常のブログやワードプレスサイトの要領でできないかな？
 
+[github pageでないと使えないようです。](https://github.nomuraya.work/)
+
 <form id="cse-search-box" action="http://google.com/cse">
 <input type="hidden" name="cx" value="partner-pub-4313452092557553:7524370029"/>
 <input type="hidden" name="ie" value="UTF-8"/>
