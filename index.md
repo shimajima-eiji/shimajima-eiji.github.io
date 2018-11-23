@@ -24,7 +24,6 @@ scriptが使えるなら通常のブログやワードプレスサイトの要�
 レコメンドエンジン、ステキですよね～。
 
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- nomuraya.work link -->
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4313452092557553" data-ad-slot="9310870936" data-ad-format="link" data-full-width-responsive="true"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
