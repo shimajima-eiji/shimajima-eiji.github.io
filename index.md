@@ -6,7 +6,9 @@ github-pageのindex.mdのタイトルは最初の#で決まるらしいので、
 そういう面倒くさいことから開放されたい！っていう気持ちで作っていたので、サイト名にも気持ちを乗せる事にしました。
 
 # 検索フォーム
-なんでGithub公式の検索フォームってあんなに使いにくいんですかね？っていう不満
+なんでGithub公式の検索フォームってあんなに使いにくいんですかね？っていう不満を解決してくれるかも知れない方法。
+
+scriptが使えるなら通常のブログやワードプレスサイトの要領でできないかな？
 
 <form id="cse-search-box" action="http://google.com/cse">
 <input type="hidden" name="cx" value="partner-pub-4313452092557553:7524370029"/>
@@ -50,10 +52,10 @@ function googleTranslateElementInit() {
 
 リポジトリ名とサブモジュール名を変えた場合ってどうなるのかも検証
 
-## [gist: （新）ブログで解説しているソースコードの管理リポジトリ](/gist/)
+### [gist: （新）ブログで解説しているソースコードの管理リポジトリ](/gist/)
 どんどんmylibに以降していくよ～
 
-## [public_kh: （旧）ブログで解説しているソースコードの管理リポジトリ](/public_kh/)
+### [public_kh: （旧）ブログで解説しているソースコードの管理リポジトリ](/public_kh/)
 どんどんmylibに以降していくよ～
 
 ## [resume: Githubで履歴書・経歴書を作るリポジトリ](/resume/)
@@ -61,11 +63,20 @@ function googleTranslateElementInit() {
 
 [今ある自己紹介まとめ](https://nomuraya.work/profile)
 
-# 使い方
+## [EntranceExam: 日能研の問題をプログラムで解くシリーズ](/nichiken/)
+電車広告にあった中学入試問題。シカクいアタマをマルくするシリーズ（日能研）とかをプログラムで解決してみた。
+
+何気にgithub初学者向けになるんじゃないかと思ったのでガッツリ触ってみることにします。
+
+# このページ・リポジトリの使い方
 サブモジュールも一括でcloneする場合は --recursiveを追加します。
 
 ```
-git clone --recursive (https or ssh)shimajima-eiji/shimajima-eiji.github.io.git
+git clone --recursive git@github.com:shimajima-eiji/shimajima-eiji.github.io.git
+### git remote -v: git@github.com:shimajima-eiji/shimajima-eiji.github.io.git
+# or
+git clone --recursive https://github.com/shimajima-eiji/shimajima-eiji.github.io.git
+### git remote -v: https://github.com/shimajima-eiji/shimajima-eiji.github.io.git
 ```
 
 # Githubプロジェクト
@@ -89,6 +100,10 @@ git clone --recursive (https or ssh)shimajima-eiji/shimajima-eiji.github.io.git
   - [技術情報速報](https://nomuraya.work/techzine/)
   - [開発ノウハウ](https://nomuraya.work/develop/)
   - [OSSコントリビューション](https://nomuraya.work/adiary/)
+
+## github pageをプログラム勉強者向けに使うためには？
+github自体は素晴らしいのに、githubを使って私はこうやって勉強しました！っていうのを初学者向けに公開しやすい仕組みができれば後進がどんどん育つんじゃない？っていう話をガチでしていたので、じゃあ俺がやってやんよ！っていう意気込み70%と運用30%ぐらいでやり始めました。
+
 
 # footer
 ## サイトでもSlack de チャット
