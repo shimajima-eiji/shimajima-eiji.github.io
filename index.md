@@ -4,7 +4,6 @@ github-pageのindex.mdのタイトルは最初の#で決まるらしいので、
 これは割と真面目な心の叫びで、git含めプログラムのライブラリは組み合わせて使う事を想定していて、単独で使うならまだしも組み込みを考えると扱いが難しすぎるんですよね。
 
 そういう面倒くさいことから開放されたい！っていう気持ちで作っていたので、サイト名にも気持ちを乗せる事にしました。
-
 # 検索フォーム
 なんでGithub公式の検索フォームってあんなに使いにくいんですかね？っていう不満を解決してくれるかも知れない方法。
 
@@ -35,7 +34,6 @@ scriptが使えるなら通常のブログやワードプレスサイトの要�
 なんだかんだでgithubpageの可能性に気付いたので、できることを全部やってみよう！みたいなノリで色々拡張しています。
 
 元々の計画は後述のresumeリポジトリに移行しました。
-
 # To be unable to read Japanese
 <div id="google_translate_element"></div><script type="text/javascript">
 function googleTranslateElementInit() {
@@ -47,28 +45,22 @@ function googleTranslateElementInit() {
 ![image](https://grass-graph.moshimo.works/images/shimajima-eiji.png)
 
 [活動状況](https://github.com/shimajima-eiji)
-
-## [mylib: gistで管理するのがつらくなったのでSub Moduleにしてみた](/utils/)
+## [mylib: gistで管理するのがつらくなったのでSub Moduleにしてみた](/mylib/)
 執筆時点(2018-10)は業務でPythonメイン、個人でGoogleAppScriptメイン
 
 リポジトリ名とサブモジュール名を変えた場合ってどうなるのかも検証
-
 ### [gist: （新）ブログで解説しているソースコードの管理リポジトリ](/gist/)
 どんどんmylibに以降していくよ～
-
 ### [public_kh: （旧）ブログで解説しているソースコードの管理リポジトリ](/public_kh/)
 どんどんmylibに以降していくよ～
-
 ## [resume: Githubで履歴書・経歴書を作るリポジトリ](/resume/)
 履歴書や経歴書、スキルシートも大量に書いて個別に書き直しているからこのリポジトリを作ったので、自己紹介系もまとめて管理したい。
 
 [今ある自己紹介まとめ](https://nomuraya.work/profile)
-
-## [EntranceExam: 日能研の問題をプログラムで解くシリーズ](/nichiken/)
+## [EntranceExam: 日能研の問題をプログラムで解くシリーズ](/EntranceExam/)
 電車広告にあった中学入試問題。シカクいアタマをマルくするシリーズ（日能研）とかをプログラムで解決してみた。
 
 何気にgithub初学者向けになるんじゃないかと思ったのでガッツリ触ってみることにします。
-
 # このページ・リポジトリの使い方
 サブモジュールも一括でcloneする場合は --recursiveを追加します。
 
@@ -93,7 +85,6 @@ git clone --recursive https://github.com/shimajima-eiji/shimajima-eiji.github.io
 当然公開できる範囲でしか書いていません。
 
 昔に書いたものをgithub用に書き直しています。
-
 # メディア
 - [Qiita](https://qiita.com/nomurasan)
 - [gist](https://gist.github.com/shimajima-eiji)
@@ -104,19 +95,15 @@ git clone --recursive https://github.com/shimajima-eiji/shimajima-eiji.github.io
 
 ## github pageをプログラム勉強者向けに使うためには？
 github自体は素晴らしいのに、githubを使って私はこうやって勉強しました！っていうのを初学者向けに公開しやすい仕組みができれば後進がどんどん育つんじゃない？っていう話をガチでしていたので、じゃあ俺がやってやんよ！っていう意気込み70%と運用30%ぐらいでやり始めました。
-
-
 # footer
 ## サイトでもSlack de チャット
 - Github pageでサイトを作ると気軽にコメントができないじゃん！
 - Issueに書き込むような内容じゃないし…
 - Githubのアカウント持ってないぉ
-
 っていう不満をSlackチャットにぶつけられるように拡張しました。
 <script src="https://embed.small.chat/TCQBTUWTXGD0U00YLT.js" async></script>
 
 内容によってはIssueに採用させていただいたり、対応したりしますです。
-
 # Google AdsenseをGithub pageに使えるかな？
 もしCloneして使うならgoogle_ad_clientは自身のものに変えてください。
 
@@ -125,8 +112,8 @@ github自体は素晴らしいのに、githubを使って私はこうやって�
 静的コンテンツなので各ページに手動で埋め込む手間があるので、これは自動化したいですね。
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
-     (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-4313452092557553",
-          enable_page_level_ads: true
-     });
+(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: "ca-pub-4313452092557553",
+  enable_page_level_ads: true
+});
 </script>
