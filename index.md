@@ -57,6 +57,12 @@ function googleTranslateElementInit() {
 履歴書や経歴書、スキルシートも大量に書いて個別に書き直しているからこのリポジトリを作ったので、自己紹介系もまとめて管理したい。
 
 [今ある自己紹介まとめ](https://nomuraya.work/profile)
+## [EntranceExam: 日能研の問題をプログラムで解くシリーズ](/WinSettings/)
+Windowsに限らず、開発環境構築をDockerではできないのでGithubで連携してみようという思想で始めたリポジトリ。
+
+Windows10 Pro 64bit Windows Sub-system LinuxとHyper-Vを併用する前提で作っています。
+
+エディタやターミナルはVSCodeを推奨しています。
 ## [EntranceExam: 日能研の問題をプログラムで解くシリーズ](/EntranceExam/)
 電車広告にあった中学入試問題。シカクいアタマをマルくするシリーズ（日能研）とかをプログラムで解決してみた。
 
