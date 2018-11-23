@@ -1,37 +1,68 @@
-## Welcome to GitHub Pages
+# 注意
+このページはTry and Errorでやった事をまとめるためのWebページをmarkdownで書きたいためだけのディレクトリです。
 
-You can use the [editor on GitHub](https://github.com/shimajima-eiji/shimajima-eiji.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+gh-pages（github pages）でWebサイトを作ろうとするとファイル名.htmlを作るしかないんですが、先述のとおりです。
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+htmlファイルにmd書いても読んでくれないし、mdはindexしか使えません。
 
-### Markdown
+もちろん、凝った事をやるならhtmlファイルにスクリプトをガシガシ乗せて書くのが望ましいです。
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+github page向けに書いているので、ソースコードを見ると悲惨な事になってます。
+# .htaccessは使えない
+書き方が間違ってるとは思わないんだけどなぁ、うまくいきませんね。
 
-```markdown
-Syntax highlighted code block
+github pagesが便利だとか簡単だとかいろんな事を書いているブログ記事やQiitaの投稿がありますので細かいのはそちらに任せます。
 
-# Header 1
-## Header 2
-### Header 3
+が、凝った事をやり始めるとこの通り、かゆいところに手が届きません。
 
-- Bulleted
-- List
+使い方を間違えているとかアプローチがおかしいとか、正直私もそう思うんですが考えるだけなら誰でもあるんじゃないか？と思ったのがこのページの始まりです。
 
-1. Numbered
-2. List
+他己責任にするなら、ほとんどすべてgithubで就職活動・転職活動をするような運動が活発になったのが悪いと言いたいんですが、こういった運用ができるようになってくるとアフィリエイト向きになるので、必然的に私のような事をやりだす人が増えます。
 
-**Bold** and _Italic_ and `Code` text
+そのうち、github pageでソースを公開しない方法とか調べ始めます。
 
-[Link](url) and ![Image](src)
-```
+javascriptで右クリックを禁止してみたり名前を隠そうとしたり、とかかなぁ。
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+出来ない事は出来ないんでgithub pagesアフィリエイトが流行って負荷を掛けまくる、みたいな大本営に迷惑をかけるような事はないと思いますが、ここではそうなった場合を想定しています。
 
-### Jekyll Themes
+とはいえ、githubを実務でも使っている人間としては負荷を掛けて他のユーザーに影響を与えたくないので適度なところでスクリプトを抑えています。
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/shimajima-eiji/shimajima-eiji.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+.htaccessが使えないのは良いことだな、と思いました。
+# SEO対策は出来ない
+index.mdを使う場合、_config.ymlの設定に準拠します。
 
-### Support or Contact
+_config.ymlの先を自分で作らない限りムリでしょう。
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+この時点でindex.mdを使うという選択肢はなくなります。
+# 新しいページを作ってmdで書きたい
+最初にも述べていますが、リンクさせたいページ名のディレクトリ/index.mdを一つずつ作るしかないです。
+
+ページの管理が大変です、正直おすすめしかねます。
+
+また、githubで見た時とgithu pagesで見た時の差もあるので、このページのgithubを見直してください。
+
+たぶん嫌になるだろう、と思ってこのページを、いつもなら[adiaryブログ](https://nomuraya.work/techzine/)に書くような事をgithub pages向けに書いてみました。
+
+書いていてしんどいです。向かないです。
+
+というか私にとってはadiaryが便利すぎたんです。マークダウンだけじゃ戻ろうと思わないなぁ……
+# github pageが更新されない時
+いくつか問題は考えられますが、普通に使っているときは起こりえないでしょっていう話ばっかりです。
+## シンボリックリンク先が存在しない
+Your site is having problems building: The symbolic link (link to) targets a file which does not exist within your site's repository. For more information, see
+
+あなたのサイトはビルドに問題があります：シンボリックリンク(リンク先)は、サイトのリポジトリ内に存在しないファイルをターゲットにしています。詳細は、次を参照してください。
+
+とのことで、リンク先のファイルが存在しない場合に起こります。
+
+実運用だといるけど、.gitignoreなどでコミットされたくないファイルたちがあるケースなんかはこれですね。
+
+対策として、それぞれのディレクトリに必ずindex.mdとREADME.mdを配置するようにすれば解決できるでしょう。
+## ページ構成に問題があります
+Your site is having problems building: Page build failed. For more information, see
+
+サイトの構築に問題があります。ページビルドに失敗しました。 詳細は、次を参照してください。
+
+https://help.github.com/articles/troubleshooting-github-pages-builds/
+
+一個ずつ心当たりを潰していくしかありません…
