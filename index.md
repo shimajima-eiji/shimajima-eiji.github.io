@@ -1,3 +1,6 @@
+<!-- headerタグ -->
+<script data-ad-client="ca-pub-4313452092557553" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 # もっとプログラミングに集中させてくれ！
 [胴元](https://nomuraya.work/github/)
 
