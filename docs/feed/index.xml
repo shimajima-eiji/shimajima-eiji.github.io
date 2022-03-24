@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>のむらやさんチのホームハック</title>
+	<atom:link href="https://shimajima-eiji.github.io/feed" rel="self" type="application/rss+xml" />
+	<link>https://shimajima-eiji.github.io/</link>
+	<description>日曜プログラマーの父が、家族のプロジェクト円滑化と称して家庭で作って使えるBOTとか育児やったり日常の不満が爆発してシステム化したりソフトウェアで玩具を作ったりするブログ</description>
+	<lastBuildDate>Wed, 23 Mar 2022 17:19:49 +0000</lastBuildDate>
+	<language>ja</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.9.2</generator>
+	<item>
+		<title>wordpressとAIでなんかやりたい！→それ、できます！</title>
+		<link>https://shimajima-eiji.github.io/2022/03/wantouse_ai.html</link>
+		
+		<dc:creator><![CDATA[nomuraya]]></dc:creator>
+		<pubDate>Wed, 23 Mar 2022 16:50:58 +0000</pubDate>
+				<category><![CDATA[技術ネタ: wordpress]]></category>
+		<category><![CDATA[技術ネタ全般]]></category>
+		<category><![CDATA[AI・ML(機械学習)]]></category>
+		<guid isPermaLink="false">https://shimajima-eiji.github.io/?p=1007</guid>
+
+					<description><![CDATA[<p>注意私が紹介するものは無料のものばかりです。 有料の場合はいつも「これ有料です」と事前にお伝えしていますので、今回も引き&#46;&#46;&#46;</p>
+<p>The post <a href="https://shimajima-eiji.github.io/2022/03/wantouse_ai.html" data-wpel-link="internal">wordpressとAIでなんかやりたい！→それ、できます！</a> first appeared on <a href="https://shimajima-eiji.github.io/" data-wpel-link="internal">のむらやさんチのホームハック</a>.</p>]]></description>
+										<content:encoded><![CDATA[<div class="alert accepted">
+<span>注意</span>私が紹介するものは無料のものばかりです。<br />
+有料の場合はいつも「これ有料です」と事前にお伝えしていますので、今回も引き続きご安心してご利用いただけますよ。
+</div>
+<h2>本題</h2>
+<ul>
+<li><a href="https://text-summary.userlocal.jp/" data-wpel-link="external" rel="external noopener noreferrer">自動要約ツール</a>
+<ul>
+<li>正直、あまり使えませんでした。調整不足でしょうか。</li>
+</ul>
+</li>
+<li><a href="https://peta.okechan.net/tools/ghost-writer.html" data-wpel-link="external" rel="external noopener noreferrer">ゴーストライター</a>
+<ul>
+<li>マルコフ連鎖というアルゴリズムを採用しているようなので、新しいものを生み出すのは苦手っぽいです</li>
+<li><a href="https://www.wizard-notes.com/entry/music-analysis/gen-chord-prog-with-markov-chain" data-wpel-link="external" rel="external noopener noreferrer">超分かりやすい解説</a></li>
+</ul>
+</li>
+<li><a href="https://ai-novel.com/novel.php" data-wpel-link="external" rel="external noopener noreferrer">AIのべりすと</a>
+<ul>
+<li>昨今、<a href="https://www.pixiv.net/tags/AI%E3%81%AE%E3%81%B9%E3%82%8A%E3%81%99%E3%81%A8/novels" data-wpel-link="external" rel="external noopener noreferrer">pixiv小説を荒らし回っているジャンル</a>。</li>
+<li>使えば分かりますが、精度は高くありません。修正作業大変そう。</li>
+</ul>
+</li>
+</ul>
+<h2>発端</h2>
+<p>前回、<a href="/?p=1002" data-wpel-link="internal">WordPressでAIを運用する話</a>を書いて、どうしても「AI使ってます」と言い張りたくなった（初心者感）ので、wordpressに限定せず「AI使ってます」と言い張るためだけにAI使ってるっぽいツールの力を借りようというわけです。<br />
+AIというよりはただのアルゴリズムのような気がしないでもないですが、AIのべりすとだけは言い張ってもいいかな、と思います。<br />
+AIはAIなんだけど「自然言語処理をしてます」かなぁ。専門用語チックに言うとNLPですが、あまりこういう言い方をする人を聞いた事がないです。</p>
+<p>プログラミング初学者は、自然言語処理をすると訳がわからなくなるので、画像解析から始めるのが分かりやすくておすすめです。<br />
+自然言語処理と画像解析はやってる事が全然違うので、特にライブラリとかAIエンジンの勉強は要りますが、おそらくAIに抵抗はなくなっているはず、だと思いたいですね。</p>
+<p>上記でいうと、AIのべりすとはうまく使えばできそうなポテンシャルを感じています。<br />
+それ以外はコピーコンテンツは作れそうですが、新しいものを生み出すのは難しそうです。</p><p>The post <a href="https://shimajima-eiji.github.io/2022/03/wantouse_ai.html" data-wpel-link="internal">wordpressとAIでなんかやりたい！→それ、できます！</a> first appeared on <a href="https://shimajima-eiji.github.io/" data-wpel-link="internal">のむらやさんチのホームハック</a>.</p>]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>WordPressでAIを入れたい！静的サイトの問題点</title>
+		<link>https://shimajima-eiji.github.io/2022/03/wordpress_ai.html</link>
+		
+		<dc:creator><![CDATA[nomuraya]]></dc:creator>
+		<pubDate>Wed, 23 Mar 2022 15:44:49 +0000</pubDate>
+				<category><![CDATA[技術ネタ: wordpress]]></category>
+		<category><![CDATA[技術ネタ全般]]></category>
+		<category><![CDATA[AI・ML(機械学習)]]></category>
+		<category><![CDATA[プラグイン]]></category>
+		<category><![CDATA[静的サイト]]></category>
+		<guid isPermaLink="false">https://shimajima-eiji.github.io/?p=1002</guid>
+
+					<description><![CDATA[<p>注意今回のお話は技術者目線です。 google　analyticsを使わないので、リピーター情報を得られないため、効果は&#46;&#46;&#46;</p>
+<p>The post <a href="https://shimajima-eiji.github.io/2022/03/wordpress_ai.html" data-wpel-link="internal">WordPressでAIを入れたい！静的サイトの問題点</a> first appeared on <a href="https://shimajima-eiji.github.io/" data-wpel-link="internal">のむらやさんチのホームハック</a>.</p>]]></description>
+										<content:encoded><![CDATA[<div class="alert warning">
+<span>注意</span>今回のお話は技術者目線です。<br />
+google　analyticsを使わないので、リピーター情報を得られないため、効果は薄いと思われます。
+</div>
+<h2>使いたいプラグインと、静的サイトの問題点</h2>
+<ul>
+<li>Kindred Posts</li>
+<li>MyCurator</li>
+<li>Primal for WordPress</li>
+<li>Watsonfinds</li>
+</ul>
+<p>AI運用は実務でもやっているので知見はそれなりにありますが、静的サイトなので高速化を追求した結果、トロ臭いAIは入れられません。<br />
+ローカル環境でデータを集計しても、ビルドツールがクローリングする際は別のユーザーとして巡回するので、計測したデータはおそらく無効にされてしまいます。</p>
+<p>導入が簡単そうなこの辺りから着手しようとしたんですが、得られたデータがなんの意味もなければ、入れる必要もありません。<br />
+本来であれば自分で検証して、検証した結果を記事にしたいのですが、残念ながら私の環境では検証する事もできません。<br />
+なので、情報しか提供できません。</p>
+<h2>AIを入れると遅くなる</h2>
+<p>これは仕方ないです。<br />
+通常のワードプレスの挙動というか、クライアントからリクエストが飛んできて、リクエストに従ってホストがスクリプト動かしたりデータベースに接続したり、といった動的処理を実行するため、クライアントが頑張ってもどうにもならない世界があります。<br />
+特にAIで何かやる、というのはもっと大変です。サーバーの強化は必須ですが、無料プランで使えるレベルのサーバーはAI運用を想定したスペックでないことが普通です。<br />
+レンタルサーバーなどだと、他のユーザーとリソースを共有している事がほとんどなので、カタログスペックを引き出すことはまず不可能だと思ってください。</p>
+<h2>コメントお待ちしています。</h2>
+<p>もし上手くいったら、ご報告いただけると嬉しいです。<br />
+専用のコメントフォームを作成しましたので、ぜひご活用ください。</p>
+<p><a href="https://marshmallow-qa.com/githubfreelance?utm_medium=url_text&amp;utm_source=promotion" data-wpel-link="external" rel="external noopener noreferrer">https://marshmallow-qa.com/githubfreelance?utm_medium=url_text&utm_source=promotion</a></p>
+<p>（NGワードが厳しいようなので、受け取れないメッセージがあります。また、ご連絡いただいても対応ができない事があります）</p><p>The post <a href="https://shimajima-eiji.github.io/2022/03/wordpress_ai.html" data-wpel-link="internal">WordPressでAIを入れたい！静的サイトの問題点</a> first appeared on <a href="https://shimajima-eiji.github.io/" data-wpel-link="internal">のむらやさんチのホームハック</a>.</p>]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>font awesomeのアイコンを使えるか</title>
+		<link>https://shimajima-eiji.github.io/2022/03/howtouse_fontawesome.html</link>
+		
+		<dc:creator><![CDATA[nomuraya]]></dc:creator>
+		<pubDate>Wed, 23 Mar 2022 11:49:52 +0000</pubDate>
+				<category><![CDATA[技術ネタ全般]]></category>
+		<category><![CDATA[fontawesome]]></category>
+		<guid isPermaLink="false">https://shimajima-eiji.github.io/?p=980</guid>
+
+					<description><![CDATA[<p>注意 本稿の内容はfontawesomeのバージョンによってはうまく表示できなくなる可能性があります。 また、環境依存の&#46;&#46;&#46;</p>
+<p>The post <a href="https://shimajima-eiji.github.io/2022/03/howtouse_fontawesome.html" data-wpel-link="internal">font awesomeのアイコンを使えるか</a> first appeared on <a href="https://shimajima-eiji.github.io/" data-wpel-link="internal">のむらやさんチのホームハック</a>.</p>]]></description>
+										<content:encoded><![CDATA[<div class="alert warning">
+<span>注意</span><br />
+本稿の内容はfontawesomeのバージョンによってはうまく表示できなくなる可能性があります。<br />
+また、環境依存の問題が高いため他の環境ではうまくいかない可能性があります。
+</div>
+<h2>結論</h2>
+<p><a href="https://fontawesome.com/search" data-wpel-link="external" rel="external noopener noreferrer">fontawesomeの公式</a>で検索してSVGを貼り付ければ特に設定も要らないです。</p>
+<p>これを前提として、wordpressで完結させる方法です。<br />
+私にとって大きな罠だったのが、公式プラグインが使い物にならなかった事です。<br />
+ありがたいことに、公式でも上記の方法が用意されているので、画面に表示させるだけならプラグインは必要ではありません。<br />
+大事な事なので、繰り返しておきます。</p>
+<h2>使えるプラグインを試行錯誤</h2>
+<p>この辺りは人の環境によるので、あくまで私の環境でのお話です。</p>
+<ul>
+<li><i class="fab fa-github " ></i> <code><i class="fa fa-&quot;github&quot; fa-&quot;&quot; &quot;&quot; " ></i></code></li>
+<li><i class="wp-svg-github-3 github-3"></i> <code><i class="fa fa-&quot;github&quot; fa-&quot;&quot; &quot;&quot; " ></i></code></li>
+<li>
+<svg width=16 height=16 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com/ License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> （※後述）
+</li>
+</ul>
+<p>このような形で表示できます。<br />
+iタグを使うと <i class="fa-brands fa-github"></i> <code>&lt;i class=&quot;fa-brands fa-github&quot;&gt;&lt;/i&gt;</code> となり、うまくいかなかったのでsvgです。</p>
+<h2>SVGコード</h2>
+<p>サイズを指定しないとえらいことになるので、svgにwidth,heightプロパティを指定しましょう。<br />
+どちらか１つでも最適化されますが、念の為２つ入れています。</p>
+<pre><code>&lt;svg width=16 height=16 xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 496 512&quot;&gt;&lt;!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com/ License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. &#8211; &gt;&lt;path d=&quot;M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z&quot;/&gt;&lt;/svg&gt;</code></pre>
+<h2>注意事項</h2>
+<p>一番最初にも書きましたが、環境依存だったりfontawesome自体のバージョンによってはうまくいかない可能性が高いです。<br />
+また、プラグインもfontawesomeに限らず、似たようなものがいっぱいあるので合ったものを使うようにしましょう。</p><p>The post <a href="https://shimajima-eiji.github.io/2022/03/howtouse_fontawesome.html" data-wpel-link="internal">font awesomeのアイコンを使えるか</a> first appeared on <a href="https://shimajima-eiji.github.io/" data-wpel-link="internal">のむらやさんチのホームハック</a>.</p>]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>マークダウンファイルをWordPressに取り込んで出力する</title>
+		<link>https://shimajima-eiji.github.io/2022/03/import_markdown.html</link>
+		
+		<dc:creator><![CDATA[nomuraya]]></dc:creator>
+		<pubDate>Wed, 23 Mar 2022 10:53:40 +0000</pubDate>
+				<category><![CDATA[技術ネタ: wordpress]]></category>
+		<category><![CDATA[技術ネタ全般]]></category>
+		<category><![CDATA[デモ・検証考察]]></category>
+		<guid isPermaLink="false">https://shimajima-eiji.github.io/?p=970</guid>
+
+					<description><![CDATA[<p>プラグインを使ってマークダウンファイルをWorePressにインポートする import markdownプラグインを使&#46;&#46;&#46;</p>
+<p>The post <a href="https://shimajima-eiji.github.io/2022/03/import_markdown.html" data-wpel-link="internal">マークダウンファイルをWordPressに取り込んで出力する</a> first appeared on <a href="https://shimajima-eiji.github.io/" data-wpel-link="internal">のむらやさんチのホームハック</a>.</p>]]></description>
+										<content:encoded><![CDATA[<h2>プラグインを使ってマークダウンファイルをWorePressにインポートする</h2>
+<p><a href="https://ja.wordpress.org/plugins/import-markdown/" data-wpel-link="external" rel="external noopener noreferrer">import markdownプラグイン</a>を使います。</p>
+<pre><code># インポートテスト
+本文</code></pre>
+<p>が</p>
+<pre><code>&amp;lt;h1&amp;gt;インポートテスト&amp;lt;/h1&amp;gt;
+&amp;lt;p&amp;gt;本文&amp;lt;/p&amp;gt;</code></pre>
+<p>に変換されていました。<br />
+期待通りの結果が得られました。</p>
+<h2>問題点</h2>
+<p>QiitaとかZennとかに書いている記事を移行したい場合、単一ファイルしか読み取れないので非常に手間がかかります。<br />
+Wordpressでもマークダウン記法で記事を書いている私としては、HTMLパースされると管理が面倒くさいので、直接ファイルを開いて投稿画面にコピーして貼り付けた方が早かったです。<br />
+どうもやる気がでないので、移行が遅いのですがこればかりはどうしようもないです。<br />
+WP RESTAPIを使って投稿すれば早いと思いますが、どうせ一回だけしか使わないので、それならシステム化せずに手打ちすればよくね？となってしまっているのが現状です。</p>
+<h2>直接マークダウンをwordpressに投稿する方法</h2>
+<p><a href="https://ja.wordpress.org/plugins/wp-githuber-md/" data-wpel-link="external" rel="external noopener noreferrer">WP-githuber-md</a>にする方法です。<br />
+これは仕様上ブロックエディターは使えませんが、そもそもビジュアルブロックエディターの挙動がもっさりして使いにくいので、結局従来のエディターに戻してしまいました。<br />
+なので、私にとっては導入時の障害はありませんでした。</p>
+<p>ビジュアルエディターを気に入っている方でも、コピペは使えなくはないですが、コピー時に変な挙動になってうまくHTML変換されない事が考えられます。<br />
+どちらが良いかは一長一短です。</p><p>The post <a href="https://shimajima-eiji.github.io/2022/03/import_markdown.html" data-wpel-link="internal">マークダウンファイルをWordPressに取り込んで出力する</a> first appeared on <a href="https://shimajima-eiji.github.io/" data-wpel-link="internal">のむらやさんチのホームハック</a>.</p>]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>wordpressの設定をガチャガチャいじるよ！</title>
+		<link>https://shimajima-eiji.github.io/2022/03/wordpress_customize.html</link>
+		
+		<dc:creator><![CDATA[nomuraya]]></dc:creator>
+		<pubDate>Wed, 23 Mar 2022 02:09:45 +0000</pubDate>
+				<category><![CDATA[技術ネタ: wordpress]]></category>
+		<category><![CDATA[技術ネタ全般]]></category>
+		<category><![CDATA[更新情報]]></category>
+		<guid isPermaLink="false">https://shimajima-eiji.github.io/?p=814</guid>
+
+					<description><![CDATA[<p>参考サイト WordPressのWebサイト設計の考え方 公式サイトリファレンス WordPress で構築したサイトを&#46;&#46;&#46;</p>
+<p>The post <a href="https://shimajima-eiji.github.io/2022/03/wordpress_customize.html" data-wpel-link="internal">wordpressの設定をガチャガチャいじるよ！</a> first appeared on <a href="https://shimajima-eiji.github.io/" data-wpel-link="internal">のむらやさんチのホームハック</a>.</p>]]></description>
+										<content:encoded><![CDATA[<h2>参考サイト</h2>
+<ul>
+<li><a href="https://zenn.dev/web_tanuki/articles/3aad9d92e0eb97" data-wpel-link="external" rel="external noopener noreferrer">WordPressのWebサイト設計の考え方</a></li>
+<li><a href="https://developer.wordpress.org/reference/functions/_e/" data-wpel-link="external" rel="external noopener noreferrer">公式サイトリファレンス</a></li>
+<li><a href="https://rinoguchi.net/2021/01/wordpress-firebase-hosting.html" data-wpel-link="external" rel="external noopener noreferrer">WordPress で構築したサイトをFirebase Hosting</a></li>
+<li><a href="https://www.szx.jp/blog/2021/07/03/wordpress-docker-markdown/" data-wpel-link="external" rel="external noopener noreferrer">番外: DockerでWordPressをローカルで復元して記事をMarkdownに変換する</a></li>
+</ul>
+<p>本題の前に、上記サイトに感謝と御礼申し上げます。</p>
+<h1>wordpressをガシガシカスタマイズしてみた ver2022.03</h1>
+<h2>レイアウト</h2>
+<p>主にいじったのはテーマ周り。<br />
+今までのテーマでも不満はなかったのですが、個人的には２カラムは記事を読みたいときにノイズが多いと思っているので、これをやめたかったのです。<br />
+トップページは２カラムでもいいかな、と思ったんですが、サイドバーを使うほどコンテンツが充実しているわけでもないので、１カラムで大きく画面を使うようにしました。</p>
+<p>その代わり、ヘッダーに情報を集めて充実させました。<br />
+本来はタグクラウドとかも置きたかったんですが、PHPをいじると今回のようにテーマを変えたい場合、テーマエディタでfunctions.phpだとかをいじらないといけないので、運用可用性が下がるため採用しませんでした。<br />
+理想はデフォルトの状態でいじらないようにすることなので、プログラミング経験があればあるほどカスタマイズしたくなりますが、鋼の自制心で絶対に触らないようにします。</p>
+<h2>プラグイン</h2>
+<p>タグの扱いに困りました。<br />
+タグ自体の需要がそんなにない運用をしているので、あまり気にしなくてもいいんですが、将来的には主力になるコンテンツにしたいので、今のうちから運用方針を考えておきたいのです。<br />
+タグを扱う場合、プラグインでなんとかするより直接PHPをいじった方が楽な展開が多いです。<br />
+PHPもある程度できるようになると、プラグインも自作したくなりますが、wordpress本体のバージョンアップに伴い、メンテナンスが必要になったりと色々面倒くさいので、自作プラグインもやりません。</p>
+<ul>
+<li>この問題は、他のプラグインを使用する場合でも起こりますので、有料公開しているもの＝メンテナンスされやすいもので、無料で使える部分だけでも有用なプラグインを優先的に採用します。</li>
+<li>メンテナンスされにくいと思われるものでも、使えるうちは使います。メンテナンスされなくなったら捨てる事も検討します。</li>
+</ul>
+<h2>収益化（広告）など</h2>
+<p>そろそろ収益化を考えていきたいです。<br />
+アドブロックを入れても閲覧できる状態にすることと、広告がユーザーの邪魔ではなく、ユーザーに有益なコンテンツをもたらすもの（大部分は「今は興味がない」けど、「そういえばこういう情報（広告）あったな」と思い出すもの）であって欲しいと私は考えています。<br />
+また、広告自体をサイトの１つのコンテンツとも考えているので、ユーザーにとって不快な自動広告は積極的にNGをしていきます。<br />
+手動で作成する広告＝コンテンツは、私が意味があると判断して貼ったものしかありません。</p>
+<p>もし、「これってどうなん？」と思った広告を発見したら、スクリーンキャプチャ（スクショ）を貼って送ってもらえませんか？<br />
+至急対応します。</p>
+<h2>カテゴリー・タグ</h2>
+<p>この辺りは構造化を考えるべきですね。<br />
+今までサイトを運営していたノウハウがあるので、カンで設定しているのですが、同一運営者でもコンテンツあるいはサイトコンセプトごとに変わるんですよね。<br />
+なので、あんまり参考になりません。</p>
+<p>今後もカテゴリーやタグは変わります。名前が変わったりアドレスが変わったりするので、ブックマークには入れないでください。<br />
+あるいは、管理するようにしておいてください。</p>
+<p>お手数をおかけしてすみません。</p><p>The post <a href="https://shimajima-eiji.github.io/2022/03/wordpress_customize.html" data-wpel-link="internal">wordpressの設定をガチャガチャいじるよ！</a> first appeared on <a href="https://shimajima-eiji.github.io/" data-wpel-link="internal">のむらやさんチのホームハック</a>.</p>]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[CoC]クトゥルフ神話TRPGで現代(日本？)を舞台に脱出ゲームするシナリオがなろう感溢れるので何が問題なのか考察する</title>
+		<link>https://shimajima-eiji.github.io/2022/03/coc_escape_scenario.html</link>
+		
+		<dc:creator><![CDATA[nomuraya]]></dc:creator>
+		<pubDate>Mon, 21 Mar 2022 11:36:03 +0000</pubDate>
+				<category><![CDATA[ゲーム: テーブルトーク]]></category>
+		<category><![CDATA[ゲーム全般]]></category>
+		<category><![CDATA[クトゥルフ神話TRPG]]></category>
+		<category><![CDATA[シナリオメイキング]]></category>
+		<category><![CDATA[デモ・検証考察]]></category>
+		<guid isPermaLink="false">https://shimajima-eiji.github.io/?p=776</guid>
+
+					<description><![CDATA[<p>目覚めると知らない部屋という記事を斜め読みしていたら非常に共感したので、読み直して私の思うところをざっと書き散らしておき&#46;&#46;&#46;</p>
+<p>The post <a href="https://shimajima-eiji.github.io/2022/03/coc_escape_scenario.html" data-wpel-link="internal">[CoC]クトゥルフ神話TRPGで現代(日本？)を舞台に脱出ゲームするシナリオがなろう感溢れるので何が問題なのか考察する</a> first appeared on <a href="https://shimajima-eiji.github.io/" data-wpel-link="internal">のむらやさんチのホームハック</a>.</p>]]></description>
+										<content:encoded><![CDATA[<p><a href="http://trpgfrontier.net/archives/299" data-wpel-link="external" rel="external noopener noreferrer">目覚めると知らない部屋</a>という記事を斜め読みしていたら非常に共感したので、読み直して私の思うところをざっと書き散らしておきます。<br>タイトルではピンポイントにdisったんですが、似たようなテイストのテレビ番組（原作あり？）とか、多くのインディーズゲームなどが当てはまります。</p>
+
+
+<h2>「目覚めると知らない部屋」がもたらした功罪</h2>
+
+
+<p>王道（＝ここでは誤解を恐れずワンパターンと言います）は使いやすく分かりやすいから王道です。<br>なろう系小説も</p>
+
+
+<ul><li>主人公が最初から強い（理由の有無は別として）</li><li>現実から異世界（文明的に遅れている世界）で生きていく（転生する）</li><li>なぜか上手くいきすぎる（ご都合主義）</li></ul>
+
+
+<p>という点が使いやすく分かりやすいんですよね。<br>ワンパターンとは、作り手にとって非常に助かる反面、使い古されていくとユーザーが飽きてきます。<br>アフィリエイト業界ではよく「先行者利益」「既得権益」と言ったりしますが、後発者利益として作るのが容易（先駆者が試行錯誤して見つけた成功パターンに乗っている）という点で益を享受しています。<br>ただ、やったところで大きな効果を得にくいというのが課題（問題ではない）です。</p>
+
+
+<h2>「目覚めると知らない部屋」の何が悪いのか</h2>
+
+
+<p>目覚めると知らない部屋にいた事自体がダメだと、記事は言っていません。<br>謎解き脱出ゲームになるのはそうだよね、と言っていますが「ちゃんとクトゥルフ神話TRPGになってるか？」という話ですね。<br>私も正直、CoCのシステムを使った、クトゥルフではないシナリオで遊ばされているなぁと感じている事はありました。<br>「CoCだから神話生物が出てこないのはおかしい！」のような過激派ではありませんが、このように考えているPLまたはKPは絶対に居るので、なんかしらの配慮はあった方が親切ではないかと思います。<br>オリジナルシナリオを書く場合は、CoCのシステムが使いたいだけなのか神話生物とPCを対峙あるいは何かしらの接触をさせたいのか、はシナリオの書き手により異なります。</p>
+
+
+<h3>ネタバレ</h3>
+
+
+<p>反転してご覧ください。</p>
+
+
+<p>「</p>
+
+
+<p class="p_hidden">たとえば、有名な「毒入りスープ」道場なんかは分かりやすく恐怖体験なシナリオですね。<br>無抵抗の奴隷（作中表記による。現実には仲間NPCキャラ）に対してどういう扱いをするのか、が問われます。<br>（特に最後の決断など）<br>ただ、今回の件で言えば「なんでそんな事やったの？」というのが分かりにくいですね。ただの気まぐれの可能性が高いのがチャウグナー・フォーンたる所以です。</p>
+
+
+<p class="p_hidden">こちらも有名ですが「カタシロ」（Vtuber向けの道場？）も理性はありながら狂気を感じるNPCと「思考実験」と称した面談＝対話をすることで、徐々にキャラクターを狂気に誘導していく流れが面白いです。<br>ここでの発言が全て自身に跳ね返ってくるので、頭の良いPCと直情的なPCではゲーム性がガラッと変わるのが特徴でもあります。<br>（NPCはPCを害してはいけないのでキーパリングスキルとともに、相槌と復唱（これが大事）で医者NPCの行動が決まるため、PCは善意性が高い必要があります）</p>
+
+
+<p>」</p>
+
+
+<p>裏を返すと、これだけ凝ったシナリオを練れるCoCのシステムがそれだけ優秀ともいえます。</p>
+
+
+<h2>「目覚めると知らない部屋」の鍵事情</h2>
+
+
+<p>そもそも家主？不在で鍵がかかっているのは当然として、室内にも鍵があるのも不思議な感覚ですね。<br>人間っぽくいうなら、持ち出し用とは別に家にスペアキー（マスターキー）を用意するのは考えられますが、魔術的な仕組みなら鍵と解除の方法に妥当な理由がなければ、理知的なPC(と、経験豊富なPL）なら勘繰ってしまうかもしれません。</p>
+
+
+<p>鍵はないけど、鍵になるようなアイテムがなければ先に進めないようなギミックを用意する方法を検討するのが合理的かと思います。<br>特殊な行動習性のあるもの（たとえば火を嫌がるとか集まる）とか、規則性のある行動をする（させたい場合は、合理的な理由が必要）ことで鍵のような役割を持たせる事ができますが、これらがそこに存在する理由（鍵を掛ける理由）は必要です。<br>これは「金庫に鍵を掛けるのはなぜ？」ぐらいの質問なので、シナリオで書いていない場合はKPが補足するぐらいでいいと思います。</p>
+
+
+<p>これがマーダーミステリーなら確実に突っ込まれます。</p>
+
+
+<h2>シナリオを多くのユーザーに認知してもらうには？</h2>
+
+
+<p>手っ取り早いのは、SNSなどで発信力が強い方と組む（契約する）方法です。</p>
+
+
+<ul><li>著名な方に</li><li>「定期的に」取り扱ってもらう</li></ul>
+
+
+<p>のが一番広告効果が現れるでしょう。<br>重要なのは「定期的」の部分。<br>昨今は単発だと効果が期待できなくなっています。<br>コラボ回は見ない、プロモーション広告を含む場合は見ないなどいつもの雰囲気ではない動画は評価しないユーザーが増えました。<br>もっとも、コラボ先のファンが見てくれるという効果もあるのでプラマイな印象です。</p><p>The post <a href="https://shimajima-eiji.github.io/2022/03/coc_escape_scenario.html" data-wpel-link="internal">[CoC]クトゥルフ神話TRPGで現代(日本？)を舞台に脱出ゲームするシナリオがなろう感溢れるので何が問題なのか考察する</a> first appeared on <a href="https://shimajima-eiji.github.io/" data-wpel-link="internal">のむらやさんチのホームハック</a>.</p>]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>百年王国を遊びたての方向け：巫女レベルと遺産レベル</title>
+		<link>https://shimajima-eiji.github.io/2022/03/hyakunen_kingdom_level.html</link>
+		
+		<dc:creator><![CDATA[nomuraya]]></dc:creator>
+		<pubDate>Sat, 19 Mar 2022 15:06:00 +0000</pubDate>
+				<category><![CDATA[ゲーム: 百年王国]]></category>
+		<category><![CDATA[ゲーム: 百年王国: 攻略]]></category>
+		<category><![CDATA[ゲーム全般]]></category>
+		<guid isPermaLink="false">https://shimajima-eiji.github.io/?p=783</guid>
+
+					<description><![CDATA[<p>攻略というよりは、取扱説明書のお話です。 巫女レベルとは？ 巫女ごとに設定されたレベルです。 食料（アリアンロッドとフレ&#46;&#46;&#46;</p>
+<p>The post <a href="https://shimajima-eiji.github.io/2022/03/hyakunen_kingdom_level.html" data-wpel-link="internal">百年王国を遊びたての方向け：巫女レベルと遺産レベル</a> first appeared on <a href="https://shimajima-eiji.github.io/" data-wpel-link="internal">のむらやさんチのホームハック</a>.</p>]]></description>
+										<content:encoded><![CDATA[<p>攻略というよりは、取扱説明書のお話です。</p>
+
+
+
+<h2>巫女レベルとは？</h2>
+
+
+
+<p>巫女ごとに設定されたレベルです。</p>
+
+
+
+<ul><li>食料（アリアンロッドとフレイヤ）</li><li>生産（アリアンロッドとアマテラス）</li><li>文明（イナンナ）</li><li>初期土地数（ガイア）</li></ul>
+
+
+
+<p>に補正がかかります。</p>
+
+
+
+<h2>遺産レベルとは？</h2>
+
+
+
+<p>巫女によって作れる遺産が３種類あり、それぞれに設定されたレベルです。<br>ゲーム開始時に巫女と遺産を選ぶタイミングがありますが、巫女は分かりやすいですが遺産は、選択した遺産に経験値が入るというもので、選ばれなかった遺産も使えますが経験値が入りません。</p>
+
+
+
+<p>分かりにくいので、具体例を挙げます。</p>
+
+
+
+<p>巫女レベル５のアリアンロッドは、以下の遺産が作れます。</p>
+
+
+
+<ul><li>ウェーストミンスター宮殿（初期から解放済み）</li><li>オックスフォード大学（巫女Lv5で解放できる）</li></ul>
+
+
+
+<p>もう一つの遺産は、条件を満たせば解放できます。<br>遺産レベルは巫女レベルとは別で管理されていますので、巫女レベルと遺産レベルは必ずしもイコールにはなりません。<br>巫女レベル５だと、最速でウェーストミンスター宮殿がLv4、オックスフォード大学がLv1になっているはず。</p>
+
+
+
+<h2>巫女の遺産の計算式</h2>
+
+
+
+<p>たとえばウェーストミンスター宮殿は、生産数に（工場の数）×（遺産レベル）×15となります。<br>今回の場合、工場１つにつき、60ずつ生産が増える事になります。工場が２つ、３つと増えていくと120, 180と生産していきます。<br>ウェーストミンスター宮殿の遺産レベルがLv10（称号獲得）となると、工場１つで生産を150も産出できるようになります。<br>正直、めちゃくちゃ強いです。</p>
+
+
+
+<p>もう一つのオックスフォード大学も見てみましょう。<br>ウェーストミンスター宮殿の遺産レベルを上げても、オックスフォード大学の遺産レベルは上がりません。<br>オックスフォード大学の遺産レベルを上げたい場合、ステージ選択時にアリアンロッドを選んで、遺産も忘れずに設定しましょう。<br>この状態で、100ターン経過後のリザルト画面でオックスフォード大学に経験値が入ればOKです。<br>この場合、ウェーストミンスター宮殿には経験値が入りません。</p>
+
+
+
+<p>オックスフォード大学は、よりシンプルな計算式です。<br>文明を（遺産レベル）×10増やすものです。<br>初期遺産レベルは１なので、必ず10以上の文明を産出します。<br>正直、10しか文明を産出しない遺産はいらないのでLv1だと使い物になりませんが、これがLv10になると話が変わります。<br>１ターンで文明100も産出できるので、建築コストを１ターンで回収できてしまいます。</p>
+
+
+
+<p>このように、遺産には「前提となる施設が必要なもの」と「作るだけで効果があるもの」の２つがあります。<br>オックスフォード大学は正直チートな気もしますが、使いやすいのは後者ですよね。<br>前者は前提となる施設が優秀なら気にしません（ウェーストミンスター宮殿なら工場。工場はとても優秀です）が、使いにくい施設なら目も当てられません。</p>
+
+
+
+<p>私が個人的に使いにくいと感じるのは、アマテラスの白鷺城でした。<br>採石場は草原→鉱山→採石場の３ターンで食料・生産に補正がかかる遺産を作る事ができます。<br>未開の鉱山と未開の採石場を使えばターン数も節約できます。<br>が、白鷺城の場合はたたら場を作るために採石場から更に１ターン掛けて育てる必要があり、たたら場に補正をかけられるのが白鷺城の他にないため使いにくく、たたら場の施設効果も初期で食料10/生産10だと施設のレベルを上げて育てるのが大変です。<br>アマテラスに限って言えば、他の２つは性能が優秀なので白鷺城が使えなくてもなんとかなります。</p>
+
+
+
+<p>さて、遺産レベルが関係ない遺産もあります。<br>イナンナの「古代都市ダマスカス」などです。<br>これは、隣接地４つの文明の産出量がそのまま古代都市ダマスカスの産出量になるため、隣接施設によっては非常に強力な効果を生み出します。<br>ただし、遺産レベルがLv1だろうがLv10だろうが、産出量は変わらないのでレベルを上げるメリットはありません。<br>Lv2にするのも非常に強い抵抗がありますが、称号のためと思えばある程度は割り切れるでしょうか。</p>
+
+
+
+<h2>巫女レベルと遺産レベルの管理をしっかりしよう</h2>
+
+
+
+<p>まとめます。</p>
+
+
+
+<ul><li>巫女レベルは、巫女を選べばリザルト画面で増える。</li><li>遺産レベルは、巫女を選んで、その上で３つのうち１つを選ぶ必要がある。同じくリザルトで増える<ul><li>遺産レベルは高いに越した事はないが、遺産レベルが効果に影響がない遺産もある</li></ul></li></ul>
+
+
+
+<p>新しい遺産を解放した後は、遺産についてしっかり調べておきましょう。<br>作り方は頑張って探してみてください。</p><p>The post <a href="https://shimajima-eiji.github.io/2022/03/hyakunen_kingdom_level.html" data-wpel-link="internal">百年王国を遊びたての方向け：巫女レベルと遺産レベル</a> first appeared on <a href="https://shimajima-eiji.github.io/" data-wpel-link="internal">のむらやさんチのホームハック</a>.</p>]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>高橋メソッドジェネレーターでgif画像を作ってくれるので、ブログに向いてる気がしたので採用する。</title>
+		<link>https://shimajima-eiji.github.io/2022/03/takahashi_method.html</link>
+		
+		<dc:creator><![CDATA[nomuraya]]></dc:creator>
+		<pubDate>Sat, 19 Mar 2022 14:11:15 +0000</pubDate>
+				<category><![CDATA[技術ネタ全般]]></category>
+		<guid isPermaLink="false">https://shimajima-eiji.github.io/?p=760</guid>
+
+					<description><![CDATA[<p>高橋メソッドGeneratorというサイトがめちゃくちゃ便利！試しに、デフォルトで入っている内容をgitにして扉絵にして&#46;&#46;&#46;</p>
+<p>The post <a href="https://shimajima-eiji.github.io/2022/03/takahashi_method.html" data-wpel-link="internal">高橋メソッドジェネレーターでgif画像を作ってくれるので、ブログに向いてる気がしたので採用する。</a> first appeared on <a href="https://shimajima-eiji.github.io/" data-wpel-link="internal">のむらやさんチのホームハック</a>.</p>]]></description>
+										<content:encoded><![CDATA[<p class="has-drop-cap"><a href="https://landhere.jp/services/tkmethod/index.php" data-wpel-link="external" rel="external noopener noreferrer">高橋メソッドGenerator</a>というサイトがめちゃくちゃ便利！<br>試しに、デフォルトで入っている内容をgitにして扉絵にしてみたんですが、これはとても便利ですね！<br>あまりにも気に入ったんで、他の扉絵も差し替えようかと思ったぐらいです。</p>
+
+
+
+<p class="has-drop-cap">橋が無ければ渡られぬ、とは言いますが、本稿も発端は「（作成中の）このドキュメントで高橋メソッドを組み込むにはどうしたらいいんだ<img src="https://s.w.org/images/core/emoji/13.1.0/72x72/1f914.png" alt="🤔" class="wp-smiley" style="height: 1em; max-height: 1em;" />」から始まりました。<br>元々プレゼンテーション用に作っていたわけではないので、相当な力技でねじ込んだというか、押し込んだ結果になってしまったのはしくじったなぁ、と。</p>
+
+
+
+<p class="has-drop-cap">メソッドはあくまでも方法です。高橋メソッドもプレゼンの方法の一つなんですが、本格的なスライドを作っている時に面倒くさくなったら使いたくなります。連発や乱発するとしんどいんですが、勘所で使うと強いインパクトがあるので、論理的な根拠や提案をする前に置くとスムーズに進行する印象があります。</p>
+
+
+
+<p class="has-drop-cap">ソースを置いておきますね。<br><a href="https://nomuraya.tk/slide/profile.html" data-wpel-link="external" rel="external noopener noreferrer">https://nomuraya.tk/slide/profile.html</a><br>このHTMLファイルも、ツールの力を使って作っています。高橋メソッド部分がだいぶパワープレイしてる感じがあって恥ずかしいですが。</p>
+
+
+
+<p class="has-drop-cap">ツールは使っていません。あえていうなら、AsciiDocでCSSを使って文字を大きくして画面いっぱいに表示するように文字サイズを手動で修正して頑張りました。<br>ブラウザの表示サイズによっては、うまいこと行かないかもしれませんので、ブラウザサイズをいじってみると改善できるかもしれません。</p>
+
+
+
+<p class="has-drop-cap">ドキュメントに高橋メソッドを使うというのをしれっとやってるものがあります。表紙とか見出しタイトルだけのページですね。業務マニュアルとかこんな感じの表現をしているスライドかページかないですか？元々PDFデータになってそうなマニュアルなんかは、意識せず使っている気がしますよ。</p>
+
+
+
+<h2>高橋メソッド感を出して頑張ってみた</h2>
+
+
+
+<p>ここまでの段落を縦読みすると、高橋メソッド感出るかなと思って急遽思いつきで書いてみました。<br>本文を普通に読んだら支離滅裂すぎて何言ってんだ感ありますね、精進します…。</p>
+
+
+
+<p>さて、言いたいことはそこじゃない。<br>もう既に扉絵に置いていますが、でかい文字をスライド一杯に貼り付けてインパクトを残すスライド／プレゼンテーションの技です。<br>あくまでプレゼンテーション用なので、生かすも殺すもスピーカー（登壇者）次第ですから、高橋メソッドのスライドに頼るのではなく、高橋メソッドで与えた印象に沿う話題展開や組み立てを意識する事が重要です。</p>
+
+
+
+<p>とはいえ、LTでスライドを作るのに困ったら、とりあえず高橋メソッドのスライドを出して聴衆に問いかけを発信するというテクニックもあるので、高橋メソッドを使うばかりがダメなんだ、という話にするつもりはないです。<br> 何事も使い方と、使うタイミングが重要ですね。</p><p>The post <a href="https://shimajima-eiji.github.io/2022/03/takahashi_method.html" data-wpel-link="internal">高橋メソッドジェネレーターでgif画像を作ってくれるので、ブログに向いてる気がしたので採用する。</a> first appeared on <a href="https://shimajima-eiji.github.io/" data-wpel-link="internal">のむらやさんチのホームハック</a>.</p>]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>2022年冬アニメ(2021年度冬アニメ)総評</title>
+		<link>https://shimajima-eiji.github.io/2022/03/anime_2022winter.html</link>
+		
+		<dc:creator><![CDATA[nomuraya]]></dc:creator>
+		<pubDate>Fri, 18 Mar 2022 15:09:19 +0000</pubDate>
+				<category><![CDATA[アニメ]]></category>
+		<guid isPermaLink="false">https://shimajima-eiji.github.io/?p=751</guid>
+
+					<description><![CDATA[<p>まだ終わってないんですが、クライマックスがもう迫っているので、先出ししていきます。気持ち的にはランキングつけていきます。&#46;&#46;&#46;</p>
+<p>The post <a href="https://shimajima-eiji.github.io/2022/03/anime_2022winter.html" data-wpel-link="internal">2022年冬アニメ(2021年度冬アニメ)総評</a> first appeared on <a href="https://shimajima-eiji.github.io/" data-wpel-link="internal">のむらやさんチのホームハック</a>.</p>]]></description>
+										<content:encoded><![CDATA[<p>まだ終わってないんですが、クライマックスがもう迫っているので、先出ししていきます。<br>気持ち的にはランキングつけていきます。</p>
+
+
+
+<h2>その着せ替え人形は恋をする</h2>
+
+
+
+<p>最後まで徹底してコスプレ愛を貫き続けた、コンセプト一強の作品でした。<br>登場人物が一気に増えてわちゃわちゃした感じはありましたが、ストーリーはまとまっていたかなと。<br>女性指向な印象を受ける絵の割に、恋愛要素より趣味要素が強かったので不思議な違和感を覚えました。<br>違和感という言葉に悪い印象をイメージしてしまうかもしれませんが、気にすれば気になる程度で悪い評価はしていません。<br>原作をだいぶ端折ったのかな？という印象はありましたが、執筆時点では原作をまだ読んでいないので見てから再考する事があるかなと思います。</p>
+
+
+
+<h2>進撃の巨人 FinalSeason 2</h2>
+
+
+
+<p>まだ終わってない段階で書いているので、正直続きが気になりすぎて何も言えません。<br>シリーズファンは最後まできちんと見届けましょう。人類VS巨人の図から人類VS人類で、巨人が生物兵器的なポジションになってしまったので「これは進撃の巨人ではない」と思いましたが、よく考えれば人類VS人類の構図はパラディ島内だけでストーリーが展開されていた時もありました。<br>ただ単純に戦う相手（組織）が大きくなっていったので、違和感が徐々に強くなっていったとか巨人の秘密が明かされて面白さ（ワクワク感）がなくなったように感じるだけなのかもしれません。</p>
+
+
+
+<p>別のストーリーとして見た時に、やはり進撃らしさは失われていません。<br>巨人に拘らない「進撃の巨人」として見ると、また違った展開を楽しめると思います。<br>よくわからない場合は、とりあえずファイナルシーズン1を流し見して（ガビのアレは壮大な伏線だと思ってみてください）それから今季分を見るとまた違った感想を持つと思います。</p>
+
+
+
+<h2>ヴァニタスの手記 第2クール</h2>
+
+
+
+<p>妻の激推しでしたが、私がみていないので何も語る事ができません…。<br>毎週放送のタイミングに合わせて視聴していたのでそんなに面白いのか、と思って聞いてみたら「腐って何が悪い（意訳）」とプンスカしていたので、腐りものがお好きな方にはお勧めできると思います。</p>
+
+
+
+<h2>怪人開発部の黒井津さん</h2>
+
+
+
+<p>何気にローカルヒーローの登場が好きです。<br>ブレイダーVSアガスティアの展開で新怪人開発が本筋ですが、<br>気付いたら黒井津さんと佐田巻健司（ブレイダー）の一方的なラブ？展開はなくなってましたね。</p>
+
+
+
+<p>今書いていて思ったんですが、黒井津さんがブレイダーをフったらメンタルダメージで勝てるのでは？というメタ読みはアリですかね？<br>原作読め案件な気がします。</p>
+
+
+
+<h2>殺し愛</h2>
+
+
+
+<p>期待値との比較ですが、なんだかんだで満足度は高いです。<br>題材も雰囲気もシリアスな中で、息抜きフェーズがちょいちょいあるのでメリハリをつけて視聴できるのは本当に助かりました。<br>ただひたすらにシリアスな展開であっても作品的には理解ができるし、そういうものだと思えますが視聴続投するには少々きつそうな印象がありました。<br>いい意味で、心理的なハードルを下げてくれたおかげでここまれ見れている気がします。</p>
+
+
+
+<h2>スローループ</h2>
+
+
+
+<p>女の子が釣り？という部分で最初はチャレンジングな作品だな、と思ったものですが、コンセプトから外れずキッチリ走り切ったという印象です。<br>再婚夫婦で家族になりました、という割に日常ほのぼの系路線をしっかり守ってくれただけでOKかなと思います。</p>
+
+
+
+<h2>天才王子の赤字国家再生術</h2>
+
+
+
+<p>２話までは視聴者を置いてけぼりにした意味不明な展開という印象でしたが、魔法少女まどか・マギカの主要メンバーが３話で脱落事件からとりあえず４話まで見る事にするようにしています。<br>本作は、この習慣で救われた作品の一つのような気がしています。<br>とはいえ、面白いか？というとご都合主義の塊なので、細かいことは目を瞑りましょう。</p>
+
+
+
+<p>昨今珍しい頭脳戦の様相（体裁）が保てていたのは評価します。</p>
+
+
+
+<h2>失格紋の最強賢者</h2>
+
+
+
+<p>残念ながら「魔王学院の不適合者 ～史上最強の魔王の始祖、転生して子孫たちの学校へ通う～」を超えることは出来ませんでした。<br>比較対象が悪かったというか、爽快感がないんですよね。<br>俺TUEEEEEE系はそういうものだと思って見れるんですが、それにしても突き抜けたりないというか、中途半端な印象が拭えません。</p>
+
+
+
+<h2>現実主義勇者の王国再建記 第二部</h2>
+
+
+
+<p>正直、評価はできません。ぱっと見に面白いとは思わないからです。<br>第一部は最後まで付き合ったし、水瀬いのりの声質を推したい私がただ聞きたかっただけです。</p>
+
+
+
+<h2>4話切りしてしまったものたち</h2>
+
+
+
+<ul><li>賢者の弟子を名乗る賢者：思った以上に面白さが分かりませんでした…</li><li>プリンセスコネクト！ReDive Season 2：ユニ先輩が見たかっただけなんや……！４話以降も出ている回があれば教えてクレメンス</li><li>リアデイルの大地にて：ただ単純に私がてんまそ氏の追いかけだったので見ていましたが、あまりにもあまりだったのでちょっとついていけませんでした。</li></ul>
+
+
+
+<p>他、いろいろあったんですが思いついたら追記するかもしれません…。</p><p>The post <a href="https://shimajima-eiji.github.io/2022/03/anime_2022winter.html" data-wpel-link="internal">2022年冬アニメ(2021年度冬アニメ)総評</a> first appeared on <a href="https://shimajima-eiji.github.io/" data-wpel-link="internal">のむらやさんチのホームハック</a>.</p>]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>はじめて１ヶ月、ビルド時間がえらいことになっていく…</title>
+		<link>https://shimajima-eiji.github.io/2022/03/static_build_slow.html</link>
+		
+		<dc:creator><![CDATA[nomuraya]]></dc:creator>
+		<pubDate>Fri, 18 Mar 2022 09:42:25 +0000</pubDate>
+				<category><![CDATA[技術ネタ全般]]></category>
+		<category><![CDATA[静的サイト]]></category>
+		<guid isPermaLink="false">https://shimajima-eiji.github.io/?p=731</guid>
+
+					<description><![CDATA[<p>静的サイトジェネレータの問題点が早々に浮き彫りになってきました、恐れていた問題というか、抗えない問題ですね。記事を書く、&#46;&#46;&#46;</p>
+<p>The post <a href="https://shimajima-eiji.github.io/2022/03/static_build_slow.html" data-wpel-link="internal">はじめて１ヶ月、ビルド時間がえらいことになっていく…</a> first appeared on <a href="https://shimajima-eiji.github.io/" data-wpel-link="internal">のむらやさんチのホームハック</a>.</p>]]></description>
+										<content:encoded><![CDATA[<p>静的サイトジェネレータの問題点が早々に浮き彫りになってきました、<br>恐れていた問題というか、抗えない問題ですね。<br>記事を書く、カテゴリを作る、タグを作る、ampに対応する…<br>動的環境（wordpressのアドレス)を増やすたびに、ビルドするhtmlファイルも当然増えるので、仕方ないと言えば仕方がないのですが、快適さはだんだん失われつつあります。</p>
+
+
+<p>これが、私が去年に静的サイトジェネレータを捨てた理由でもあります。</p>
+
+
+<h2>静的サイトジェネレータを使って記事を書く場合の問題点と解決方法</h2>
+
+
+<p>CSSを適用した状態で記事を確認する方法がありません。<br>コンテンツを管理するCMS側でうまく設定できればいいんですが、axios等に対応していない場合はうまくいきません。<br>つまり、JAMStackなサイトでなければプレビューは使えません。<br>そうでなくても、プレビューサイトを作るのに時間がかかります。<br>記事を更新するたびに確認作業を行うなら、常にプレビュー機能が迅速に動いている必要があります。</p>
+
+
+<p>ローカルでWordPressを使ってビルドする強みがここに出てきます。<br>WordPress単体でプレビューサイトを構築できるので、執筆時は静的サイトビルディングについて全く考えることなく普段使いをしながら、ユーザーに公開する環境については静的サイトなので軽量かつ高速な環境を提供できます。<br>誤解を恐れずに言うなら、間違えて公開してしまってもpushしない限りユーザーには見れないので、公開設定をしている状態でレビューをする環境があり、開発・検証環境で問題なければpushする事でユーザーに配信ができるので、コンテンツに対してもセキュアな環境が作れます。</p>
+
+
+<h2>ユーザーは表示が速い方がいい、運用者は動作が速い方がいい、開発者はメンテが楽な方がいい</h2>
+
+
+<p>三方良しの理念に基づいています。<br>開発をラクにすると、ユーザーファーストは失われます。<br>ユーザーや運用をラクにすると、開発が頑張るしかないです。<br>割を食いやすい開発者が、ユーザーと運用のちょっとの負荷でシステムの健康管理体制を容易に維持できるなら、開発側のプロジェクトマネージャーあるいは営業渉外担当が働きかけて対応すべきだと思います。<br>開発で楽をして運用負荷が上がるのでは意味はありませんが、</p>
+
+
+<ul><li>運用負荷を下げて保守コストも下げられる範囲</li><li>運用負荷を下げて保守コストが上がるならやらない</li><li>運用負荷を上げて保守コストが下がるならやらない</li></ul>
+
+
+<p>ぐらいの感覚でシステム化する領域を吟味した方がいいんじゃないかと思います。</p>
+
+
+<h2>経験談: 業務運用システムコンサルタントの目</h2>
+
+
+<p>あんまり大っぴらにプロジェクトの話はできないんですが、考え方とアプローチのお話を少し。<br>業務改善を考える際に、システムを回収すると一言で言っても、アプローチはユーザー側とシステム側の両面から考える必要があります。</p>
+
+
+<ul><li>ユーザーの入力項目を削減する（項目数、あるいは選択式）</li><li>ユーザーの入力補助をする（予測変換など）</li><li>ユーザーの入力を自動化する仕組み（ツールを起動したら画面にデータを投入する）</li></ul>
+
+
+<p>項目が３つありますが、ユーザーオペレーションの自動化か、システム側の改修か微妙なところがあるためです。<br>もちろん、現場によってはこれ以外の方法（特に業務連絡）で解消する方法があるかもしれません。<br>運用自体をシステムに合わせて変えるという、大胆な戦略も必要になるかもしれません。</p><p>The post <a href="https://shimajima-eiji.github.io/2022/03/static_build_slow.html" data-wpel-link="internal">はじめて１ヶ月、ビルド時間がえらいことになっていく…</a> first appeared on <a href="https://shimajima-eiji.github.io/" data-wpel-link="internal">のむらやさんチのホームハック</a>.</p>]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

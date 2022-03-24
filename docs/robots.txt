@@ -1,0 +1,4 @@
+User-agent: *
+Sitemap: https://nomuraya.tk/sitemap.xml
+Sitemap: https://nomuraya.tk/feed
+Sitemap: https://nomuraya.tk/feed/index.xml

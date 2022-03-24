@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: https://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta content="#00619f" name="theme-color">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<title>技術ネタ: プログラミング → のむらやさんチのホームハック</title>
+
+		<!-- All in One SEO 4.1.8 -->
+		<meta name="robots" content="max-image-preview:large">
+		<meta name="google-site-verification" content="txV9SDfkGqIEcMQqRNnmFvWjm9aGOTU7sB3msZ_bsZ4">
+		<meta name="msvalidate.01" content="1CDDF8AC77A80576AF99343D01A5CB03">
+		<meta name="p:domain_verify" content="shimajimaeiji">
+		<link rel="canonical" href="https://shimajima-eiji.github.io/category/tech/tech_programming">
+		<script type="application/ld+json" class="aioseo-schema">
+			{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebSite","@id":"https:\/\/shimajima-eiji.github.io\/#website","url":"https:\/\/shimajima-eiji.github.io\/","name":"のむらやさんチのホームハック","description":"日曜プログラマーの父が、家族のプロジェクト円滑化と称して家庭で作って使えるBOTとか育児やったり日常の不満が爆発してシステム化したりソフトウェアで玩具を作ったりするブログ","inLanguage":"ja","publisher":{"@id":"https:\/\/shimajima-eiji.github.io\/#organization"}},{"@type":"Organization","@id":"https:\/\/shimajima-eiji.github.io\/#organization","name":"のむらやさんチのホームハック","url":"https:\/\/shimajima-eiji.github.io\/"},{"@type":"BreadcrumbList","@id":"https:\/\/shimajima-eiji.github.io\/category\/tech\/tech_programming\/#breadcrumblist","itemListElement":[{"@type":"ListItem","@id":"https:\/\/shimajima-eiji.github.io\/#listItem","position":1,"item":{"@type":"WebPage","@id":"https:\/\/shimajima-eiji.github.io\/","name":"ホーム","description":"日曜プログラマーの父が、家族のプロジェクト円滑化と称して家庭で作って使えるBOTとか育児やったり日常の不満が爆発してシステム化したりソフトウェアで玩具を作ったりするブログ","url":"https:\/\/shimajima-eiji.github.io\/"},"nextItem":"https:\/\/shimajima-eiji.github.io\/category\/tech#listItem"},{"@type":"ListItem","@id":"https:\/\/shimajima-eiji.github.io\/category\/tech#listItem","position":2,"item":{"@type":"WebPage","@id":"https:\/\/shimajima-eiji.github.io\/category\/tech","name":"技術ネタ全般","url":"https:\/\/shimajima-eiji.github.io\/category\/tech"},"nextItem":"https:\/\/shimajima-eiji.github.io\/category\/tech\/tech_programming#listItem","previousItem":"https:\/\/shimajima-eiji.github.io\/#listItem"},{"@type":"ListItem","@id":"https:\/\/shimajima-eiji.github.io\/category\/tech\/tech_programming#listItem","position":3,"item":{"@type":"WebPage","@id":"https:\/\/shimajima-eiji.github.io\/category\/tech\/tech_programming","name":"技術ネタ: プログラミング","url":"https:\/\/shimajima-eiji.github.io\/category\/tech\/tech_programming"},"previousItem":"https:\/\/shimajima-eiji.github.io\/category\/tech#listItem"}]},{"@type":"CollectionPage","@id":"https:\/\/shimajima-eiji.github.io\/category\/tech\/tech_programming\/#collectionpage","url":"https:\/\/shimajima-eiji.github.io\/category\/tech\/tech_programming\/","name":"技術ネタ: プログラミング → のむらやさんチのホームハック","inLanguage":"ja","isPartOf":{"@id":"https:\/\/shimajima-eiji.github.io\/#website"},"breadcrumb":{"@id":"https:\/\/shimajima-eiji.github.io\/category\/tech\/tech_programming\/#breadcrumblist"}}]}
+		</script>
+		<!-- All in One SEO -->
+
+<link rel="dns-prefetch" href="//codoc.jp">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//use.fontawesome.com">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="のむらやさんチのホームハック &raquo; ストーリー フィード" href="https://shimajima-eiji.github.io/web-stories/feed/">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/shimajima-eiji.github.io\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.9.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="gtranslate-style-css" href="https://shimajima-eiji.github.io/wp-content/plugins/gtranslate/gtranslate-style24.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="https://shimajima-eiji.github.io/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}</style>
+<link rel="stylesheet" id="crp-style-rounded-thumbs-css" href="https://shimajima-eiji.github.io/wp-content/plugins/contextual-related-posts/css/rounded-thumbs.min.css" type="text/css" media="all">
+<style id="crp-style-rounded-thumbs-inline-css" type="text/css">.crp_related a {
+			  width: 150px;
+			  height: 150px;
+			  text-decoration: none;
+			}
+			.crp_related img {
+			  max-width: 150px;
+			  margin: auto;
+			}
+			.crp_related .crp_title {
+			  width: 100%;
+			}</style>
+<link rel="stylesheet" id="default-icon-styles-css" href="https://shimajima-eiji.github.io/wp-content/plugins/svg-vector-icon-plugin/public/../admin/css/wordpress-svg-icon-plugin-style.min.css" type="text/css" media="all">
+<style id="md-style-inline-css" type="text/css"></style>
+<link rel="stylesheet" id="ez-icomoon-css" href="https://shimajima-eiji.github.io/wp-content/plugins/easy-table-of-contents/vendor/icomoon/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="ez-toc-css" href="https://shimajima-eiji.github.io/wp-content/plugins/easy-table-of-contents/assets/css/screen.min.css" type="text/css" media="all">
+<style id="ez-toc-inline-css" type="text/css">div#ez-toc-container p.ez-toc-title {font-size: 120%;}div#ez-toc-container p.ez-toc-title {font-weight: 500;}div#ez-toc-container ul li {font-size: 95%;}</style>
+<link rel="stylesheet" id="GoogleFonts-css" href="//fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700&#038;display=swap" type="text/css" media="all">
+<link rel="stylesheet" id="cd-style-css" href="https://shimajima-eiji.github.io/wp-content/themes/coldbox/assets/css/style.min.css" type="text/css" media="all">
+<style id="cd-style-inline-css" type="text/css">.entry h2{margin:2em -40px 1.3em;padding:1.3rem 30px;border-style:solid;border-width:1px 0;overflow:hidden}@media screen and (max-width:640px){.entry h2{margin-left:-20px;margin-right:-20px;padding-left:10px;padding-right:10px}}.entry h3{margin:1.6em -10px 1.1em;padding:0 5px .4rem;border-bottom:2px solid rgba(0,0,0,.5);overflow:hidden}.entry h4{padding:0 0 .4rem;border-bottom:2px solid #bbb;overflow:hidden}.entry h5{padding:0 0 .4rem;border-bottom:1px dotted #bbb;overflow:hidden}@media screen and (max-width:640px){.grid-view .article,.grid-view .page,.grid-view .post{width:100%}}.related-posts .related-article{width:calc(100% / 2)}.site-info,.site-title{color:#444}.site-description{color:rgb(78,78,78)}.header-menu .menu-container>li>a{color:#444}.header-menu .menu-container>li:hover>a{color:rgb(48,48,48)}:root body .search-toggle span.icon.search{border-color:#444}:root body .search-toggle span.icon.search::before,.nav-toggle .bottom,.nav-toggle .middle,.nav-toggle .top{background-color:#444}</style>
+<link rel="stylesheet" id="SourceSansPro-css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C400i%2C600%2C600i%2C700&#038;display=swap" type="text/css" media="all">
+<link rel="stylesheet" id="bfa-font-awesome-css" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" type="text/css" media="all">
+<script src="https://codoc.jp/js/cms.js?ver=5.9.2" id="codoc-injector-js-js" data-css="blue" data-usercode="DPPgDaxPZg" defer></script>
+<script src="https://shimajima-eiji.github.io/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.9" id="regenerator-runtime-js"></script>
+<script src="https://shimajima-eiji.github.io/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
+<script defer src="https://shimajima-eiji.github.io/wp-content/themes/coldbox/assets/js/min/scripts.js?ver=1.9.4" id="cd-script-js"></script>
+<script src="https://shimajima-eiji.github.io/wp-content/themes/coldbox/assets/js/min/hljs_web.js?ver=9.12.0" id="hljs-js"></script>
+<link rel="https://api.w.org/" href="https://shimajima-eiji.github.io/wp-json/">
+<link rel="alternate" type="application/json" href="https://shimajima-eiji.github.io/wp-json/wp/v2/categories/55">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://shimajima-eiji.github.io/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://shimajima-eiji.github.io/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.9.2">
+		<link rel="amphtml" href="https://shimajima-eiji.github.io/amp/category/tech/tech_programming">
+			<!-- Coldbox Addon Open Graph -->
+<meta name="description" content="">
+<meta property="og:title" content="技術ネタ: プログラミング → のむらやさんチのホームハック">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shimajima-eiji.github.io/category/tech/tech_programming">
+<meta property="og:site_name" content="のむらやさんチのホームハック">
+<meta property="og:image" content="https://shimajima-eiji.github.io/wp-content/themes/coldbox/assets/img/thumb-standard.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:domain" content="https://shimajima-eiji.github.io">
+<meta property="og:locale" content="ja">
+<!-- /Coldbox Addon Open Graph -->
+<!-- for tag post_tag, website powered with xili-tidy-tags v.1.12.03, a WP plugin by dev.xiligroup.com -->
+<style type="text/css">.broken_link, a.broken_link {
+	text-decoration: line-through;
+}</style>
+<script>
+if(location.host != "wordpress.local" or location.host != "nomuraya.tk") {
+  location.replace('https://nomuraya.tk' + location.pathname)
+}
+</script>
+<!-- Small Chat -->
+<script async src="https://embed.small.chat/TCQBTUWTXGD0U00YLT.js"></script>
+
+<!-- Google Ads -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4313452092557553" crossorigin="anonymous"></script>
+
+<!-- AMP Analytics -->
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7HLQHYMST4"></script>
+<!-- https://nomuraya.tk -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7HLQHYMST4');
+</script>
+<!-- Google Search Console -->
+<meta name="google-site-verification" content="txV9SDfkGqIEcMQqRNnmFvWjm9aGOTU7sB3msZ_bsZ4">
+<!-- Bing Webmaster Tools -->
+<meta name="msvalidate.01" content="1CDDF8AC77A80576AF99343D01A5CB03">
+
+<style type="text/css">/**
+   * Ref: https://phpjavascriptroom.com/?t=css&p=cssdesign_exclamation
+   */
+
+  /* エラー用 */
+  div.alert {
+    background-color: #FFEFEF;
+    margin: 0 0 1em 0;
+    padding: 10px;
+    color: #C25338;
+    border: 1px solid #D4440D;
+    line-height: 1.5;
+    clear: both;
+    background-repeat: no-repeat;
+    background-position: 5px 5px;
+  }
+
+  div.alert span {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://raw.githubusercontent.com/shimajima-eiji/__Backup_Images/main/nomuraya.tk/misc/nomark/base/cancel.png', sizingMethod='scale');
+    width: 48px;
+    height: 48px;
+    position: relative;
+    top: -5px;
+    left: -5px;
+    display: block;
+    text-indent: -9999px;
+    float: left;
+  }
+
+  html>body div.alert {
+    background-image: url(https://raw.githubusercontent.com/shimajima-eiji/__Backup_Images/main/nomuraya.tk/misc/nomark/base/cancel.png);
+  }
+
+  html>body div.alert span {
+    visibility: hidden;
+  }
+
+  /* OK用 */
+  div.accepted {
+    background-color: #e2ffaa;
+    border-color: #76CC0B;
+    color: #3A9805;
+  }
+
+  div.accepted span {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://raw.githubusercontent.com/shimajima-eiji/__Backup_Images/main/nomuraya.tk/misc/nomark/base/accepted.png', sizingMethod='scale');
+  }
+
+  html>body div.accepted {
+    background-image: url(https://raw.githubusercontent.com/shimajima-eiji/__Backup_Images/main/nomuraya.tk/misc/nomark/base/accepted.png);
+  }
+
+  html>body div.accepted span {
+    visibility: hidden;
+  }
+
+  /* 警告用 */
+  div.warning {
+    background-color: #ffff80;
+    border-color: #E5A500;
+    color: #CC7600;
+  }
+
+  div.warning span {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://raw.githubusercontent.com/shimajima-eiji/__Backup_Images/main/nomuraya.tk/misc/nomark/base/warning.png', sizingMethod='scale');
+  }
+
+  html>body div.warning {
+    background-image: url(https://raw.githubusercontent.com/shimajima-eiji/__Backup_Images/main/nomuraya.tk/misc/nomark/base/warning.png);
+  }
+
+  html>body div.warning span {
+    visibility: hidden;
+  }
+
+  /**
+   * Ref: https://reasonable-code.com/gist-embed-customize/
+   */
+  /* 行の背景色を統一する */
+  .gist .gist-data {
+    background-color: rgba(220, 220, 220, 0.2) !important;
+  }
+
+  .gist .highlight {
+    background: none !important;
+  }
+
+  /* 行数を非表示にする */
+  .blob-num {
+    display: none;
+  }
+
+  /* フッタ非表示 */
+  .gist-meta {
+    display: none;
+  }
+
+  /* コード領域の下枠線調整 */
+  .gist-file {
+    border-bottom: 1px solid !important;
+    border-bottom-color: rgb(221, 221, 221) !important;
+  }
+
+  .gist-data {
+    border-bottom: none !important;
+  }
+
+  /* 文字を大きくする */
+  .gist * {
+    font-size: 14px !important;
+  }
+
+  /* フォントをプログラミング用に変更する */
+  .gist * {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
+  }
+
+  /* コードエリアの上部の余白を開ける */
+  .gist tr:first-child td {
+    padding-top: 15px !important;
+  }
+
+  /* コードエリアの下部の余白を開ける */
+  .gist tr:last-child td {
+    padding-bottom: 15px !important;
+  }
+
+  /* footerのpowered byのレイアウト崩れを解消 */
+  .site-wordpress {
+    display: none;
+  }
+
+  /**
+   * ネタバレワードなど
+   */
+  .p_hidden {
+    color: white;
+  }</style>
+</head>
+
+<body class="archive category category-tech_programming category-55 codoc-theme-blue header-menu-enabled bottom-sidebar-s1 header-column">
+
+	<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>
+<a class="skip-link screen-reader-text noscroll" href="#content">
+	コンテンツへスキップ</a>
+
+
+	<header id="header" class="header" role="banner">
+
+		<div class="header-inner container">
+
+			<div class="site-info">
+
+				<a href="https://shimajima-eiji.github.io/" title="のむらやさんチのホームハック" data-wpel-link="internal"><h2 class="site-title">のむらやさんチのホームハック</h2></a>
+									<p class="site-description">日曜プログラマーの父が、家族のプロジェクト円滑化と称して家庭で作って使えるBOTとか育児やったり日常の不満が爆発してシステム化したりソフトウェアで玩具を作ったりするブログ</p>
+							</div>
+
+			
+			
+				<nav id="header-menu" class="header-menu" role="navigation" aria-label="ヘッダーメニュー"><ul id="header-nav" class="menu-container">
+<li id="menu-item-836" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-836"><a href="https://shimajima-eiji.github.io/" data-wpel-link="internal">ホーム</a></li>
+<li id="menu-item-842" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-842"><a href="https://shimajima-eiji.github.io/amp/" data-wpel-link="internal">ホーム(モバイル)</a></li>
+<li id="menu-item-840" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-840"><a href="https://shimajima-eiji.github.io/category" data-wpel-link="internal">カテゴリーリスト</a></li>
+<li id="menu-item-959" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-959"><a href="https://shimajima-eiji.github.io/tag" data-wpel-link="internal">タグ一覧</a></li>
+<li id="menu-item-837" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-837"><a href="https://shimajima-eiji.github.io/teams_and_conditions" data-wpel-link="internal">利用規約</a></li>
+<li id="menu-item-839" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-839"><a href="https://shimajima-eiji.github.io/profile" data-wpel-link="internal">運営情報</a></li>
+<li id="menu-item-960" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-960"><a href="https://shimajima-eiji.github.io/contact" data-wpel-link="internal">コンタクト</a></li>
+<li class="menu-item"><button id="close-mobile-menu" class="screen-reader-text close-mobile-menu">メニューを閉じる</button></li>
+</ul>
+<!--/#header-nav--></nav>
+				<button class="search-toggle">
+					<span class="icon search" aria-hidden="true"></span>
+					<span class="screen-reader-text">検索切り替え</span>
+				</button>
+									<button id="header-nav-toggle" class="nav-toggle header-menu" on="tap:amp-sidebar.open">
+					<span class="top" aria-hidden="true"></span>
+					<span class="middle" aria-hidden="true"></span>
+					<span class="bottom" aria-hidden="true"></span>
+					<span class="screen-reader-text">メニュー</span>
+				</button>				
+			
+
+		</div>
+
+</header>
+
+<main id="main" role="main">
+
+	<section class="main-inner">
+
+			<div class="title-box">
+		<div class="title-box-inner container">
+			<div class="breadcrumb">
+<a href="https://shimajima-eiji.github.io/" data-wpel-link="internal">ホーム</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="https://shimajima-eiji.github.io/category/tech" data-wpel-link="internal">技術ネタ全般</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<span>技術ネタ: プログラミング</span>
+</div>
+				<h1>
+<span class="title-description">Category:&#32;</span>技術ネタ: プログラミング</h1>	
+
+		</div>
+	</div>
+	
+		<div class="container-outer">
+
+			<div class="container">
+
+				<div id="content" class="content">
+
+					
+					<div class="content-inner grid-view view-has-post">
+
+						
+						<div class="code-block code-block-1" style="margin: 8px 0; clear: both;">
+<div class="admax-ads" data-admax-id="7bd082829b5a689888602513daa882ba" style="display:inline-block;width:728px;height:90px;"></div>
+<script type="text/javascript">(admaxads = window.admaxads || []).push({admax_id: "7bd082829b5a689888602513daa882ba",type: "banner"});</script>
+<script type="text/javascript" charset="utf-8" src="https://adm.shinobi.jp/st/t.js" async></script>
+</div>
+<div class="code-block code-block-3" style="margin: 8px 0; clear: both;">
+<amp-ad width="300" height="250" type="nend" data-nend_params='{"media":37174,"site":355547,"spot":1055019,"type":1,"oriented":1}'>
+</amp-ad>
+</div>
+<div class="code-block code-block-5" style="margin: 8px 0; clear: both;">
+<!-- Google Tag Manager -->
+<amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-PTPJ6B8&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
+</div>
+<div class="code-block code-block-6" style="margin: 8px 0; clear: both;">
+<!-- googleads amp -->
+<script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+</script>
+</div>
+
+																	
+<article id="post-156" class="article post-156 post type-post status-publish format-standard has-post-thumbnail hentry category-tech_programming category-tech tag-python tag-shell-script tag-source">
+	<div class="post-inner flex-column">
+
+		<a class="post-link" href="https://shimajima-eiji.github.io/2022/03/webp_sh.html" data-wpel-link="internal">
+
+			<div class="post-thumbnail"><figure>
+				<img src="https://raw.githubusercontent.com/shimajima-eiji/__Backup_Images/main/nomuraya.tk/2022/03/156_webp%E3%81%AB%E5%A4%89%E6%8F%9B%E3%81%99%E3%82%8B%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88/nomark/webp/webp%E5%A4%89%E6%8F%9B/webp%E5%A4%89%E6%8F%9B_blog.webp" class="external-img wp-post-image ">			</figure></div>
+
+			<div class="post-content">
+				
+				<h2 class="post-title">webpに変換するスクリプト</h2>
+
+									<div class="post-excerpt">
+<p>jpg(jpeg)やpng、bpmなど(その他)の画像ファイルを無料でwebp形式に変換してwordpressで利用できるようにするコマンドのソースコードを公開！</p>
+</div>
+							</div>
+
+		</a>
+
+		<div class="post-meta">
+							<span class="post-category">
+					<span class="far fa-folder" aria-hidden="true"></span>
+					<span class="screen-reader-text">カテゴリー</span>
+					<a href="https://shimajima-eiji.github.io/category/tech/tech_programming" rel="category tag" data-wpel-link="internal">技術ネタ: プログラミング</a>/<a href="https://shimajima-eiji.github.io/category/tech" rel="category tag" data-wpel-link="internal">技術ネタ全般</a>				</span>
+			
+					</div>
+
+	</div>
+<!--/.post-inner-->
+</article>
+								
+								
+							
+																	
+<article id="post-113" class="article post-113 post type-post status-publish format-standard has-post-thumbnail hentry category-tech_programming category-tech tag-mac tag-shell-script tag-source">
+	<div class="post-inner flex-column">
+
+		<a class="post-link" href="https://shimajima-eiji.github.io/2022/02/which_judge.html" data-wpel-link="internal">
+
+			<div class="post-thumbnail"><figure>
+				<img src="https://raw.githubusercontent.com/shimajima-eiji/__Backup_Images/main/nomuraya.tk/2022/03/113_which%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%A7%E6%9D%A1%E4%BB%B6%E5%88%A4%E5%AE%9A%E3%82%92%E3%81%99%E3%82%8B%E9%9A%9B%E3%81%AE%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85/nomark/webp/which%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/which%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89_blog.webp" class="external-img wp-post-image ">			</figure></div>
+
+			<div class="post-content">
+				
+				<h2 class="post-title">whichコマンドで条件判定をする際の注意事項</h2>
+
+									<div class="post-excerpt">
+<p>whichコマンドは実行するコマンドのファイルを確認するコマンド。しかし気をつけないと思わぬ落とし穴にハマってうまくいかない事も！知らないと気付かない正しい実行結果の検証法をまとめました。</p>
+</div>
+							</div>
+
+		</a>
+
+		<div class="post-meta">
+							<span class="post-category">
+					<span class="far fa-folder" aria-hidden="true"></span>
+					<span class="screen-reader-text">カテゴリー</span>
+					<a href="https://shimajima-eiji.github.io/category/tech/tech_programming" rel="category tag" data-wpel-link="internal">技術ネタ: プログラミング</a>/<a href="https://shimajima-eiji.github.io/category/tech" rel="category tag" data-wpel-link="internal">技術ネタ全般</a>				</span>
+			
+					</div>
+
+	</div>
+<!--/.post-inner-->
+</article>
+								
+								
+							<div class="code-block code-block-4" style="margin: 8px 0; clear: both;">
+<script type="text/javascript">(admaxads = window.admaxads || []).push({admax_id: "942b16e63a4afe860987479918721ae9",type: "overlay"});</script>
+<script type="text/javascript" charset="utf-8" src="https://adm.shinobi.jp/st/t.js" async></script>
+</div>
+
+							
+						
+					</div>
+
+				</div>
+<!--/.content-->
+
+				
+
+	<aside id="sidebar-s1" class="sidebar-s1" role="complementary">
+
+		<div class="sidebar">
+
+			<div class="sidebar-inner">
+
+				<section id="rss-3" class="widget widget_rss"><h2 class="widget-title">
+<a class="rsswidget rss-widget-feed" href="https://nomuraya.tk/feed/index.xml" data-wpel-link="external" rel="external noopener noreferrer"><img class="rss-widget-icon" style="border:0" width="14" height="14" src="https://shimajima-eiji.github.io/wp-includes/images/rss.png" alt="RSS" loading="lazy"></a> <a class="rsswidget rss-widget-title" href="https://nomuraya.tk/" data-wpel-link="external" rel="external noopener noreferrer">最新記事</a>
+</h2>
+<ul>
+<li>
+<a class="rsswidget" href="https://nomuraya.tk/2022/03/howtouse_fontawesome.html" data-wpel-link="external" rel="external noopener noreferrer">font awesomeのアイコンを使えるか</a><div class="rssSummary">注意 本稿の内容はfontawesomeのバージョンによってはうまく表示できなくなる可能性があります。 また、 [&hellip;]</div>
+</li>
+<li>
+<a class="rsswidget" href="https://nomuraya.tk/2022/03/import_markdown.html" data-wpel-link="external" rel="external noopener noreferrer">マークダウンファイルをWordPressに取り込んで出力する</a><div class="rssSummary">プラグインを使ってマークダウンファイルをWorePressにインポートする import markdownプラ [&hellip;]</div>
+</li>
+<li>
+<a class="rsswidget" href="https://nomuraya.tk/2022/03/wordpress_customize.html" data-wpel-link="external" rel="external noopener noreferrer">wordpressの設定をガチャガチャいじるよ！</a><div class="rssSummary">参考サイト WordPressのWebサイト設計の考え方 公式サイトリファレンス WordPress で構築し [&hellip;]</div>
+</li>
+<li>
+<a class="rsswidget" href="https://nomuraya.tk/2022/03/coc_escape_scenario.html" data-wpel-link="external" rel="external noopener noreferrer">[CoC]クトゥルフ神話TRPGで現代(日本？)を舞台に脱出ゲームするシナリオがなろう感溢れるので何が問題なのか考察する</a><div class="rssSummary">目覚めると知らない部屋という記事を斜め読みしていたら非常に共感したので、読み直して私の思うところをざっと書き散 [&hellip;]</div>
+</li>
+<li>
+<a class="rsswidget" href="https://nomuraya.tk/2022/03/hyakunen_kingdom_level.html" data-wpel-link="external" rel="external noopener noreferrer">百年王国を遊びたての方向け：巫女レベルと遺産レベル</a><div class="rssSummary">攻略というよりは、取扱説明書のお話です。 巫女レベルとは？ 巫女ごとに設定されたレベルです。 食料（アリアンロ [&hellip;]</div>
+</li>
+</ul></section><section id="categories-3" class="widget widget_categories"><h2 class="widget-title">サイトマップ</h2>
+			<ul>
+					<li class="cat-item cat-item-61">
+<a href="https://shimajima-eiji.github.io/category/anime" data-wpel-link="internal">アニメ</a>
+</li>
+	<li class="cat-item cat-item-13">
+<a href="https://shimajima-eiji.github.io/category/game" data-wpel-link="internal">ゲーム全般</a>
+<ul class="children">
+	<li class="cat-item cat-item-74">
+<a href="https://shimajima-eiji.github.io/category/game/game_table_talk" data-wpel-link="internal">ゲーム: テーブルトーク</a>
+</li>
+	<li class="cat-item cat-item-38">
+<a href="https://shimajima-eiji.github.io/category/game/game_hyakunen-kingdom" data-wpel-link="internal">ゲーム: 百年王国</a>
+	<ul class="children">
+	<li class="cat-item cat-item-95">
+<a href="https://shimajima-eiji.github.io/category/game/game_hyakunen-kingdom/game_hyakunen-kingdom_strategy" data-wpel-link="internal">ゲーム: 百年王国: 攻略</a>
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-1">
+<a href="https://shimajima-eiji.github.io/category/uncategorized" data-wpel-link="internal">ノンカテゴリ</a>
+</li>
+	<li class="cat-item cat-item-5 current-cat-parent current-cat-ancestor">
+<a href="https://shimajima-eiji.github.io/category/tech" data-wpel-link="internal">技術ネタ全般</a>
+<ul class="children">
+	<li class="cat-item cat-item-22">
+<a href="https://shimajima-eiji.github.io/category/tech/tech_wordpress" data-wpel-link="internal">技術ネタ: wordpress</a>
+</li>
+	<li class="cat-item cat-item-89">
+<a href="https://shimajima-eiji.github.io/category/tech/tech_document" title="技術的な資料のライティングテクニックなど。
+引き継ぎ資料から運用資料、コミュニティなど多岐に渡る。" data-wpel-link="internal">技術ネタ: ドキュメント</a>
+</li>
+	<li class="cat-item cat-item-55 current-cat">
+<a aria-current="page" href="https://shimajima-eiji.github.io/category/tech/tech_programming" data-wpel-link="internal">技術ネタ: プログラミング</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-18">
+<a href="https://shimajima-eiji.github.io/category/essay" data-wpel-link="internal">随筆</a>
+</li>
+			</ul>
+
+			</section><section id="xili_tidy_tags_cloud_widget-9" class="widget xili_tdtc_widget"><h2 class="widget-title">タグ一覧</h2>
+<div class="xilitidytagscloud">
+<ul class="wp-tag-cloud" role="list">
+	<li><a href="https://shimajima-eiji.github.io/tag/api" class="tag-cloud-link tag-link-9 tag-link-position-1" style="font-size: 10pt;" aria-label="API (1個の項目)" data-wpel-link="internal">API</a></li>
+	<li><a href="https://shimajima-eiji.github.io/tag/ci" class="tag-cloud-link tag-link-75 tag-link-position-2" style="font-size: 10pt;" aria-label="ci (1個の項目)" data-wpel-link="internal">ci</a></li>
+	<li><a href="https://shimajima-eiji.github.io/tag/mac" class="tag-cloud-link tag-link-6 tag-link-position-3" style="font-size: 10pt;" aria-label="mac (1個の項目)" data-wpel-link="internal">mac</a></li>
+	<li><a href="https://shimajima-eiji.github.io/tag/nintendoswitch" class="tag-cloud-link tag-link-39 tag-link-position-4" style="font-size: 10pt;" aria-label="NintendoSwitch (1個の項目)" data-wpel-link="internal">NintendoSwitch</a></li>
+	<li><a href="https://shimajima-eiji.github.io/tag/playstation4" class="tag-cloud-link tag-link-56 tag-link-position-5" style="font-size: 10pt;" aria-label="PlayStation4 (1個の項目)" data-wpel-link="internal">PlayStation4</a></li>
+	<li><a href="https://shimajima-eiji.github.io/tag/playstation5" class="tag-cloud-link tag-link-57 tag-link-position-6" style="font-size: 10pt;" aria-label="PlayStation5 (1個の項目)" data-wpel-link="internal">PlayStation5</a></li>
+	<li><a href="https://shimajima-eiji.github.io/tag/python" class="tag-cloud-link tag-link-96 tag-link-position-7" style="font-size: 10pt;" aria-label="python (1個の項目)" data-wpel-link="internal">python</a></li>
+	<li><a href="https://shimajima-eiji.github.io/tag/shell-script" class="tag-cloud-link tag-link-7 tag-link-position-8" style="font-size: 13.272727272727pt;" aria-label="shell-script (2個の項目)" data-wpel-link="internal">shell-script</a></li>
+	<li><a href="https://shimajima-eiji.github.io/tag/steam" class="tag-cloud-link tag-link-45 tag-link-position-9" style="font-size: 10pt;" aria-label="Steam (1個の項目)" data-wpel-link="internal">Steam</a></li>
+	<li><a href="https://shimajima-eiji.github.io/tag/uml" class="tag-cloud-link tag-link-88 tag-link-position-10" style="font-size: 10pt;" aria-label="UML (1個の項目)" data-wpel-link="internal">UML</a></li>
+	<li><a href="https://shimajima-eiji.github.io/tag/cthulhu_trpg" class="tag-cloud-link tag-link-97 tag-link-position-11" style="font-size: 10pt;" aria-label="クトゥルフ神話TRPG (1個の項目)" data-wpel-link="internal">クトゥルフ神話TRPG</a></li>
+	<li><a href="https://shimajima-eiji.github.io/tag/game-hard" class="tag-cloud-link tag-link-58 tag-link-position-12" style="font-size: 10pt;" aria-label="ゲームハード (1個の項目)" data-wpel-link="internal">ゲームハード</a></li>
+	<li><a href="https://shimajima-eiji.github.io/tag/commercial" class="tag-cloud-link tag-link-65 tag-link-position-13" style="font-size: 10pt;" aria-label="コマーシャル (1個の項目)" data-wpel-link="internal">コマーシャル</a></li>
+	<li><a href="https://shimajima-eiji.github.io/tag/scenario_making" class="tag-cloud-link tag-link-98 tag-link-position-14" style="font-size: 10pt;" aria-label="シナリオメイキング (1個の項目)" data-wpel-link="internal">シナリオメイキング</a></li>
+	<li><a href="https://shimajima-eiji.github.io/tag/simulation-game" class="tag-cloud-link tag-link-40 tag-link-position-15" style="font-size: 10pt;" aria-label="シミュレーションゲーム (1個の項目)" data-wpel-link="internal">シミュレーションゲーム</a></li>
+	<li><a href="https://shimajima-eiji.github.io/tag/source" class="tag-cloud-link tag-link-87 tag-link-position-16" style="font-size: 20pt;" aria-label="ソースコード有り (6個の項目)" data-wpel-link="internal">ソースコード有り</a></li>
+	<li><a href="https://shimajima-eiji.github.io/tag/demo" class="tag-cloud-link tag-link-90 tag-link-position-17" style="font-size: 17.272727272727pt;" aria-label="デモ・検証考察 (4個の項目)" data-wpel-link="internal">デモ・検証考察</a></li>
+	<li><a href="https://shimajima-eiji.github.io/tag/backup" class="tag-cloud-link tag-link-10 tag-link-position-18" style="font-size: 10pt;" aria-label="バックアップ (1個の項目)" data-wpel-link="internal">バックアップ</a></li>
+	<li><a href="https://shimajima-eiji.github.io/tag/price3000" class="tag-cloud-link tag-link-47 tag-link-position-19" style="font-size: 10pt;" aria-label="予算:~3000 (1個の項目)" data-wpel-link="internal">予算:~3000</a></li>
+	<li><a href="https://shimajima-eiji.github.io/tag/demoplay" class="tag-cloud-link tag-link-46 tag-link-position-20" style="font-size: 10pt;" aria-label="体験版 (1個の項目)" data-wpel-link="internal">体験版</a></li>
+	<li><a href="https://shimajima-eiji.github.io/tag/movie" class="tag-cloud-link tag-link-93 tag-link-position-21" style="font-size: 13.272727272727pt;" aria-label="動画有り (2個の項目)" data-wpel-link="internal">動画有り</a></li>
+	<li><a href="https://shimajima-eiji.github.io/tag/job_hunting" class="tag-cloud-link tag-link-92 tag-link-position-22" style="font-size: 10pt;" aria-label="就活・転職 (1個の項目)" data-wpel-link="internal">就活・転職</a></li>
+	<li><a href="https://shimajima-eiji.github.io/tag/nostalgic" class="tag-cloud-link tag-link-66 tag-link-position-23" style="font-size: 10pt;" aria-label="懐かしネタ (1個の項目)" data-wpel-link="internal">懐かしネタ</a></li>
+	<li><a href="https://shimajima-eiji.github.io/tag/education" class="tag-cloud-link tag-link-60 tag-link-position-24" style="font-size: 10pt;" aria-label="教育・指導 (1個の項目)" data-wpel-link="internal">教育・指導</a></li>
+	<li><a href="https://shimajima-eiji.github.io/tag/freeplay" class="tag-cloud-link tag-link-48 tag-link-position-25" style="font-size: 10pt;" aria-label="無料 (1個の項目)" data-wpel-link="internal">無料</a></li>
+	<li><a href="https://shimajima-eiji.github.io/tag/ksdh" class="tag-cloud-link tag-link-63 tag-link-position-26" style="font-size: 10pt;" aria-label="関西電気保安協会 (1個の項目)" data-wpel-link="internal">関西電気保安協会</a></li>
+	<li><a href="https://shimajima-eiji.github.io/tag/static-site" class="tag-cloud-link tag-link-53 tag-link-position-27" style="font-size: 17.272727272727pt;" aria-label="静的サイト (4個の項目)" data-wpel-link="internal">静的サイト</a></li>
+</ul>
+</div></section>
+			</div>
+
+		</div>
+
+	</aside><!--/.sidebar-->
+
+
+			</div>
+<!--/.container-->
+
+		</div>
+<!--/.container-outer-->
+
+	</section>
+
+</main>
+
+
+<footer id="footer" class="footer" role="contentinfo">
+
+	
+	
+	<div class="footer-bottom">
+
+		<div class="container">
+
+			<div class="copyright">
+
+				<p>
+					
+					&copy;2022 <a href="https://shimajima-eiji.github.io/" data-wpel-link="internal">のむらやさんチのホームハック</a>
+											 / <a class="privacy-policy-link" href="https://shimajima-eiji.github.io/teams_and_conditions" data-wpel-link="internal">利用規約</a><span role="separator" aria-hidden="true"></span>					
+				</p>
+
+				
+			</div>
+
+			<ul class="social-links has-3  ">			<li class="codepen-container">
+				<a class="codepen" href="https://codepen.io/nomuraya" title="CodePen" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">
+					<span class="fab fa-codepen" aria-hidden="true"></span>
+					<span class="screen-reader-text">CodePen</span>
+				</a>
+			</li>
+						<li class="github-container">
+				<a class="github" href="https://github.com/shimajima-eiji" title="GitHub" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">
+					<span class="fab fa-github" aria-hidden="true"></span>
+					<span class="screen-reader-text">GitHub</span>
+				</a>
+			</li>
+						<li class="rss-container">
+				<a class="rss" href="https://shimajima-eiji.github.io/feed" title="RSS フィード" target="_blank" data-wpel-link="internal">
+					<span class="fas fa-rss" aria-hidden="true"></span>
+					<span class="screen-reader-text">RSS フィード</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+
+	</div>
+<!--/.footer-bottom-->
+
+	<a id="back-to-top" class="noscroll is-hidden back-to-top" href="#">
+		<span class="chevron-up" aria-hidden="true"></span>
+		<span class="screen-reader-text">トップへ戻る</span>
+	</a>
+
+</footer>
+
+<div class="modal-search-form" id="modal-search-form" role="dialog" aria-modal="true">
+	
+<form method="get" class="search-form" action="https://shimajima-eiji.github.io/" role="search">
+	<label for="search-form1" class="screen-reader-text">検索</label>
+	<input type="search" class="search-inner" name="s" id="search-form1" placeholder="サイト内を検索" value="">
+	<button type="submit" class="search-submit">
+		<span class="icon search" aria-hidden="true"></span>
+		<span class="screen-reader-text">検索</span>
+	</button>
+</form>
+
+	<button class="close-toggle">
+		<span class="top" aria-hidden="true"></span>
+		<span class="bottom" aria-hidden="true"></span>
+		<span class="label">閉じる</span>
+	</button>
+</div>
+
+	<div style="position:fixed;top:10px;right:8%;z-index:999999;" id="gtranslate_wrapper">
+<!-- GTranslate: https://gtranslate.io/ -->
+ <select onchange="doGTranslate(this);" class="notranslate" id="gtranslate_selector" aria-label="Website Language Selector"><option value="">Select Language</option>
+<option value="ja|ar">Arabic</option>
+<option value="ja|zh-CN">Chinese (Simplified)</option>
+<option value="ja|nl">Dutch</option>
+<option value="ja|en">English</option>
+<option value="ja|fr">French</option>
+<option value="ja|de">German</option>
+<option value="ja|it">Italian</option>
+<option value="ja|ja">Japanese</option>
+<option value="ja|pt">Portuguese</option>
+<option value="ja|ru">Russian</option>
+<option value="ja|es">Spanish</option></select><style>#goog-gt-tt{display:none!important;}.goog-te-banner-frame{display:none!important;}.goog-te-menu-value:hover{text-decoration:none!important;}.goog-text-highlight{background-color:transparent!important;box-shadow:none!important;}body{top:0!important;}#google_translate_element2{display:none!important;}</style>
+<div id="google_translate_element2"></div>
+<script>function googleTranslateElementInit2() {new google.translate.TranslateElement({pageLanguage: 'ja',autoDisplay: false}, 'google_translate_element2');}if(!window.gt_translate_script){window.gt_translate_script=document.createElement('script');gt_translate_script.src='https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2';document.body.appendChild(gt_translate_script);}</script>
+
+<script>
+function GTranslateGetCurrentLang() {var keyValue = document['cookie'].match('(^|;) ?googtrans=([^;]*)(;|$)');return keyValue ? keyValue[2].split('/')[2] : null;}
+function GTranslateFireEvent(element,event){try{if(document.createEventObject){var evt=document.createEventObject();element.fireEvent('on'+event,evt)}else{var evt=document.createEvent('HTMLEvents');evt.initEvent(event,true,true);element.dispatchEvent(evt)}}catch(e){}}
+function doGTranslate(lang_pair){if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];if(GTranslateGetCurrentLang() == null && lang == lang_pair.split('|')[0])return;if(typeof ga=='function'){ga('send', 'event', 'GTranslate', lang, location.hostname+location.pathname+location.search);}var teCombo;var sel=document.getElementsByTagName('select');for(var i=0;i<sel.length;i++)if(sel[i].className.indexOf('goog-te-combo')!=-1){teCombo=sel[i];break;}if(document.getElementById('google_translate_element2')==null||document.getElementById('google_translate_element2').innerHTML.length==0||teCombo.length==0||teCombo.innerHTML.length==0){setTimeout(function(){doGTranslate(lang_pair)},500)}else{teCombo.value=lang;GTranslateFireEvent(teCombo,'change');GTranslateFireEvent(teCombo,'change')}}
+</script>
+<script>jQuery(document).ready(function() {var allowed_languages = ["ar","zh-CN","nl","en","fr","de","it","ja","pt","ru","es"];var accept_language = navigator.language.toLowerCase() || navigator.userLanguage.toLowerCase();switch(accept_language) {case 'zh-cn': var preferred_language = 'zh-CN'; break;case 'zh': var preferred_language = 'zh-CN'; break;case 'zh-tw': var preferred_language = 'zh-TW'; break;case 'zh-hk': var preferred_language = 'zh-TW'; break;case 'he': var preferred_language = 'iw'; break;default: var preferred_language = accept_language.substr(0, 2); break;}if(preferred_language != 'ja' && GTranslateGetCurrentLang() == null && document.cookie.match('gt_auto_switch') == null && allowed_languages.indexOf(preferred_language) >= 0){doGTranslate('ja|'+preferred_language);document.cookie = 'gt_auto_switch=1; expires=Thu, 05 Dec 2030 08:08:08 UTC; path=/;';}});</script>
+</div>
+<script src="https://shimajima-eiji.github.io/wp-includes/js/comment-reply.min.js?ver=5.9.2" id="comment-reply-js"></script>
+<script async src="https://shimajima-eiji.github.io/wp-includes/js/imagesloaded.min.js?ver=4.1.4" id="imagesloaded-js"></script>
+<script async src="https://shimajima-eiji.github.io/wp-includes/js/masonry.min.js?ver=4.2.2" id="masonry-js"></script>
+ 
+</body>
+</html>
