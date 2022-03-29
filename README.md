@@ -249,7 +249,7 @@ progress: false
 ---
 
 ### 活動状況
-<img src="https://raw.githubusercontent.com/shimajima-eiji/shimajima-eiji/master/profile-3d-contrib/profile-night-rainbow.svg" width=80% />
+<img src="https://raw.githubusercontent.com/shimajima-eiji/__Github-Operation/main/profile-3d-contrib/profile-gitblock.svg" width=80% />
 
 ---
 
