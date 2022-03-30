@@ -292,8 +292,10 @@ progress: false
 ### 詳細な経歴について
 - [wantedly](https://www.wantedly.com/id/nomuraya)
 - BizReach: BU1068620
-- [個人ブログ](https://nomuraya.tk)
 - [他視点・経歴スライド](https://nomuraya.tk/slide/profile.html)
+- [Qiita](https://qiita.com/nomurasan)
+- [Zenn](https://zenn.dev/nomuraya)
+- [個人ブログ](https://nomuraya.tk)
 
 ---
 
@@ -385,10 +387,10 @@ progress: false
 ### その他参考サイト
 |ページ|概要|
 |---|---|
-|[スライド](https://shimajima-eiji.github.io)|これ。色々なサイトで興味を持ってもらいたくて作成したスライドページ。|
-|[ブログ](https://nomuraya.tk)|動いて喋って聞こえるブログのシステム開発目指して頑張っています。|
-|[Github就活転職](https://github.com/users/shimajima-eiji/projects/4/views/1)|エンジニアの採用・被採用を考えるプロジェクト。専用リポジトリを作って活用していく方法も実運用、また手引き中。|
-|[開発環境](https://github.com/shimajima-eiji/Settings_Environment)|Windows, Mac, Linux(WSL-Ubuntu)で冪等性を担保するためのリポジトリ。|
+|[スライド](https://shimajima-eiji.github.io)|テキストをスライド表示した画面|
+|[ブログ](https://nomuraya.tk)|目標: 動いて喋って聞こえるブログ|
+|[Github就活転職　　　　](https://github.com/users/shimajima-eiji/projects/4/views/1)|IT(被)採用を考えるプロジェクト。専用リポジトリを作って活用方法を実運用と促進中|
+|[開発環境](https://github.com/shimajima-eiji/Settings_Environment)|Windows,Mac,Linux(WSL-Ubuntu)で冪等性を担保するリポジトリ|
 
 <style>
   /* ボタンオプションを非表示 */
