@@ -282,13 +282,6 @@ progress: false
 
 ---
 
-### 具体的な契約トラブルと注意喚起
-[実際にあった契約トラブルと、対応]()
-
-貴社とは無縁のお話だと思いますが、契約と信頼は貴社のため、私のため、なにより貴社クライアントのため、しっかり守っていく所存です。
-
----
-
 ### 詳細な経歴について
 - [wantedly](https://www.wantedly.com/id/nomuraya)
 - BizReach: BU1068620
@@ -391,6 +384,13 @@ progress: false
 |[ブログ](https://nomuraya.tk)|目標: 動いて喋って聞こえるブログ|
 |[Github就活転職　　　　](https://github.com/users/shimajima-eiji/projects/4/views/1)|IT(被)採用を考えるプロジェクト。専用リポジトリを作って活用方法を実運用と促進中|
 |[開発環境](https://github.com/shimajima-eiji/Settings_Environment)|Windows,Mac,Linux(WSL-Ubuntu)で冪等性を担保するリポジトリ|
+
+---
+
+# ご清聴・ご閲覧ありがとうございました
+ご興味・ご関心があるものには、ぜひお話の機会をいただければと思います。
+
+また何かの機会でお会いしましょう。
 
 <style>
   /* ボタンオプションを非表示 */
