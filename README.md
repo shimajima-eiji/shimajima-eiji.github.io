@@ -11,7 +11,7 @@ progress: false
 ## ごあんない
 - [スライド形式で見る場合](https://shimajima-eiji.github.io)
 - [テキスト形式で見る場合](https://github.com/shimajima-eiji/shimajima-eiji.github.io)
-- [一覧で見る場合](https://github.com/shimajima-eiji/shimajima-eiji.github.io/mindmap.html)
+- [一覧で見る場合](https://shimajima-eiji.github.io/mindmap.html)
 
 内容は同じです。
 
