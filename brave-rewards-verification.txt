@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: shimajima-eiji.github.io
+Token: 0e03d78731cf945d876eaa4bc2adce57c683377fd9759cd9304d9242d22f1377
