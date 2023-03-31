@@ -1,0 +1,64 @@
+<style>
+  /* !importantを食い破りたい: FYI https://qiita.com/amamamaou/items/1647bb8ba89bdf9a0fe6 */
+  * {
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    -khtml-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    pointer-events: none !important;
+  }
+
+  code.ok {
+    -webkit-touch-callout: auto !important;
+    -webkit-user-select: auto !important;
+    -khtml-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
+    user-select: auto !important;
+    pointer-events: auto !important;
+    background-color: lightgray;
+    font-size: 24px;
+  }
+
+</style>
+<noscript>
+
+  <body>
+    JavaScriptを禁止するとコンテンツを隠すページはクライアントのjavascriptで生成していると考えられます。
+    <br>
+    右クリックはできますので、ソースを表示して内容を見る事ができます（要HTMLの知識）
+  </body>
+
+</noscript>
+
+<body oncontextmenu="return false;" onClick="return false;" onMouseDown="return false;" onSelectStart="return false;"
+  oncopy="return false;">
+  <p>
+    JavaScriptをonにしないと表示されない内容です。
+    <br>
+    右クリック禁止スクリプト（<code>document.oncontextmenu = () => false;</code>）が動くので制御ができません。
+    <br>
+    これを解消したい場合は、手間ですがアドレスバーに<code class="ok" onClick="return true;" onMouseDown="return true;"
+      onSelectStart="return true;"
+      oncopy="return true;">javascript:void(document.oncontextmenu=null);</code>を打ち込みましょう。コピペすると<code>javascript:</code>が消えるので気をつけて！
+  </p>
+  <p>
+    ドラッグはCSS(styleタグ)のuser-selectがやっているのでスクリプトを禁止にしたぐらいでは解決しません。
+    <br>
+    開発者ツールでドラッグしたい項目のuser-selectを消すなどの対応が必要です。
+  </p>
+  <p>
+    JavaScript自体をOFFにすると、noscriptタグが実行されるためこの内容が表示されません。
+  </p>
+  <p>
+    <img src="test.png">
+  </p>
+</body>
+<script>
+  document.oncontextmenu = () => false;
+  
+  // TODO: bodyタグ以下をJavaScriptで生成してnoscriptで表示しないようにする
+  // https://www.tairaengineer-note.com/javascript-createelement/
+</script>
