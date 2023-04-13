@@ -11,36 +11,28 @@
       background-color: blue;
     }
 
+    /* FYI: https://wreath-ent.co.jp/web-design/how-to-change-while-maintaining-the-ratio-of-block-elements-with-css/ */
     main {
       position: relative;
-    }
-    
+    }    
     main::before {
       content: "";
       display: block;
       padding-top: 56.25%;
     }
-    
     main iframe {
-      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      position: absolute; top: 0; left: 0; width: 100%; height: 60%;
     }
-
-  </style>  
-
-
-  
-  </head>
+  </style>
+</head>
 
 <body>
   <h1>中　翔　リアルタイムスケジュール確認＆調整フォーム</h1>
   <aside>
     文字サイズ変更　
-    <button type="button" onclick="smaller()">小さく</button>
-    <button type="button" onclick="larger()">大きく</button>
+    <button type="button" onclick="smaller()">画面縮小</button>
+    <button type="button" onclick="larger()">画面拡大</button>
   </aside>
-  <p>
-    使い方はカレンダー下部「クリック・タップで開閉」テキストをクリック・タップで参照できます。
-  </p>
   <main>
     <iframe src="https://calendar.google.com/calendar/embed?src=tcn71djql7idcs6nou41lqnm3o%40group.calendar.google.com&ctz=Asia%2FTokyo" style="border: 0" frameborder="0" scrolling="no"></iframe>
   </main>
@@ -61,12 +53,13 @@
   
   <article>
     <details>
-      <summary>クリック・タップで開閉</summary>
+      <summary>その他、留意事項（クリック・タップで開閉）</summary>
       <hr>
       <h3>ご利用案内</h3>
       <p>
         本サイトはPC端末やスマートデバイスを横にしての閲覧を想定しておりますが、縦型表示でも利用に差し支えない事を確認しております。
-        文字サイズが小さい部分がございますため、
+        <br />文字サイズが小さく感じられる場合、ブラウザの拡大機能や、ページ上部の「画面縮小」「画面拡大」ボタンをご活用ください。
+        <br />（※ブラウザによっては使えない可能性がございます）
       </p>
       <h3>お詫び</h3>
       <p>
@@ -88,6 +81,7 @@
   </article>
 
   <script>
+    // FYI: https://okumuralab.org/~okumura/javascript/changesize.html
     let x = 100;
     function larger()  { x *= 1.2; document.body.style.fontSize = x + '%'; }
     function smaller() { x /= 1.2; document.body.style.fontSize = x + '%'; }
