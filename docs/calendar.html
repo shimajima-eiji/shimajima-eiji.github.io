@@ -11,10 +11,17 @@
       background-color: blue;
     }
 
+    /* FYI: https://okumuralab.org/~okumura/javascript/changesize.html */
+    button {
+      font-weight: bold;
+      padding: 0.5em 1em;
+      background-color: #EEE;
+      border-radius: 0.7em
+    }
+
     /* FYI: https://wreath-ent.co.jp/web-design/how-to-change-while-maintaining-the-ratio-of-block-elements-with-css/ */
     main {
       position: relative;
-      height:60%;
     }    
     main::before {
       content: "";
@@ -50,39 +57,33 @@
       <strong>メールやSNSなどでアポイントをいただいた時点で即時反映されるわけではありません。</strong>
       <br />私がGoogleカレンダーに予定を登録した時に反映されるため、タイミングによってはブッキングが発生する可能性がございます。
     </p>
-  </article>
-  
-  <article>
-    <details>
-      <summary>その他、留意事項（クリック・タップで開閉）</summary>
-      <hr>
-      <h3>ご利用案内</h3>
-      <p>
-        本サイトはPC端末やスマートデバイスを横にしての閲覧を想定しておりますが、縦型表示でも利用に差し支えない事を確認しております。
-        <br />文字サイズが小さく感じられる場合、ブラウザの拡大機能や、ページ上部の「画面縮小」「画面拡大」ボタンをご活用ください。
-        <br />（※ブラウザによっては使えない可能性がございます）
-      </p>
-      <h3>お詫び</h3>
-      <p>
-        Googleカレンダーの仕様のため、各予定の時間は開始時間となっております。
-        <br />終了時間についてはお手数をお掛けして恐縮ですが各時間をクリック・タップでご確認ください。
-        <br />※ 気付き次第、手作業で修正しております。
-      </p>
-      <hr>
-      <h3>一部予定が公開されている状態について</h3>
-      <p>
-        一部の予定については勉強会のカレンダーから参照しているものがあり、その特性上内容が表示されてしまうものがございます。
-        <br />現在内容が公開されているカレンダーは以下のとおりです。
-      </p>
-      <ul>
-        <li><a href="https://connpass.com/user/shimajima-eiji">エンジニア勉強会の参加予定(connpass)</a></li>
-      </ul>
-      <hr>
-    </details>
+    <hr>
+    <h3>ご利用案内</h3>
+    <p>
+      本サイトはPC端末やスマートデバイスを横にしての閲覧を想定しておりますが、縦型表示でも利用に差し支えない事を確認しております。
+      <br />文字サイズが小さく感じられる場合、ブラウザの拡大機能や、ページ上部の「画面縮小」「画面拡大」ボタンをご活用ください。
+      <br />（※ブラウザによっては使えない可能性がございます）
+    </p>
+    <h3>お詫び</h3>
+    <p>
+      Googleカレンダーの仕様のため、各予定の時間は開始時間となっております。
+      <br />終了時間についてはお手数をお掛けして恐縮ですが各時間をクリック・タップでご確認ください。
+      <br />※ 気付き次第、手作業で修正しております。
+    </p>
+    <hr>
+    <h3>一部予定が公開されている状態について</h3>
+    <p>
+      一部の予定については勉強会のカレンダーから参照しているものがあり、その特性上内容が表示されてしまうものがございます。
+      <br />現在内容が公開されているカレンダーは以下のとおりです。
+    </p>
+    <ul>
+      <li><a href="https://connpass.com/user/shimajima-eiji">エンジニア勉強会の参加予定(connpass)</a></li>
+    </ul>
+    <hr>
   </article>
 
   <script>
-    // FYI: https://okumuralab.org/~okumura/javascript/changesize.html
+    /* FYI: https://okumuralab.org/~okumura/javascript/changesize.html */
     let x = 100;
     function larger()  { x *= 1.2; document.body.style.fontSize = x + '%'; }
     function smaller() { x /= 1.2; document.body.style.fontSize = x + '%'; }
