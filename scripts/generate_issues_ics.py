@@ -179,6 +179,8 @@ def build_ics(issues: List[Dict[str, Any]], cal_name: str, repo: str) -> str:
         due = extract_due(body)
         if due is None:
             continue
+        if due < date.today():
+            continue
 
         number = issue.get("number", 0)
         title = (issue.get("title") or "").strip() or f"Issue #{number}"
