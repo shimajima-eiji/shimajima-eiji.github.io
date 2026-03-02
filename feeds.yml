@@ -1,0 +1,23 @@
+feeds:
+  # 設定例: subdomain で指定（connpassのグループURLのサブドメイン部分）
+  # 購読URL: https://shimajima-eiji.github.io/shimajima-eiji.github.io/{key}.ics
+  #
+  # フィルタは以下のどれか1つ以上を指定:
+  #   subdomain: connpassグループのサブドメイン
+  #   group_id: connpassグループID（数値）
+  #   event_id: 特定イベントID（配列）
+  #   keyword: キーワード検索（暫定用途）
+
+  - key: ospn
+    name: "OSPN / OSC (connpass)"
+    subdomain: "ospn"
+
+  # group_id 指定の例（コメントアウト済み）
+  # - key: mygroup
+  #   name: "任意団体A"
+  #   group_id: [12345]
+
+  # 複数イベントを手動指定する例
+  # - key: selected-events
+  #   name: "気になるイベント"
+  #   event_id: [382104, 400001]

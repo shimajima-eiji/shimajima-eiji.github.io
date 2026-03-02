@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>connpass ICS 配信</title>
+  <style>
+    body { font-family: sans-serif; max-width: 640px; margin: 2rem auto; padding: 0 1rem; }
+    h1 { font-size: 1.4rem; }
+    ul { padding-left: 1.2rem; }
+    li { margin: 0.5rem 0; }
+    code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+    p { color: #555; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <h1>connpass ICS 配信</h1>
+  <p>以下の URL をカレンダーアプリの「URL で購読」に貼り付けてください。</p>
+  <ul id="list"></ul>
+  <p>feeds.yml に団体を追加すると自動で ICS が生成されます。</p>
+
+  <script>
+    // docs/ 内の *.ics をリストアップ（実際のファイルは feeds.yml から生成）
+    // ここでは既知のキーを列挙する（Actions 実行後に自動で更新）
+    const base = location.origin + location.pathname.replace(/\/?$/, "/");
+    const feeds = [
+      { key: "ospn", name: "OSPN / OSC (connpass)" },
+    ];
+    const ul = document.getElementById("list");
+    feeds.forEach(({ key, name }) => {
+      const url = base + key + ".ics";
+      const li = document.createElement("li");
+      li.innerHTML = `<strong>${name}</strong><br><code>${url}</code>`;
+      ul.appendChild(li);
+    });
+  </script>
+</body>
+</html>
