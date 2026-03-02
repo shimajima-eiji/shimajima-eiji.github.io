@@ -2,9 +2,9 @@ name: Update ICS Feeds
 
 on:
   workflow_dispatch:
-  schedule:
-    # JST 09:00 = UTC 00:00
-    - cron: "0 0 * * *"
+  # schedule は API キー取得後に有効化する
+  # schedule:
+  #   - cron: "0 0 * * *"  # JST 09:00 = UTC 00:00
 
 permissions:
   contents: write
