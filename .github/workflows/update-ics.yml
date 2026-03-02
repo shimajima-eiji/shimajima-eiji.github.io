@@ -28,12 +28,8 @@ jobs:
 
       - name: Generate all ICS
         env:
-          CONNPASS_API_KEY: ${{ secrets.CONNPASS_API_KEY }}
           FEEDS_YML: feeds.yml
           OUT_DIR: docs
-          CONNPASS_RANGE_DAYS_AHEAD: "365"
-          CONNPASS_RANGE_DAYS_BACK: "0"
-          CONNPASS_COUNT: "100"
         run: python scripts/generate_all_ics.py
 
       - name: Commit if changed

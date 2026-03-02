@@ -1,40 +1,37 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-connpass API v2 から複数団体分の ICS を生成する。
+connpass グループの Atom フィードから ICS を生成する。
 
 目的:
-    feeds.yml に列挙した団体のイベントを connpass API から取得し、
+    feeds.yml に列挙した connpass グループの Atom フィードを取得し、
     docs/{key}.ics として出力する。GitHub Pages で配信することで
     カレンダーアプリから購読可能にする。
 
+    API キー不要。{subdomain}.connpass.com/ja.atom を使う。
+
 使い方:
-    CONNPASS_API_KEY=xxx python scripts/generate_all_ics.py
+    python scripts/generate_all_ics.py
 
 環境変数:
-    CONNPASS_API_KEY          (必須) connpass API v2 キー
-    FEEDS_YML                 feeds.yml のパス（デフォルト: feeds.yml）
-    OUT_DIR                   出力先ディレクトリ（デフォルト: docs）
-    CONNPASS_COUNT            1リクエストの最大取得件数 (1-100, デフォルト: 100)
-    CONNPASS_RANGE_DAYS_AHEAD 何日先まで取得するか（デフォルト: 365）
-    CONNPASS_RANGE_DAYS_BACK  何日前まで取得するか（デフォルト: 0）
+    FEEDS_YML   feeds.yml のパス（デフォルト: feeds.yml）
+    OUT_DIR     出力先ディレクトリ（デフォルト: docs）
 """
 
 from __future__ import annotations
 
-import json
 import os
 import re
 import sys
-import urllib.parse
 import urllib.request
+import xml.etree.ElementTree as ET
 from dataclasses import dataclass
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 from typing import Any, Dict, List, Optional
 
-API_ENDPOINT = "https://connpass.com/api/v2/events/"
 JST = ZoneInfo("Asia/Tokyo")
+ATOM_NS = "http://www.w3.org/2005/Atom"
 
 
 # ---------------------------------------------------------------------------
@@ -49,23 +46,6 @@ def load_feeds_yml(path: str) -> List[Dict[str, Any]]:
     lines = [ln.rstrip("\n") for ln in open(path, "r", encoding="utf-8")]
     feeds: List[Dict[str, Any]] = []
     cur: Optional[Dict[str, Any]] = None
-
-    def parse_list_value(v: str) -> List[Any]:
-        v = v.strip()
-        if not (v.startswith("[") and v.endswith("]")):
-            return []
-        inner = v[1:-1].strip()
-        if not inner:
-            return []
-        parts = [p.strip() for p in inner.split(",")]
-        out: List[Any] = []
-        for p in parts:
-            p = p.strip().strip("'").strip('"')
-            if re.fullmatch(r"-?\d+", p):
-                out.append(int(p))
-            else:
-                out.append(p)
-        return out
 
     for ln in lines:
         if not ln.strip() or ln.strip().startswith("#"):
@@ -85,16 +65,7 @@ def load_feeds_yml(path: str) -> List[Dict[str, Any]]:
             continue
         if ":" in ln:
             k, v = ln.strip().split(":", 1)
-            k = k.strip()
-            v = v.strip()
-            if v.startswith("[") and v.endswith("]"):
-                cur[k] = parse_list_value(v)
-            else:
-                vv = v.strip().strip("'").strip('"')
-                if re.fullmatch(r"-?\d+", vv):
-                    cur[k] = int(vv)
-                else:
-                    cur[k] = vv
+            cur[k.strip()] = v.strip().strip("'").strip('"')
 
     if cur:
         feeds.append(cur)
@@ -106,24 +77,14 @@ def load_feeds_yml(path: str) -> List[Dict[str, Any]]:
 # ---------------------------------------------------------------------------
 
 @dataclass(frozen=True)
-class ConnpassEvent:
-    event_id: int
+class CalEvent:
+    uid: str
     title: str
-    event_url: str
-    started_at: datetime   # tz-aware JST
-    ended_at: datetime     # tz-aware JST
-    place: str
-    address: str
-    catch: str
-    description: str
-
-    @property
-    def location(self) -> str:
-        p = (self.place or "").strip()
-        a = (self.address or "").strip()
-        if p and a and a not in p:
-            return f"{p} {a}"
-        return p or a
+    url: str
+    published: datetime    # tz-aware（投稿日時）
+    started_at: datetime   # tz-aware（イベント開始日時）
+    ended_at: datetime     # tz-aware（イベント終了日時）
+    summary: str
 
 
 # ---------------------------------------------------------------------------
@@ -155,144 +116,101 @@ def parse_iso_datetime(s: str) -> datetime:
     return dt
 
 
+# 「開催日時: 2026/04/18 10:00 ～ 18:00」形式から開始・終了を抽出する
+_DATETIME_PATTERN = re.compile(
+    r"開催日時[:：]\s*(\d{4}/\d{2}/\d{2})\s+(\d{2}:\d{2})\s*[～〜~]\s*(\d{2}:\d{2})"
+)
+
+def parse_event_datetime(summary: str, fallback: datetime) -> tuple[datetime, datetime]:
+    """
+    connpass Atom の summary 先頭にある開催日時テキストから
+    (started_at, ended_at) を JST で返す。
+    パースできなければ fallback（投稿日時）を started_at、+1h を ended_at にする。
+    """
+    m = _DATETIME_PATTERN.search(summary)
+    if not m:
+        ended = fallback.replace(hour=min(fallback.hour + 1, 23))
+        return fallback, ended
+
+    date_str, start_str, end_str = m.group(1), m.group(2), m.group(3)
+    date_part = date_str.replace("/", "-")
+    try:
+        started = datetime.fromisoformat(f"{date_part}T{start_str}:00").replace(tzinfo=JST)
+        ended = datetime.fromisoformat(f"{date_part}T{end_str}:00").replace(tzinfo=JST)
+        if ended <= started:
+            ended = started.replace(hour=min(started.hour + 1, 23))
+        return started, ended
+    except ValueError:
+        ended = fallback.replace(hour=min(fallback.hour + 1, 23))
+        return fallback, ended
+
+
+def ns(tag: str) -> str:
+    return f"{{{ATOM_NS}}}{tag}"
+
+
 # ---------------------------------------------------------------------------
-# connpass API
+# Atom フィード取得・パース
 # ---------------------------------------------------------------------------
 
-def http_get_json(url: str, api_key: str) -> Dict[str, Any]:
+def fetch_atom(subdomain: str) -> List[CalEvent]:
+    """
+    {subdomain}.connpass.com/ja.atom を取得してイベント一覧を返す。
+    認証不要。取得件数は connpass 側の固定値（通常 10件）。
+    """
+    url = f"https://{subdomain}.connpass.com/ja.atom"
     req = urllib.request.Request(url, method="GET")
-    req.add_header("X-API-Key", api_key)
-    req.add_header("User-Agent", "multi-ics-generator/1.0")
-    req.add_header("Accept", "application/json")
+    req.add_header("User-Agent", "connpass-ics-generator/2.0")
 
     try:
         with urllib.request.urlopen(req, timeout=30) as resp:
-            return json.loads(resp.read().decode("utf-8"))
+            body = resp.read()
     except urllib.error.HTTPError as e:
-        try:
-            detail = e.read().decode("utf-8", errors="replace")
-        except Exception:
-            detail = ""
-        if e.code in (401, 403):
-            die(f"API 認証に失敗 (HTTP {e.code}). CONNPASS_API_KEY を確認。詳細: {detail[:400]}")
-        die(f"HTTPError (HTTP {e.code}): {detail[:400]}")
+        die(f"HTTP {e.code}: {url}")
     except urllib.error.URLError as e:
-        die(f"URL error: {e}")
-    except json.JSONDecodeError as e:
-        die(f"JSON decode error: {e}")
+        die(f"URL error ({url}): {e}")
 
+    try:
+        root = ET.fromstring(body)
+    except ET.ParseError as e:
+        die(f"Atom parse error ({url}): {e}")
 
-def to_int_list(x: Any) -> List[int]:
-    if x is None:
-        return []
-    if isinstance(x, int):
-        return [x]
-    if isinstance(x, list):
-        out = []
-        for v in x:
-            if isinstance(v, int):
-                out.append(v)
-            elif isinstance(v, str) and re.fullmatch(r"\d+", v.strip()):
-                out.append(int(v.strip()))
-            else:
-                die(f"ID 配列に数値以外が混入: {v!r}")
-        return out
-    if isinstance(x, str):
-        x = x.strip()
-        return [int(x)] if x else []
-    die(f"ID 指定の型が不正: {type(x)}")
+    events: List[CalEvent] = []
+    for entry in root.findall(ns("entry")):
+        title_el = entry.find(ns("title"))
+        link_el = entry.find(ns("link"))
+        pub_el = entry.find(ns("published"))
+        if pub_el is None:
+            pub_el = entry.find(ns("updated"))
+        summary_el = entry.find(ns("summary"))
+        id_el = entry.find(ns("id"))
 
-
-def build_query_params(feed: Dict[str, Any], count: int, order: int) -> Dict[str, str]:
-    params: Dict[str, str] = {
-        "count": str(max(1, min(count, 100))),
-        "order": str(order),
-    }
-
-    subdomain = str(feed.get("subdomain") or "").strip()
-    keyword = str(feed.get("keyword") or "").strip()
-    group_ids = to_int_list(feed.get("group_id"))
-    event_ids = to_int_list(feed.get("event_id"))
-
-    if subdomain:
-        params["subdomain"] = subdomain
-    if group_ids:
-        params["group_id"] = ",".join(str(x) for x in group_ids)
-    if event_ids:
-        params["event_id"] = ",".join(str(x) for x in event_ids)
-    if keyword:
-        params["keyword"] = keyword
-
-    if not (subdomain or group_ids or event_ids or keyword):
-        die(
-            f"フィルタ未指定: key={feed.get('key')!r}"
-            "（subdomain / group_id / event_id / keyword のどれか必須）"
-        )
-    return params
-
-
-def fetch_events(
-    api_key: str,
-    feed: Dict[str, Any],
-    count: int = 100,
-    days_back: int = 0,
-    days_ahead: int = 365,
-    order: int = 2,
-) -> List[ConnpassEvent]:
-    params = build_query_params(feed, count=count, order=order)
-    url = f"{API_ENDPOINT}?{urllib.parse.urlencode(params)}"
-    data = http_get_json(url, api_key=api_key)
-
-    raw_events = data.get("events")
-    if not isinstance(raw_events, list):
-        die(f"API レスポンス形式が想定外。keys={list(data.keys())}")
-
-    now_jst = datetime.now(JST)
-    window_start = now_jst - timedelta(days=days_back)
-    window_end = now_jst + timedelta(days=days_ahead)
-
-    out: List[ConnpassEvent] = []
-    for ev in raw_events:
-        if not isinstance(ev, dict):
+        if title_el is None or link_el is None or pub_el is None:
             continue
+
+        title = (title_el.text or "").strip()
+        url_href = link_el.get("href", "").strip()
+        summary = (summary_el.text or "") if summary_el is not None else ""
+        uid = (id_el.text if id_el is not None else url_href) or url_href
+
         try:
-            started = parse_iso_datetime(str(ev.get("started_at", ""))).astimezone(JST)
-            ended = parse_iso_datetime(str(ev.get("ended_at", ""))).astimezone(JST)
+            published = parse_iso_datetime(pub_el.text or "")
         except Exception:
             continue
 
-        if not (window_start <= started <= window_end):
-            continue
+        started_at, ended_at = parse_event_datetime(summary, published)
 
-        eid = ev.get("event_id")
-        if eid is None:
-            continue
-        try:
-            event_id_int = int(eid)
-        except Exception:
-            continue
+        events.append(CalEvent(
+            uid=uid,
+            title=title,
+            url=url_href,
+            published=published,
+            started_at=started_at,
+            ended_at=ended_at,
+            summary=summary,
+        ))
 
-        title = str(ev.get("title") or "").strip() or f"connpass event {event_id_int}"
-        event_url = str(
-            ev.get("event_url") or ev.get("public_url") or ev.get("url") or ""
-        ).strip() or f"https://connpass.com/event/{event_id_int}/"
-
-        out.append(
-            ConnpassEvent(
-                event_id=event_id_int,
-                title=title,
-                event_url=event_url,
-                started_at=started,
-                ended_at=ended,
-                place=str(ev.get("place") or "").strip(),
-                address=str(ev.get("address") or "").strip(),
-                catch=str(ev.get("catch") or "").strip(),
-                description=str(ev.get("description") or "").strip(),
-            )
-        )
-
-    out.sort(key=lambda x: x.started_at)
-    return out
+    return events
 
 
 # ---------------------------------------------------------------------------
@@ -329,22 +247,12 @@ def ics_fold_line(line: str, limit: int = 75) -> List[str]:
     return parts
 
 
-def fmt_dt_jst(dt: datetime) -> str:
-    return dt.astimezone(JST).strftime("%Y%m%dT%H%M%S")
-
-
 def fmt_dtstamp_utc() -> str:
     return datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
 
 
-def html_to_text(s: str) -> str:
-    if not s:
-        return ""
-    s = s.replace("<br>", "\n").replace("<br/>", "\n").replace("<br />", "\n")
-    s = re.sub(r"<[^>]+>", " ", s)
-    s = re.sub(r"[ \t]+\n", "\n", s)
-    s = re.sub(r"\n{3,}", "\n\n", s)
-    return s.strip()
+def fmt_dt_jst(dt: datetime) -> str:
+    return dt.astimezone(JST).strftime("%Y%m%dT%H%M%S")
 
 
 VTIMEZONE_ASIA_TOKYO = [
@@ -361,11 +269,11 @@ VTIMEZONE_ASIA_TOKYO = [
 ]
 
 
-def build_ics(events: List[ConnpassEvent], cal_name: str) -> str:
+def build_ics(events: List[CalEvent], cal_name: str) -> str:
     lines: List[str] = [
         "BEGIN:VCALENDAR",
         "VERSION:2.0",
-        "PRODID:-//shimajima-eiji//multi-connpass-ics//JA",
+        "PRODID:-//shimajima-eiji//connpass-atom-ics//JA",
         "CALSCALE:GREGORIAN",
         "METHOD:PUBLISH",
         f"X-WR-CALNAME:{ics_escape(cal_name)}",
@@ -375,25 +283,20 @@ def build_ics(events: List[ConnpassEvent], cal_name: str) -> str:
     dtstamp = fmt_dtstamp_utc()
 
     for ev in events:
-        host = urllib.parse.urlparse(ev.event_url).hostname or "connpass.com"
-        uid = f"connpass-{ev.event_id}@{host}"
-
-        desc_parts = [p for p in [ev.catch, html_to_text(ev.description), ev.event_url] if p]
+        desc_parts = [p for p in [ev.summary.strip(), ev.url] if p]
         description = "\n\n".join(desc_parts)
 
         vevent_lines: List[str] = [
             "BEGIN:VEVENT",
-            f"UID:{ics_escape(uid)}",
+            f"UID:{ics_escape(ev.uid)}",
             f"DTSTAMP:{dtstamp}",
             f"DTSTART;TZID=Asia/Tokyo:{fmt_dt_jst(ev.started_at)}",
             f"DTEND;TZID=Asia/Tokyo:{fmt_dt_jst(ev.ended_at)}",
             f"SUMMARY:{ics_escape(ev.title)}",
+            f"DESCRIPTION:{ics_escape(description)}",
+            f"URL:{ics_escape(ev.url)}",
+            "END:VEVENT",
         ]
-        if ev.location:
-            vevent_lines.append(f"LOCATION:{ics_escape(ev.location)}")
-        vevent_lines.append(f"DESCRIPTION:{ics_escape(description)}")
-        vevent_lines.append(f"URL:{ics_escape(ev.event_url)}")
-        vevent_lines.append("END:VEVENT")
 
         for ln in vevent_lines:
             lines.extend(ics_fold_line(ln))
@@ -407,16 +310,8 @@ def build_ics(events: List[ConnpassEvent], cal_name: str) -> str:
 # ---------------------------------------------------------------------------
 
 def main() -> int:
-    api_key = os.getenv("CONNPASS_API_KEY", "").strip()
-    if not api_key:
-        die("CONNPASS_API_KEY が未設定です。")
-
     feeds_path = os.getenv("FEEDS_YML", "feeds.yml")
     out_dir = os.getenv("OUT_DIR", "docs")
-    count = int(os.getenv("CONNPASS_COUNT", "100"))
-    days_ahead = int(os.getenv("CONNPASS_RANGE_DAYS_AHEAD", "365"))
-    days_back = int(os.getenv("CONNPASS_RANGE_DAYS_BACK", "0"))
-
     os.makedirs(out_dir, exist_ok=True)
 
     feeds = load_feeds_yml(feeds_path)
@@ -427,14 +322,13 @@ def main() -> int:
     for feed in feeds:
         key = safe_slug(str(feed.get("key") or ""))
         name = str(feed.get("name") or key)
+        subdomain = str(feed.get("subdomain") or "").strip()
 
-        events = fetch_events(
-            api_key=api_key,
-            feed=feed,
-            count=count,
-            days_back=days_back,
-            days_ahead=days_ahead,
-        )
+        if not subdomain:
+            print(f"SKIP {key}: subdomain 未指定", file=sys.stderr)
+            continue
+
+        events = fetch_atom(subdomain)
 
         ics = build_ics(events, cal_name=name)
         out_path = os.path.join(out_dir, f"{key}.ics")
