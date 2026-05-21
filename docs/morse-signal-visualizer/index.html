@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Morse Signal Visualizer</title>
+  <style>
+    :root {
+      --bg: #020617;
+      --panel: #0f172a;
+      --panel2: #111827;
+      --ink: #f8fafc;
+      --muted: #94a3b8;
+      --line: #334155;
+      --cyan: #a5f3fc;
+      --cyan2: #22d3ee;
+      --accent: rgba(165, 243, 252, 0.16);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at top right, rgba(34, 211, 238, 0.12), transparent 32rem), var(--bg);
+      color: var(--ink);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+    main {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0;
+    }
+    .grid {
+      display: grid;
+      gap: 24px;
+    }
+    .hero {
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+      align-items: stretch;
+    }
+    .card {
+      background: rgba(15, 23, 42, 0.86);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+      overflow: hidden;
+    }
+    .card-inner { padding: 28px; }
+    .eyebrow {
+      color: var(--cyan2);
+      letter-spacing: 0.28em;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: clamp(32px, 5vw, 56px);
+      line-height: 1.08;
+      margin: 0 0 16px;
+      letter-spacing: -0.04em;
+    }
+    h2 {
+      font-size: clamp(22px, 3vw, 30px);
+      margin: 4px 0 8px;
+      letter-spacing: -0.02em;
+    }
+    p { color: #cbd5e1; margin: 0; }
+    .control {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    input {
+      height: 48px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: #020617;
+      color: var(--ink);
+      padding: 0 14px;
+      font-size: 16px;
+      width: 100%;
+    }
+    button {
+      height: 48px;
+      border: 0;
+      border-radius: 14px;
+      background: var(--cyan);
+      color: #0f172a;
+      padding: 0 22px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button:disabled {
+      opacity: 0.6;
+      cursor: wait;
+    }
+    .encoded {
+      margin-top: 18px;
+      background: #020617;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 16px;
+    }
+    .encoded-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    .morse-text {
+      min-height: 52px;
+      color: var(--cyan);
+      font: 700 clamp(20px, 3vw, 28px) ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      overflow-wrap: anywhere;
+    }
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .mini {
+      background: #020617;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px;
+    }
+    .mini .mark {
+      color: var(--cyan);
+      font-size: 32px;
+      line-height: 1;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      margin-bottom: 8px;
+    }
+    .mini .name { color: var(--ink); font-weight: 700; }
+    .mini .desc { color: var(--muted); font-size: 13px; }
+
+    .signal-panel {
+      background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(17, 24, 39, 0.95));
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      height: 100%;
+    }
+    .output-box, .rule-box {
+      background: rgba(2, 6, 23, 0.72);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 18px;
+    }
+    .lamp-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 260px;
+    }
+    .lamp-outer {
+      position: relative;
+      width: 220px;
+      height: 220px;
+      border-radius: 999px;
+      border: 1px solid rgba(165, 243, 252, 0.2);
+      background: rgba(34, 211, 238, 0.06);
+      display: grid;
+      place-items: center;
+      transition: transform 0.15s ease;
+    }
+    .lamp-ring {
+      position: absolute;
+      inset: 30px;
+      border-radius: 999px;
+      border: 1px solid rgba(165, 243, 252, 0.28);
+      opacity: 0.1;
+      transition: all 0.15s ease;
+    }
+    .lamp {
+      width: 128px;
+      height: 128px;
+      border-radius: 999px;
+      border: 8px solid #334155;
+      color: #475569;
+      display: grid;
+      place-items: center;
+      font-size: 52px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      transition: all 0.12s ease;
+    }
+    .lamp.on {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      box-shadow: 0 0 48px rgba(165, 243, 252, 0.7);
+    }
+    .lamp-outer.on { transform: scale(1.04); }
+    .lamp-outer.on .lamp-ring { opacity: 1; transform: scale(1.22); }
+    .current {
+      margin-top: 12px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px;
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+    .current span { color: var(--cyan); }
+    .rules {
+      color: #cbd5e1;
+      font-size: 14px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .structure {
+      margin-top: 24px;
+    }
+    .section-lead {
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 820px;
+    }
+    .word-list {
+      display: grid;
+      gap: 18px;
+      margin-top: 18px;
+    }
+    .word-card {
+      background: #020617;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 16px;
+    }
+    .word-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .word-index {
+      font-size: 12px;
+      color: #64748b;
+    }
+    .word-title {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+    }
+    .gap-pill {
+      color: var(--muted);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 12px;
+    }
+    .letter-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .letter-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px;
+      transition: all 0.12s ease;
+    }
+    .letter-card.active {
+      background: var(--accent);
+      border-color: var(--cyan);
+      transform: translateY(-3px);
+    }
+    .letter-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .letter {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: #020617;
+      display: grid;
+      place-items: center;
+      font-size: 24px;
+      font-weight: 800;
+    }
+    .code {
+      color: var(--cyan);
+      font: 800 26px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    .symbols {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      min-height: 38px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .symbol {
+      height: 32px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: #020617;
+      color: var(--cyan);
+      display: grid;
+      place-items: center;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    .symbol.dot { width: 32px; }
+    .symbol.dash { width: 56px; }
+    .symbol.active {
+      background: var(--cyan);
+      color: #020617;
+      border-color: var(--cyan);
+      transform: scale(1.08);
+    }
+    .tiny-gap {
+      width: 12px;
+      height: 1px;
+      background: #334155;
+    }
+    .durations {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+    .duration {
+      color: #64748b;
+      background: #020617;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 3px 8px;
+      font-size: 11px;
+    }
+    .letter-gap {
+      border-top: 1px solid #1e293b;
+      color: #64748b;
+      font-size: 12px;
+      padding-top: 8px;
+    }
+    .mobile-word-gap {
+      display: none;
+      margin-top: 12px;
+      background: var(--panel);
+      border: 1px solid #1e293b;
+      border-radius: 14px;
+      color: var(--muted);
+      font-size: 12px;
+      padding: 10px 12px;
+    }
+
+    @media (max-width: 860px) {
+      main { width: min(100% - 24px, 720px); padding: 20px 0; }
+      .hero { grid-template-columns: 1fr; }
+      .card-inner { padding: 20px; }
+      .letter-grid { grid-template-columns: 1fr; }
+      .mini-grid { grid-template-columns: 1fr; }
+      .control { grid-template-columns: 1fr; }
+      button { width: 100%; }
+      .gap-pill { display: none; }
+      .mobile-word-gap { display: block; }
+      .lamp-wrap { min-height: 220px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="grid hero">
+      <div class="card">
+        <div class="card-inner">
+          <div class="eyebrow">MORSE SIGNAL VISUALIZER</div>
+          <h1>点・線・間隔で読む通信。</h1>
+          <p>モールス信号は、短い点、長い線、そして無音の間隔で文字を表します。このデモでは、文字がどのように信号へ分解され、どの間隔で読まれるのかを可視化します。</p>
+
+          <div class="control">
+            <input id="messageInput" value="HELLO WORLD" placeholder="MESSAGE" />
+            <button id="playButton">信号を見る</button>
+          </div>
+
+          <div class="encoded">
+            <div class="encoded-head">
+              <span>ENCODED</span>
+              <span id="status">入力した文字をモールス信号に分解します</span>
+            </div>
+            <div id="morseText" class="morse-text"></div>
+          </div>
+
+          <div class="mini-grid">
+            <div class="mini">
+              <div class="mark">・</div>
+              <div class="name">短点</div>
+              <div class="desc">短く光る・短く鳴る</div>
+            </div>
+            <div class="mini">
+              <div class="mark">ー</div>
+              <div class="name">長点</div>
+              <div class="desc">短点の約3倍の長さ</div>
+            </div>
+            <div class="mini">
+              <div class="mark">間</div>
+              <div class="name">区切り</div>
+              <div class="desc">文字や単語を分ける無音</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card signal-panel">
+        <div class="card-inner">
+          <div class="output-box">
+            <div class="eyebrow">SIGNAL OUTPUT</div>
+            <div class="lamp-wrap">
+              <div id="lampOuter" class="lamp-outer">
+                <div class="lamp-ring"></div>
+                <div id="lamp" class="lamp"></div>
+              </div>
+            </div>
+            <div class="current">現在の読み取り: <span id="currentRead">待機中</span></div>
+          </div>
+
+          <div class="rule-box" style="margin-top:18px;">
+            <div class="eyebrow">READING RULE</div>
+            <div class="rules">
+              <div>1. 点と線の組み合わせを1文字として読む。</div>
+              <div>2. 文字と文字の間には少し長い無音が入る。</div>
+              <div>3. 単語と単語の間にはさらに長い無音が入る。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="structure">
+      <div class="card">
+        <div class="card-inner">
+          <div class="eyebrow">SIGNAL STRUCTURE</div>
+          <h2>文字ごとの信号と読み取り順</h2>
+          <p class="section-lead">横に長いタイムラインではなく、1文字ごとに「文字 → モールス → 時間の長さ」を並べて表示します。スマホでは上から順に読むだけで、文字間・単語間も追える構成です。</p>
+          <div id="wordList" class="word-list"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const MORSE = {
+      A: ".-", B: "-...", C: "-.-.", D: "-..", E: ".", F: "..-.", G: "--.", H: "....", I: "..", J: ".---",
+      K: "-.-", L: ".-..", M: "--", N: "-.", O: "---", P: ".--.", Q: "--.-", R: ".-.", S: "...", T: "-",
+      U: "..-", V: "...-", W: ".--", X: "-..-", Y: "-.--", Z: "--..",
+      0: "-----", 1: ".----", 2: "..---", 3: "...--", 4: "....-", 5: ".....", 6: "-....", 7: "--...", 8: "---..", 9: "----."
+    };
+
+    const input = document.getElementById("messageInput");
+    const button = document.getElementById("playButton");
+    const statusEl = document.getElementById("status");
+    const morseText = document.getElementById("morseText");
+    const wordList = document.getElementById("wordList");
+    const lamp = document.getElementById("lamp");
+    const lampOuter = document.getElementById("lampOuter");
+    const currentRead = document.getElementById("currentRead");
+
+    let words = [];
+    let timeline = [];
+    let isPlaying = false;
+    let audioCtx = null;
+
+    function encodeWords(text) {
+      return text
+        .toUpperCase()
+        .split(/\s+/)
+        .filter(Boolean)
+        .map(word => ({
+          raw: word,
+          letters: word
+            .split("")
+            .map(ch => ({ char: ch, code: MORSE[ch] || "" }))
+            .filter(item => item.code)
+        }))
+        .filter(word => word.letters.length > 0);
+    }
+
+    function flattenTimeline(words) {
+      const events = [];
+      words.forEach((word, wordIndex) => {
+        word.letters.forEach((letter, letterIndex) => {
+          letter.code.split("").forEach((symbol, symbolIndex) => {
+            events.push({ type: "signal", symbol, char: letter.char, code: letter.code, word: word.raw, wordIndex, letterIndex, symbolIndex });
+            if (symbolIndex < letter.code.length - 1) {
+              events.push({ type: "gap", gap: "signal", label: "点線の間" });
+            }
+          });
+          if (letterIndex < word.letters.length - 1) {
+            events.push({ type: "gap", gap: "letter", label: "文字の間" });
+          }
+        });
+        if (wordIndex < words.length - 1) {
+          events.push({ type: "gap", gap: "word", label: "単語の間" });
+        }
+      });
+      return events;
+    }
+
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function playTone(duration) {
+      try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        audioCtx = audioCtx || new AudioContext();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.frequency.value = 620;
+        gain.gain.value = 0.045;
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        await sleep(duration);
+        osc.stop();
+      } catch (e) {
+        await sleep(duration);
+      }
+    }
+
+    function setLamp(symbol) {
+      if (!symbol) {
+        lamp.textContent = "";
+        lamp.classList.remove("on");
+        lampOuter.classList.remove("on");
+        return;
+      }
+      lamp.textContent = symbol === "." ? "・" : "ー";
+      lamp.classList.add("on");
+      lampOuter.classList.add("on");
+    }
+
+    function clearActive() {
+      document.querySelectorAll(".letter-card.active, .symbol.active").forEach(el => el.classList.remove("active"));
+    }
+
+    function setActive(event) {
+      clearActive();
+      if (!event || event.type !== "signal") return;
+      const letterCard = document.querySelector(`[data-word-index="${event.wordIndex}"][data-letter-index="${event.letterIndex}"]`);
+      const symbol = document.querySelector(`[data-word-index="${event.wordIndex}"][data-letter-index="${event.letterIndex}"][data-symbol-index="${event.symbolIndex}"]`);
+      if (letterCard) letterCard.classList.add("active");
+      if (symbol) symbol.classList.add("active");
+    }
+
+    function render() {
+      words = encodeWords(input.value);
+      timeline = flattenTimeline(words);
+      morseText.textContent = words.map(word => word.letters.map(letter => letter.code).join(" ")).join(" / ") || "...";
+      wordList.innerHTML = "";
+
+      words.forEach((word, wordIndex) => {
+        const wordCard = document.createElement("div");
+        wordCard.className = "word-card";
+
+        const head = document.createElement("div");
+        head.className = "word-head";
+        head.innerHTML = `
+          <div>
+            <div class="word-index">WORD ${wordIndex + 1}</div>
+            <div class="word-title">${word.raw}</div>
+          </div>
+          ${wordIndex < words.length - 1 ? '<div class="gap-pill">次の単語まで長い無音</div>' : ''}
+        `;
+        wordCard.appendChild(head);
+
+        const grid = document.createElement("div");
+        grid.className = "letter-grid";
+
+        word.letters.forEach((letter, letterIndex) => {
+          const letterCard = document.createElement("div");
+          letterCard.className = "letter-card";
+          letterCard.dataset.wordIndex = wordIndex;
+          letterCard.dataset.letterIndex = letterIndex;
+
+          const symbols = letter.code.split("").map((symbol, symbolIndex) => {
+            const symbolClass = symbol === "." ? "dot" : "dash";
+            const mark = symbol === "." ? "・" : "ー";
+            const gap = symbolIndex < letter.code.length - 1 ? '<div class="tiny-gap"></div>' : '';
+            return `<div class="symbol ${symbolClass}" data-word-index="${wordIndex}" data-letter-index="${letterIndex}" data-symbol-index="${symbolIndex}">${mark}</div>${gap}`;
+          }).join("");
+
+          const durations = letter.code.split("").map(symbol => `<span class="duration">${symbol === "." ? "短く" : "長く"}</span>`).join("");
+
+          letterCard.innerHTML = `
+            <div class="letter-top">
+              <div class="letter">${letter.char}</div>
+              <div class="code">${letter.code}</div>
+            </div>
+            <div class="symbols">${symbols}</div>
+            <div class="durations">${durations}</div>
+            ${letterIndex < word.letters.length - 1 ? '<div class="letter-gap">次の文字まで少し長い無音</div>' : ''}
+          `;
+          grid.appendChild(letterCard);
+        });
+
+        wordCard.appendChild(grid);
+
+        if (wordIndex < words.length - 1) {
+          const mobileGap = document.createElement("div");
+          mobileGap.className = "mobile-word-gap";
+          mobileGap.textContent = "次の単語まで長い無音";
+          wordCard.appendChild(mobileGap);
+        }
+
+        wordList.appendChild(wordCard);
+      });
+    }
+
+    async function playTimeline() {
+      if (!timeline.length || isPlaying) return;
+      isPlaying = true;
+      button.disabled = true;
+      button.textContent = "再生中";
+      const unit = 150;
+
+      for (let i = 0; i < timeline.length; i++) {
+        const event = timeline[i];
+        setActive(event);
+
+        if (event.type === "signal") {
+          const duration = event.symbol === "." ? unit : unit * 3;
+          setLamp(event.symbol);
+          statusEl.textContent = event.symbol === "." ? `短点: ${event.char} の一部` : `長点: ${event.char} の一部`;
+          currentRead.textContent = `${event.char} = ${event.code}`;
+          await playTone(duration);
+          setLamp(null);
+          await sleep(unit);
+        } else {
+          const duration = event.gap === "signal" ? unit : event.gap === "letter" ? unit * 3 : unit * 7;
+          statusEl.textContent = event.label;
+          currentRead.textContent = event.label;
+          setLamp(null);
+          await sleep(duration);
+        }
+      }
+
+      clearActive();
+      setLamp(null);
+      statusEl.textContent = "再生完了。点・線・間隔の並びで文字を読みます";
+      currentRead.textContent = "待機中";
+      isPlaying = false;
+      button.disabled = false;
+      button.textContent = "信号を見る";
+    }
+
+    input.addEventListener("input", render);
+    button.addEventListener("click", playTimeline);
+    render();
+  </script>
+</body>
+</html>

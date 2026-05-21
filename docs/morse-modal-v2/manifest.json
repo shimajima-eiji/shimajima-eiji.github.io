@@ -1,0 +1,30 @@
+{
+  "name": "morse_modal_integrated_design_v2",
+  "purpose": "過去方針に戻したモールス信号UIへ、ひよこ状態画像と読み方モーダルを組み込む",
+  "design_policy": [
+    "画面の主役はモールス信号の読み解き",
+    "かわいい要素は補助役",
+    "英語見出しは避け、日本語中心にする",
+    "LETTER MAP/TIMELINE相当は、横一体の信号分解ビューとして統合する",
+    "スマホで横スクロールを強制しない",
+    "モーダルはキャラ説明ではなく、信号の読み方補足に使う"
+  ],
+  "states": {
+    "idle": {
+      "label": "待機",
+      "path": "assets/chick/chick_idle.jpg"
+    },
+    "dot": {
+      "label": "短点",
+      "path": "assets/chick/chick_dot.jpg"
+    },
+    "dash": {
+      "label": "長点",
+      "path": "assets/chick/chick_dash.jpg"
+    },
+    "done": {
+      "label": "完了",
+      "path": "assets/chick/chick_done.jpg"
+    }
+  }
+}

@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>モールス信号の読み解き</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --panel: rgba(15, 23, 42, .92);
+      --panel-2: #101b2e;
+      --line: rgba(148, 163, 184, .26);
+      --ink: #f8fafc;
+      --muted: #9ca3af;
+      --soft: #dbeafe;
+      --cyan: #67e8f9;
+      --cyan-soft: rgba(103, 232, 249, .13);
+      --amber: #fde68a;
+      --amber-strong: #f59e0b;
+      --amber-soft: rgba(245, 158, 11, .16);
+      --green: #86efac;
+      --shadow: 0 24px 80px rgba(0,0,0,.32);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(103, 232, 249, .12), transparent 28rem),
+        radial-gradient(circle at 90% 12%, rgba(245, 158, 11, .10), transparent 28rem),
+        linear-gradient(180deg, #07111f, #020617);
+      color: var(--ink);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      padding: 20px;
+    }
+
+    main {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+    }
+
+    .shell {
+      display: grid;
+      gap: 18px;
+    }
+
+    .top {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 220px;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      padding: clamp(22px, 4vw, 34px);
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--cyan);
+      background: var(--cyan-soft);
+      border: 1px solid rgba(103,232,249,.28);
+      border-radius: 999px;
+      padding: 6px 11px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 5vw, 52px);
+      letter-spacing: -0.04em;
+      line-height: 1.08;
+    }
+
+    .lead {
+      margin: 14px 0 0;
+      color: var(--muted);
+      line-height: 1.85;
+      max-width: 740px;
+      font-size: 15px;
+    }
+
+    .controls {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto auto;
+      gap: 10px;
+    }
+
+    input {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #020617;
+      color: var(--ink);
+      padding: 14px 16px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: rgba(103,232,249,.7);
+      box-shadow: 0 0 0 3px rgba(103,232,249,.14);
+    }
+
+    button {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #172033;
+      color: var(--ink);
+      padding: 12px 16px;
+      font-weight: 900;
+      cursor: pointer;
+      transition: transform .15s ease, border-color .15s ease, background .15s ease;
+    }
+
+    button:hover {
+      transform: translateY(-1px);
+      border-color: rgba(103,232,249,.65);
+    }
+
+    .primary {
+      color: #021018;
+      background: var(--cyan);
+      border-color: var(--cyan);
+    }
+
+    .guide {
+      padding: 14px;
+      display: grid;
+      align-content: start;
+      gap: 10px;
+      box-shadow: none;
+    }
+
+    .guide-frame {
+      position: relative;
+      min-height: 170px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(245,158,11,.33);
+      border-radius: 22px;
+      background: #020617;
+      overflow: hidden;
+    }
+
+    .guide-frame img {
+      width: 132px;
+      height: 132px;
+      object-fit: contain;
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 12px 34px rgba(0,0,0,.28);
+      transition: transform .2s ease, filter .2s ease;
+    }
+
+    .guide-frame.dot img {
+      transform: translateY(-6px) rotate(-2deg);
+      filter: drop-shadow(0 0 15px rgba(245,158,11,.44));
+    }
+
+    .guide-frame.dash img {
+      transform: scale(1.05) rotate(1deg);
+      filter: drop-shadow(0 0 18px rgba(245,158,11,.44));
+    }
+
+    .guide-frame.done img {
+      transform: translateY(-4px) scale(1.03);
+      filter: drop-shadow(0 0 18px rgba(134,239,172,.38));
+    }
+
+    .state-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: var(--amber);
+      border: 1px solid rgba(245,158,11,.42);
+      background: rgba(2,6,23,.92);
+      border-radius: 999px;
+      padding: 5px 9px;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .guide small {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .guide button {
+      padding: 10px 12px;
+      border-radius: 14px;
+      color: var(--cyan);
+      background: rgba(103,232,249,.08);
+      border-color: rgba(103,232,249,.28);
+    }
+
+    .readout {
+      padding: 18px;
+    }
+
+    .readout-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .readout h2 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .mini-dot, .mini-dash {
+      display: inline-block;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--amber);
+    }
+
+    .mini-dot { width: 10px; }
+    .mini-dash { width: 30px; }
+
+    .signal-board {
+      display: grid;
+      gap: 12px;
+    }
+
+    .char-row {
+      display: grid;
+      grid-template-columns: 84px minmax(0,1fr) 86px;
+      gap: 12px;
+      align-items: center;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #020617;
+    }
+
+    .char-row.active {
+      border-color: rgba(103,232,249,.8);
+      box-shadow: 0 0 0 3px rgba(103,232,249,.10);
+    }
+
+    .char-mark {
+      display: grid;
+      place-items: center;
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      background: #111827;
+      border: 1px solid var(--line);
+      font-size: 28px;
+      font-weight: 950;
+    }
+
+    .signal-track {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .pulse {
+      position: relative;
+      height: 18px;
+      border-radius: 999px;
+      background: #334155;
+      overflow: hidden;
+      border: 1px solid rgba(148,163,184,.18);
+    }
+
+    .pulse.dot { width: 34px; }
+    .pulse.dash { width: 86px; }
+
+    .pulse::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      transform: scaleX(0);
+      transform-origin: left;
+      background: linear-gradient(90deg, var(--amber), #fff7ed);
+    }
+
+    .pulse.active {
+      box-shadow: 0 0 20px rgba(245,158,11,.5);
+      border-color: rgba(245,158,11,.8);
+    }
+
+    .pulse.active::after {
+      transform: scaleX(1);
+      transition: transform var(--duration, 300ms) linear;
+    }
+
+    .duration {
+      color: var(--muted);
+      font-size: 13px;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .current-note {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+      border: 1px solid var(--line);
+      background: rgba(2,6,23,.62);
+      border-radius: 18px;
+      padding: 13px 14px;
+      color: #cbd5e1;
+      line-height: 1.65;
+      font-size: 14px;
+    }
+
+    .status-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 72px;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 13px;
+      font-weight: 900;
+      color: #020617;
+      background: var(--amber);
+    }
+
+    .tips {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 14px;
+    }
+
+    .tip {
+      padding: 16px;
+    }
+
+    .tip h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+
+    .tip p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      display: none;
+      place-items: center;
+      padding: 18px;
+      background: rgba(2,6,23,.72);
+      backdrop-filter: blur(8px);
+      z-index: 10;
+    }
+
+    .modal-backdrop.open {
+      display: grid;
+    }
+
+    .modal {
+      width: min(880px, 100%);
+      max-height: min(760px, 92vh);
+      overflow: auto;
+      border-radius: 28px;
+      background: #0f172a;
+      border: 1px solid var(--line);
+      box-shadow: 0 30px 120px rgba(0,0,0,.58);
+      padding: 24px;
+    }
+
+    .modal-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 18px;
+    }
+
+    .modal-head h2 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: -0.03em;
+    }
+
+    .close {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      padding: 0;
+      font-size: 18px;
+    }
+
+    .modal-body {
+      display: grid;
+      grid-template-columns: 240px minmax(0,1fr);
+      gap: 20px;
+      align-items: start;
+    }
+
+    .modal-image {
+      display: grid;
+      place-items: center;
+      min-height: 260px;
+      border: 1px solid rgba(245,158,11,.35);
+      background: #020617;
+      border-radius: 24px;
+      overflow: hidden;
+    }
+
+    .modal-image img {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      background: white;
+      border-radius: 20px;
+    }
+
+    .modal-copy {
+      color: #cbd5e1;
+      line-height: 1.85;
+      margin: 0;
+    }
+
+    .decode-table {
+      margin-top: 16px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .decode-row {
+      display: grid;
+      grid-template-columns: 92px minmax(0, 1fr);
+      gap: 10px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #020617;
+    }
+
+    .decode-row strong {
+      color: var(--cyan);
+    }
+
+    .state-list {
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 10px;
+    }
+
+    .state-card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #020617;
+      padding: 9px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .state-card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      background: white;
+      border-radius: 12px;
+    }
+
+    .state-card span {
+      display: block;
+      margin-top: 6px;
+      font-weight: 900;
+    }
+
+    @media (max-width: 880px) {
+      body { padding: 12px; }
+      .top { grid-template-columns: 1fr; }
+      .guide {
+        grid-template-columns: 170px minmax(0,1fr);
+        align-items: center;
+      }
+      .guide button {
+        grid-column: 1 / -1;
+      }
+      .guide-frame { min-height: 150px; }
+      .guide-frame img {
+        width: 118px;
+        height: 118px;
+      }
+      .controls {
+        grid-template-columns: 1fr;
+      }
+      .char-row {
+        grid-template-columns: 62px minmax(0,1fr);
+      }
+      .duration {
+        grid-column: 2;
+        text-align: left;
+      }
+      .tips {
+        grid-template-columns: 1fr;
+      }
+      .modal-body {
+        grid-template-columns: 1fr;
+      }
+      .state-list {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+    }
+
+    @media (max-width: 520px) {
+      .readout-head {
+        display: block;
+      }
+      .legend {
+        margin-top: 10px;
+      }
+      .guide {
+        grid-template-columns: 1fr;
+      }
+      .current-note {
+        grid-template-columns: 1fr;
+      }
+      .status-chip {
+        width: fit-content;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="top">
+      <div class="panel hero">
+        <div class="tag">読み解きビュー</div>
+        <h1>モールス信号を、短点と長点に分けて見る</h1>
+        <p class="lead">
+          入力した文字を、短く光る「短点」と長く光る「長点」に分けて表示します。丸暗記ではなく、いま読んでいる位置・長さ・区切りが見える画面です。
+        </p>
+        <div class="controls">
+          <input id="textInput" value="SOS" aria-label="変換する文字" />
+          <button id="playButton" class="primary">再生する</button>
+          <button id="resetButton">戻す</button>
+        </div>
+      </div>
+
+      <aside class="panel guide">
+        <div id="guideFrame" class="guide-frame idle">
+          <img id="guideImage" src="assets/chick/chick_idle.jpg" alt="通信状態を示すひよこ" />
+          <div id="stateBadge" class="state-badge">待機</div>
+        </div>
+        <div>
+          <strong>通信状態</strong><br />
+          <small id="guideText">信号の状態に合わせて、補助キャラが反応します。</small>
+        </div>
+        <button id="openModal">信号の読み方を見る</button>
+      </aside>
+    </section>
+
+    <section class="panel readout">
+      <div class="readout-head">
+        <h2>信号分解ビュー</h2>
+        <div class="legend">
+          <span class="legend-item"><span class="mini-dot"></span>短点</span>
+          <span class="legend-item"><span class="mini-dash"></span>長点</span>
+          <span class="legend-item">左から順に読む</span>
+        </div>
+      </div>
+
+      <div id="signalBoard" class="signal-board"></div>
+
+      <div class="current-note">
+        <div id="currentNote">再生すると、現在読んでいる短点・長点が光ります。</div>
+        <div id="statusChip" class="status-chip">待機</div>
+      </div>
+    </section>
+
+    <section class="tips">
+      <div class="panel tip">
+        <h3>短点を見る</h3>
+        <p>短点は短く光る信号です。この画面では小さなバーで表示します。</p>
+      </div>
+      <div class="panel tip">
+        <h3>長点を見る</h3>
+        <p>長点は短点より長く続く信号です。この画面では横に長いバーで表示します。</p>
+      </div>
+      <div class="panel tip">
+        <h3>文字ごとに区切る</h3>
+        <p>同じ記号列でも、区切りがあることで文字として読めます。文字カード単位でまとまりを見ます。</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="modalBackdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <div class="modal-head">
+        <div>
+          <div class="tag">補足</div>
+          <h2 id="modalTitle">いまの信号の読み方</h2>
+        </div>
+        <button id="closeModal" class="close" aria-label="閉じる">×</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-image">
+          <img id="modalImage" src="assets/chick/chick_idle.jpg" alt="現在の通信状態" />
+        </div>
+
+        <div>
+          <p id="modalCopy" class="modal-copy">
+            短点と長点は、音や光の長さの違いとして読みます。この画面では、短点を短いバー、長点を長いバーとして表示しています。
+          </p>
+
+          <div class="decode-table">
+            <div class="decode-row"><strong>短点</strong><span>短く光る。画面では短いバーとして表示。</span></div>
+            <div class="decode-row"><strong>長点</strong><span>短点より長く光る。画面では長いバーとして表示。</span></div>
+            <div class="decode-row"><strong>区切り</strong><span>文字ごとにカードを分けることで、どこまでが一文字かを見えるようにする。</span></div>
+          </div>
+
+          <div class="state-list">
+            <div class="state-card"><img src="assets/chick/chick_idle.jpg" alt="待機"><span>待機</span></div>
+            <div class="state-card"><img src="assets/chick/chick_dot.jpg" alt="短点"><span>短点</span></div>
+            <div class="state-card"><img src="assets/chick/chick_dash.jpg" alt="長点"><span>長点</span></div>
+            <div class="state-card"><img src="assets/chick/chick_done.jpg" alt="完了"><span>完了</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const MORSE = {
+      A: ".-", B: "-...", C: "-.-.", D: "-..", E: ".", F: "..-.", G: "--.", H: "....",
+      I: "..", J: ".---", K: "-.-", L: ".-..", M: "--", N: "-.", O: "---", P: ".--.",
+      Q: "--.-", R: ".-.", S: "...", T: "-", U: "..-", V: "...-", W: ".--", X: "-..-",
+      Y: "-.--", Z: "--..", 0: "-----", 1: ".----", 2: "..---", 3: "...--", 4: "....-",
+      5: ".....", 6: "-....", 7: "--...", 8: "---..", 9: "----."
+    };
+
+    const CHICK_IMAGES = {
+      idle: "assets/chick/chick_idle.jpg",
+      dot: "assets/chick/chick_dot.jpg",
+      dash: "assets/chick/chick_dash.jpg",
+      done: "assets/chick/chick_done.jpg"
+    };
+
+    const STATE_LABELS = {
+      idle: "待機",
+      dot: "短点",
+      dash: "長点",
+      done: "完了"
+    };
+
+    const STATE_TEXT = {
+      idle: "再生すると、短点・長点に合わせて反応します。",
+      dot: "短点です。短く光る信号を見ています。",
+      dash: "長点です。短点より長い信号を見ています。",
+      done: "最後まで読み終わりました。文字ごとの区切りを確認できます。"
+    };
+
+    const input = document.getElementById("textInput");
+    const playButton = document.getElementById("playButton");
+    const resetButton = document.getElementById("resetButton");
+    const signalBoard = document.getElementById("signalBoard");
+    const currentNote = document.getElementById("currentNote");
+    const statusChip = document.getElementById("statusChip");
+
+    const guideFrame = document.getElementById("guideFrame");
+    const guideImage = document.getElementById("guideImage");
+    const guideText = document.getElementById("guideText");
+    const stateBadge = document.getElementById("stateBadge");
+
+    const modalBackdrop = document.getElementById("modalBackdrop");
+    const openModal = document.getElementById("openModal");
+    const closeModal = document.getElementById("closeModal");
+    const modalImage = document.getElementById("modalImage");
+    const modalCopy = document.getElementById("modalCopy");
+
+    let steps = [];
+    let timer = null;
+
+    function charsFromInput() {
+      return input.value.toUpperCase().split("").filter((char) => MORSE[char]);
+    }
+
+    function makeSteps(chars) {
+      const next = [];
+      chars.forEach((char, charIndex) => {
+        MORSE[char].split("").forEach((symbol, symbolIndex) => {
+          next.push({
+            char,
+            charIndex,
+            symbol,
+            symbolIndex,
+            duration: symbol === "." ? 320 : 760
+          });
+        });
+      });
+      return next;
+    }
+
+    function renderBoard() {
+      const chars = charsFromInput();
+      steps = makeSteps(chars);
+      signalBoard.innerHTML = "";
+
+      chars.forEach((char, charIndex) => {
+        const row = document.createElement("div");
+        row.className = "char-row";
+        row.dataset.charIndex = String(charIndex);
+
+        const mark = document.createElement("div");
+        mark.className = "char-mark";
+        mark.textContent = char;
+
+        const track = document.createElement("div");
+        track.className = "signal-track";
+
+        MORSE[char].split("").forEach((symbol, symbolIndex) => {
+          const pulse = document.createElement("div");
+          pulse.className = "pulse " + (symbol === "." ? "dot" : "dash");
+          pulse.dataset.charIndex = String(charIndex);
+          pulse.dataset.symbolIndex = String(symbolIndex);
+          pulse.style.setProperty("--duration", symbol === "." ? "320ms" : "760ms");
+          pulse.title = symbol === "." ? "短点" : "長点";
+          track.appendChild(pulse);
+        });
+
+        const duration = document.createElement("div");
+        duration.className = "duration";
+        duration.textContent = MORSE[char].replaceAll(".", "・").replaceAll("-", "ー");
+
+        row.appendChild(mark);
+        row.appendChild(track);
+        row.appendChild(duration);
+        signalBoard.appendChild(row);
+      });
+
+      setState("idle");
+      currentNote.textContent = "再生すると、現在読んでいる短点・長点が光ります。";
+    }
+
+    function setState(state) {
+      guideImage.src = CHICK_IMAGES[state];
+      modalImage.src = CHICK_IMAGES[state];
+      guideFrame.className = "guide-frame " + state;
+      stateBadge.textContent = STATE_LABELS[state];
+      statusChip.textContent = STATE_LABELS[state];
+      guideText.textContent = STATE_TEXT[state];
+      modalCopy.textContent = STATE_TEXT[state] + " 短点と長点の長さ、文字ごとの区切りを見ながら読むための補助表示です。";
+    }
+
+    function clearActive() {
+      document.querySelectorAll(".char-row.active").forEach((el) => el.classList.remove("active"));
+      document.querySelectorAll(".pulse.active").forEach((el) => {
+        el.classList.remove("active");
+        void el.offsetWidth;
+      });
+    }
+
+    function stop() {
+      if (timer) {
+        clearTimeout(timer);
+        timer = null;
+      }
+      clearActive();
+      setState("idle");
+    }
+
+    function playAt(index) {
+      clearActive();
+
+      if (index >= steps.length) {
+        setState("done");
+        currentNote.textContent = "最後まで再生しました。文字ごとのまとまりを確認できます。";
+        return;
+      }
+
+      const step = steps[index];
+      const state = step.symbol === "." ? "dot" : "dash";
+      setState(state);
+
+      const row = document.querySelector(`.char-row[data-char-index="${step.charIndex}"]`);
+      const pulse = document.querySelector(`.pulse[data-char-index="${step.charIndex}"][data-symbol-index="${step.symbolIndex}"]`);
+
+      if (row) row.classList.add("active");
+      if (pulse) pulse.classList.add("active");
+
+      currentNote.textContent = `${step.char} の ${step.symbol === "." ? "短点" : "長点"} を読んでいます。${step.symbol === "." ? "短く光る信号です。" : "短点より長く続く信号です。"}`;
+
+      timer = setTimeout(() => playAt(index + 1), step.duration + 220);
+    }
+
+    playButton.addEventListener("click", () => {
+      stop();
+      renderBoard();
+      playAt(0);
+    });
+
+    resetButton.addEventListener("click", () => {
+      input.value = "SOS";
+      stop();
+      renderBoard();
+    });
+
+    input.addEventListener("input", () => {
+      stop();
+      renderBoard();
+    });
+
+    openModal.addEventListener("click", () => modalBackdrop.classList.add("open"));
+    closeModal.addEventListener("click", () => modalBackdrop.classList.remove("open"));
+    modalBackdrop.addEventListener("click", (event) => {
+      if (event.target === modalBackdrop) modalBackdrop.classList.remove("open");
+    });
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") modalBackdrop.classList.remove("open");
+    });
+
+    renderBoard();
+  </script>
+</body>
+</html>

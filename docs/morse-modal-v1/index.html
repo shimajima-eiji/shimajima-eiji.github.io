@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>モールス信号ビジュアライザー モーダル組み込み版</title>
+  <style>
+    :root {
+      --bg: #020617;
+      --panel: #0f172a;
+      --panel-2: #111827;
+      --line: #334155;
+      --ink: #f8fafc;
+      --muted: #94a3b8;
+      --cyan: #67e8f9;
+      --cyan-soft: rgba(103,232,249,.13);
+      --amber: #fde68a;
+      --amber-soft: rgba(251,191,36,.14);
+      --green: #86efac;
+      --red: #fca5a5;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top left, rgba(103,232,249,.13), transparent 34rem),
+        radial-gradient(circle at bottom right, rgba(251,191,36,.1), transparent 34rem),
+        var(--bg);
+      color: var(--ink);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      padding: 24px;
+    }
+
+    main {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) 320px;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .card {
+      background: rgba(15,23,42,.92);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: 0 24px 80px rgba(0,0,0,.32);
+    }
+
+    .intro {
+      padding: clamp(22px, 4vw, 38px);
+    }
+
+    .eyebrow {
+      color: var(--cyan);
+      letter-spacing: .2em;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 5vw, 56px);
+      line-height: 1.05;
+    }
+
+    .lead {
+      margin: 16px 0 0;
+      max-width: 660px;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .input-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto auto;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    input {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #020617;
+      color: var(--ink);
+      padding: 14px 16px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 0 3px rgba(103,232,249,.15);
+    }
+
+    button {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #1e293b;
+      color: var(--ink);
+      padding: 12px 16px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    }
+
+    button:hover {
+      transform: translateY(-1px);
+      border-color: var(--cyan);
+    }
+
+    button.primary {
+      background: var(--cyan);
+      color: #020617;
+      border-color: var(--cyan);
+    }
+
+    .guide-card {
+      position: relative;
+      padding: 20px;
+      display: grid;
+      gap: 14px;
+      align-content: start;
+      overflow: hidden;
+    }
+
+    .guide-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -30px -80px auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: var(--amber-soft);
+      filter: blur(10px);
+    }
+
+    .guide-image-wrap {
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-height: 240px;
+      border-radius: 24px;
+      background: #020617;
+      border: 1px solid rgba(251,191,36,.35);
+      overflow: hidden;
+    }
+
+    .guide-image-wrap img {
+      width: 210px;
+      height: 210px;
+      object-fit: contain;
+      border-radius: 22px;
+      background: white;
+      box-shadow: 0 14px 42px rgba(0,0,0,.28);
+      transition: transform .2s ease, filter .2s ease;
+    }
+
+    .guide-image-wrap.dot img {
+      transform: translateY(-8px) rotate(-2deg);
+      filter: drop-shadow(0 0 18px rgba(251,191,36,.42));
+    }
+
+    .guide-image-wrap.dash img {
+      transform: scale(1.04) rotate(1deg);
+      filter: drop-shadow(0 0 18px rgba(251,191,36,.42));
+    }
+
+    .signal-badge {
+      position: absolute;
+      right: 14px;
+      top: 14px;
+      border: 1px solid rgba(251,191,36,.65);
+      color: var(--amber);
+      background: rgba(2,6,23,.92);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .guide-title {
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .guide-text {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .open-modal {
+      width: 100%;
+      justify-content: center;
+      background: rgba(103,232,249,.1);
+      border-color: rgba(103,232,249,.5);
+      color: var(--cyan);
+    }
+
+    .section {
+      margin-top: 24px;
+      padding: 22px;
+    }
+
+    .section h2 {
+      margin: 0 0 16px;
+      font-size: 22px;
+    }
+
+    .morse-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .letter-card {
+      min-width: 110px;
+      flex: 1 1 130px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #020617;
+      padding: 14px;
+    }
+
+    .letter-card.active {
+      border-color: var(--cyan);
+      box-shadow: 0 0 0 3px rgba(103,232,249,.12);
+    }
+
+    .letter {
+      font-size: 28px;
+      font-weight: 900;
+    }
+
+    .code {
+      display: flex;
+      gap: 6px;
+      margin-top: 12px;
+      align-items: center;
+    }
+
+    .symbol {
+      height: 12px;
+      border-radius: 999px;
+      background: #475569;
+    }
+
+    .symbol.dot {
+      width: 12px;
+    }
+
+    .symbol.dash {
+      width: 36px;
+    }
+
+    .symbol.active {
+      background: var(--amber);
+      box-shadow: 0 0 18px rgba(251,191,36,.6);
+    }
+
+    .timeline {
+      display: grid;
+      gap: 10px;
+    }
+
+    .timeline-step {
+      display: grid;
+      grid-template-columns: 80px minmax(0,1fr) 70px;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .bar {
+      height: 10px;
+      border-radius: 999px;
+      background: #1e293b;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--cyan);
+      transition: width .16s linear;
+    }
+
+    .timeline-step.active .bar-fill {
+      background: var(--amber);
+      width: 100%;
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      display: none;
+      place-items: center;
+      background: rgba(2,6,23,.72);
+      backdrop-filter: blur(8px);
+      padding: 20px;
+      z-index: 20;
+    }
+
+    .modal-backdrop.open {
+      display: grid;
+    }
+
+    .modal {
+      width: min(920px, 100%);
+      max-height: min(760px, 92vh);
+      overflow: auto;
+      background: #0f172a;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: 0 28px 120px rgba(0,0,0,.58);
+      padding: 24px;
+    }
+
+    .modal-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: start;
+      margin-bottom: 20px;
+    }
+
+    .modal-head h2 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .close {
+      min-width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      padding: 0;
+      font-size: 18px;
+    }
+
+    .modal-grid {
+      display: grid;
+      grid-template-columns: 300px minmax(0, 1fr);
+      gap: 20px;
+      align-items: start;
+    }
+
+    .modal-image {
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(251,191,36,.35);
+      border-radius: 24px;
+      background: #020617;
+      min-height: 320px;
+      overflow: hidden;
+    }
+
+    .modal-image img {
+      width: 260px;
+      height: 260px;
+      object-fit: contain;
+      background: white;
+      border-radius: 22px;
+    }
+
+    .state-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .state-item {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #020617;
+      padding: 12px;
+    }
+
+    .state-item img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      background: white;
+      border-radius: 14px;
+    }
+
+    .state-item strong {
+      display: block;
+      margin-top: 8px;
+    }
+
+    .modal-copy {
+      color: var(--muted);
+      line-height: 1.85;
+      font-size: 15px;
+    }
+
+    .mapping {
+      margin-top: 16px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .mapping-row {
+      display: grid;
+      grid-template-columns: 120px minmax(0,1fr);
+      border-top: 1px solid var(--line);
+    }
+
+    .mapping-row:first-child {
+      border-top: 0;
+    }
+
+    .mapping-row div {
+      padding: 12px;
+    }
+
+    .mapping-row div:first-child {
+      color: var(--cyan);
+      background: rgba(103,232,249,.08);
+      font-weight: 900;
+    }
+
+    @media (max-width: 860px) {
+      body { padding: 12px; }
+      .hero { grid-template-columns: 1fr; }
+      .input-row { grid-template-columns: 1fr; }
+      .modal-grid { grid-template-columns: 1fr; }
+      .state-list { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .timeline-step { grid-template-columns: 64px minmax(0,1fr) 52px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="card intro">
+        <div class="eyebrow">MORSE VISUALIZER</div>
+        <h1>モールス信号を、光と区切りで読む</h1>
+        <p class="lead">
+          文字を入力すると、短点と長点に分解して表示します。ひよこ通信係のモーダルでは、いまの状態と画像差分の対応を確認できます。
+        </p>
+
+        <div class="input-row">
+          <input id="textInput" value="SOS" aria-label="変換する文字" />
+          <button id="playButton" class="primary">再生</button>
+          <button id="resetButton">リセット</button>
+        </div>
+      </div>
+
+      <aside class="card guide-card">
+        <div id="guideImageWrap" class="guide-image-wrap idle">
+          <img id="guideImage" src="assets/chick/chick_idle.jpg" alt="ひよこ通信係" />
+          <div id="guideBadge" class="signal-badge">待機</div>
+        </div>
+        <div>
+          <div class="guide-title">ひよこ通信係</div>
+          <div id="guideText" class="guide-text">短点・長点・完了に合わせて状態が変わります。</div>
+        </div>
+        <button id="openModal" class="open-modal">通信係の説明を開く</button>
+      </aside>
+    </section>
+
+    <section class="card section">
+      <h2>文字ごとの信号</h2>
+      <div id="morseLine" class="morse-line"></div>
+    </section>
+
+    <section class="card section">
+      <h2>タイムライン</h2>
+      <div id="timeline" class="timeline"></div>
+    </section>
+  </main>
+
+  <div id="modalBackdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <div class="modal-head">
+        <div>
+          <div class="eyebrow">GUIDE MODAL</div>
+          <h2 id="modalTitle">ひよこ通信係の状態</h2>
+        </div>
+        <button id="closeModal" class="close" aria-label="閉じる">×</button>
+      </div>
+
+      <div class="modal-grid">
+        <div class="modal-image">
+          <img id="modalMainImage" src="assets/chick/chick_idle.jpg" alt="現在のひよこ通信係" />
+        </div>
+
+        <div>
+          <p id="modalText" class="modal-copy">
+            このモーダルは、画像ファイル分離版の組み込み確認用です。React本体では同じ構造で画像パスを切り替えます。
+          </p>
+
+          <div class="mapping">
+            <div class="mapping-row"><div>待機</div><div>何も再生していない通常状態</div></div>
+            <div class="mapping-row"><div>短点</div><div>短い信号。ピッと軽く反応</div></div>
+            <div class="mapping-row"><div>長点</div><div>長い信号。ピーと少し伸びる反応</div></div>
+            <div class="mapping-row"><div>完了</div><div>再生完了。できた状態</div></div>
+          </div>
+
+          <div class="state-list">
+            <div class="state-item"><img src="assets/chick/chick_idle.jpg" alt="待機"><strong>待機</strong></div>
+            <div class="state-item"><img src="assets/chick/chick_dot.jpg" alt="短点"><strong>短点</strong></div>
+            <div class="state-item"><img src="assets/chick/chick_dash.jpg" alt="長点"><strong>長点</strong></div>
+            <div class="state-item"><img src="assets/chick/chick_done.jpg" alt="完了"><strong>完了</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const MORSE = {
+      A: ".-", B: "-...", C: "-.-.", D: "-..", E: ".", F: "..-.", G: "--.", H: "....",
+      I: "..", J: ".---", K: "-.-", L: ".-..", M: "--", N: "-.", O: "---", P: ".--.",
+      Q: "--.-", R: ".-.", S: "...", T: "-", U: "..-", V: "...-", W: ".--", X: "-..-",
+      Y: "-.--", Z: "--..", 0: "-----", 1: ".----", 2: "..---", 3: "...--", 4: "....-",
+      5: ".....", 6: "-....", 7: "--...", 8: "---..", 9: "----."
+    };
+
+    const CHICK_IMAGES = {
+      idle: "assets/chick/chick_idle.jpg",
+      dot: "assets/chick/chick_dot.jpg",
+      dash: "assets/chick/chick_dash.jpg",
+      done: "assets/chick/chick_done.jpg"
+    };
+
+    const STATE_LABELS = {
+      idle: "待機",
+      dot: "ピッ",
+      dash: "ピー",
+      done: "できた"
+    };
+
+    const STATE_TEXT = {
+      idle: "短点・長点・完了に合わせて状態が変わります。",
+      dot: "短点です。短く光る信号を表しています。",
+      dash: "長点です。短点より長く続く信号を表しています。",
+      done: "再生が完了しました。信号のまとまりを確認できます。"
+    };
+
+    const input = document.getElementById("textInput");
+    const playButton = document.getElementById("playButton");
+    const resetButton = document.getElementById("resetButton");
+    const morseLine = document.getElementById("morseLine");
+    const timeline = document.getElementById("timeline");
+
+    const guideImageWrap = document.getElementById("guideImageWrap");
+    const guideImage = document.getElementById("guideImage");
+    const guideBadge = document.getElementById("guideBadge");
+    const guideText = document.getElementById("guideText");
+
+    const modalBackdrop = document.getElementById("modalBackdrop");
+    const openModal = document.getElementById("openModal");
+    const closeModal = document.getElementById("closeModal");
+    const modalMainImage = document.getElementById("modalMainImage");
+    const modalText = document.getElementById("modalText");
+
+    let steps = [];
+    let currentTimer = null;
+
+    function buildSteps(text) {
+      const chars = text.toUpperCase().split("").filter((char) => MORSE[char]);
+      const result = [];
+      chars.forEach((char, charIndex) => {
+        MORSE[char].split("").forEach((symbol, symbolIndex) => {
+          result.push({
+            char,
+            charIndex,
+            symbol,
+            symbolIndex,
+            duration: symbol === "." ? 300 : 720
+          });
+        });
+      });
+      return result;
+    }
+
+    function render() {
+      const text = input.value || "";
+      const chars = text.toUpperCase().split("").filter((char) => MORSE[char]);
+      morseLine.innerHTML = "";
+      timeline.innerHTML = "";
+
+      chars.forEach((char, charIndex) => {
+        const card = document.createElement("div");
+        card.className = "letter-card";
+        card.dataset.charIndex = String(charIndex);
+
+        const letter = document.createElement("div");
+        letter.className = "letter";
+        letter.textContent = char;
+
+        const code = document.createElement("div");
+        code.className = "code";
+
+        MORSE[char].split("").forEach((symbol, symbolIndex) => {
+          const s = document.createElement("div");
+          s.className = "symbol " + (symbol === "." ? "dot" : "dash");
+          s.dataset.charIndex = String(charIndex);
+          s.dataset.symbolIndex = String(symbolIndex);
+          code.appendChild(s);
+        });
+
+        card.appendChild(letter);
+        card.appendChild(code);
+        morseLine.appendChild(card);
+      });
+
+      steps = buildSteps(text);
+      steps.forEach((step, index) => {
+        const row = document.createElement("div");
+        row.className = "timeline-step";
+        row.dataset.stepIndex = String(index);
+        row.innerHTML = `
+          <div>${step.char} ${step.symbol === "." ? "短点" : "長点"}</div>
+          <div class="bar"><div class="bar-fill"></div></div>
+          <div>${step.duration}ms</div>
+        `;
+        timeline.appendChild(row);
+      });
+
+      setGuideState("idle");
+    }
+
+    function setGuideState(state) {
+      guideImage.src = CHICK_IMAGES[state];
+      guideImageWrap.className = "guide-image-wrap " + state;
+      guideBadge.textContent = STATE_LABELS[state];
+      guideText.textContent = STATE_TEXT[state];
+      modalMainImage.src = CHICK_IMAGES[state];
+      modalText.textContent = STATE_TEXT[state] + " 画像はassets配下の物理ファイルを参照しています。";
+    }
+
+    function clearActive() {
+      document.querySelectorAll(".letter-card.active").forEach((el) => el.classList.remove("active"));
+      document.querySelectorAll(".symbol.active").forEach((el) => el.classList.remove("active"));
+      document.querySelectorAll(".timeline-step.active").forEach((el) => el.classList.remove("active"));
+    }
+
+    function stopPlayback() {
+      if (currentTimer) {
+        clearTimeout(currentTimer);
+        currentTimer = null;
+      }
+      clearActive();
+      setGuideState("idle");
+    }
+
+    function playStep(index) {
+      clearActive();
+
+      if (index >= steps.length) {
+        setGuideState("done");
+        return;
+      }
+
+      const step = steps[index];
+      setGuideState(step.symbol === "." ? "dot" : "dash");
+
+      const letterCard = document.querySelector(`.letter-card[data-char-index="${step.charIndex}"]`);
+      const symbolEl = document.querySelector(`.symbol[data-char-index="${step.charIndex}"][data-symbol-index="${step.symbolIndex}"]`);
+      const timelineEl = document.querySelector(`.timeline-step[data-step-index="${index}"]`);
+
+      if (letterCard) letterCard.classList.add("active");
+      if (symbolEl) symbolEl.classList.add("active");
+      if (timelineEl) timelineEl.classList.add("active");
+
+      currentTimer = setTimeout(() => {
+        playStep(index + 1);
+      }, step.duration + 180);
+    }
+
+    input.addEventListener("input", render);
+    playButton.addEventListener("click", () => {
+      stopPlayback();
+      render();
+      playStep(0);
+    });
+    resetButton.addEventListener("click", () => {
+      input.value = "SOS";
+      stopPlayback();
+      render();
+    });
+
+    openModal.addEventListener("click", () => modalBackdrop.classList.add("open"));
+    closeModal.addEventListener("click", () => modalBackdrop.classList.remove("open"));
+    modalBackdrop.addEventListener("click", (event) => {
+      if (event.target === modalBackdrop) modalBackdrop.classList.remove("open");
+    });
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") modalBackdrop.classList.remove("open");
+    });
+
+    render();
+  </script>
+</body>
+</html>

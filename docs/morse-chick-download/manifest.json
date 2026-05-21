@@ -1,0 +1,41 @@
+{
+  "name": "morse_chick_download_preview_v2",
+  "source_image": "a_set_of_digital_images_is_showcased_on_four_recta.png",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "crop_method": "manual ratio boxes, centered to 512x512",
+  "assets": {
+    "chick_idle.jpg": "待機",
+    "chick_dot.jpg": "短点",
+    "chick_dash.jpg": "長点",
+    "chick_done.jpg": "完了"
+  },
+  "boxes_ratio": {
+    "idle": [
+      0.035,
+      0.18,
+      0.245,
+      0.9
+    ],
+    "dot": [
+      0.285,
+      0.18,
+      0.495,
+      0.9
+    ],
+    "dash": [
+      0.535,
+      0.18,
+      0.745,
+      0.9
+    ],
+    "done": [
+      0.785,
+      0.18,
+      0.965,
+      0.9
+    ]
+  }
+}

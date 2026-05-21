@@ -1,0 +1,27 @@
+{
+  "name": "morse_chick_assets_individual_v1",
+  "description": "4枚個別生成したひよこ通信係の状態差分素材",
+  "states": {
+    "idle": {
+      "label": "待機",
+      "jpg": "assets/chick/chick_idle.jpg",
+      "png": "assets/chick/chick_idle.png"
+    },
+    "dot": {
+      "label": "短点・ピッ",
+      "jpg": "assets/chick/chick_dot.jpg",
+      "png": "assets/chick/chick_dot.png"
+    },
+    "dash": {
+      "label": "長点・ピー",
+      "jpg": "assets/chick/chick_dash.jpg",
+      "png": "assets/chick/chick_dash.png"
+    },
+    "done": {
+      "label": "完了・できた",
+      "jpg": "assets/chick/chick_done.jpg",
+      "png": "assets/chick/chick_done.png"
+    }
+  },
+  "implementation_note": "React/HTMLでは状態に応じて画像パスを切り替えるだけで利用可能。"
+}

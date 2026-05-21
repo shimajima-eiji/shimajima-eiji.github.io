@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ひよこ通信係 4枚個別画像プレビュー</title>
+  <style>
+    :root {
+      --bg: #020617;
+      --panel: #0f172a;
+      --line: #334155;
+      --ink: #f8fafc;
+      --muted: #94a3b8;
+      --cyan: #a5f3fc;
+      --amber: #fde68a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at top right, rgba(34,211,238,.14), transparent 32rem), var(--bg);
+      color: var(--ink);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      padding: 24px;
+    }
+    main {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      background: rgba(15,23,42,.92);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: 0 24px 80px rgba(0,0,0,.36);
+      padding: clamp(20px, 4vw, 36px);
+    }
+    .head { text-align: center; margin-bottom: 24px; }
+    .label { color: #22d3ee; letter-spacing: .22em; font-size: 12px; margin-bottom: 8px; }
+    h1 { margin: 0; font-size: clamp(26px, 4vw, 38px); }
+    p { margin: 10px auto 0; max-width: 760px; color: var(--muted); line-height: 1.7; font-size: 14px; }
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 230px;
+      gap: 24px;
+      align-items: center;
+    }
+    .viewer {
+      position: relative;
+      min-height: 620px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      border: 1px solid rgba(251,191,36,.35);
+      border-radius: 28px;
+      background: #020617;
+    }
+    .viewer img {
+      width: min(92%, 560px);
+      max-height: 560px;
+      object-fit: contain;
+      border-radius: 26px;
+      box-shadow: 0 16px 52px rgba(0,0,0,.42);
+      transition: transform .22s ease, filter .22s ease;
+      background: white;
+    }
+    .viewer.dot img {
+      transform: translateY(-8px) rotate(-1.5deg);
+      filter: drop-shadow(0 0 16px rgba(251,191,36,.45));
+    }
+    .viewer.dash img {
+      transform: scale(1.035) rotate(1deg);
+      filter: drop-shadow(0 0 18px rgba(251,191,36,.42));
+    }
+    .badge {
+      position: absolute;
+      right: 18px;
+      top: 18px;
+      border: 1px solid rgba(251,191,36,.65);
+      color: var(--amber);
+      background: rgba(2,6,23,.9);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .buttons { display: grid; gap: 10px; }
+    button {
+      border: 1px solid var(--line);
+      color: var(--ink);
+      background: #1e293b;
+      border-radius: 14px;
+      padding: 12px 14px;
+      font-weight: 700;
+      text-align: left;
+      cursor: pointer;
+    }
+    button.active { color: #020617; background: var(--cyan); border-color: var(--cyan); }
+    button span { display: block; opacity: .72; font-size: 12px; font-weight: 600; margin-top: 2px; }
+    .all {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .tile {
+      border: 1px solid var(--line);
+      background: #020617;
+      border-radius: 18px;
+      padding: 10px;
+    }
+    .tile img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      border-radius: 14px;
+      background: white;
+    }
+    .tile strong { display: block; margin-top: 8px; font-size: 14px; }
+    .tile span { color: var(--muted); font-size: 12px; }
+    .note {
+      margin-top: 20px;
+      border: 1px solid var(--line);
+      background: rgba(2,6,23,.6);
+      border-radius: 18px;
+      padding: 14px 16px;
+      color: #cbd5e1;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    code {
+      color: var(--cyan);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    @media (max-width: 820px) {
+      body { padding: 12px; }
+      .layout { grid-template-columns: 1fr; }
+      .viewer { min-height: 430px; }
+      .viewer img { max-height: 380px; }
+      .buttons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      button { text-align: center; }
+      .all { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="head">
+      <div class="label">ひよこ通信係プレビュー</div>
+      <h1>4枚個別生成版</h1>
+      <p>1枚の画像を切り出すのではなく、生成された4枚の画像ファイルをそのまま別ファイルとして読み込みます。React/HTMLに戻す時も、この相対パスを状態に応じて切り替えるだけです。</p>
+    </section>
+
+    <section class="layout">
+      <div id="viewer" class="viewer idle">
+        <img id="chickImage" src="assets/chick/chick_idle.jpg" alt="待機中のひよこ通信係" />
+        <div id="badge" class="badge">通常表示</div>
+      </div>
+
+      <div class="buttons">
+        <button class="active" data-state="idle" data-label="待機" data-note="通常表示" data-src="assets/chick/chick_idle.jpg">待機<span>通常表示</span></button>
+        <button data-state="dot" data-label="短点" data-note="ピッ" data-src="assets/chick/chick_dot.jpg">短点<span>ピッ</span></button>
+        <button data-state="dash" data-label="長点" data-note="ピー" data-src="assets/chick/chick_dash.jpg">長点<span>ピー</span></button>
+        <button data-state="done" data-label="完了" data-note="できた" data-src="assets/chick/chick_done.jpg">完了<span>できた</span></button>
+      </div>
+    </section>
+
+    <section class="all" aria-label="4枚個別画像一覧">
+      <div class="tile"><img src="assets/chick/chick_idle.jpg" alt="待機"><strong>待機</strong><span>chick_idle.jpg</span></div>
+      <div class="tile"><img src="assets/chick/chick_dot.jpg" alt="短点"><strong>短点</strong><span>chick_dot.jpg</span></div>
+      <div class="tile"><img src="assets/chick/chick_dash.jpg" alt="長点"><strong>長点</strong><span>chick_dash.jpg</span></div>
+      <div class="tile"><img src="assets/chick/chick_done.jpg" alt="完了"><strong>完了</strong><span>chick_done.jpg</span></div>
+    </section>
+
+    <section class="note">
+      実装時は <code>assets/chick/chick_idle.jpg</code> などの相対パスをReact側の <code>CHICK_IMAGES</code> に入れれば使えます。プレビューではJPGを参照していますが、素材としてPNGも同梱しています。
+    </section>
+  </main>
+
+  <script>
+    const viewer = document.getElementById("viewer");
+    const image = document.getElementById("chickImage");
+    const badge = document.getElementById("badge");
+    const buttons = Array.from(document.querySelectorAll("button[data-state]"));
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        buttons.forEach((b) => b.classList.remove("active"));
+        button.classList.add("active");
+
+        const state = button.dataset.state;
+        viewer.className = "viewer " + state;
+        image.src = button.dataset.src;
+        image.alt = button.dataset.label + "のひよこ通信係";
+        badge.textContent = button.dataset.note;
+      });
+    });
+  </script>
+</body>
+</html>

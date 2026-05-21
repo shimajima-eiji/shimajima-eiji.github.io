@@ -1,0 +1,23 @@
+{
+  "name": "morse_modal_integration_preview_v1",
+  "purpose": "モールス信号UIへひよこ通信係モーダルを組み込むローカル確認用プロトタイプ",
+  "states": {
+    "idle": {
+      "label": "待機",
+      "path": "assets/chick/chick_idle.jpg"
+    },
+    "dot": {
+      "label": "短点・ピッ",
+      "path": "assets/chick/chick_dot.jpg"
+    },
+    "dash": {
+      "label": "長点・ピー",
+      "path": "assets/chick/chick_dash.jpg"
+    },
+    "done": {
+      "label": "完了・できた",
+      "path": "assets/chick/chick_done.jpg"
+    }
+  },
+  "note": "ZIP展開後、index.htmlをブラウザで開いて確認。Canvasではなくローカル確認を正とする。"
+}
