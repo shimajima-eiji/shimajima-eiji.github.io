@@ -24,15 +24,18 @@ import json
 import os
 import re
 import sys
+import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from zoneinfo import ZoneInfo
 from typing import Any, Dict, List, Optional
 
 JST = ZoneInfo("Asia/Tokyo")
 ATOM_NS = "http://www.w3.org/2005/Atom"
+USER_AGENT = "connpass-ics-generator/2.0 (+https://github.com/shimajima-eiji/shimajima-eiji.github.io)"
+CONNPASS_API_URL = "https://connpass.com/api/v2/events/"
 
 
 # ---------------------------------------------------------------------------
@@ -161,7 +164,7 @@ def fetch_atom(subdomain: str) -> List[CalEvent]:
     """
     url = f"https://{subdomain}.connpass.com/ja.atom"
     req = urllib.request.Request(url, method="GET")
-    req.add_header("User-Agent", "connpass-ics-generator/2.0")
+    req.add_header("User-Agent", USER_AGENT)
 
     try:
         with urllib.request.urlopen(req, timeout=30) as resp:
@@ -211,6 +214,85 @@ def fetch_atom(subdomain: str) -> List[CalEvent]:
             summary=summary,
         ))
 
+    return events
+
+
+# ---------------------------------------------------------------------------
+# connpass API v2 取得（CONNPASS_API_KEY がある場合のみ使用）
+#   - 認証: X-API-Key ヘッダ。User-Agent 必須。
+#   - ym(年月) で「今月〜数ヶ月先」に絞り、過去イベントで埋まるのを防ぐ。
+#   - キーが無い／失敗した場合は呼び出し側で Atom にフォールバックする。
+# ---------------------------------------------------------------------------
+
+def _ym_window(months_ahead: int = 6) -> List[str]:
+    """今月から months_ahead ヶ月先までの YYYYMM 文字列リストを返す。"""
+    today = date.today()
+    out: List[str] = []
+    y, m = today.year, today.month
+    for _ in range(months_ahead + 1):
+        out.append(f"{y}{m:02d}")
+        m += 1
+        if m > 12:
+            m = 1
+            y += 1
+    return out
+
+
+def event_from_api(e: Dict[str, Any]) -> CalEvent:
+    """connpass API v2 のイベント1件を CalEvent に変換する（純粋関数）。"""
+    title = (e.get("title") or "").strip()
+    url_href = (e.get("event_url") or "").strip()
+    event_id = e.get("event_id")
+    uid = f"connpass-event-{event_id}@connpass.com" if event_id else url_href
+
+    started_at = parse_iso_datetime(e.get("started_at") or "")
+    ended_raw = e.get("ended_at")
+    if ended_raw:
+        ended_at = parse_iso_datetime(ended_raw)
+    else:
+        ended_at = started_at.replace(hour=min(started_at.hour + 1, 23))
+    if ended_at <= started_at:
+        ended_at = started_at.replace(hour=min(started_at.hour + 1, 23))
+
+    catch = (e.get("catch") or "").strip()
+    place = (e.get("place") or "").strip()
+    summary = "\n".join(p for p in [catch, (f"会場: {place}" if place else "")] if p)
+
+    return CalEvent(
+        uid=uid,
+        title=title,
+        url=url_href,
+        published=started_at,
+        started_at=started_at,
+        ended_at=ended_at,
+        summary=summary,
+    )
+
+
+def fetch_api(subdomain: str, api_key: str, months_ahead: int = 6, count: int = 100) -> List[CalEvent]:
+    """connpass API v2 から今後のイベントを取得する。失敗時は例外を送出する。"""
+    params: List[tuple[str, str]] = [
+        ("subdomain", subdomain),
+        ("count", str(count)),
+        ("order", "2"),  # 開催日時順
+    ]
+    params += [("ym", ym) for ym in _ym_window(months_ahead)]
+    url = f"{CONNPASS_API_URL}?{urllib.parse.urlencode(params)}"
+
+    req = urllib.request.Request(url, method="GET")
+    req.add_header("X-API-Key", api_key)
+    req.add_header("User-Agent", USER_AGENT)
+    req.add_header("Accept", "application/json")
+
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        data = json.loads(resp.read().decode("utf-8"))
+
+    events: List[CalEvent] = []
+    for e in data.get("events", []) or []:
+        try:
+            events.append(event_from_api(e))
+        except Exception:  # noqa: BLE001 — 不正な1件はスキップ
+            continue
     return events
 
 
@@ -319,6 +401,9 @@ def main() -> int:
     if not feeds:
         die("feeds.yml に feeds がありません。")
 
+    api_key = os.getenv("CONNPASS_API_KEY", "").strip()
+    print(f"connpass source: {'API v2 (key あり)' if api_key else 'Atom (key なし)'}")
+
     total = 0
     generated: List[Dict[str, Any]] = []
     for feed in feeds:
@@ -330,16 +415,26 @@ def main() -> int:
             print(f"SKIP {key}: subdomain 未指定", file=sys.stderr)
             continue
 
-        events = fetch_atom(subdomain)
+        # API キーがあれば API v2、無ければ／失敗時は Atom を使う。
+        source = "atom"
+        if api_key:
+            try:
+                events = fetch_api(subdomain, api_key)
+                source = "api"
+            except Exception as ex:  # noqa: BLE001
+                print(f"WARN {key}: API 取得失敗のため Atom にフォールバック: {ex}", file=sys.stderr)
+                events = fetch_atom(subdomain)
+        else:
+            events = fetch_atom(subdomain)
 
         ics = build_ics(events, cal_name=name)
         out_path = os.path.join(out_dir, f"{key}.ics")
         with open(out_path, "w", encoding="utf-8", newline="") as f:
             f.write(ics)
 
-        print(f"OK  {key}: {len(events)} events -> {out_path}")
+        print(f"OK  {key}: {len(events)} events [{source}] -> {out_path}")
         total += len(events)
-        generated.append({"key": key, "name": name, "events": len(events)})
+        generated.append({"key": key, "name": name, "events": len(events), "source": source})
 
     # トップページ（index.html）が動的に読み込む一覧。
     # feeds.yml を更新すれば自動で追従し、HTML を手で直す必要がない。
