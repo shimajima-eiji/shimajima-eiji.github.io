@@ -31,6 +31,8 @@ jobs:
         env:
           FEEDS_YML: feeds.yml
           OUT_DIR: docs
+          # 未設定なら空文字 → スクリプトが Atom 方式に自動フォールバックする。
+          CONNPASS_API_KEY: ${{ secrets.CONNPASS_API_KEY }}
         run: python scripts/generate_all_ics.py
 
       - name: Commit if changed

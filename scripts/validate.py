@@ -168,6 +168,23 @@ def selftest_connpass() -> None:
     assert ics.startswith("BEGIN:VCALENDAR\r\n")
     assert ics.rstrip("\r\n").endswith("END:VCALENDAR")
     assert ics.count("BEGIN:VEVENT") == 1
+
+    # API v2 レスポンス1件 → CalEvent 変換（ネットワーク不要）
+    api_ev = gen.event_from_api({
+        "title": "もくもく会",
+        "event_id": 365530,
+        "event_url": "https://ospn.connpass.com/event/365530/",
+        "started_at": "2025-08-16T07:00:00+09:00",
+        "ended_at": "2025-08-16T08:00:00+09:00",
+        "place": "Discord",
+        "catch": "ゆるい会",
+    })
+    assert api_ev.uid == "connpass-event-365530@connpass.com"
+    assert api_ev.started_at.hour == 7 and api_ev.ended_at.hour == 8
+    assert "会場: Discord" in api_ev.summary
+    # ym ウィンドウは今月を含み months_ahead+1 件
+    win = gen._ym_window(6)
+    assert len(win) == 7 and len(win[0]) == 6
     ok("selftest generate_all_ics")
 
 
