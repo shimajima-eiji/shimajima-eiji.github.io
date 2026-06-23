@@ -1,0 +1,10 @@
+{
+  "generated_at": "2026-06-23T15:31:12.472181+00:00",
+  "feeds": [
+    {
+      "key": "ospn",
+      "name": "OSPN / OSC (connpass)",
+      "events": 10
+    }
+  ]
+}

@@ -4,40 +4,106 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI で作ったミニアプリ集 — shimajima-eiji</title>
+  <meta name="description" content="AI と一緒に一発ネタで作ったミニアプリの動作確認ページ。">
+  <meta name="color-scheme" content="light dark">
+  <meta property="og:title" content="AI で作ったミニアプリ集 — shimajima-eiji">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>🧪</text></svg>">
   <style>
-    body { font-family: sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
-    h1 { font-size: 1.6rem; }
-    h2 { font-size: 1.2rem; margin-top: 2rem; border-bottom: 1px solid #ddd; padding-bottom: 0.3rem; }
-    .app { margin: 1rem 0; padding: 0.8rem; border: 1px solid #e0e0e0; border-radius: 6px; }
-    .app a { font-weight: bold; }
-    .app .note { color: #666; font-size: 0.9rem; margin-top: 0.3rem; }
-    p { color: #555; }
+    :root {
+      --bg: #ffffff;
+      --bg-soft: #f6f7f9;
+      --fg: #1a1a1a;
+      --fg-muted: #5c6470;
+      --border: #e4e7eb;
+      --accent: #2563eb;
+      --radius: 12px;
+      --shadow: 0 1px 2px rgba(0,0,0,.04), 0 4px 16px rgba(0,0,0,.04);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117;
+        --bg-soft: #161b22;
+        --fg: #e6edf3;
+        --fg-muted: #9198a1;
+        --border: #2a313c;
+        --accent: #4f8cff;
+        --shadow: 0 1px 2px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.3);
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+      line-height: 1.7;
+      color: var(--fg);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+    }
+    header { margin-bottom: 1rem; }
+    h1 { font-size: 1.75rem; line-height: 1.3; margin: 0 0 .5rem; letter-spacing: -.01em; }
+    .lead { color: var(--fg-muted); margin: 0; }
+    h2 { font-size: 1.05rem; margin: 2.5rem 0 1rem; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-muted); }
+    nav a {
+      display: inline-flex; align-items: center; gap: .35rem;
+      color: var(--accent); text-decoration: none; font-weight: 600; font-size: .95rem;
+    }
+    nav a:hover { text-decoration: underline; }
+    .grid { display: grid; gap: .85rem; }
+    a.app {
+      display: block;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.25rem;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: var(--shadow);
+      transition: transform .12s, border-color .12s;
+    }
+    a.app:hover { transform: translateY(-2px); border-color: var(--accent); }
+    a.app .title { font-weight: 600; font-size: 1.05rem; color: var(--accent); }
+    a.app .note { color: var(--fg-muted); font-size: .9rem; margin-top: .3rem; }
+    footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--fg-muted); font-size: .85rem; }
+    footer a { color: var(--accent); }
   </style>
 </head>
 <body>
-  <h1>AI で作ったミニアプリ集</h1>
-  <p>AI と一緒に「一発ネタ」で作ったアプリの動作確認用ページ。完結済みで保守はしない。ブログネタとして公開維持する。</p>
+  <header>
+    <h1>🧪 AI で作ったミニアプリ集</h1>
+    <p class="lead">AI と一緒に「一発ネタ」で作ったアプリの動作確認用ページ。完結済みで保守はしないが、ブログネタとして公開を維持しています。</p>
+  </header>
+
+  <nav><a href="./">← カレンダー購読 (ICS) に戻る</a></nav>
 
   <h2>モールス信号</h2>
-  <div class="app">
-    <a href="./morse-signal-visualizer/">Morse Signal Visualizer</a>
-    <div class="note">モールス信号の波形を可視化。単体 HTML。</div>
+  <div class="grid">
+    <a class="app" href="./morse-signal-visualizer/">
+      <div class="title">Morse Signal Visualizer</div>
+      <div class="note">モールス信号の波形を可視化。単体 HTML。</div>
+    </a>
+    <a class="app" href="./morse-chick-assets/">
+      <div class="title">Morse Chick — Assets Preview</div>
+      <div class="note">ひよこキャラのモーションアセット集 (4状態: dot/dash/idle/done)。</div>
+    </a>
+    <a class="app" href="./morse-chick-download/">
+      <div class="title">Morse Chick — Download Preview</div>
+      <div class="note">アセットダウンロード UI のプレビュー。</div>
+    </a>
+    <a class="app" href="./morse-modal-v1/">
+      <div class="title">Morse Modal v1</div>
+      <div class="note">React 統合用モーダル UI、プレビュー版。</div>
+    </a>
+    <a class="app" href="./morse-modal-v2/">
+      <div class="title">Morse Modal v2</div>
+      <div class="note">React 統合用モーダル UI、改良版 (integrated design)。</div>
+    </a>
   </div>
-  <div class="app">
-    <a href="./morse-chick-assets/">Morse Chick — Assets Preview</a>
-    <div class="note">ひよこキャラのモーションアセット集 (4状態: dot/dash/idle/done)。</div>
-  </div>
-  <div class="app">
-    <a href="./morse-chick-download/">Morse Chick — Download Preview</a>
-    <div class="note">アセットダウンロード UI のプレビュー。</div>
-  </div>
-  <div class="app">
-    <a href="./morse-modal-v1/">Morse Modal v1</a>
-    <div class="note">React 統合用モーダル UI、プレビュー版。</div>
-  </div>
-  <div class="app">
-    <a href="./morse-modal-v2/">Morse Modal v2</a>
-    <div class="note">React 統合用モーダル UI、改良版 (integrated design)。</div>
-  </div>
+
+  <footer>
+    <p>ソース: <a href="https://github.com/shimajima-eiji/shimajima-eiji.github.io">GitHub</a></p>
+  </footer>
 </body>
 </html>

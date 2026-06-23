@@ -1,0 +1,541 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//shimajima-eiji//connpass-atom-ics//JA
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:OSPN / OSC (connpass)
+BEGIN:VTIMEZONE
+TZID:Asia/Tokyo
+X-LIC-LOCATION:Asia/Tokyo
+BEGIN:STANDARD
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+TZNAME:JST
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:https://ospn.connpass.com/event/396808/?utm_campaign=series_events&utm_
+ source=feed&utm_medium=atom
+DTSTAMP:20260623T153112Z
+DTSTART;TZID=Asia/Tokyo:20260829T100000
+DTEND;TZID=Asia/Tokyo:20260829T174500
+SUMMARY:Open Developers Conference 2026
+DESCRIPTION:開催日時: 2026/08/29 10:00 ～ 17:45<br />開催場所: 東
+ 京都大田区西蒲田5-23-22（日本工学院専門学校 蒲田キャ
+ ンパス）<br /><br />\n\n<h2>Open Developers Conference 2026(ODC)  開
+ 催のご案内</h2>\n<p>開発者とインフラエンジニアの交流
+ の場として、「DevOps」「開発」「開発者」をキーワー
+ ドに、様々な最新情報を提供いたします。<br>\n皆さま
+ のご参加をお待ちしております。</p>\n<h1>開催概要</h1>\n
+ <p><b>日時</b><br>\n8月29日(土) 10:00-17:45<br></p>\n<p><b>会場</b>
+ <br>\n日本工学院専門学校 蒲田キャンパス 3号館7F<br>\n<a 
+ href="https://www.neec.ac.jp/portal/access/kamata/" rel="nofollow">アク
+ セス</a></p>\n<p><b>Open Developers Conference 2026公式サイト</b><b
+ r>\n<a href="https://event.ospn.jp/odc2026" rel="nofollow">https://event.o
+ spn.jp/odc2026</a></p>\n<p><b>開催形式</b><br>\nリアル会場での
+ セミナー、ハンズオン、一部展示もあり</p>\n\n\n<h1>セミ
+ ナータイムテーブル</h1>\n<p>準備中</p>\n<h1>展示ブース</h
+ 1>\n<p>[展示ブース一覧]準備中</p>\n<p>[展示ブースマプ(PDF
+ )]準備中</p>\n<h1>懇親会のご案内</h1>\n<p>イベント終了後
+ に、場所を移動して懇親会を予定しています。<br>\n<a hr
+ ef="https://ospn.connpass.com/event/398160/" rel="nofollow">→お申し
+ 込みはこちらから</a></p>\n\nhttps://ospn.connpass.com/event/396808
+ /?utm_campaign=series_events&utm_source=feed&utm_medium=atom
+URL:https://ospn.connpass.com/event/396808/?utm_campaign=series_events&utm_
+ source=feed&utm_medium=atom
+END:VEVENT
+BEGIN:VEVENT
+UID:https://ospn.connpass.com/event/398160/?utm_campaign=series_events&utm_
+ source=feed&utm_medium=atom
+DTSTAMP:20260623T153112Z
+DTSTART;TZID=Asia/Tokyo:20260829T181500
+DTEND;TZID=Asia/Tokyo:20260829T201500
+SUMMARY:8/29 ODC2026 懇親会
+DESCRIPTION:開催日時: 2026/08/29 18:15 ～ 20:15<br />開催場所: 日
+ 本、〒144-0051 東京都大田区西蒲田７丁目４５−１ イプ
+ セ蒲田 2F<br /><br /><h2>ODC終了後に懇親会を開催します！<
+ /h2>\n<p>講師、出展者の方も交えての楽しい懇親会です
+ 。お気軽にご参加ください。<br><br>\nご案内（必ずお読
+ みください）<br>\n・ 参加される方は事前申込をお願い
+ します（締切：8/21 16:00）。<br>\n・お支払いは<b>現金の
+ み可能</b>です（キャッシュレス決済は対応していませ
+ ん）。<br>\n・当日15:30までにODC受付にてお支払いくださ
+ い。<br>\n・都合がつかなくなった方は、速やかにキャ
+ ンセルをお願いします。<br>\n・定員に達した場合は申
+ 込を締切ます。<br></p>\n<p><a href="https://event.ospn.jp/odc2026/"
+  rel="nofollow">ODC2026 公式サイト</a><br></p>\n<h2>会場</h2>\n<p><
+ a href="https://www.nihao-k.com/keishinkaku/" rel="nofollow">ニイハオ 
+ 恵馨閣</a><br>\nODC会場から徒歩5分ほど。</p>\n<h2>会費</h2>
+ \n<ul>\n<li>一般 5\,000円（税込、領収書出ます）</li>\n<li>
+ 学生 1\,000円（税込）※支払いの際、学生証を提示して
+ ください。（社会人学生は一般参加になります）<br>\n
+ ※学生サポートは当日の学生の参加費の補助のほか、
+ 今後の開催における学生の参加費用にも活用させてい
+ ただきます。\n<br></li>\n</ul>\n<h2>内容</h2>\n<ul>\n<li>コース
+ 料理＋飲み放題（120分）<br></li>\n</ul>\n<h2>支払場所</h2>\n
+ <ul>\n<li>ODC受付にて「15:30」までにお支払いください。
+ 参加証をお渡しします。</li>\n<li>なるべくお釣りがでな
+ いようにお願いいたします。<br></li>\n<li>懇親会会場で
+ は支払受付できません。</li>\n</ul>\n\nhttps://ospn.connpass.com
+ /event/398160/?utm_campaign=series_events&utm_source=feed&utm_medium=atom
+URL:https://ospn.connpass.com/event/398160/?utm_campaign=series_events&utm_
+ source=feed&utm_medium=atom
+END:VEVENT
+BEGIN:VEVENT
+UID:https://ospn.connpass.com/event/396163/?utm_campaign=series_events&utm_
+ source=feed&utm_medium=atom
+DTSTAMP:20260623T153112Z
+DTSTART;TZID=Asia/Tokyo:20260626T200000
+DTEND;TZID=Asia/Tokyo:20260626T223000
+SUMMARY:6/26 OSC2026北海道 関係者前夜祭
+DESCRIPTION:開催日時: 2026/06/26 20:00 ～ 22:30<br />開催場所: 北
+ 海道札幌市中央区南5条西3 ニューススキノビル 2F<br /><b
+ r /><p>金曜日入りしている関係者、地元の関係者による
+ 、ニラタワーを囲んでの交流会です。</p>\n<h2>会費 (当
+ 日割り勘となります。大人からの支援、大歓迎です！)<
+ /h2>\n<ul>\n<li>学生 3\,000円程度</li>\n<li>一般 6\,000円程度の
+ 予定です</li>\n</ul>\n<h2>対象者</h2>\n<ul>\n<li><strong>企業/団
+ 体スポンサーの皆様、コミュニティ参加の皆様、そし
+ てスタッフが対象となっております。</strong></li>\n<li>対
+ 象でない方の登録は、こちらから解除させていただく
+ 場合があります。</li>\n</ul>\n<p>大変申し訳ございません
+ が、関係者限定の企画となっております。\n席数も限ら
+ れておりますので、悪しからず ご理解いただけますよ
+ うお願いいたします。</p>\n<h2>おすすめ飲食店・食べ歩
+ きリスト</h2>\n<p>おすすめの飲食店をまとめたリストを
+ 公開しました！<br>\n開催当日、各グループでの懇親会
+ や食べ歩きなどにご活用ください。<br>\n<a href="https://doc
+ s.google.com/document/d/1Ur6h5r8aE4ODPvvVbHrVydDHFsuwSfu_pbtSc9i2D8o/edit?
+ usp=sharing" rel="nofollow">おすすめ飲食店リスト</a></p>\n\nhttp
+ s://ospn.connpass.com/event/396163/?utm_campaign=series_events&utm_source=
+ feed&utm_medium=atom
+URL:https://ospn.connpass.com/event/396163/?utm_campaign=series_events&utm_
+ source=feed&utm_medium=atom
+END:VEVENT
+BEGIN:VEVENT
+UID:https://ospn.connpass.com/event/394555/?utm_campaign=series_events&utm_
+ source=feed&utm_medium=atom
+DTSTAMP:20260623T153112Z
+DTSTART;TZID=Asia/Tokyo:20260627T083000
+DTEND;TZID=Asia/Tokyo:20260627T180000
+SUMMARY:6/27 OSC 2026 Hokkaido 当日スタッフ募集
+DESCRIPTION:開催日時: 2026/06/27 08:30 ～ 18:00<br />開催場所: 北
+ 海道札幌市白石区東札幌5条1丁目1-1<br /><br /><h1>概要</h1>
+ \n<p><a href="https://ospn.connpass.com/event/388639/" rel="nofollow">オ
+ ープンソースカンファレンス2026 Hokkaido</a> の当日スタ
+ ッフを募集いたします！ “当日スタッフ" とは、イベ
+ ントの始まりから終了まで、会場運営のお手伝いをし
+ ていただく方々のことです。毎年多数のセミナーが開
+ 催され、イベントの成功には当日スタッフの皆さんの
+ 力が必要不可欠です。</p>\n<p>こちらの<a href="https://docs.g
+ oogle.com/document/d/143iiIUZ3DKhnxGr75JaPBwDkhd94HTYR_lAbQ8gWDbI/edit?usp
+ =sharing" rel="nofollow">オープンソースカンファレンス2026 Ho
+ kkaido 行動規範</a>をお読みいただいた上で、スタッフ業
+ 務に興味をお持ちの方、少しだけでもお手伝いしても
+ 良いという方の参加をお待ちしております。もちろん
+ 、聴講を希望されるセミナーには参加できるよう調整
+ した上で、お手伝いをお願いいたします。</p>\n<p>ご不
+ 明な点などありましたら、本ページ内の<a href="https://osp
+ n.connpass.com/event/394555/inquiry/" rel="nofollow">イベントへのお
+ 問い合わせ</a>からお問い合わせください。</p>\n<h1>お手
+ 伝いいただきたい内容</h1>\n<p><strong>当日は朝8時に会場
+ に現地集合となります。</strong></p>\n<ul>\n<li><strong>会場
+ 設営・撤収</strong>: 展示会場や閉会式会場などの設営・
+ 撤収時にご活躍いただける方。</li>\n<li><strong>受付</stron
+ g>: 来場された方々への名札の配布などのお手伝いをし
+ てくださる方。</li>\n<li><strong>各セミナーの補助</strong>:
+  各セミナー会場での運営補助をしてくださる方。</li>\n
+ </ul>\n<h1>自己紹介と簡単な事前説明会について</h1>\n<p>
+ 当日スタッフとしてご協力いただける方を対象に、オ
+ ンラインでの自己紹介と簡単な説明会を予定しており
+ ます。\n<strong>06/17(水) または 06/18(木) 21時より、Zoomに
+ て開催</strong>しますので、ご参加をお願いいたします
+ 。詳細な参加方法は、お申込みいただいた方に締切後
+ にconnpass経由にて別途ご連絡いたします。</p>\n<p>皆様の
+ ご参加を心よりお待ちしております！</p>\n\nhttps://ospn.co
+ nnpass.com/event/394555/?utm_campaign=series_events&utm_source=feed&utm_me
+ dium=atom
+URL:https://ospn.connpass.com/event/394555/?utm_campaign=series_events&utm_
+ source=feed&utm_medium=atom
+END:VEVENT
+BEGIN:VEVENT
+UID:https://ospn.connpass.com/event/392414/?utm_campaign=series_events&utm_
+ source=feed&utm_medium=atom
+DTSTAMP:20260623T153112Z
+DTSTART;TZID=Asia/Tokyo:20260801T190000
+DTEND;TZID=Asia/Tokyo:20260801T210000
+SUMMARY:8/1 OSC京都 懇親会（京都駅堀川通）
+DESCRIPTION:開催日時: 2026/08/01 19:00 ～ 21:00<br />開催場所: 京
+ 都府京都市下京区油小路通塩小路アパホテル1F<br /><br />
+ <h2>OSC京都 終了後に懇親会を開催します！</h2>\n<p>講師
+ 、出展者の方も交えての楽しい懇親会です。お気軽に
+ ご参加ください。<br><br>\nご案内（必ずお読みください
+ ）<br>\n・ 参加される方は事前申込をお願いします。<br>
+ \n・お支払いは<b>現金のみ可能</b>です（キャッシュレ
+ ス決済は対応していません）。<br>\n・当日15:30までにOSC
+ 受付にてお支払いください。<br>\n・都合がつかなくな
+ った方は、速やかにキャンセルをお願いします。<br></p>
+ \n<h2>会場</h2>\n<p><a href="https://www.hotpepper.jp/strJ001053959/map/
+ " rel="nofollow">Garden annex 京都駅堀川通店</a><br>\n京都駅か
+ ら徒歩7分\n<b>「アパホテル京都駅堀川通」の 1Ｆ</b>で
+ す。 <br>\n※アパホテルは、駅周辺に複数あるので、間
+ 違えないように気をつけてください「京都駅堀川通」
+ です。</p>\n<p>JR丹波口　18:16→18:20　JR京都 <br>\nJR丹波口
+ 　18:32→18:36　JR京都 <br></p>\n<p><br>\nお店には18:00から入
+ 店可能ですので、早く到着された場合は店内でお待ち
+ いただけます。<br>\nスタッフが到着次第、参加証を確
+ 認いたします。<br></p>\n<h2>会費</h2>\n<ul>\n<li>一般 5\,000円
+ （税込、領収書出ます）</li>\n<li>学生 2\,000円（税込）
+ ※支払いの際、学生証を提示してください。（社会人
+ 学生は一般参加になります）<br></li>\n</ul>\n<p>※一般参
+ 加の会費は学生参加費の一部負担金(500円)が含まれます
+ 。ご理解とご協力をお願いいたします。<br>\n※学生参
+ 加が少なかった場合は、他の開催の学生サポートに活
+ 用させていただきます。</p>\n<h2>内容</h2>\n<p>*立食形式
+ ／料理＋ドリンク<br>\n* 飲み放題（90分）<br></p>\n<h2>支
+ 払場所</h2>\n<ul>\n<li>OSC受付にて「15:30」までにお支払い
+ ください。参加証をお渡しします。</li>\n<li>なるべくお
+ 釣りがでないようにお願いいたします。<br></li>\n<li>懇
+ 親会会場では支払受付できません。</li>\n</ul>\n<h2>OSC京
+ 都のイベント参加登録もお願いします</h2>\n<p>OSC京都(con
+ npass)<br>\n<a href="https://ospn.connpass.com/event/392421/" rel="nofollo
+ w">https://ospn.connpass.com/event/392421/</a> <br>\n展示ブース一覧
+ <br>\n<a href="https://event.ospn.jp/osc2026-kyoto/exhibit" rel="nofollow"
+ >https://event.ospn.jp/osc2026-kyoto/exhibit</a> <br>\nタイムテーブ
+ ル<br>\n準備中</p>\n\nhttps://ospn.connpass.com/event/392414/?utm_camp
+ aign=series_events&utm_source=feed&utm_medium=atom
+URL:https://ospn.connpass.com/event/392414/?utm_campaign=series_events&utm_
+ source=feed&utm_medium=atom
+END:VEVENT
+BEGIN:VEVENT
+UID:https://ospn.connpass.com/event/392762/?utm_campaign=series_events&utm_
+ source=feed&utm_medium=atom
+DTSTAMP:20260623T153112Z
+DTSTART;TZID=Asia/Tokyo:20260627T190000
+DTEND;TZID=Asia/Tokyo:20260627T210000
+SUMMARY:6/27 OSC 2026 Hokkaido 大懇親会
+DESCRIPTION:開催日時: 2026/06/27 19:00 ～ 21:00<br />開催場所: 北
+ 海道札幌市東区北7条東9丁目2-10<br /><br /><h2>開催概要</h2
+ >\n<p>「<a href="https://ospn.connpass.com/event/388639/" rel="nofollow">
+ オープンソースカンファレンス 2026 Hokkaido</a>」の熱気
+ そのままに、恒例の大懇親会を今年も開催します！</p>\
+ n<p>OSC 2026 Hokkaidoの終了後、\n<strong>別会場に移動して</st
+ rong>懇親会が開催されます。</p>\n<p>OSCの参加者、セミナ
+ ー講師、出展企業・コミュニティの皆様、ボランティ
+ アスタッフなど、OSCに関わる方ならどなたでも大歓迎
+ です。\n美味しい食事と飲み物を囲みながら、本編で聞
+ ききれなかった技術の話や、地元のコミュニティ活動
+ 、あるいはたわいもない雑談で盛り上がりましょう。</
+ p>\n<p>初めて参加される方も、お一人で参加される方も
+ 、実行委員や常連メンバーがフォローしますので、ぜ
+ ひお気軽にお申し込みください！</p>\n<h2>会場</h2>\n<p><a 
+ href="https://sapporobiergarten-kaitakushikan.com/" rel="nofollow">サッ
+ ポロビール園 開拓使館 1階 トロンメルホール</a></p>\n<p>
+ 住所: 北海道札幌市東区北7条東9丁目2-10</p>\n<p>アクセス
+ :<br>\n- JR 苗穂駅 北口より徒歩約8分<br>\n- 東豊線 東区役
+ 所前駅 4番出口より徒歩約10分<br>\n- 札幌駅北口2番乗り
+ 場 サッポロビール園・アリオ線 路線バスにて約7分</p>\
+ n<p><strong>※懇親会会場へは各自でご移動ください。</str
+ ong></p>\n<h2>会費</h2>\n<p>当日、会場受付にて現金でお支
+ 払いください。</p>\n<ul>\n<li><strong>一般（学生サポート
+ ）：7\,000円</strong>（税込、領収書出ます）</li>\n<li><stron
+ g>一般：6\,000円</strong>（税込、領収書出ます）</li>\n<li><
+ strong>学生：3\,000円</strong>（税込、学生証の提示が必要
+ ）</li>\n</ul>\n<p><strong>※ 複数人申し込みの場合でも、1
+ 名ずつ登録してください。</strong></p>\n<div style="background-
+ color: #ffecec\; padding: 10px\; border-left: 4px solid #d32f2f\;">\n<li><
+ span style="color: #d32f2f\; font-weight: bold\;">支払い場所：OSC会
+ 場の受付</span></li>\n<li><span style="color: #d32f2f\; font-weight: b
+ old\;">参加費の支払い時間：12:45 ~ 14:30</span></li>\n<li><span 
+ style="color: #d32f2f\; font-weight: bold\;">時間内に支払いと連
+ 絡がない場合はキャンセル扱いとなります。</span></li>\n
+ <li><span style="color: #d32f2f\; font-weight: bold\;">懇親会会場で
+ の申込や支払いはできません。</span></li>\n</div>\n\n<ul>\n<l
+ i>できるだけおつりが出ないようご準備ください</li>\n</
+ ul>\n<h2>スポンサー募集のご案内</h2>\n<p>懇親会では、毎
+ 年多くの方にご参加いただいておりますが、\n今年もよ
+ り充実した交流の場を提供するため、<strong>スポンサー
+ 様を募集</strong>しています。</p>\n<p>ご協賛いただいた
+ 企業様には、下記の特典をご用意しております。\nぜひ
+ この機会に、コミュニティを盛り上げるサポートをお
+ 願いいたします！</p>\n<h3>スポンサー特典</h3>\n<ol>\n<li>
+ 懇親会での紹介</li>\n<li>connpassに紹介文＋ロゴ＋企業URL
+ を記載</li>\n</ol>\n<p>スポンサーの詳細・お申込み</p>\n<p>
+ 詳細は下記依頼文をご確認ください。</p>\n<p><a href="https
+ ://docs.google.com/document/d/1R1uEKq7ftEr3J65LutzZBmu0d7GwseqSZJs1pvyqEKc
+ /edit?usp=sharing" rel="nofollow">懇親会スポンサー依頼文</a></p
+ >\n<p>スポンサーを希望される会社様は、OSPNのSlackまた
+ はメールにてOSC北海道2026懇親会スポンサーをご希望の
+ 旨ご連絡ください。</p>\n<p>メール: <a href="mailto:osc2026@beg
+ i.net">osc2026[at]begi.net</a></p>\n<h2>懇親会スポンサー様ご紹
+ 介</h2>\n<p><img alt="" src="https://i.gyazo.com/9b7628b950dd05f76fa806cb
+ 3e1f139e.png"><br>\n<a href="https://pleasanter.org/" rel="nofollow">OSS
+ ノーコード・ローコード開発ツール「プリザンター」</
+ a></p>\n<p><img alt="" src="https://i.gyazo.com/43ada8f2514908cee95dce0b43
+ fa329a.png"><br>\n<a href="https://virtualtech.jp/" rel="nofollow">日本
+ 仮想化技術株式会社</a></p>\n<p><img alt="" src="https://i.gyazo.c
+ om/b26e999da20c4f47b11ce42842043991.png"><br>\n<a href="http://www.3bit.co
+ .jp" rel="nofollow">有限会社サンビットシステム</a></p>\n<h2>
+ 参加資格</h2>\n<ul>\n<li>OSC 2026 Hokkaido の参加者、展示者、
+ セミナー講師、運営スタッフ、その他関係者</li>\n<li>オ
+ ープンソースに興味のある方、交流を楽しみたい方</li>
+ \n</ul>\n<h2>注意事項</h2>\n<p>一般（学生サポート）・一般
+ ・学生のそれぞれの枠数は申込状況に応じて適宜調整
+ いたします。\n枠数に限らず該当する参加枠にて申込く
+ ださい。</p>\n<p>キャンセル待ちは、connpassからお申し込
+ みいただいた順に自動で繰り上げとなります。\n補欠者
+ から参加者への繰り上げ状況はご自身でご確認いただ
+ き、受付で参加費のお支払いをお願いします。</p>\n<p><s
+ pan style="color: #d32f2f\; font-weight: bold\;">過去実施をしてお
+ りました、OSC受付でのキャンセル待ちリストへの追加
+ 等は、今年度は実施致しません。</span></p>\n<p>必ずconnpas
+ sからのお申し込みをお願いいたします。</p>\n\nhttps://osp
+ n.connpass.com/event/392762/?utm_campaign=series_events&utm_source=feed&ut
+ m_medium=atom
+URL:https://ospn.connpass.com/event/392762/?utm_campaign=series_events&utm_
+ source=feed&utm_medium=atom
+END:VEVENT
+BEGIN:VEVENT
+UID:https://ospn.connpass.com/event/391085/?utm_campaign=series_events&utm_
+ source=feed&utm_medium=atom
+DTSTAMP:20260623T153112Z
+DTSTART;TZID=Asia/Tokyo:20260606T180000
+DTEND;TZID=Asia/Tokyo:20260606T200000
+SUMMARY:6/6 OSC仙台  懇親会
+DESCRIPTION:開催日時: 2026/06/06 18:00 ～ 20:00<br />開催場所: 宮
+ 城県仙台市青葉区花京院1-3-1(東北電子専門学校)<br /><br 
+ />\n\n<h1>OSC仙台、終了後に学内ので懇親会を開催します
+ ！</h1>\n<p>OSC仙台のプログラムが終了後、2Fの学食に移
+ 動して懇親会を開催します！<br>\n講師・出展者も交え
+ ての楽しい懇親会です。<br>\n最新の情報交換や人脈を
+ 広げるチャンス！お気軽にご参加ください。<br></p>\n<p>
+ ※登録後に参加できなくなった場合は、速やかにキャ
+ ンセル処理をお願いします。<br></p>\n<h2>当日受付のご案
+ 内</h2>\n<p>connpassでの申込は締切ましたが、当日受付を
+ 行います。<br>\n参加されたい方は当日OSC受付（会場8F）
+ に15:30までにお越しください。<br>\nよろしくお願いしま
+ す。<br></p>\n<h2>会場</h2>\n<p>東北電子専門学校 2F 学食<br>
+ </p>\n<h2>会費</h2>\n<ul>\n<li>一般 学生サポート付き 5\,000円
+ （税込、領収書出ます）※<br></li>\n<li>一般 4\,000円（税
+ 込、領収書出ます）<br></li>\n<li>学生 1\,000円（税込、領
+ 収書なし）※支払いの際、学生証を提示してください
+ 。（社会人学生は対象となりません）<br>\n※学生サポ
+ ートは当日の学生の懇親会参加の補助のほか、今後の
+ 開催の学生の参加にも活用させていただきます。</li>\n<
+ /ul>\n<h2>内容</h2>\n<ul>\n<li>立食形式／料理＋ドリンク（
+ ビール他、ソフトドリンク）<br></li>\n</ul>\n<h2>支払場所<
+ /h2>\n<ul>\n<li>OSC会場の総合受付にて15:30までにお支払い
+ 、参加証お渡し。なるべくお釣りがでないようにご用
+ 意ください。</li>\n<li>懇親会会場では、基本的に支払受
+ 付ができませんので、OSC会場でお願いします。\n15:30ま
+ でにお支払いができない場合は、事前にメールにてお
+ 知らせください（osc2026@begi.net)</li>\n</ul>\n<h2>OSC仙台のイ
+ ベント参加登録もお願いします</h2>\n<p>OSC仙台(connpass)<br
+ >\n<a href="https://ospn.connpass.com/event/387446/" rel="nofollow">https:
+ //ospn.connpass.com/event/387446/</a> <br>\n展示ブース一覧<br>\n<a 
+ href="https://event.ospn.jp/osc2026-sendai/exhibit" rel="nofollow">https:/
+ /event.ospn.jp/osc2026-sendai/exhibit</a> <br>\nタイムテーブル<br>\
+ n<a href="https://event.ospn.jp/osc2026-sendai/session/day1" rel="nofollow
+ ">https://event.ospn.jp/osc2026-sendai/session/day1</a></p>\n\nhttps://osp
+ n.connpass.com/event/391085/?utm_campaign=series_events&utm_source=feed&ut
+ m_medium=atom
+URL:https://ospn.connpass.com/event/391085/?utm_campaign=series_events&utm_
+ source=feed&utm_medium=atom
+END:VEVENT
+BEGIN:VEVENT
+UID:https://ospn.connpass.com/event/392421/?utm_campaign=series_events&utm_
+ source=feed&utm_medium=atom
+DTSTAMP:20260623T153112Z
+DTSTART;TZID=Asia/Tokyo:20260801T100000
+DTEND;TZID=Asia/Tokyo:20260801T180000
+SUMMARY:8/1 オープンソースカンファレンス2026 Kyoto
+DESCRIPTION:開催日時: 2026/08/01 10:00 ～ 18:00<br />開催場所: 京
+ 都府京都市下京区中堂寺粟田町93(京都リサーチパーク(K
+ RP) 西地区 4号館 地下1F バズホール)<br /><br /><h1>オープ
+ ンソースカンファレンス2026 Kyoto開催のご案内</h1>\n<p>オ
+ ープンソースソフトウェア（OSS）は、世界中の人たち
+ と一緒に作品をつくるようなコンピュータプログラム
+ です。ソースコード（中身）がすべて公開されていて
+ 、誰でも自由に使え、自分のアイデアを入れてアップ
+ グレードすることもできます。 OSSに関わるのに、特別
+ な資格や経験は必要ありません。国境を越えて仲間が
+ できたり、自分のつくったものが世界のユーザーに届
+ いたり、将来のキャリアにつながるスキルが身に付い
+ たりします。たとえば、ゲームクリエイター、アプリ
+ 開発者、Webデザイナー、エンジニアなど、IT分野の多く
+ の仕事でOSSが使われています。</p>\n<p>普段使っている 
+ 地図アプリ、動画配信サービス、SNS、スマホゲーム の
+ 裏側にもOSSが活躍しています。オープンソースカンフ
+ ァレンス(OSC)は、そんなOSSの世界を「見て・話して・参
+ 加できる」イベントです。好きなことから始めて、世
+ 界レベルのプロジェクトに参加できる、そんなチャン
+ スがOSSには広がっています。</p>\n<p>皆さんのご参加を
+ お待ちしております。</p>\n<h2>セミナー発表、展示ブー
+ ス出展者(団体)募集中です！</h2>\n<p>希望者は、公式サ
+ イトの<a href="https://event.ospn.jp/osc2026-kyoto/contact" rel="nofoll
+ ow">「お問い合わせフォーム」</a>にてご連絡ください。
+ <br>\n申込ファイルをお送りいたします。<br>\n<a href="https
+ ://event.ospn.jp/osc2026-kyoto/" rel="nofollow">https://event.ospn.jp/osc2
+ 026-kyoto/</a></p>\n<p>1）団体(企業)名<br>\n2）団体(企業)URL<br
+ >\n※企業出展の場合は協賛をお願いしております<br></p>
+ \n\n\n<h2>開催概要</h2>\n<p><b>日時</b><br>\n8月1日(土) 10:00-18:
+ 00（展示は16:00まで）<br></p>\n<p><b>会場</b><br>\n京都リサ
+ ーチパーク(KRP) 西地区 4号館 地下1F バズホール(OSC受付)
+ <br>\n<a href="https://www.krp.co.jp/access/map.html" rel="nofollow">ア
+ クセス</a> (JR 丹波口駅から徒歩5分)</p>\n<p><b>OSC2026 Kyoto
+ 公式サイト</b><br>\n<a href="https://event.ospn.jp/osc2026-kyoto/" re
+ l="nofollow">https://event.ospn.jp/osc2026-kyoto/</a></p>\n<p><b>開催形
+ 式</b><br>\nリアル会場でのセミナー、展示ブース</p>\n<h1>
+ セミナータイムテーブル</h1>\n<p>公開前</p>\n<h1>展示ブー
+ ス（バズホール）</h1>\n<ul>\n<li><a href="https://event.ospn.jp/os
+ c2026-kyoto/exhibit" rel="nofollow">出展者と展示内容リスト</a><
+ /li>\n<li>[展示ブースの配置図(PDF)]準備中</li>\n</ul>\n<h1>OSC
+ 京都 懇親会（事前登録制）</h1>\n<p>終了後、京都駅に場
+ 所を変えて、19:00〜懇親会を行います。<br>\nご参加には
+ 以下のページでお申し込みが必要です。<br>\n→<a href="ht
+ tps://ospn.connpass.com/event/392414/" rel="nofollow">懇親会の申込
+ ページ(connpass)</a></p>\n<h1>属性アンケートご協力のお願
+ い</h1>\n<p>connpassご登録時に、年代、職種、お住まいの
+ 地域、OSC参加歴、参加目的、参加コメントなど簡単な
+ アンケートへのご入力をお願いしています。集計結果
+ はイベント開催後にスポンサー、出展者にし提供する
+ とともに、イベントの運営に役立てています。</p>\n\nhtt
+ ps://ospn.connpass.com/event/392421/?utm_campaign=series_events&utm_source
+ =feed&utm_medium=atom
+URL:https://ospn.connpass.com/event/392421/?utm_campaign=series_events&utm_
+ source=feed&utm_medium=atom
+END:VEVENT
+BEGIN:VEVENT
+UID:https://ospn.connpass.com/event/388639/?utm_campaign=series_events&utm_
+ source=feed&utm_medium=atom
+DTSTAMP:20260623T153112Z
+DTSTART;TZID=Asia/Tokyo:20260627T100000
+DTEND;TZID=Asia/Tokyo:20260627T180000
+SUMMARY:6/27 オープンソースカンファレンス2026 Hokkaido
+DESCRIPTION:開催日時: 2026/06/27 10:00 ～ 18:00<br />開催場所: 札
+ 幌市白石区東札幌5条1丁目1－1(札幌市産業振興センター
+ )<br /><br /><h1>オープンソースカンファレンス2026 Hokkaido
+ 開催のご案内</h1>\n<p>オープンソースソフトウェア（OSS
+ ）は、世界中の人たちと一緒に作品をつくるようなコ
+ ンピュータプログラムです。ソースコード（中身）が
+ すべて公開されていて、誰でも自由に使え、自分のア
+ イデアを入れてアップグレードすることもできます。 O
+ SSに関わるのに、特別な資格や経験は必要ありません。
+ 国境を越えて仲間ができたり、自分のつくったものが
+ 世界のユーザーに届いたり、将来のキャリアにつなが
+ るスキルが身に付いたりします。たとえば、ゲームク
+ リエイター、アプリ開発者、Webデザイナー、エンジニ
+ アなど、IT分野の多くの仕事でOSSが使われています。</p
+ >\n<p>普段使っている 地図アプリ、動画配信サービス、S
+ NS、スマホゲーム の裏側にもOSSが活躍しています。オ
+ ープンソースカンファレンス(OSC)は、そんなOSSの世界を
+ 「見て・話して・参加できる」イベントです。好きな
+ ことから始めて、世界レベルのプロジェクトに参加で
+ きる、そんなチャンスがOSSには広がっています。</p>\n<p
+ >皆さんのご参加をお待ちしております。</p>\n\n\n\n<h2>開
+ 催概要</h2>\n<p><b>日時</b><br>\n6月27日(土) 10:00-18:00（展示
+ は16:00まで）<br></p>\n<p><b>会場</b><br>\n札幌市産業振興セ
+ ンター 2F ルームA (OSC受付)<br>\n<a href="https://www.sapporosansi
+ n.jp/access/" rel="nofollow">アクセス</a> (地下鉄東西線「東札
+ 幌駅」から徒歩7分)</p>\n<p><b>OSC2026 Hokkaido公式サイト</b><
+ br>\n<a href="https://event.ospn.jp/osc2026-do/" rel="nofollow">https://ev
+ ent.ospn.jp/osc2026-do/</a></p>\n<p><b>開催形式</b><br>\nリアル会
+ 場でのセミナー、展示ブース</p>\n<h1>学生交通費支援</h1
+ >\n<p>オープンソースカンファレンス2026北海道実行委員
+ 会では「一般社団法人LOCAL学生交通費支援制度」を利用
+ し、学生がOSC2026 Hokkaidoに参加するための交通費を支援
+ します。<br>\n<a href="https://forms.gle/gx2NM2eLE7Ew3CwY6" rel="nofol
+ low">学生交通費支援申し込みフォーム</a></p>\n<h1>セミナ
+ ータイムテーブル</h1>\n<p><a href="https://event.ospn.jp/osc2026-d
+ o/session/day1" rel="nofollow">https://event.ospn.jp/osc2026-do/session/da
+ y1</a></p>\n<h1>展示ブース</h1>\n<ul>\n<li><a href="https://event.osp
+ n.jp/osc2026-do/exhibit" rel="nofollow">出展者と展示内容リスト<
+ /a></li>\n<li><a href="https://event.ospn.jp/files/booth_layout/26do_a.pdf
+ " rel="nofollow">展示ブースの配置図(ルームA)</a></li>\n<li><a 
+ href="https://event.ospn.jp/files/booth_layout/26do_b.pdf" rel="nofollow">
+ 展示ブースの配置図(ルームB)</a></li>\n</ul>\n<h1>OSC北海道 
+ 大懇親会（事前登録制）</h1>\n<p>終了後に懇親会を行い
+ ます。（移動は各自）<br>\nご参加には以下のページで
+ お申し込みが必要です。<br>\n→<a href="https://ospn.connpass.c
+ om/event/392762/" rel="nofollow">懇親会の申込ページ(connpass)</a>
+ </p>\n<h1>属性アンケートご協力のお願い</h1>\n<p>connpassご
+ 登録時に、年代、職種、お住まいの地域、OSC参加歴、
+ 参加目的、参加コメントなど簡単なアンケートへのご
+ 入力をお願いしています。集計結果はイベント開催後
+ にスポンサー、出展者にし提供するとともに、イベン
+ トの運営に役立てています。</p>\n\nhttps://ospn.connpass.com/e
+ vent/388639/?utm_campaign=series_events&utm_source=feed&utm_medium=atom
+URL:https://ospn.connpass.com/event/388639/?utm_campaign=series_events&utm_
+ source=feed&utm_medium=atom
+END:VEVENT
+BEGIN:VEVENT
+UID:https://ospn.connpass.com/event/387446/?utm_campaign=series_events&utm_
+ source=feed&utm_medium=atom
+DTSTAMP:20260623T153112Z
+DTSTART;TZID=Asia/Tokyo:20260606T100000
+DTEND;TZID=Asia/Tokyo:20260606T180000
+SUMMARY:6/6 オープンソースカンファレンス2026 Sendai
+DESCRIPTION:開催日時: 2026/06/06 10:00 ～ 18:00<br />開催場所: 宮
+ 城県仙台市青葉区花京院1-3-1(東北電子専門学校)<br /><br 
+ /><h1>オープンソースカンファレンス2026 Sendai開催のご案
+ 内</h1>\n<p>オープンソースソフトウェア（OSS）は、世界
+ 中の人たちと一緒に作品をつくるようなコンピュータ
+ プログラムです。\nソースコード（中身）がすべて公開
+ されていて、誰でも自由に使え、自分のアイデアを入
+ れてアップグレードすることもできます。\nOSSに関わる
+ のに、特別な資格や経験は必要ありません。\n国境を越
+ えて仲間ができたり、自分のつくったものが世界のユ
+ ーザーに届いたり、将来のキャリアにつながるスキル
+ が身に付いたりします。\nたとえば、ゲームクリエイタ
+ ー、アプリ開発者、Webデザイナー、エンジニアなど、IT
+ 分野の多くの仕事でOSSが使われています。</p>\n<p>普段
+ 使っている 地図アプリ、動画配信サービス、SNS、スマ
+ ホゲーム の裏側にもOSSが活躍しています。\nオープン
+ ソースカンファレンス(OSC)は、そんなOSSの世界を「見て
+ ・話して・参加できる」イベントです。\n好きなことか
+ ら始めて、世界レベルのプロジェクトに参加できる、
+ そんなチャンスがOSSには広がっています。</p>\n<p>皆さ
+ んのご参加をお待ちしております。</p>\n<h2>イベント参
+ 加登録について</h2>\n<p>ご来場予定の方は、参加登録を
+ お願いします。<br>\nシステム上、当イベントの参加登
+ 録ができない場合（他のイベントにも参加申し込み済
+ みなど）は、<br>\n登録なしでご来場ください。（当イ
+ ベントは重複参加を許可設定です）</p>\n<h1>来場者アン
+ ケートにご協力をお願いします！</h1>\n<p>出展者、講演
+ 者にもお伝えしますので、面白かった、ためになった
+ 、良かったことなど、感想コメントをお待ちしていま
+ す！<br>\n<a href="https://forms.gle/erJDSgnazf8sVdkdA" rel="nofollow">h
+ ttps://forms.gle/erJDSgnazf8sVdkdA</a> <br>\n6月15日(月)締切 ※全5
+ 問の簡単な質問です</p>\n\n\n<h2>開催概要</h2>\n<p><b>日時</
+ b><br>\n6月6日(土) 10:00-18:00（展示は16:00まで）<br></p>\n<p><b
+ >会場</b><br>\n 東北電子専門学校<br>\n<a href="https://tcc.ac.jp
+ /outline/access/" rel="nofollow">アクセス</a> (JR仙台駅から徒歩
+ 5分)</p>\n<p><b>OSC2026 Sendai公式サイト</b><br>\n<a href="https://e
+ vent.ospn.jp/osc2026-sendai/" rel="nofollow">https://event.ospn.jp/osc2026
+ -sendai/</a></p>\n<p><b>開催形式</b><br>\nリアル会場でのセミ
+ ナー、展示ブース</p>\n<h1>セミナータイムテーブル</h1>\n
+ <p><a href="https://event.ospn.jp/osc2026-sendai/session/day1" rel="nofoll
+ ow">https://event.ospn.jp/osc2026-sendai/session/day1</a></p>\n<h1>展示
+ ブース</h1>\n<ul>\n<li><a href="https://event.ospn.jp/osc2026-sendai/ex
+ hibit" rel="nofollow">出展ブースと展示内容の一覧ページ</a>
+ </li>\n<li><a href="https://event.ospn.jp/files/booth_layout/26sendai_801.
+ pdf" rel="nofollow">展示ブースのレイアウト 801教室(PDF)</a>
+ ・<a href="https://event.ospn.jp/files/booth_layout/26sendai_802.pdf" rel
+ ="nofollow">802教室(PDF)</a>・<a href="https://event.ospn.jp/files/boot
+ h_layout/26sendai_806.pdf" rel="nofollow">806教室(PDF)</a></li>\n</ul>\n
+ <h1>OSC仙台懇親会（事前登録制）</h1>\n<p>終了後(18:00〜20:
+ 00)に懇親会を行います。<br>\nご参加には以下のページ
+ でお申し込みが必要です。<br>\n→<a href="https://ospn.connpas
+ s.com/event/391085/" rel="nofollow">懇親会の申込ページ(connpass)<
+ /a></p>\n<h1>属性アンケートご協力のお願い</h1>\n<p>connpass
+ ご登録時に、年代、職種、お住まいの地域、OSC参加歴
+ 、参加目的、参加コメントなど簡単なアンケートへの
+ ご入力をお願いしています。集計結果はイベント開催
+ 後にスポンサー、出展者にし提供するとともに、イベ
+ ントの運営に役立てています。</p>\n\nhttps://ospn.connpass.co
+ m/event/387446/?utm_campaign=series_events&utm_source=feed&utm_medium=atom
+URL:https://ospn.connpass.com/event/387446/?utm_campaign=series_events&utm_
+ source=feed&utm_medium=atom
+END:VEVENT
+END:VCALENDAR
