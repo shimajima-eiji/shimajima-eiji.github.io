@@ -20,6 +20,7 @@ connpass グループの Atom フィードから ICS を生成する。
 
 from __future__ import annotations
 
+import json
 import os
 import re
 import sys
@@ -319,6 +320,7 @@ def main() -> int:
         die("feeds.yml に feeds がありません。")
 
     total = 0
+    generated: List[Dict[str, Any]] = []
     for feed in feeds:
         key = safe_slug(str(feed.get("key") or ""))
         name = str(feed.get("name") or key)
@@ -337,6 +339,23 @@ def main() -> int:
 
         print(f"OK  {key}: {len(events)} events -> {out_path}")
         total += len(events)
+        generated.append({"key": key, "name": name, "events": len(events)})
+
+    # トップページ（index.html）が動的に読み込む一覧。
+    # feeds.yml を更新すれば自動で追従し、HTML を手で直す必要がない。
+    feeds_json_path = os.path.join(out_dir, "feeds.json")
+    with open(feeds_json_path, "w", encoding="utf-8") as f:
+        json.dump(
+            {
+                "generated_at": datetime.now(timezone.utc).isoformat(),
+                "feeds": generated,
+            },
+            f,
+            ensure_ascii=False,
+            indent=2,
+        )
+        f.write("\n")
+    print(f"OK  feeds.json -> {feeds_json_path}")
 
     print(f"---\ntotal: {total} events")
     return 0
