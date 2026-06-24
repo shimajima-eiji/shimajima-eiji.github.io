@@ -28,7 +28,7 @@ import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 from typing import Any, Dict, List, Optional
 
@@ -133,8 +133,8 @@ def parse_event_datetime(summary: str, fallback: datetime) -> tuple[datetime, da
     """
     m = _DATETIME_PATTERN.search(summary)
     if not m:
-        ended = fallback.replace(hour=min(fallback.hour + 1, 23))
-        return fallback, ended
+        # timedelta で +1h（日付をまたぐ。23:00 開始でも 0 長にならない）
+        return fallback, fallback + timedelta(hours=1)
 
     date_str, start_str, end_str = m.group(1), m.group(2), m.group(3)
     date_part = date_str.replace("/", "-")
@@ -142,11 +142,10 @@ def parse_event_datetime(summary: str, fallback: datetime) -> tuple[datetime, da
         started = datetime.fromisoformat(f"{date_part}T{start_str}:00").replace(tzinfo=JST)
         ended = datetime.fromisoformat(f"{date_part}T{end_str}:00").replace(tzinfo=JST)
         if ended <= started:
-            ended = started.replace(hour=min(started.hour + 1, 23))
+            ended = started + timedelta(hours=1)
         return started, ended
     except ValueError:
-        ended = fallback.replace(hour=min(fallback.hour + 1, 23))
-        return fallback, ended
+        return fallback, fallback + timedelta(hours=1)
 
 
 def ns(tag: str) -> str:
@@ -250,9 +249,10 @@ def event_from_api(e: Dict[str, Any]) -> CalEvent:
     if ended_raw:
         ended_at = parse_iso_datetime(ended_raw)
     else:
-        ended_at = started_at.replace(hour=min(started_at.hour + 1, 23))
+        ended_at = started_at + timedelta(hours=1)
     if ended_at <= started_at:
-        ended_at = started_at.replace(hour=min(started_at.hour + 1, 23))
+        # timedelta で +1h（23:00 開始でも 0 長にならず翌日にまたぐ）
+        ended_at = started_at + timedelta(hours=1)
 
     catch = (e.get("catch") or "").strip()
     place = (e.get("place") or "").strip()

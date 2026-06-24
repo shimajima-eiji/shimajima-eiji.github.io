@@ -70,17 +70,22 @@ def check_html(path: str) -> None:
     c.feed(html)
     c.close()
 
+    # このファイルのエラーだけをローカルに集める。global errors への部分文字列マッチに
+    # 頼ると 'docs/index.html.bak' のような別ファイル名と誤一致して OK 判定を取り違える。
+    local: list[str] = []
     for tag in _TRACKED:
         s, e = c.starts.get(tag, 0), c.ends.get(tag, 0)
         if s != e:
-            err(f"{name}: <{tag}> の開閉数が不一致 (open={s}, close={e})")
+            local.append(f"{name}: <{tag}> の開閉数が不一致 (open={s}, close={e})")
 
     low = html.lower()
     for must in ("<!doctype html", "<title>", "</html>", "</body>"):
         if must not in low:
-            err(f"{name}: 必須要素が見つからない: {must}")
+            local.append(f"{name}: 必須要素が見つからない: {must}")
 
-    if not errors or all(name not in x for x in errors):
+    for m in local:
+        err(m)
+    if not local:
         ok(f"HTML {name}")
 
 
@@ -143,10 +148,21 @@ def selftest_connpass() -> None:
     # ICS エスケープ
     assert gen.ics_escape("a,b;c\\d\ne") == "a\\,b\\;c\\\\d\\ne"
 
-    # 行折り返しは UTF-8 75 バイト以内
+    # 行折り返しは UTF-8 75 バイト以内（ASCII）
     long_line = "X" * 200
     for piece in gen.ics_fold_line(long_line):
         assert len(piece.encode("utf-8")) <= 75
+
+    # マルチバイト（日本語 3 バイト文字）でも各 piece が 75 バイト以内で、
+    # 文字の途中で割れない（継続行先頭スペースを除いて連結すると原文に戻る）。
+    jp_line = "今日も一日がんばりましょう" * 10  # 130 文字 / 約 390 バイト
+    pieces = gen.ics_fold_line(jp_line)
+    assert len(pieces) > 1, "折り返しが起きていない"
+    for piece in pieces:
+        assert len(piece.encode("utf-8")) <= 75, f"75 バイト超: {piece!r}"
+    # 1 行目はそのまま、2 行目以降は先頭スペースを剥がして連結 → 原文一致
+    rejoined = pieces[0] + "".join(p[1:] for p in pieces[1:])
+    assert rejoined == jp_line, "折り返し再結合で原文に戻らない（文字が割れている）"
 
     # 開催日時パース
     summary = "開催日時: 2026/04/18 10:00 ～ 18:00 / 場所: ..."
@@ -203,16 +219,28 @@ def selftest_issues() -> None:
 # ---------------------------------------------------------------------------
 
 def main() -> int:
+    # 各種別で「期待ファイルが 0 件」なら無音 PASS させず FAIL にする。
+    # docs/ を丸ごと削除する事故コミットや、生成ジョブが何も出力しなかったケースを
+    # CI で検出するため（ループ本体が走らないと errors が空のまま PASSED になる穴を塞ぐ）。
     print("== HTML ==")
-    for path in sorted(glob.glob(os.path.join(DOCS, "*.html"))):
+    html_paths = sorted(glob.glob(os.path.join(DOCS, "*.html")))
+    if not html_paths:
+        err("docs/*.html が 1 件もない（サイト本体が消えている可能性）")
+    for path in html_paths:
         check_html(path)
 
     print("== ICS ==")
-    for path in sorted(glob.glob(os.path.join(DOCS, "*.ics"))):
+    ics_paths = sorted(glob.glob(os.path.join(DOCS, "*.ics")))
+    if not ics_paths:
+        err("docs/*.ics が 1 件もない（カレンダー生成が失敗した可能性）")
+    for path in ics_paths:
         check_ics(path)
 
     print("== JSON ==")
-    for path in sorted(glob.glob(os.path.join(DOCS, "*.json"))):
+    json_paths = sorted(glob.glob(os.path.join(DOCS, "*.json")))
+    if not json_paths:
+        err("docs/*.json が 1 件もない（feeds.json が消えている可能性）")
+    for path in json_paths:
         check_json(path)
 
     print("== 自己テスト ==")
