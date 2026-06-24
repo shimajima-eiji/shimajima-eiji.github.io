@@ -1,10 +1,11 @@
 {
-  "generated_at": "2026-06-23T15:31:12.472181+00:00",
+  "generated_at": "2026-06-24T04:15:56.675433+00:00",
   "feeds": [
     {
       "key": "ospn",
       "name": "OSPN / OSC (connpass)",
-      "events": 10
+      "events": 10,
+      "source": "atom"
     }
   ]
 }
