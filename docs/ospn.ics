@@ -17,7 +17,7 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/396808/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260624T041556Z
+DTSTAMP:20260625T041614Z
 DTSTART;TZID=Asia/Tokyo:20260829T100000
 DTEND;TZID=Asia/Tokyo:20260829T174500
 SUMMARY:Open Developers Conference 2026
@@ -48,7 +48,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/398160/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260624T041556Z
+DTSTAMP:20260625T041614Z
 DTSTART;TZID=Asia/Tokyo:20260829T181500
 DTEND;TZID=Asia/Tokyo:20260829T201500
 SUMMARY:8/29 ODC2026 懇親会
@@ -85,7 +85,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/396163/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260624T041556Z
+DTSTAMP:20260625T041614Z
 DTSTART;TZID=Asia/Tokyo:20260626T200000
 DTEND;TZID=Asia/Tokyo:20260626T223000
 SUMMARY:6/26 OSC2026北海道 関係者前夜祭
@@ -116,7 +116,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/394555/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260624T041556Z
+DTSTAMP:20260625T041614Z
 DTSTART;TZID=Asia/Tokyo:20260627T083000
 DTEND;TZID=Asia/Tokyo:20260627T180000
 SUMMARY:6/27 OSC 2026 Hokkaido 当日スタッフ募集
@@ -162,7 +162,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/392414/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260624T041556Z
+DTSTAMP:20260625T041614Z
 DTSTART;TZID=Asia/Tokyo:20260801T190000
 DTEND;TZID=Asia/Tokyo:20260801T210000
 SUMMARY:8/1 OSC京都 懇親会（京都駅堀川通）
@@ -211,7 +211,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/392762/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260624T041556Z
+DTSTAMP:20260625T041614Z
 DTSTART;TZID=Asia/Tokyo:20260627T190000
 DTEND;TZID=Asia/Tokyo:20260627T210000
 SUMMARY:6/27 OSC 2026 Hokkaido 大懇親会
@@ -287,19 +287,17 @@ DESCRIPTION:開催日時: 2026/06/27 19:00 ～ 21:00<br />開催場所: 北
  みいただいた順に自動で繰り上げとなります。\n補欠者
  から参加者への繰り上げ状況はご自身でご確認いただ
  き、受付で参加費のお支払いをお願いします。</p>\n<p><s
- pan style="color: #d32f2f\; font-weight: bold\;">過去実施をしてお
- りました、OSC受付でのキャンセル待ちリストへの追加
- 等は、今年度は実施致しません。</span></p>\n<p>必ずconnpas
- sからのお申し込みをお願いいたします。</p>\n\nhttps://osp
- n.connpass.com/event/392762/?utm_campaign=series_events&utm_source=feed&ut
- m_medium=atom
+ pan style="color: #d32f2f\; font-weight: bold\;"></span></p>\n<p>必ずcon
+ npassからのお申し込みをお願いいたします。</p>\n\nhttps:/
+ /ospn.connpass.com/event/392762/?utm_campaign=series_events&utm_source=fee
+ d&utm_medium=atom
 URL:https://ospn.connpass.com/event/392762/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
 END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/391085/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260624T041556Z
+DTSTAMP:20260625T041614Z
 DTSTART;TZID=Asia/Tokyo:20260606T180000
 DTEND;TZID=Asia/Tokyo:20260606T200000
 SUMMARY:6/6 OSC仙台  懇親会
@@ -346,7 +344,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/392421/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260624T041556Z
+DTSTAMP:20260625T041614Z
 DTSTART;TZID=Asia/Tokyo:20260801T100000
 DTEND;TZID=Asia/Tokyo:20260801T180000
 SUMMARY:8/1 オープンソースカンファレンス2026 Kyoto
@@ -409,7 +407,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/388639/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260624T041556Z
+DTSTAMP:20260625T041614Z
 DTSTART;TZID=Asia/Tokyo:20260627T100000
 DTEND;TZID=Asia/Tokyo:20260627T180000
 SUMMARY:6/27 オープンソースカンファレンス2026 Hokkaido
@@ -433,46 +431,50 @@ DESCRIPTION:開催日時: 2026/06/27 10:00 ～ 18:00<br />開催場所: 札
  「見て・話して・参加できる」イベントです。好きな
  ことから始めて、世界レベルのプロジェクトに参加で
  きる、そんなチャンスがOSSには広がっています。</p>\n<p
- >皆さんのご参加をお待ちしております。</p>\n\n\n\n<h2>開
- 催概要</h2>\n<p><b>日時</b><br>\n6月27日(土) 10:00-18:00（展示
- は16:00まで）<br></p>\n<p><b>会場</b><br>\n札幌市産業振興セ
- ンター 2F ルームA (OSC受付)<br>\n<a href="https://www.sapporosansi
- n.jp/access/" rel="nofollow">アクセス</a> (地下鉄東西線「東札
- 幌駅」から徒歩7分)</p>\n<p><b>OSC2026 Hokkaido公式サイト</b><
- br>\n<a href="https://event.ospn.jp/osc2026-do/" rel="nofollow">https://ev
- ent.ospn.jp/osc2026-do/</a></p>\n<p><b>開催形式</b><br>\nリアル会
- 場でのセミナー、展示ブース</p>\n<h1>学生交通費支援</h1
- >\n<p>オープンソースカンファレンス2026北海道実行委員
- 会では「一般社団法人LOCAL学生交通費支援制度」を利用
- し、学生がOSC2026 Hokkaidoに参加するための交通費を支援
- します。<br>\n<a href="https://forms.gle/gx2NM2eLE7Ew3CwY6" rel="nofol
- low">学生交通費支援申し込みフォーム</a></p>\n<h1>セミナ
- ータイムテーブル</h1>\n<p><a href="https://event.ospn.jp/osc2026-d
- o/session/day1" rel="nofollow">https://event.ospn.jp/osc2026-do/session/da
- y1</a></p>\n<h1>展示ブース</h1>\n<ul>\n<li><a href="https://event.osp
- n.jp/osc2026-do/exhibit" rel="nofollow">出展者と展示内容リスト<
- /a></li>\n<li><a href="https://event.ospn.jp/files/booth_layout/26do_a.pdf
- " rel="nofollow">展示ブースの配置図(ルームA)</a></li>\n<li><a 
- href="https://event.ospn.jp/files/booth_layout/26do_b.pdf" rel="nofollow">
- 展示ブースの配置図(ルームB)</a></li>\n</ul>\n<h1>OSC北海道 
- 大懇親会（事前登録制）</h1>\n<p>終了後に懇親会を行い
- ます。（移動は各自）<br>\nご参加には以下のページで
- お申し込みが必要です。<br>\n→<a href="https://ospn.connpass.c
- om/event/392762/" rel="nofollow">懇親会の申込ページ(connpass)</a>
- </p>\n<h1>属性アンケートご協力のお願い</h1>\n<p>connpassご
- 登録時に、年代、職種、お住まいの地域、OSC参加歴、
- 参加目的、参加コメントなど簡単なアンケートへのご
- 入力をお願いしています。集計結果はイベント開催後
- にスポンサー、出展者にし提供するとともに、イベン
- トの運営に役立てています。</p>\n\nhttps://ospn.connpass.com/e
- vent/388639/?utm_campaign=series_events&utm_source=feed&utm_medium=atom
+ >皆さんのご参加をお待ちしております。</p>\n\n\n<h2>来
+ 場者アンケート</h2>\n<p>OSC北海道ご参加のご感想やメッ
+ セージをお寄せください！<br>\n<a href="https://forms.gle/Bq9bS
+ ZUy44nPYGcV8" rel="nofollow">→アンケートの回答はこちらから
+ ←</a></p>\n<h2>開催概要</h2>\n<p><b>日時</b><br>\n6月27日(土) 1
+ 0:00-18:00（展示は16:00まで）<br></p>\n<p><b>会場</b><br>\n札幌
+ 市産業振興センター 2F ルームA (OSC受付)<br>\n<a href="https:
+ //www.sapporosansin.jp/access/" rel="nofollow">アクセス</a> (地下鉄
+ 東西線「東札幌駅」から徒歩7分)</p>\n<p><b>OSC2026 Hokkaido
+ 公式サイト</b><br>\n<a href="https://event.ospn.jp/osc2026-do/" rel="
+ nofollow">https://event.ospn.jp/osc2026-do/</a></p>\n<p><b>開催形式</b
+ ><br>\nリアル会場でのセミナー、展示ブース</p>\n<h1>学生
+ 交通費支援</h1>\n<p>オープンソースカンファレンス2026北
+ 海道実行委員会では「一般社団法人LOCAL学生交通費支援
+ 制度」を利用し、学生がOSC2026 Hokkaidoに参加するための
+ 交通費を支援します。<br>\n<a href="https://forms.gle/gx2NM2eLE7E
+ w3CwY6" rel="nofollow">学生交通費支援申し込みフォーム</a></
+ p>\n<h1>セミナータイムテーブル</h1>\n<p><a href="https://event.
+ ospn.jp/osc2026-do/session/day1" rel="nofollow">https://event.ospn.jp/osc2
+ 026-do/session/day1</a></p>\n<h1>展示ブース</h1>\n<ul>\n<li><a href="
+ https://event.ospn.jp/osc2026-do/exhibit" rel="nofollow">出展者と展
+ 示内容リスト</a></li>\n<li><a href="https://event.ospn.jp/files/boot
+ h_layout/26do_a.pdf" rel="nofollow">展示ブースの配置図(ルームA
+ )</a></li>\n<li><a href="https://event.ospn.jp/files/booth_layout/26do_b.p
+ df" rel="nofollow">展示ブースの配置図(ルームB)</a></li>\n</ul>
+ \n<h1>OSC北海道 大懇親会（事前登録制）</h1>\n<p>終了後に
+ 懇親会を行います。（移動は各自）<br>\nご参加には以
+ 下のページでお申し込みが必要です。<br>\n→<a href="https
+ ://ospn.connpass.com/event/392762/" rel="nofollow">懇親会の申込ペ
+ ージ(connpass)</a></p>\n<h1>属性アンケートご協力のお願い</
+ h1>\n<p>connpassご登録時に、年代、職種、お住まいの地域
+ 、OSC参加歴、参加目的、参加コメントなど簡単なアン
+ ケートへのご入力をお願いしています。集計結果はイ
+ ベント開催後にスポンサー、出展者にし提供するとと
+ もに、イベントの運営に役立てています。</p>\n\nhttps://o
+ spn.connpass.com/event/388639/?utm_campaign=series_events&utm_source=feed&
+ utm_medium=atom
 URL:https://ospn.connpass.com/event/388639/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
 END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/387446/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260624T041556Z
+DTSTAMP:20260625T041614Z
 DTSTART;TZID=Asia/Tokyo:20260606T100000
 DTEND;TZID=Asia/Tokyo:20260606T180000
 SUMMARY:6/6 オープンソースカンファレンス2026 Sendai
