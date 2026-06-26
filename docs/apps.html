@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI で作ったミニアプリ集 — shimajima-eiji</title>
-  <meta name="description" content="AI と一緒に一発ネタで作ったミニアプリの動作確認ページ。">
+  <title>Mini Apps Built with AI — shimajima-eiji</title>
+  <meta name="description" content="A live-demo page for one-off mini apps built together with AI.">
   <meta name="color-scheme" content="light dark">
-  <meta property="og:title" content="AI で作ったミニアプリ集 — shimajima-eiji">
+  <meta property="og:title" content="Mini Apps Built with AI — shimajima-eiji">
   <meta property="og:type" content="website">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>🧪</text></svg>">
   <style>
@@ -68,42 +68,56 @@
     a.app .note { color: var(--fg-muted); font-size: .9rem; margin-top: .3rem; }
     footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--fg-muted); font-size: .85rem; }
     footer a { color: var(--accent); }
+    .lang-ja { color: var(--fg-muted); font-size: .92em; margin-top: .25rem; }
+    h1 .lang-ja { font-size: 1.05rem; font-weight: 500; margin-top: .35rem; }
+    a.app .note.lang-ja { font-size: .85rem; margin-top: .1rem; }
   </style>
 </head>
 <body>
   <header>
-    <h1>🧪 AI で作ったミニアプリ集</h1>
-    <p class="lead">AI と一緒に「一発ネタ」で作ったアプリの動作確認用ページ。完結済みで保守はしないが、ブログネタとして公開を維持しています。</p>
+    <h1>🧪 Mini Apps Built with AI
+      <span class="lang-ja" lang="ja">AI で作ったミニアプリ集</span>
+    </h1>
+    <p class="lead">A page for trying out one-off apps built together with AI. They are finished and unmaintained, but kept public as blog material.</p>
+    <p class="lead lang-ja" lang="ja">AI と一緒に「一発ネタ」で作ったアプリの動作確認用ページ。完結済みで保守はしないが、ブログネタとして公開を維持しています。</p>
   </header>
 
-  <nav><a href="./">← カレンダー購読 (ICS) に戻る</a></nav>
+  <nav><a href="./">← Calendar Subscriptions (ICS) / カレンダー購読 (ICS) に戻る</a></nav>
 
-  <h2>モールス信号</h2>
+  <h2>Morse Code
+    <span class="lang-ja" lang="ja">モールス信号</span>
+  </h2>
   <div class="grid">
     <a class="app" href="./morse-signal-visualizer/">
       <div class="title">Morse Signal Visualizer</div>
-      <div class="note">モールス信号の波形を可視化。単体 HTML。</div>
+      <div class="note">Visualizes Morse code waveforms. Single HTML file.</div>
+      <div class="note lang-ja" lang="ja">モールス信号の波形を可視化。単体 HTML。</div>
     </a>
     <a class="app" href="./morse-chick-assets/">
       <div class="title">Morse Chick — Assets Preview</div>
-      <div class="note">ひよこキャラのモーションアセット集 (4状態: dot/dash/idle/done)。</div>
+      <div class="note">Motion asset set for the chick character (4 states: dot/dash/idle/done).</div>
+      <div class="note lang-ja" lang="ja">ひよこキャラのモーションアセット集 (4状態: dot/dash/idle/done)。</div>
     </a>
     <a class="app" href="./morse-chick-download/">
       <div class="title">Morse Chick — Download Preview</div>
-      <div class="note">アセットダウンロード UI のプレビュー。</div>
+      <div class="note">Preview of the asset download UI.</div>
+      <div class="note lang-ja" lang="ja">アセットダウンロード UI のプレビュー。</div>
     </a>
     <a class="app" href="./morse-modal-v1/">
       <div class="title">Morse Modal v1</div>
-      <div class="note">React 統合用モーダル UI、プレビュー版。</div>
+      <div class="note">Modal UI for React integration, preview version.</div>
+      <div class="note lang-ja" lang="ja">React 統合用モーダル UI、プレビュー版。</div>
     </a>
     <a class="app" href="./morse-modal-v2/">
       <div class="title">Morse Modal v2</div>
-      <div class="note">React 統合用モーダル UI、改良版 (integrated design)。</div>
+      <div class="note">Modal UI for React integration, refined version (integrated design).</div>
+      <div class="note lang-ja" lang="ja">React 統合用モーダル UI、改良版 (integrated design)。</div>
     </a>
   </div>
 
   <footer>
-    <p>ソース: <a href="https://github.com/shimajima-eiji/shimajima-eiji.github.io">GitHub</a></p>
+    <p>Source: <a href="https://github.com/shimajima-eiji/shimajima-eiji.github.io">GitHub</a></p>
+    <p class="lang-ja" lang="ja">ソース: <a href="https://github.com/shimajima-eiji/shimajima-eiji.github.io">GitHub</a></p>
   </footer>
 </body>
 </html>
