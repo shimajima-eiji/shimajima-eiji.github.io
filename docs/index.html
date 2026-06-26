@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>カレンダー購読 (ICS) — shimajima-eiji</title>
-  <meta name="description" content="connpass イベントや GitHub Issues の締切を ICS で配信。カレンダーアプリに URL で購読できます。">
+  <title>Calendar Subscriptions (ICS) — shimajima-eiji</title>
+  <meta name="description" content="Subscribe to connpass events and GitHub Issues deadlines as ICS feeds — paste the URL into your calendar app.">
   <meta name="color-scheme" content="light dark">
-  <meta property="og:title" content="カレンダー購読 (ICS) — shimajima-eiji">
-  <meta property="og:description" content="connpass イベントや GitHub Issues の締切を ICS で配信。">
+  <meta property="og:title" content="Calendar Subscriptions (ICS) — shimajima-eiji">
+  <meta property="og:description" content="Subscribe to connpass events and GitHub Issues deadlines as ICS feeds.">
   <meta property="og:type" content="website">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>📅</text></svg>">
   <style>
@@ -87,28 +87,39 @@
     footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--fg-muted); font-size: .85rem; }
     footer a { color: var(--accent); }
     .empty { color: var(--fg-muted); font-style: italic; }
+    .lang-ja { color: var(--fg-muted); font-size: .92em; margin-top: .25rem; }
+    h1 .lang-ja { font-size: 1.05rem; font-weight: 500; margin-top: .35rem; }
   </style>
 </head>
 <body>
   <header>
-    <h1>📅 カレンダー購読 (ICS)</h1>
-    <p class="lead">下の URL をカレンダーアプリの「URL で購読」に貼り付けると、イベントや締切が自動で同期されます。</p>
+    <h1>📅 Calendar Subscriptions (ICS)
+      <span class="lang-ja" lang="ja">カレンダー購読 (ICS)</span>
+    </h1>
+    <p class="lead">Paste the URLs below into the "Subscribe to calendar by URL" field of your calendar app to keep events and deadlines synced automatically.</p>
+    <p class="lead lang-ja" lang="ja">下の URL をカレンダーアプリの「URL で購読」に貼り付けると、イベントや締切が自動で同期されます。</p>
   </header>
 
-  <h2>connpass イベント</h2>
+  <h2>connpass Events
+    <span class="lang-ja" lang="ja">connpass イベント</span>
+  </h2>
   <div id="connpass-list">
     <p class="empty">読み込み中…</p>
   </div>
 
-  <h2>GitHub Issues 締切</h2>
+  <h2>GitHub Issues Deadlines
+    <span class="lang-ja" lang="ja">GitHub Issues 締切</span>
+  </h2>
   <div id="issues-list"></div>
 
   <nav style="margin-top:2.5rem;">
-    <a href="./apps.html">🧪 AI で作ったミニアプリ集 →</a>
+    <a href="./apps.html">🧪 Mini apps built with AI / AI で作ったミニアプリ集 →</a>
   </nav>
 
   <footer>
-    <p>feeds.yml に connpass グループを追加すると自動で ICS が生成されます。
+    <p>Adding a connpass group to feeds.yml generates an ICS feed automatically.
+    Source: <a href="https://github.com/shimajima-eiji/shimajima-eiji.github.io">GitHub</a></p>
+    <p class="lang-ja" lang="ja">feeds.yml に connpass グループを追加すると自動で ICS が生成されます。
     ソース: <a href="https://github.com/shimajima-eiji/shimajima-eiji.github.io">GitHub</a></p>
   </footer>
 
