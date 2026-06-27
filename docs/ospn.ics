@@ -17,7 +17,7 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/396808/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260626T042232Z
+DTSTAMP:20260627T040857Z
 DTSTART;TZID=Asia/Tokyo:20260829T100000
 DTEND;TZID=Asia/Tokyo:20260829T174500
 SUMMARY:Open Developers Conference 2026
@@ -48,7 +48,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/398160/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260626T042232Z
+DTSTAMP:20260627T040857Z
 DTSTART;TZID=Asia/Tokyo:20260829T181500
 DTEND;TZID=Asia/Tokyo:20260829T201500
 SUMMARY:8/29 ODC2026 懇親会
@@ -85,7 +85,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/396163/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260626T042232Z
+DTSTAMP:20260627T040857Z
 DTSTART;TZID=Asia/Tokyo:20260626T200000
 DTEND;TZID=Asia/Tokyo:20260626T223000
 SUMMARY:6/26 OSC2026北海道 関係者前夜祭
@@ -116,7 +116,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/394555/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260626T042232Z
+DTSTAMP:20260627T040857Z
 DTSTART;TZID=Asia/Tokyo:20260627T083000
 DTEND;TZID=Asia/Tokyo:20260627T180000
 SUMMARY:6/27 OSC 2026 Hokkaido 当日スタッフ募集
@@ -162,56 +162,58 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/392414/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260626T042232Z
+DTSTAMP:20260627T040857Z
 DTSTART;TZID=Asia/Tokyo:20260801T190000
 DTEND;TZID=Asia/Tokyo:20260801T210000
 SUMMARY:8/1 OSC京都 懇親会（京都駅堀川通）
 DESCRIPTION:開催日時: 2026/08/01 19:00 ～ 21:00<br />開催場所: 京
  都府京都市下京区油小路通塩小路アパホテル1F<br /><br />
- <h2>OSC京都 終了後に懇親会を開催します！</h2>\n<p>講師
- 、出展者の方も交えての楽しい懇親会です。お気軽に
- ご参加ください。<br><br>\nご案内（必ずお読みください
- ）<br>\n・ 参加される方は事前申込をお願いします。<br>
- \n・お支払いは<b>現金のみ可能</b>です（キャッシュレ
- ス決済は対応していません）。<br>\n・当日15:30までにOSC
- 受付にてお支払いください。<br>\n・都合がつかなくな
- った方は、速やかにキャンセルをお願いします。<br></p>
- \n<h2>会場</h2>\n<p><a href="https://www.hotpepper.jp/strJ001053959/map/
- " rel="nofollow">Garden annex 京都駅堀川通店</a><br>\n京都駅か
- ら徒歩7分\n<b>「アパホテル京都駅堀川通」の 1Ｆ</b>で
- す。 <br>\n※アパホテルは、駅周辺に複数あるので、間
- 違えないように気をつけてください「京都駅堀川通」
- です。</p>\n<p>JR丹波口　18:16→18:20　JR京都 <br>\nJR丹波口
- 　18:32→18:36　JR京都 <br></p>\n<p><br>\nお店には18:00から入
- 店可能ですので、早く到着された場合は店内でお待ち
- いただけます。<br>\nスタッフが到着次第、参加証を確
- 認いたします。<br></p>\n<h2>会費</h2>\n<ul>\n<li>一般 5\,000円
- （税込、領収書出ます）</li>\n<li>学生 2\,000円（税込）
- ※支払いの際、学生証を提示してください。（社会人
- 学生は一般参加になります）<br></li>\n</ul>\n<p>※一般参
- 加の会費は学生参加費の一部負担金(500円)が含まれます
- 。ご理解とご協力をお願いいたします。<br>\n※学生参
- 加が少なかった場合は、他の開催の学生サポートに活
- 用させていただきます。</p>\n<h2>内容</h2>\n<p>*立食形式
- ／料理＋ドリンク<br>\n* 飲み放題（90分）<br></p>\n<h2>支
- 払場所</h2>\n<ul>\n<li>OSC受付にて「15:30」までにお支払い
- ください。参加証をお渡しします。</li>\n<li>なるべくお
- 釣りがでないようにお願いいたします。<br></li>\n<li>懇
- 親会会場では支払受付できません。</li>\n</ul>\n<h2>OSC京
- 都のイベント参加登録もお願いします</h2>\n<p>OSC京都(con
- npass)<br>\n<a href="https://ospn.connpass.com/event/392421/" rel="nofollo
- w">https://ospn.connpass.com/event/392421/</a> <br>\n展示ブース一覧
- <br>\n<a href="https://event.ospn.jp/osc2026-kyoto/exhibit" rel="nofollow"
- >https://event.ospn.jp/osc2026-kyoto/exhibit</a> <br>\nタイムテーブ
- ル<br>\n準備中</p>\n\nhttps://ospn.connpass.com/event/392414/?utm_camp
- aign=series_events&utm_source=feed&utm_medium=atom
+ <h2>OSC京都 終了後に懇親会を開催します！ライトニング
+ トークも行います！</h2>\n<p>講師、出展者の方も交えて
+ の楽しい懇親会です。お気軽にご参加ください。<br>\n
+ 今回は、本編で最後のライトニングトークができない
+ ので、懇親会で行います！<br></p>\n<p>ご案内（必ずお読
+ みください）<br>\n・ 参加される方は事前申込をお願い
+ します。<br>\n・お支払いは<b>現金のみ可能</b>です（キ
+ ャッシュレス決済は対応していません）。<br>\n・当日15
+ :30までにOSC受付にてお支払いください。<br>\n・都合が
+ つかなくなった方は、速やかにキャンセルをお願いし
+ ます。<br></p>\n<h2>会場</h2>\n<p><a href="https://www.hotpepper.jp/s
+ trJ001053959/map/" rel="nofollow">Garden annex 京都駅堀川通店</a><b
+ r>\n京都駅から徒歩7分\n<b>「アパホテル京都駅堀川通」
+ の 1Ｆ</b>です。 <br>\n※アパホテルは、駅周辺に複数あ
+ るので、間違えないように気をつけてください「京都
+ 駅堀川通」です。</p>\n<p>JR丹波口　18:16→18:20　JR京都 <b
+ r>\nJR丹波口　18:32→18:36　JR京都 <br></p>\n<p><br>\nお店には
+ 18:00から入店可能ですので、早く到着された場合は店内
+ でお待ちいただけます。<br>\nスタッフが到着次第、参
+ 加証を確認いたします。<br></p>\n<h2>会費</h2>\n<ul>\n<li>一
+ 般 5\,000円（税込、領収書出ます）</li>\n<li>学生 2\,000円
+ （税込）※支払いの際、学生証を提示してください。
+ （社会人学生は一般参加になります）<br></li>\n</ul>\n<p>
+ ※一般参加の会費は学生参加費の一部負担金(500円)が含
+ まれます。ご理解とご協力をお願いいたします。<br>\n
+ ※学生参加が少なかった場合は、他の開催の学生サポ
+ ートに活用させていただきます。</p>\n<h2>内容</h2>\n<p>*
+ 立食形式／料理＋ドリンク<br>\n* 飲み放題（90分）<br></p
+ >\n<h2>支払場所</h2>\n<ul>\n<li>OSC受付にて「15:30」までにお
+ 支払いください。参加証をお渡しします。</li>\n<li>なる
+ べくお釣りがでないようにお願いいたします。<br></li>\n
+ <li>懇親会会場では支払受付できません。</li>\n</ul>\n<h2>O
+ SC京都のイベント参加登録もお願いします</h2>\n<p>OSC京
+ 都(connpass)<br>\n<a href="https://ospn.connpass.com/event/392421/" rel="
+ nofollow">https://ospn.connpass.com/event/392421/</a> <br>\n展示ブー
+ ス一覧<br>\n<a href="https://event.ospn.jp/osc2026-kyoto/exhibit" rel="
+ nofollow">https://event.ospn.jp/osc2026-kyoto/exhibit</a> <br>\nタイム
+ テーブル<br>\n準備中</p>\n\nhttps://ospn.connpass.com/event/392414/
+ ?utm_campaign=series_events&utm_source=feed&utm_medium=atom
 URL:https://ospn.connpass.com/event/392414/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
 END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/392762/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260626T042232Z
+DTSTAMP:20260627T040857Z
 DTSTART;TZID=Asia/Tokyo:20260627T190000
 DTEND;TZID=Asia/Tokyo:20260627T210000
 SUMMARY:6/27 OSC 2026 Hokkaido 大懇親会
@@ -297,7 +299,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/391085/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260626T042232Z
+DTSTAMP:20260627T040857Z
 DTSTART;TZID=Asia/Tokyo:20260606T180000
 DTEND;TZID=Asia/Tokyo:20260606T200000
 SUMMARY:6/6 OSC仙台  懇親会
@@ -344,7 +346,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/392421/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260626T042232Z
+DTSTAMP:20260627T040857Z
 DTSTART;TZID=Asia/Tokyo:20260801T100000
 DTEND;TZID=Asia/Tokyo:20260801T180000
 SUMMARY:8/1 オープンソースカンファレンス2026 Kyoto
@@ -399,7 +401,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/388639/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260626T042232Z
+DTSTAMP:20260627T040857Z
 DTSTART;TZID=Asia/Tokyo:20260627T100000
 DTEND;TZID=Asia/Tokyo:20260627T180000
 SUMMARY:6/27 オープンソースカンファレンス2026 Hokkaido
@@ -466,7 +468,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/387446/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260626T042232Z
+DTSTAMP:20260627T040857Z
 DTSTART;TZID=Asia/Tokyo:20260606T100000
 DTEND;TZID=Asia/Tokyo:20260606T180000
 SUMMARY:6/6 オープンソースカンファレンス2026 Sendai
