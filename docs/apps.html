@@ -1,60 +1,72 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI で作ったミニアプリ集 — shimajima-eiji</title>
-  <meta name="description" content="AI と一緒に一発ネタで作ったミニアプリの動作確認ページ集。モールス信号ビジュアライザ、ひよこキャラのアセット集など。">
+  <title>Mini Apps Built with AI — shimajima-eiji | AI で作ったミニアプリ集</title>
+  <meta name="description" content="A collection of quick prototype apps built together with AI: Morse code visualizers, chick-character asset sets, and more. AI と一緒に一発ネタで作ったミニアプリの動作確認ページ集。">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#f7f8fb" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0a0e1a" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="AI で作ったミニアプリ集 — shimajima-eiji">
-  <meta property="og:description" content="AI と一緒に一発ネタで作ったミニアプリの動作確認ページ集。">
+  <meta property="og:title" content="Mini Apps Built with AI — shimajima-eiji | AI で作ったミニアプリ集">
+  <meta property="og:description" content="Quick prototype apps built with AI: Morse code visualizers, chick-character assets, and more. AI と一緒に一発ネタで作ったミニアプリの動作確認ページ集。">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <main class="wrap wrap--wide">
-    <a class="backlink" href="./">← トップへ戻る</a>
+    <a class="backlink" href="./">← <span class="i18n-en">Back to top</span><span class="i18n-ja" lang="ja">トップへ戻る</span></a>
 
     <header class="site-head">
       <p class="eyebrow">mini apps</p>
-      <h1>AI で作ったミニアプリ集</h1>
-      <p class="lede">AI と一緒に「一発ネタ」で作ったアプリの動作確認用ページ。完結済みで保守はしないが、ブログネタとして公開を続けています。</p>
+      <h1>Mini Apps Built with AI<span class="i18n-ja" lang="ja">AI で作ったミニアプリ集</span></h1>
+      <p class="lede">A collection of quick "one-shot idea" apps built together with AI. They're finished and unmaintained, but stay published as blog material.</p>
+      <p class="lede i18n-ja" lang="ja">AI と一緒に「一発ネタ」で作ったアプリの動作確認用ページ。完結済みで保守はしないが、ブログネタとして公開を続けています。</p>
     </header>
 
     <section aria-labelledby="morse-title">
-      <h2 id="morse-title"><span class="dot" aria-hidden="true"></span>モールス信号</h2>
-      <p class="section-note">モールス信号をテーマにした一連のプロトタイプ。</p>
+      <h2 id="morse-title"><span class="dot" aria-hidden="true"></span><span class="h2-text"><span class="i18n-en">Morse Code</span><span class="i18n-ja" lang="ja">モールス信号</span></span></h2>
+      <p class="section-note">A series of prototypes themed around Morse code.</p>
+      <p class="section-note i18n-ja" lang="ja">モールス信号をテーマにした一連のプロトタイプ。</p>
       <ul class="cards cards--2">
         <li class="card card--link">
           <a href="./morse-signal-visualizer/">
             <div class="card__title">Morse Signal Visualizer <span class="arrow" aria-hidden="true">→</span></div>
-            <p class="card__desc">モールス信号の波形を可視化。単体 HTML。</p>
+            <div class="card__title i18n-ja" lang="ja">モールス信号ビジュアライザ</div>
+            <p class="card__desc">Visualizes Morse code waveforms. Single-file HTML.</p>
+            <p class="card__desc i18n-ja" lang="ja">モールス信号の波形を可視化。単体 HTML。</p>
           </a>
         </li>
         <li class="card card--link">
           <a href="./morse-chick-assets/">
             <div class="card__title">Morse Chick — Assets Preview <span class="arrow" aria-hidden="true">→</span></div>
-            <p class="card__desc">ひよこキャラのモーションアセット集（4 状態: dot / dash / idle / done）。</p>
+            <div class="card__title i18n-ja" lang="ja">ひよこキャラ アセットプレビュー</div>
+            <p class="card__desc">Motion asset collection for the chick character (4 states: dot / dash / idle / done).</p>
+            <p class="card__desc i18n-ja" lang="ja">ひよこキャラのモーションアセット集（4 状態: dot / dash / idle / done）。</p>
           </a>
         </li>
         <li class="card card--link">
           <a href="./morse-chick-download/">
             <div class="card__title">Morse Chick — Download Preview <span class="arrow" aria-hidden="true">→</span></div>
-            <p class="card__desc">アセットダウンロード UI のプレビュー。</p>
+            <div class="card__title i18n-ja" lang="ja">ひよこキャラ ダウンロードプレビュー</div>
+            <p class="card__desc">Preview of the asset download UI.</p>
+            <p class="card__desc i18n-ja" lang="ja">アセットダウンロード UI のプレビュー。</p>
           </a>
         </li>
         <li class="card card--link">
           <a href="./morse-modal-v1/">
             <div class="card__title">Morse Modal v1 <span class="arrow" aria-hidden="true">→</span></div>
-            <p class="card__desc">React 統合用モーダル UI、プレビュー版。</p>
+            <div class="card__title i18n-ja" lang="ja">モーダル v1</div>
+            <p class="card__desc">Modal UI for React integration, preview version.</p>
+            <p class="card__desc i18n-ja" lang="ja">React 統合用モーダル UI、プレビュー版。</p>
           </a>
         </li>
         <li class="card card--link">
           <a href="./morse-modal-v2/">
-            <div class="card__title">Morse Modal v2 <span class="badge">改良版</span> <span class="arrow" aria-hidden="true">→</span></div>
-            <p class="card__desc">React 統合用モーダル UI の改良版（integrated design）。</p>
+            <div class="card__title">Morse Modal v2 <span class="badge">Improved<span class="i18n-ja" lang="ja">改良版</span></span> <span class="arrow" aria-hidden="true">→</span></div>
+            <div class="card__title i18n-ja" lang="ja">モーダル v2</div>
+            <p class="card__desc">Improved modal UI for React integration (integrated design).</p>
+            <p class="card__desc i18n-ja" lang="ja">React 統合用モーダル UI の改良版（integrated design）。</p>
           </a>
         </li>
       </ul>
@@ -62,7 +74,7 @@
 
     <footer class="site-foot">
       <span>© shimajima-eiji</span>
-      <a href="https://github.com/shimajima-eiji/shimajima-eiji.github.io" rel="noopener">GitHub リポジトリ ↗</a>
+      <a href="https://github.com/shimajima-eiji/shimajima-eiji.github.io" rel="noopener">GitHub Repository ↗</a>
     </footer>
   </main>
 </body>

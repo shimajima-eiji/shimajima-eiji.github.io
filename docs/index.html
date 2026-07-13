@@ -1,40 +1,45 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>shimajima-eiji — カレンダー配信 & ミニアプリ</title>
-  <meta name="description" content="connpass イベントや GitHub Issues の締切をカレンダーに購読できる ICS 配信と、AI と作ったミニアプリ集。">
+  <title>shimajima-eiji — Calendar Feeds &amp; Mini Apps | カレンダー配信 &amp; ミニアプリ</title>
+  <meta name="description" content="Subscribe to connpass events and GitHub Issue deadlines via ICS calendar feeds, plus a collection of mini apps built with AI. connpass イベントや GitHub Issues の締切をカレンダー購読できる ICS 配信と、AI と作ったミニアプリ集。">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#f7f8fb" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0a0e1a" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="shimajima-eiji — カレンダー配信 & ミニアプリ">
-  <meta property="og:description" content="ICS カレンダー配信と、AI と作ったミニアプリ集。">
+  <meta property="og:title" content="shimajima-eiji — Calendar Feeds &amp; Mini Apps | カレンダー配信 &amp; ミニアプリ">
+  <meta property="og:description" content="ICS calendar feeds for connpass and GitHub Issues, plus a collection of mini apps built with AI. ICS カレンダー配信と、AI と作ったミニアプリ集。">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <main class="wrap">
     <header class="site-head">
       <p class="eyebrow">shimajima-eiji.github.io</p>
-      <h1>カレンダー配信 &amp; ミニアプリ</h1>
-      <p class="lede">connpass や GitHub Issues の予定をカレンダーに購読できる ICS 配信と、AI と一緒に作ったミニアプリの置き場です。</p>
+      <h1>Calendar Feeds &amp; Mini Apps<span class="i18n-ja" lang="ja">カレンダー配信 &amp; ミニアプリ</span></h1>
+      <p class="lede">Subscribe to connpass and GitHub Issues schedules with ICS calendar feeds, plus a collection of mini apps built together with AI.</p>
+      <p class="lede i18n-ja" lang="ja">connpass や GitHub Issues の予定をカレンダーに購読できる ICS 配信と、AI と一緒に作ったミニアプリの置き場です。</p>
     </header>
 
     <section aria-labelledby="ics-title">
-      <h2 id="ics-title"><span class="dot" aria-hidden="true"></span>カレンダー配信（ICS）</h2>
-      <p class="section-note">下の URL をカレンダーアプリの「URL で購読 / 照会」に貼り付けると、予定が自動で同期されます。</p>
+      <h2 id="ics-title"><span class="dot" aria-hidden="true"></span><span class="h2-text"><span class="i18n-en">Calendar Feeds (ICS)</span><span class="i18n-ja" lang="ja">カレンダー配信（ICS）</span></span></h2>
+      <p class="section-note">Paste the URL below into your calendar app's "Subscribe by URL" feature and events will sync automatically.</p>
+      <p class="section-note i18n-ja" lang="ja">下の URL をカレンダーアプリの「URL で購読 / 照会」に貼り付けると、予定が自動で同期されます。</p>
       <ul class="cards" id="feed-list"></ul>
     </section>
 
     <section aria-labelledby="apps-title">
-      <h2 id="apps-title"><span class="dot" aria-hidden="true"></span>ミニアプリ集</h2>
-      <p class="section-note">AI と「一発ネタ」で作ったアプリの動作確認用ページ。</p>
+      <h2 id="apps-title"><span class="dot" aria-hidden="true"></span><span class="h2-text"><span class="i18n-en">Mini Apps</span><span class="i18n-ja" lang="ja">ミニアプリ集</span></span></h2>
+      <p class="section-note">A collection of quick "one-shot idea" apps built with AI.</p>
+      <p class="section-note i18n-ja" lang="ja">AI と「一発ネタ」で作ったアプリの動作確認用ページ。</p>
       <ul class="cards">
         <li class="card card--link">
           <a href="./apps.html">
-            <div class="card__title">AI で作ったミニアプリ集 <span class="arrow" aria-hidden="true">→</span></div>
-            <p class="card__desc">モールス信号ビジュアライザやひよこキャラのアセット集など。</p>
+            <div class="card__title">Mini Apps Built with AI <span class="arrow" aria-hidden="true">→</span></div>
+            <div class="card__title i18n-ja" lang="ja">AI で作ったミニアプリ集</div>
+            <p class="card__desc">Morse code visualizers, chick-character asset collections, and more.</p>
+            <p class="card__desc i18n-ja" lang="ja">モールス信号ビジュアライザやひよこキャラのアセット集など。</p>
           </a>
         </li>
       </ul>
@@ -42,52 +47,20 @@
 
     <footer class="site-foot">
       <span>© shimajima-eiji</span>
-      <a href="https://github.com/shimajima-eiji/shimajima-eiji.github.io" rel="noopener">GitHub リポジトリ ↗</a>
+      <a href="https://github.com/shimajima-eiji/shimajima-eiji.github.io" rel="noopener">GitHub Repository ↗</a>
     </footer>
   </main>
 
   <script>
-    // 配信中の ICS フィード。feeds.yml / ワークフローで docs/*.ics が生成される。
-    const feeds = [
-      {
-        file: "ospn.ics",
-        name: "OSPN / OSC（connpass）",
-        note: "オープンソースカンファレンス関連イベントの開催予定。",
-      },
-      {
-        file: "github-issues.ics",
-        name: "GitHub Issues の締切",
-        note: "Issue 本文の due: YYYY-MM-DD を終日イベントとして配信。",
-      },
-    ];
-
+    // 配信中の ICS フィード。
+    // - GitHub Issues の締切フィードは固定カードとして表示。
+    // - connpass 系フィードは ./feeds.json を動的フェッチしてカード化する
+    //   （feeds.json は feeds.yml / update-ics ワークフローで生成される）。
     const base = location.origin + location.pathname.replace(/index\.html$/, "").replace(/\/?$/, "/");
     const list = document.getElementById("feed-list");
 
-    for (const feed of feeds) {
-      const url = base + feed.file;
-      const li = document.createElement("li");
-      li.className = "card";
-
-      const title = document.createElement("div");
-      title.className = "card__title";
-      title.textContent = feed.name;
-
-      const note = document.createElement("p");
-      note.className = "card__desc";
-      note.textContent = feed.note;
-
-      const row = document.createElement("div");
-      row.className = "feed__url";
-
-      const code = document.createElement("code");
-      code.textContent = url;
-
-      const btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "copy-btn";
-      btn.textContent = "コピー";
-      btn.setAttribute("aria-label", feed.name + " の URL をコピー");
+    function copyHandlerFor(btn, code, url, label) {
+      btn.setAttribute("aria-label", label);
       btn.addEventListener("click", async () => {
         try {
           await navigator.clipboard.writeText(url);
@@ -100,18 +73,115 @@
           try { document.execCommand("copy"); } catch {}
           sel.removeAllRanges();
         }
-        btn.textContent = "コピー済み";
+        btn.textContent = "Copied";
         btn.classList.add("is-done");
         setTimeout(() => {
-          btn.textContent = "コピー";
+          btn.textContent = "Copy";
           btn.classList.remove("is-done");
         }, 1600);
       });
+    }
+
+    function makeFeedCard({ name, nameJa, note, noteJa, meta, url, ariaLabel }) {
+      const li = document.createElement("li");
+      li.className = "card";
+
+      const title = document.createElement("div");
+      title.className = "card__title";
+      title.textContent = name;
+      li.appendChild(title);
+
+      if (nameJa) {
+        const titleJa = document.createElement("div");
+        titleJa.className = "card__title i18n-ja";
+        titleJa.lang = "ja";
+        titleJa.textContent = nameJa;
+        li.appendChild(titleJa);
+      }
+
+      if (note) {
+        const desc = document.createElement("p");
+        desc.className = "card__desc";
+        desc.textContent = note;
+        li.appendChild(desc);
+      }
+
+      if (noteJa) {
+        const descJa = document.createElement("p");
+        descJa.className = "card__desc i18n-ja";
+        descJa.lang = "ja";
+        descJa.textContent = noteJa;
+        li.appendChild(descJa);
+      }
+
+      if (meta) {
+        const metaP = document.createElement("p");
+        metaP.className = "card__meta";
+        metaP.textContent = meta;
+        li.appendChild(metaP);
+      }
+
+      const row = document.createElement("div");
+      row.className = "feed__url";
+
+      const code = document.createElement("code");
+      code.textContent = url;
+
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "copy-btn";
+      btn.textContent = "Copy";
+      copyHandlerFor(btn, code, url, ariaLabel);
 
       row.append(code, btn);
-      li.append(title, note, row);
-      list.appendChild(li);
+      li.appendChild(row);
+      return li;
     }
+
+    // 固定カード: GitHub Issues の締切
+    list.appendChild(makeFeedCard({
+      name: "GitHub Issues Deadlines",
+      nameJa: "GitHub Issues の締切",
+      note: "Publishes each issue's due: YYYY-MM-DD as an all-day calendar event.",
+      noteJa: "Issue 本文の due: YYYY-MM-DD を終日イベントとして配信。",
+      url: base + "github-issues.ics",
+      ariaLabel: "Copy the GitHub Issues Deadlines feed URL / GitHub Issues の締切の URL をコピー",
+    }));
+
+    // 動的カード: connpass 系フィード（feeds.json から取得）
+    fetch(base + "feeds.json")
+      .then((res) => {
+        if (!res.ok) throw new Error("feeds.json request failed: " + res.status);
+        return res.json();
+      })
+      .then((data) => {
+        const feeds = Array.isArray(data && data.feeds) ? data.feeds : [];
+        for (const feed of feeds) {
+          if (!feed || !feed.key || !feed.name) continue;
+          const url = base + feed.key + ".ics";
+          const meta = typeof feed.events === "number"
+            ? feed.events + " events / " + feed.events + "件"
+            : null;
+          list.appendChild(makeFeedCard({
+            name: feed.name,
+            note: null,
+            meta,
+            url,
+            ariaLabel: "Copy the " + feed.name + " feed URL / " + feed.name + " の URL をコピー",
+          }));
+        }
+      })
+      .catch(() => {
+        // feeds.json が存在しない/取得失敗の場合は静かに諦める（ページはクラッシュさせない）
+        const note = document.createElement("p");
+        note.className = "section-note";
+        note.textContent = "Additional feeds are temporarily unavailable.";
+        const noteJa = document.createElement("p");
+        noteJa.className = "section-note i18n-ja";
+        noteJa.lang = "ja";
+        noteJa.textContent = "追加フィードは現在取得できません。";
+        list.after(note, noteJa);
+      });
   </script>
 </body>
 </html>

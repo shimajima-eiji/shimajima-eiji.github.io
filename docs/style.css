@@ -192,6 +192,47 @@ h2 .dot {
   padding: 0.12rem 0.55rem;
   margin-left: 0.4rem;
   vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* ---- i18n: English-first, Japanese secondary ---- */
+.i18n-ja {
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 0.9em;
+}
+p.i18n-ja,
+div.i18n-ja {
+  margin-top: 0.3em;
+}
+h1 .i18n-ja {
+  display: block;
+  font-size: clamp(1rem, 2.6vw, 1.3rem);
+  font-weight: 600;
+  letter-spacing: 0;
+  margin-top: 0.45rem;
+}
+.h2-text {
+  display: block;
+  line-height: 1.35;
+}
+.h2-text .i18n-en { display: block; }
+.h2-text .i18n-ja {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 500;
+  margin-top: 0.15rem;
+}
+.backlink .i18n-ja,
+.badge .i18n-ja {
+  margin-left: 0.35em;
+}
+
+/* small muted meta line under a card title (e.g. event counts) */
+.card__meta {
+  color: var(--muted);
+  font-size: 0.78rem;
+  margin: 0.3rem 0 0;
 }
 
 /* ---- feed (ICS) row ---- */
