@@ -1,0 +1,62 @@
+name: "Notify workflow failure"
+description: >-
+  ワークフローが失敗した際に、GitHub Issue で通知する（ci-failure ラベル）。
+  同名ワークフローの open Issue が既にあればコメントを追記し、なければ新規作成する。
+
+inputs:
+  workflow-name:
+    description: "失敗したワークフローの名前（Issue のタイトル検索・生成に使う）"
+    required: true
+  github-token:
+    description: "gh CLI に使う GitHub トークン"
+    required: false
+    default: ${{ github.token }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: Create or update failure issue
+      shell: bash
+      env:
+        GH_TOKEN: ${{ inputs.github-token }}
+        WORKFLOW_NAME: ${{ inputs.workflow-name }}
+        RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        REPO: ${{ github.repository }}
+      run: |
+        set -euo pipefail
+
+        # ci-failure ラベルが無ければ作成する（既にあれば --force で内容を揃えて成功扱いにする）
+        gh label create ci-failure \
+          --color d73a4a \
+          --description "CI/自動化ワークフローの失敗" \
+          --force
+
+        run_at="$(date -u +'%Y-%m-%d %H:%M UTC')"
+        title="[CI Failure] ${WORKFLOW_NAME} (${run_at})"
+
+        # 同じワークフロー名を含む open Issue（ci-failure ラベル付き）を検索する
+        existing_issue="$(gh issue list \
+          --label ci-failure \
+          --state open \
+          --search "${WORKFLOW_NAME} in:title" \
+          --json number \
+          --jq '.[0].number // empty')"
+
+        body=$(cat <<EOF
+        ワークフロー **${WORKFLOW_NAME}** が失敗しました。
+
+        - 発生日時: ${run_at}
+        - 失敗した実行: ${RUN_URL}
+        EOF
+        )
+
+        if [ -n "${existing_issue}" ]; then
+          echo "Existing issue #${existing_issue} found. Adding comment."
+          gh issue comment "${existing_issue}" --body "${body}"
+        else
+          echo "No existing open issue found. Creating a new one."
+          gh issue create \
+            --title "${title}" \
+            --label ci-failure \
+            --body "${body}"
+        fi
