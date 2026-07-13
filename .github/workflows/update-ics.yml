@@ -2,12 +2,12 @@ name: Update ICS Feeds
 
 on:
   workflow_dispatch:
-  # schedule は API キー取得後に有効化する
-  # schedule:
-  #   - cron: "0 0 * * *"  # JST 09:00 = UTC 00:00
+  schedule:
+    - cron: "0 0 * * *"  # JST 09:00 = UTC 00:00
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: update-ics-feeds
@@ -30,6 +30,7 @@ jobs:
         env:
           FEEDS_YML: feeds.yml
           OUT_DIR: docs
+          CONNPASS_API_KEY: ${{ secrets.CONNPASS_API_KEY }}
         run: python scripts/generate_all_ics.py
 
       - name: Commit if changed
@@ -37,9 +38,15 @@ jobs:
           if [ -n "$(git status --porcelain)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add docs/*.ics
+            git add docs/*.ics docs/feeds.json
             git commit -m "Update ICS feeds"
             git push
           else
             echo "No changes."
           fi
+
+      - name: Notify on failure
+        if: failure()
+        uses: ./.github/actions/notify-failure
+        with:
+          workflow-name: "Update ICS Feeds"

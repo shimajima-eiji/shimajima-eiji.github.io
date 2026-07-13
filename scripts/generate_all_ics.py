@@ -1,28 +1,36 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-connpass グループの Atom フィードから ICS を生成する。
+connpass グループの Atom フィード（または API v2）から ICS を生成する。
 
 目的:
-    feeds.yml に列挙した connpass グループの Atom フィードを取得し、
+    feeds.yml に列挙した connpass グループのイベント情報を取得し、
     docs/{key}.ics として出力する。GitHub Pages で配信することで
     カレンダーアプリから購読可能にする。
+    あわせて docs/feeds.json（フィード一覧のマニフェスト）も出力する。
 
-    API キー不要。{subdomain}.connpass.com/ja.atom を使う。
+    デフォルトは API キー不要の Atom 方式（{subdomain}.connpass.com/ja.atom）。
+    環境変数 CONNPASS_API_KEY が設定されている場合のみ、より多件数を
+    取得できる connpass API v2 を試み、失敗時は自動的に Atom 方式へ
+    フォールバックする（Atom 方式が唯一の安定動作パスであるため）。
 
 使い方:
     python scripts/generate_all_ics.py
 
 環境変数:
-    FEEDS_YML   feeds.yml のパス（デフォルト: feeds.yml）
-    OUT_DIR     出力先ディレクトリ（デフォルト: docs）
+    FEEDS_YML          feeds.yml のパス（デフォルト: feeds.yml）
+    OUT_DIR            出力先ディレクトリ（デフォルト: docs）
+    CONNPASS_API_KEY   connpass API v2 のAPIキー（任意。未設定なら Atom 方式のみ）
 """
 
 from __future__ import annotations
 
+import json
 import os
 import re
 import sys
+import urllib.error
+import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
@@ -214,6 +222,126 @@ def fetch_atom(subdomain: str) -> List[CalEvent]:
 
 
 # ---------------------------------------------------------------------------
+# connpass API v2 取得（CONNPASS_API_KEY 設定時のみ試行）
+# ---------------------------------------------------------------------------
+
+def _connpass_ym_range(months_ahead: int = 6) -> List[str]:
+    """今月から months_ahead ヶ月先までの YYYYMM リストを返す。"""
+    now = datetime.now(JST)
+    y, m = now.year, now.month
+    out: List[str] = []
+    for _ in range(months_ahead + 1):
+        out.append(f"{y:04d}{m:02d}")
+        m += 1
+        if m > 12:
+            m = 1
+            y += 1
+    return out
+
+
+def fetch_api_v2(subdomain: str, api_key: str) -> List[CalEvent]:
+    """
+    connpass API v2 (https://connpass.com/api/v2/events/) からイベント一覧を取得する。
+
+    認証は X-API-Key ヘッダー。取得期間は今月から6ヶ月先まで（ym パラメータを
+    複数指定して絞り込む）。
+
+    注意: connpass API v2 のグループ検索パラメータの正確な仕様は非公開のため、
+    グループの subdomain を "series_nickname" として渡すベストエフォート実装。
+    HTTPエラーや JSON パースエラーなど、何が起きてもここでは握りつぶさず
+    例外を送出する。呼び出し元（fetch_events）が Atom 方式へフォールバックする。
+    """
+    base_url = "https://connpass.com/api/v2/events/"
+    ym_values = _connpass_ym_range(months_ahead=6)
+
+    events: List[CalEvent] = []
+    start = 1
+    count = 100
+    max_pages = 10  # 無限ループ防止の安全上限
+
+    for _ in range(max_pages):
+        query: List[tuple[str, str]] = [
+            ("series_nickname", subdomain),
+            ("count", str(count)),
+            ("start", str(start)),
+        ]
+        query += [("ym", ym) for ym in ym_values]
+        url = f"{base_url}?{urllib.parse.urlencode(query)}"
+
+        req = urllib.request.Request(url, method="GET")
+        req.add_header("X-API-Key", api_key)
+        req.add_header("User-Agent", "connpass-ics-generator/2.0")
+
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            body = resp.read()
+
+        data = json.loads(body)
+        results = data.get("events") or []
+
+        for item in results:
+            uid = str(item.get("id") or item.get("url") or "").strip()
+            title = str(item.get("title") or "").strip()
+            url_href = str(item.get("url") or "").strip()
+            started_raw = item.get("started_at")
+            if not uid or not title or not url_href or not started_raw:
+                continue
+
+            started_at = parse_iso_datetime(str(started_raw))
+            ended_raw = item.get("ended_at")
+            if ended_raw:
+                ended_at = parse_iso_datetime(str(ended_raw))
+            else:
+                ended_at = started_at.replace(hour=min(started_at.hour + 1, 23))
+
+            updated_raw = item.get("updated_at") or started_raw
+            published = parse_iso_datetime(str(updated_raw))
+            summary = str(item.get("description") or item.get("catch") or "")
+
+            events.append(CalEvent(
+                uid=uid,
+                title=title,
+                url=url_href,
+                published=published,
+                started_at=started_at,
+                ended_at=ended_at,
+                summary=summary,
+            ))
+
+        results_available = int(data.get("results_available") or 0)
+        results_returned = int(data.get("results_returned") or len(results))
+        results_start = int(data.get("results_start") or start)
+
+        if results_returned <= 0:
+            break
+        if results_start + results_returned - 1 >= results_available:
+            break
+        start += results_returned
+
+    return events
+
+
+def fetch_events(subdomain: str, api_key: str) -> tuple[List[CalEvent], str]:
+    """
+    フィード1件分のイベント一覧を取得する。
+
+    CONNPASS_API_KEY が設定されていれば API v2 (fetch_api_v2) を試み、
+    何らかの理由で失敗した場合は必ず既存の Atom 方式 (fetch_atom) に
+    フォールバックする。戻り値は (events, source)。source は "api" または "atom"。
+    """
+    if api_key:
+        try:
+            events = fetch_api_v2(subdomain, api_key)
+            return events, "api"
+        except Exception as e:  # noqa: BLE001 - 何が起きても Atom にフォールバックする
+            print(
+                f"WARN {subdomain}: connpass API v2 の取得に失敗したため Atom 方式にフォールバックします ({e})",
+                file=sys.stderr,
+            )
+
+    return fetch_atom(subdomain), "atom"
+
+
+# ---------------------------------------------------------------------------
 # ICS 生成
 # ---------------------------------------------------------------------------
 
@@ -312,6 +440,7 @@ def build_ics(events: List[CalEvent], cal_name: str) -> str:
 def main() -> int:
     feeds_path = os.getenv("FEEDS_YML", "feeds.yml")
     out_dir = os.getenv("OUT_DIR", "docs")
+    api_key = os.getenv("CONNPASS_API_KEY", "").strip()
     os.makedirs(out_dir, exist_ok=True)
 
     feeds = load_feeds_yml(feeds_path)
@@ -319,6 +448,7 @@ def main() -> int:
         die("feeds.yml に feeds がありません。")
 
     total = 0
+    manifest_feeds: List[Dict[str, Any]] = []
     for feed in feeds:
         key = safe_slug(str(feed.get("key") or ""))
         name = str(feed.get("name") or key)
@@ -328,16 +458,33 @@ def main() -> int:
             print(f"SKIP {key}: subdomain 未指定", file=sys.stderr)
             continue
 
-        events = fetch_atom(subdomain)
+        events, source = fetch_events(subdomain, api_key)
 
         ics = build_ics(events, cal_name=name)
         out_path = os.path.join(out_dir, f"{key}.ics")
         with open(out_path, "w", encoding="utf-8", newline="") as f:
             f.write(ics)
 
-        print(f"OK  {key}: {len(events)} events -> {out_path}")
+        print(f"OK  {key}: {len(events)} events -> {out_path} (source={source})")
         total += len(events)
 
+        manifest_feeds.append({
+            "key": key,
+            "name": name,
+            "events": len(events),
+            "source": source,
+        })
+
+    feeds_json_path = os.path.join(out_dir, "feeds.json")
+    manifest = {
+        "generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
+        "feeds": manifest_feeds,
+    }
+    with open(feeds_json_path, "w", encoding="utf-8", newline="") as f:
+        json.dump(manifest, f, ensure_ascii=False, indent=2)
+        f.write("\n")
+
+    print(f"OK  feeds.json -> {feeds_json_path}")
     print(f"---\ntotal: {total} events")
     return 0
 
