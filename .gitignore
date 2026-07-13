@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# エディタ
+*.swp
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]

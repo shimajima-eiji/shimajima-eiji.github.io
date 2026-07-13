@@ -3,36 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>connpass ICS 配信</title>
-  <style>
-    body { font-family: sans-serif; max-width: 640px; margin: 2rem auto; padding: 0 1rem; }
-    h1 { font-size: 1.4rem; }
-    ul { padding-left: 1.2rem; }
-    li { margin: 0.5rem 0; }
-    code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
-    p { color: #555; font-size: 0.9rem; }
-  </style>
+  <title>shimajima-eiji — カレンダー配信 & ミニアプリ</title>
+  <meta name="description" content="connpass イベントや GitHub Issues の締切をカレンダーに購読できる ICS 配信と、AI と作ったミニアプリ集。">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f7f8fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0e1a" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="shimajima-eiji — カレンダー配信 & ミニアプリ">
+  <meta property="og:description" content="ICS カレンダー配信と、AI と作ったミニアプリ集。">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <h1>connpass ICS 配信</h1>
-  <p>以下の URL をカレンダーアプリの「URL で購読」に貼り付けてください。</p>
-  <ul id="list"></ul>
-  <p>feeds.yml に団体を追加すると自動で ICS が生成されます。</p>
+  <main class="wrap">
+    <header class="site-head">
+      <p class="eyebrow">shimajima-eiji.github.io</p>
+      <h1>カレンダー配信 &amp; ミニアプリ</h1>
+      <p class="lede">connpass や GitHub Issues の予定をカレンダーに購読できる ICS 配信と、AI と一緒に作ったミニアプリの置き場です。</p>
+    </header>
+
+    <section aria-labelledby="ics-title">
+      <h2 id="ics-title"><span class="dot" aria-hidden="true"></span>カレンダー配信（ICS）</h2>
+      <p class="section-note">下の URL をカレンダーアプリの「URL で購読 / 照会」に貼り付けると、予定が自動で同期されます。</p>
+      <ul class="cards" id="feed-list"></ul>
+    </section>
+
+    <section aria-labelledby="apps-title">
+      <h2 id="apps-title"><span class="dot" aria-hidden="true"></span>ミニアプリ集</h2>
+      <p class="section-note">AI と「一発ネタ」で作ったアプリの動作確認用ページ。</p>
+      <ul class="cards">
+        <li class="card card--link">
+          <a href="./apps.html">
+            <div class="card__title">AI で作ったミニアプリ集 <span class="arrow" aria-hidden="true">→</span></div>
+            <p class="card__desc">モールス信号ビジュアライザやひよこキャラのアセット集など。</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="site-foot">
+      <span>© shimajima-eiji</span>
+      <a href="https://github.com/shimajima-eiji/shimajima-eiji.github.io" rel="noopener">GitHub リポジトリ ↗</a>
+    </footer>
+  </main>
 
   <script>
-    // docs/ 内の *.ics をリストアップ（実際のファイルは feeds.yml から生成）
-    // ここでは既知のキーを列挙する（Actions 実行後に自動で更新）
-    const base = location.origin + location.pathname.replace(/\/?$/, "/");
+    // 配信中の ICS フィード。feeds.yml / ワークフローで docs/*.ics が生成される。
     const feeds = [
-      { key: "ospn", name: "OSPN / OSC (connpass)" },
+      {
+        file: "ospn.ics",
+        name: "OSPN / OSC（connpass）",
+        note: "オープンソースカンファレンス関連イベントの開催予定。",
+      },
+      {
+        file: "github-issues.ics",
+        name: "GitHub Issues の締切",
+        note: "Issue 本文の due: YYYY-MM-DD を終日イベントとして配信。",
+      },
     ];
-    const ul = document.getElementById("list");
-    feeds.forEach(({ key, name }) => {
-      const url = base + key + ".ics";
+
+    const base = location.origin + location.pathname.replace(/index\.html$/, "").replace(/\/?$/, "/");
+    const list = document.getElementById("feed-list");
+
+    for (const feed of feeds) {
+      const url = base + feed.file;
       const li = document.createElement("li");
-      li.innerHTML = `<strong>${name}</strong><br><code>${url}</code>`;
-      ul.appendChild(li);
-    });
+      li.className = "card";
+
+      const title = document.createElement("div");
+      title.className = "card__title";
+      title.textContent = feed.name;
+
+      const note = document.createElement("p");
+      note.className = "card__desc";
+      note.textContent = feed.note;
+
+      const row = document.createElement("div");
+      row.className = "feed__url";
+
+      const code = document.createElement("code");
+      code.textContent = url;
+
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "copy-btn";
+      btn.textContent = "コピー";
+      btn.setAttribute("aria-label", feed.name + " の URL をコピー");
+      btn.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(url);
+        } catch {
+          const r = document.createRange();
+          r.selectNode(code);
+          const sel = getSelection();
+          sel.removeAllRanges();
+          sel.addRange(r);
+          try { document.execCommand("copy"); } catch {}
+          sel.removeAllRanges();
+        }
+        btn.textContent = "コピー済み";
+        btn.classList.add("is-done");
+        setTimeout(() => {
+          btn.textContent = "コピー";
+          btn.classList.remove("is-done");
+        }, 1600);
+      });
+
+      row.append(code, btn);
+      li.append(title, note, row);
+      list.appendChild(li);
+    }
   </script>
 </body>
 </html>
