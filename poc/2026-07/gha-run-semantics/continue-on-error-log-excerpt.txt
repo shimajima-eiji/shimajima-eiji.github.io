@@ -1,0 +1,5 @@
+Run: https://github.com/shimajima-eiji/shimajima-eiji.github.io/actions/runs/29347667082
+Job: coe / Step: "report outcome and conclusion"
+
+steps.fails.outcome=failure
+steps.fails.conclusion=success
