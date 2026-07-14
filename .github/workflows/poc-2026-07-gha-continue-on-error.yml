@@ -1,0 +1,16 @@
+name: poc-2026-07-gha-continue-on-error
+on: workflow_dispatch
+jobs:
+  coe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: fails but continues
+        id: fails
+        continue-on-error: true
+        run: exit 1
+      - name: report outcome and conclusion
+        run: |
+          echo "steps.fails.outcome=${{ steps.fails.outcome }}"
+          echo "steps.fails.conclusion=${{ steps.fails.conclusion }}"
+      - name: after
+        run: echo "still runs"

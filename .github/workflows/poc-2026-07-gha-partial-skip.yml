@@ -1,0 +1,12 @@
+name: poc-2026-07-gha-partial-skip
+on: workflow_dispatch
+jobs:
+  gated:
+    if: false
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "never runs"
+  sibling:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "this one succeeds"
