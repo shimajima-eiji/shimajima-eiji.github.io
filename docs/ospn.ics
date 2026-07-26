@@ -17,7 +17,7 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/399103/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260725T032839Z
+DTSTAMP:20260726T034202Z
 DTSTART;TZID=Asia/Tokyo:20260723T170454
 DTEND;TZID=Asia/Tokyo:20260723T180454
 SUMMARY:10/2-3 Open Source Conference 2026 Online/Fall
@@ -141,7 +141,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/400939/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260725T032839Z
+DTSTAMP:20260726T034202Z
 DTSTART;TZID=Asia/Tokyo:20260912T181500
 DTEND;TZID=Asia/Tokyo:20260912T201500
 SUMMARY:9/12 OSC広島 懇親会
@@ -186,7 +186,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/399098/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260725T032839Z
+DTSTAMP:20260726T034202Z
 DTSTART;TZID=Asia/Tokyo:20260912T100000
 DTEND;TZID=Asia/Tokyo:20260912T180000
 SUMMARY:9/12 オープンソースカンファレンス2026 Hiroshima
@@ -248,7 +248,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/396808/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260725T032839Z
+DTSTAMP:20260726T034202Z
 DTSTART;TZID=Asia/Tokyo:20260829T100000
 DTEND;TZID=Asia/Tokyo:20260829T174500
 SUMMARY:Open Developers Conference 2026
@@ -284,7 +284,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/398160/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260725T032839Z
+DTSTAMP:20260726T034202Z
 DTSTART;TZID=Asia/Tokyo:20260829T181500
 DTEND;TZID=Asia/Tokyo:20260829T201500
 SUMMARY:8/29 ODC2026 懇親会
@@ -321,7 +321,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/396163/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260725T032839Z
+DTSTAMP:20260726T034202Z
 DTSTART;TZID=Asia/Tokyo:20260626T200000
 DTEND;TZID=Asia/Tokyo:20260626T223000
 SUMMARY:6/26 OSC2026北海道 関係者前夜祭
@@ -352,7 +352,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/394555/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260725T032839Z
+DTSTAMP:20260726T034202Z
 DTSTART;TZID=Asia/Tokyo:20260627T083000
 DTEND;TZID=Asia/Tokyo:20260627T180000
 SUMMARY:6/27 OSC 2026 Hokkaido 当日スタッフ募集
@@ -398,7 +398,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/392414/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260725T032839Z
+DTSTAMP:20260726T034202Z
 DTSTART;TZID=Asia/Tokyo:20260801T190000
 DTEND;TZID=Asia/Tokyo:20260801T210000
 SUMMARY:8/1 OSC京都 懇親会（京都駅堀川通）
@@ -451,7 +451,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/392762/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260725T032839Z
+DTSTAMP:20260726T034202Z
 DTSTART;TZID=Asia/Tokyo:20260627T190000
 DTEND;TZID=Asia/Tokyo:20260627T210000
 SUMMARY:6/27 OSC 2026 Hokkaido 大懇親会
@@ -537,7 +537,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/391085/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260725T032839Z
+DTSTAMP:20260726T034202Z
 DTSTART;TZID=Asia/Tokyo:20260606T180000
 DTEND;TZID=Asia/Tokyo:20260606T200000
 SUMMARY:6/6 OSC仙台  懇親会
