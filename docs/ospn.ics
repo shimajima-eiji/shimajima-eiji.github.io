@@ -17,7 +17,7 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/399103/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260803T034134Z
+DTSTAMP:20260804T032602Z
 DTSTART;TZID=Asia/Tokyo:20260723T170454
 DTEND;TZID=Asia/Tokyo:20260723T180454
 SUMMARY:10/2-3 Open Source Conference 2026 Online/Fall
@@ -141,7 +141,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/400939/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260803T034134Z
+DTSTAMP:20260804T032602Z
 DTSTART;TZID=Asia/Tokyo:20260912T181500
 DTEND;TZID=Asia/Tokyo:20260912T201500
 SUMMARY:9/12 OSC広島 懇親会
@@ -186,7 +186,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/399098/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260803T034134Z
+DTSTAMP:20260804T032602Z
 DTSTART;TZID=Asia/Tokyo:20260912T100000
 DTEND;TZID=Asia/Tokyo:20260912T180000
 SUMMARY:9/12 オープンソースカンファレンス2026 Hiroshima
@@ -248,7 +248,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/396808/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260803T034134Z
+DTSTAMP:20260804T032602Z
 DTSTART;TZID=Asia/Tokyo:20260829T100000
 DTEND;TZID=Asia/Tokyo:20260829T174500
 SUMMARY:Open Developers Conference 2026
@@ -284,7 +284,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/398160/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260803T034134Z
+DTSTAMP:20260804T032602Z
 DTSTART;TZID=Asia/Tokyo:20260829T181500
 DTEND;TZID=Asia/Tokyo:20260829T201500
 SUMMARY:8/29 ODC2026 懇親会
@@ -305,23 +305,25 @@ DESCRIPTION:開催日時: 2026/08/29 18:15 ～ 20:15<br />開催場所: 日
  恵馨閣</a><br>\nODC会場から徒歩5分ほど。</p>\n<h2>会費</h2>
  \n<ul>\n<li>一般 5\,000円（税込、領収書出ます）</li>\n<li>
  学生 1\,000円（税込）※支払いの際、学生証を提示して
- ください。（社会人学生は一般参加になります）<br>\n
- ※学生サポートは当日の学生の参加費の補助のほか、
- 今後の開催における学生の参加費用にも活用させてい
- ただきます。\n<br></li>\n</ul>\n<h2>内容</h2>\n<ul>\n<li>コース
- 料理＋飲み放題（120分）<br></li>\n</ul>\n<h2>支払場所</h2>\n
- <ul>\n<li>ODC受付にて「15:30」までにお支払いください。
- 参加証をお渡しします。</li>\n<li>なるべくお釣りがでな
- いようにお願いいたします。<br></li>\n<li>懇親会会場で
- は支払受付できません。</li>\n</ul>\n\nhttps://ospn.connpass.com
- /event/398160/?utm_campaign=series_events&utm_source=feed&utm_medium=atom
+ ください。（社会人学生は一般参加になります）<br></li
+ >\n</ul>\n<p>※一般参加の会費は学生参加費の一部負担金(
+ 約600円)が含まれます。ご理解とご協力をお願いいたし
+ ます。<br>\n※学生参加が少なかった場合は、他の開催
+ の学生サポートに活用させていただきます。</p>\n<p><br><
+ /p>\n<h2>内容</h2>\n<ul>\n<li>コース料理＋飲み放題（120分）
+ <br></li>\n</ul>\n<h2>支払場所</h2>\n<ul>\n<li>ODC受付にて「15:30
+ 」までにお支払いください。参加証をお渡しします。</
+ li>\n<li>なるべくお釣りがでないようにお願いいたしま
+ す。<br></li>\n<li>懇親会会場では支払受付できません。</
+ li>\n</ul>\n\nhttps://ospn.connpass.com/event/398160/?utm_campaign=series_
+ events&utm_source=feed&utm_medium=atom
 URL:https://ospn.connpass.com/event/398160/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
 END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/396163/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260803T034134Z
+DTSTAMP:20260804T032602Z
 DTSTART;TZID=Asia/Tokyo:20260626T200000
 DTEND;TZID=Asia/Tokyo:20260626T223000
 SUMMARY:6/26 OSC2026北海道 関係者前夜祭
@@ -352,7 +354,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/394555/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260803T034134Z
+DTSTAMP:20260804T032602Z
 DTSTART;TZID=Asia/Tokyo:20260627T083000
 DTEND;TZID=Asia/Tokyo:20260627T180000
 SUMMARY:6/27 OSC 2026 Hokkaido 当日スタッフ募集
@@ -398,7 +400,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/392414/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260803T034134Z
+DTSTAMP:20260804T032602Z
 DTSTART;TZID=Asia/Tokyo:20260801T190000
 DTEND;TZID=Asia/Tokyo:20260801T210000
 SUMMARY:8/1 OSC京都 懇親会（京都駅堀川通）
@@ -456,7 +458,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/392762/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260803T034134Z
+DTSTAMP:20260804T032602Z
 DTSTART;TZID=Asia/Tokyo:20260627T190000
 DTEND;TZID=Asia/Tokyo:20260627T210000
 SUMMARY:6/27 OSC 2026 Hokkaido 大懇親会
@@ -542,7 +544,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/391085/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260803T034134Z
+DTSTAMP:20260804T032602Z
 DTSTART;TZID=Asia/Tokyo:20260606T180000
 DTEND;TZID=Asia/Tokyo:20260606T200000
 SUMMARY:6/6 OSC仙台  懇親会
