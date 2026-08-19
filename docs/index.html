@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calendar Subscriptions (ICS) — shimajima-eiji</title>
-  <meta name="description" content="Subscribe to connpass events and GitHub Issues deadlines as ICS feeds — paste the URL into your calendar app.">
+  <title>Sho Naka — Individual Developer &amp; Technical Writer</title>
+  <meta name="description" content="Sho Naka (nomuraya) — individual developer and technical writer. Articles on note, Qiita, Zenn, and dev.to; code on GitHub.">
   <meta name="color-scheme" content="light dark">
-  <meta property="og:title" content="Calendar Subscriptions (ICS) — shimajima-eiji">
-  <meta property="og:description" content="Subscribe to connpass events and GitHub Issues deadlines as ICS feeds.">
+  <meta property="og:title" content="Sho Naka — Individual Developer & Technical Writer">
+  <meta property="og:description" content="Individual developer and technical writer. Articles on note, Qiita, Zenn, and dev.to; code on GitHub.">
   <meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>📅</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>✍️</text></svg>">
   <style>
     :root {
       --bg: #ffffff;
@@ -45,14 +45,26 @@
       -webkit-font-smoothing: antialiased;
     }
     header { margin-bottom: 2.5rem; }
-    h1 { font-size: 1.75rem; line-height: 1.3; margin: 0 0 .5rem; letter-spacing: -.01em; }
-    .lead { color: var(--fg-muted); margin: 0; }
-    h2 { font-size: 1.05rem; margin: 2.5rem 0 1rem; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-muted); }
-    nav a {
-      display: inline-flex; align-items: center; gap: .35rem;
-      color: var(--accent); text-decoration: none; font-weight: 600; font-size: .95rem;
+    .avatar {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: var(--bg-soft); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem; margin-bottom: 1rem;
     }
-    nav a:hover { text-decoration: underline; }
+    h1 { font-size: 1.75rem; line-height: 1.3; margin: 0 0 .25rem; letter-spacing: -.01em; }
+    .role { color: var(--fg-muted); font-size: 1rem; margin: 0 0 .25rem; }
+    .role.lang-ja { font-size: .92rem; margin-bottom: 1rem; }
+    .lead { color: var(--fg-muted); margin: 1rem 0 0; }
+    h2 { font-size: 1.05rem; margin: 2.5rem 0 1rem; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-muted); }
+    nav.links { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.25rem; }
+    nav.links a {
+      display: inline-flex; align-items: center; gap: .4rem;
+      color: var(--fg); text-decoration: none; font-weight: 600; font-size: .9rem;
+      background: var(--bg-soft); border: 1px solid var(--border); border-radius: 999px;
+      padding: .45rem .9rem;
+      transition: border-color .12s;
+    }
+    nav.links a:hover { border-color: var(--accent); color: var(--accent); }
     .card {
       background: var(--bg-soft);
       border: 1px solid var(--border);
@@ -61,142 +73,91 @@
       margin: .85rem 0;
       box-shadow: var(--shadow);
     }
-    .card .name { font-weight: 600; font-size: 1.05rem; }
-    .card .meta { color: var(--fg-muted); font-size: .85rem; margin-top: .15rem; }
-    .url-row { display: flex; gap: .5rem; margin-top: .8rem; align-items: stretch; }
-    .url-row code {
-      flex: 1; min-width: 0;
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: .5rem .7rem;
-      font-size: .82rem;
-      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
-      overflow-x: auto; white-space: nowrap;
-      color: var(--fg);
-    }
-    button.copy {
-      flex: 0 0 auto;
-      background: var(--accent); color: var(--accent-fg);
-      border: none; border-radius: 8px;
-      padding: 0 .9rem; font-size: .85rem; font-weight: 600;
-      cursor: pointer; transition: opacity .15s;
-    }
-    button.copy:hover { opacity: .88; }
-    button.copy.done { background: #16a34a; }
+    .card .platform { font-weight: 600; font-size: .95rem; color: var(--accent); }
+    .card ul { list-style: none; margin: .6rem 0 0; padding: 0; }
+    .card li { margin: .5rem 0; }
+    .card li a { color: var(--fg); text-decoration: none; }
+    .card li a:hover { color: var(--accent); text-decoration: underline; }
+    .card li .date { color: var(--fg-muted); font-size: .8rem; margin-right: .5rem; }
     footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--fg-muted); font-size: .85rem; }
     footer a { color: var(--accent); }
-    .empty { color: var(--fg-muted); font-style: italic; }
+    footer p { margin: .35rem 0; }
     .lang-ja { color: var(--fg-muted); font-size: .92em; margin-top: .25rem; }
-    h1 .lang-ja { font-size: 1.05rem; font-weight: 500; margin-top: .35rem; }
+    h1 .lang-ja { display: block; font-size: 1.05rem; font-weight: 500; margin-top: .35rem; }
   </style>
 </head>
 <body>
   <header>
-    <h1>📅 Calendar Subscriptions (ICS)
-      <span class="lang-ja" lang="ja">カレンダー購読 (ICS)</span>
+    <div class="avatar" aria-hidden="true">✍️</div>
+    <h1>Sho Naka (nomuraya)
+      <span class="lang-ja" lang="ja">中 翔（のむらや）</span>
     </h1>
-    <p class="lead">Paste the URLs below into the "Subscribe to calendar by URL" field of your calendar app to keep events and deadlines synced automatically.</p>
-    <p class="lead lang-ja" lang="ja">下の URL をカレンダーアプリの「URL で購読」に貼り付けると、イベントや締切が自動で同期されます。</p>
+    <p class="role">Individual developer &amp; technical writer</p>
+    <p class="role lang-ja" lang="ja">個人開発者・テクニカルライター</p>
+    <p class="lead">I write and publish articles about software development, AI agents, and developer tooling — mostly what I run into while building things myself. Code and small apps live on GitHub.</p>
+    <p class="lead lang-ja" lang="ja">ソフトウェア開発・AIエージェント・開発ツールについて、自分が実際に手を動かして得た知見を記事にして公開しています。コードや小さなアプリは GitHub に置いています。</p>
+
+    <nav class="links">
+      <a href="https://note.com/nomuraya">📝 note</a>
+      <a href="https://qiita.com/nomurasan">📘 Qiita</a>
+      <a href="https://zenn.dev/nomurasan">📗 Zenn</a>
+      <a href="https://dev.to/nomurasan">🌐 dev.to</a>
+      <a href="https://github.com/shimajima-eiji">💻 GitHub</a>
+    </nav>
   </header>
 
-  <h2>connpass Events
-    <span class="lang-ja" lang="ja">connpass イベント</span>
+  <h2>Recent Articles
+    <span class="lang-ja" lang="ja">最近の記事</span>
   </h2>
-  <div id="connpass-list">
-    <p class="empty">読み込み中…</p>
+
+  <div class="card">
+    <div class="platform">note</div>
+    <ul>
+      <li><span class="date">2026-08</span><a href="https://note.com/nomuraya/n/n4e27adadcc8c">AIで記事を量産したら、公開が遅くなった。書く前に捨てる6つの問い</a></li>
+      <li><span class="date">2026-08</span><a href="https://note.com/nomuraya/n/nc42902b50e2f">Claude Code の CLAUDE.md を多層化して、AI を自分専用に育てる仕組みの作り方</a></li>
+      <li><span class="date">2026-08</span><a href="https://note.com/nomuraya/n/ne661bd599bba">レビューが遅らせたのではない。遅らせていたのは、承認のやり直しだった</a></li>
+    </ul>
   </div>
 
-  <h2>GitHub Issues Deadlines
-    <span class="lang-ja" lang="ja">GitHub Issues 締切</span>
-  </h2>
-  <div id="issues-list"></div>
+  <div class="card">
+    <div class="platform">Qiita</div>
+    <ul>
+      <li><span class="date">2026-08</span><a href="https://qiita.com/nomurasan/items/097c6962a6bb0ed847af">ChatGPTに「GitHubへpushできません」と言われたので、モードを切り替えたら普通に書き込めた話</a></li>
+      <li><span class="date">2026-07</span><a href="https://qiita.com/nomurasan/items/63654a3f9457a8b5ed35">さくらのAI Engine無料枠でgpt-oss-120bを使う ― Anthropic SDKはauth_token=必須の罠</a></li>
+      <li><span class="date">2026-07</span><a href="https://qiita.com/nomurasan/items/c227b092ba30d18aa8a1">Claude Code hookが遅い原因はpydanticだった ― 起動コストを実測してGoに移植したら約8割削減できた話</a></li>
+    </ul>
+  </div>
 
-  <nav style="margin-top:2.5rem;">
-    <a href="./apps.html">🧪 Mini apps built with AI / AI で作ったミニアプリ集 →</a>
-  </nav>
+  <div class="card">
+    <div class="platform">Zenn</div>
+    <ul>
+      <li><span class="date">2026-08</span><a href="https://zenn.dev/nomurasan/articles/ssh-config-resolution-verified-with-ssh-g">ssh_config の優先順位を ssh -G で実測する</a></li>
+      <li><span class="date">2026-08</span><a href="https://zenn.dev/nomurasan/articles/claude-code-hook-failure-detection">hookが壊れても気づける仕組みの作り方（Claude Code実例）</a></li>
+      <li><span class="date">2026-08</span><a href="https://zenn.dev/nomurasan/articles/claude-code-to-codex-handoff">Claude Codeを使い込んだ私がCodexを本気で使ってみて、最初に変えたのは仕事の渡し方だった</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="platform">dev.to</div>
+    <ul>
+      <li><span class="date">2026-08</span><a href="https://dev.to/nomurasan/i-ran-a-honeypot-for-ai-agents-for-45-days-82-of-the-traffic-that-reached-it-was-an-attack-4f35">I ran a honeypot for AI agents for 45 days. 82% of the traffic that reached it was an attack.</a></li>
+      <li><span class="date">2026-08</span><a href="https://dev.to/nomurasan/an-agents-work-isnt-done-later-until-you-can-find-it-later-1929">An Agent's Work Isn't "Done Later" Until You Can Find It Later</a></li>
+      <li><span class="date">2026-08</span><a href="https://dev.to/nomurasan/why-wsl2-is-slow-on-mntc-and-how-to-find-the-exact-operation-costing-you-time-40o7">Why WSL2 Is Slow on /mnt/c, and How to Find the Exact Operation Costing You Time</a></li>
+    </ul>
+  </div>
+
+  <h2>Also on This Site
+    <span class="lang-ja" lang="ja">このサイトの他のページ</span>
+  </h2>
+  <p class="lead">
+    <a href="./calendar/">📅 Calendar subscriptions (ICS)</a> — connpass events &amp; GitHub Issues deadlines as calendar feeds.
+    <span class="lang-ja" lang="ja">connpass イベントと GitHub Issues の締切をカレンダー配信。</span>
+  </p>
 
   <footer>
-    <p>Adding a connpass group to feeds.yml generates an ICS feed automatically.
-    Source: <a href="https://github.com/shimajima-eiji/shimajima-eiji.github.io">GitHub</a></p>
-    <p class="lang-ja" lang="ja">feeds.yml に connpass グループを追加すると自動で ICS が生成されます。
-    ソース: <a href="https://github.com/shimajima-eiji/shimajima-eiji.github.io">GitHub</a></p>
+    <p>Contact: <a href="mailto:shimajima.eiji@gmail.com">shimajima.eiji@gmail.com</a></p>
+    <p>Source: <a href="https://github.com/shimajima-eiji/shimajima-eiji.github.io">GitHub</a></p>
+    <p class="lang-ja" lang="ja">ソース: <a href="https://github.com/shimajima-eiji/shimajima-eiji.github.io">GitHub</a></p>
   </footer>
-
-  <script>
-    const base = location.origin + location.pathname.replace(/\/[^/]*$/, "/");
-
-    function makeCard({ name, meta, file }) {
-      const url = base + file;
-      const card = document.createElement("div");
-      card.className = "card";
-
-      const nameEl = document.createElement("div");
-      nameEl.className = "name";
-      nameEl.textContent = name;
-      card.appendChild(nameEl);
-
-      if (meta) {
-        const metaEl = document.createElement("div");
-        metaEl.className = "meta";
-        metaEl.textContent = meta;
-        card.appendChild(metaEl);
-      }
-
-      const row = document.createElement("div");
-      row.className = "url-row";
-      const code = document.createElement("code");
-      code.textContent = url;
-      const btn = document.createElement("button");
-      btn.className = "copy";
-      btn.type = "button";
-      btn.textContent = "コピー";
-      btn.addEventListener("click", async () => {
-        try {
-          await navigator.clipboard.writeText(url);
-          btn.textContent = "✓ コピー済";
-          btn.classList.add("done");
-          setTimeout(() => { btn.textContent = "コピー"; btn.classList.remove("done"); }, 1500);
-        } catch {
-          window.prompt("この URL をコピーしてください", url);
-        }
-      });
-      row.appendChild(code);
-      row.appendChild(btn);
-      card.appendChild(row);
-      return card;
-    }
-
-    // connpass フィードは feeds.json（生成物）から動的に描画する。
-    fetch(base + "feeds.json", { cache: "no-cache" })
-      .then((r) => (r.ok ? r.json() : Promise.reject()))
-      .then((data) => {
-        const list = document.getElementById("connpass-list");
-        list.innerHTML = "";
-        const feeds = (data && data.feeds) || [];
-        if (!feeds.length) {
-          list.innerHTML = '<p class="empty">配信中のフィードはありません。</p>';
-          return;
-        }
-        feeds.forEach((f) => {
-          list.appendChild(makeCard({
-            name: f.name,
-            meta: typeof f.events === "number" ? `直近 ${f.events} 件のイベント` : "",
-            file: f.key + ".ics",
-          }));
-        });
-      })
-      .catch(() => {
-        document.getElementById("connpass-list").innerHTML =
-          '<p class="empty">フィード一覧を読み込めませんでした。</p>';
-      });
-
-    // GitHub Issues 締切カレンダーは固定。
-    document.getElementById("issues-list").appendChild(makeCard({
-      name: "GitHub Issues の締切",
-      meta: "Issue 本文に「due: YYYY-MM-DD」と書くと終日予定として配信されます。",
-      file: "github-issues.ics",
-    }));
-  </script>
 </body>
 </html>

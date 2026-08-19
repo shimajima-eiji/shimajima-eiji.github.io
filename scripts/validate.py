@@ -223,25 +223,34 @@ def main() -> int:
     # docs/ を丸ごと削除する事故コミットや、生成ジョブが何も出力しなかったケースを
     # CI で検出するため（ループ本体が走らないと errors が空のまま PASSED になる穴を塞ぐ）。
     print("== HTML ==")
-    html_paths = sorted(glob.glob(os.path.join(DOCS, "*.html")))
+    html_paths = sorted(
+        glob.glob(os.path.join(DOCS, "*.html"))
+        + glob.glob(os.path.join(DOCS, "calendar", "*.html"))
+    )
     if not html_paths:
         err("docs/*.html が 1 件もない（サイト本体が消えている可能性）")
     for path in html_paths:
         check_html(path)
 
     print("== ICS ==")
+    # .ics はカレンダーアプリが URL を直接 fetch するため、既存購読を壊さないよう
+    # ルート直下 (docs/*.ics) を正とする（2026-08-20 owner指摘で docs/calendar/ から復元）。
     ics_paths = sorted(glob.glob(os.path.join(DOCS, "*.ics")))
     if not ics_paths:
         err("docs/*.ics が 1 件もない（カレンダー生成が失敗した可能性）")
     for path in ics_paths:
         check_ics(path)
 
-    print("== JSON ==")
-    json_paths = sorted(glob.glob(os.path.join(DOCS, "*.json")))
-    if not json_paths:
-        err("docs/*.json が 1 件もない（feeds.json が消えている可能性）")
-    for path in json_paths:
-        check_json(path)
+    print("== JSON (feeds.json) ==")
+    # feeds.json も ICS と同じ理由でルート直下 (docs/feeds.json) を正とする。
+    # docs/ 配下には mini-app 由来の manifest.json も混在するため、
+    # feeds 生成物である docs/feeds.json だけを対象にする
+    # （manifest.json は 'feeds' キーを持たず誤検知になるため）。
+    feeds_json_path = os.path.join(DOCS, "feeds.json")
+    if not os.path.exists(feeds_json_path):
+        err("docs/feeds.json が無い（feeds.json が消えている可能性）")
+    else:
+        check_json(feeds_json_path)
 
     print("== 自己テスト ==")
     selftest_connpass()

@@ -3,16 +3,20 @@
 GitHub Pages のルート。`docs/` を公開している。
 
 - 公開ページ: https://shimajima-eiji.github.io/
-  - トップ … カレンダー購読 (ICS) 一覧
-  - `/apps.html` … AI で作ったミニアプリ集
+  - トップ … 執筆者プロフィール + 著作導線
+  - `/calendar/` … カレンダー購読 (ICS) 一覧
+  - `/calendar/apps.html` … AI で作ったミニアプリ集
 
 ## カレンダー (ICS) 配信
+
+.ics / feeds.json はカレンダーアプリが URL を直接 fetch するため、既存の購読 URL を
+壊さないよう **ルート直下 (`docs/`) を正とする**（HTML ページだけ `/calendar/` に移動）。
 
 | ファイル | 中身 | 生成 |
 |----------|------|------|
 | `docs/{key}.ics` | connpass グループのイベント | `update-ics.yml`（毎日 + 手動） |
 | `docs/github-issues.ics` | Issue 本文の `due:` を締切予定に | `update-issues-ics.yml`（毎日 + Issue 変更時） |
-| `docs/feeds.json` | トップページが読む connpass 一覧 | 上記と同時生成 |
+| `docs/feeds.json` | `/calendar/` ページが読む connpass 一覧 | 上記と同時生成 |
 
 ### connpass グループを増やす
 
