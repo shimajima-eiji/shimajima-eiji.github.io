@@ -15,9 +15,54 @@ DTSTART:19700101T000000
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
+UID:https://ospn.connpass.com/event/403624/?utm_campaign=series_events&utm_
+ source=feed&utm_medium=atom
+DTSTAMP:20260821T014757Z
+DTSTART;TZID=Asia/Tokyo:20261017T173000
+DTEND;TZID=Asia/Tokyo:20261017T193000
+SUMMARY:10/17 OSC東京Fall（浅草） 懇親会
+DESCRIPTION:開催日時: 2026/10/17 17:30 ～ 19:30<br />開催場所: 東
+ 京都台東区浅草2-5-10 ケ－イ－浅草ビル1F<br /><br />\n\n<h2>
+ OSC東京Fall 終了後に懇親会を開催します！</h2>\n<p>出展
+ 者、来場者、関係者を交えての楽しい懇親会です。お
+ 気軽にご参加ください。<br><br>\nご案内（必ずお読みく
+ ださい）<br>\n・ 参加される方は事前申込をお願いしま
+ す。<br>\n・お支払いは<b>現金のみ可能</b>です（キャッ
+ シュレス決済は対応していません）。<br>\n・当日15:00ま
+ でにOSC受付にてお支払いください。<br>\n・都合がつか
+ なくなった方は、速やかにキャンセルをお願いします
+ 。<br></p>\n<h2>会場</h2>\n<p><a href="https://r.gnavi.co.jp/a904426/" 
+ rel="nofollow">寿司と居酒屋「魚民」 浅草奥山おまいりま
+ ち店</a><br>\n会場から徒歩8分<br>\n<a href="https://r.gnavi.co.jp
+ /a904426/map/" rel="nofollow">ぐるなびMAP</a></p>\n<p><br></p>\n<h2>
+ 会費</h2>\n<ul>\n<li>一般 学生サポート付き 5\,000円（税込
+ 、領収書出ます）※</li>\n<li>一般 4\,000円（税込、領収
+ 書出ます）</li>\n<li>学生 2\,000円（税込）※支払いの際
+ 、学生証を提示してください。（社会人学生は一般参
+ 加になります）<br>\n ※学生サポートは当日の学生スタ
+ ッフの参加分のサポート、今後の開催の学生参加分に
+ も活用させていただきます。ご協力ありがとうござい
+ ます。</li>\n</ul>\n<h2>内容</h2>\n<p>コース料理＋2時間飲み
+ 放題<br></p>\n<h2>支払場所</h2>\n<ul>\n<li>OSC受付にて「15:00
+ 」までにお支払いください。参加証をお渡しします。</
+ li>\n<li>なるべくお釣りがでないようにお願いいたしま
+ す。<br></li>\n<li>懇親会会場では支払受付できません。</
+ li>\n<li>15:00までにお支払いができない場合は、事前にメ
+ ールにてお知らせください（osc2026@begi.net)</li>\n</ul>\n<h2>
+ OSC東京Fallのイベント参加登録もお願いします</h2>\n<p>OSC
+ 東京Fall(connpass)<br>\n<a href="https://ospn.connpass.com/event/399105/
+ " rel="nofollow">https://ospn.connpass.com/event/399105/</a>\n<br>\n展示
+ ブース一覧<br>\n<a href="https://event.ospn.jp/osc2026-fall/exhibit" 
+ rel="nofollow">https://event.ospn.jp/osc2026-fall/exhibit</a></p>\n\nhttps
+ ://ospn.connpass.com/event/403624/?utm_campaign=series_events&utm_source=f
+ eed&utm_medium=atom
+URL:https://ospn.connpass.com/event/403624/?utm_campaign=series_events&utm_
+ source=feed&utm_medium=atom
+END:VEVENT
+BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/398562/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260820T014246Z
+DTSTAMP:20260821T014757Z
 DTSTART;TZID=Asia/Tokyo:20261121T103000
 DTEND;TZID=Asia/Tokyo:20261121T170000
 SUMMARY:11/21 Open Source Conference 2026 Nagaoka
@@ -76,7 +121,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/403736/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260820T014246Z
+DTSTAMP:20260821T014757Z
 DTSTART;TZID=Asia/Tokyo:20261120T180000
 DTEND;TZID=Asia/Tokyo:20261120T200000
 SUMMARY:11/20 オープンソースカンファレンス2026 Nagaoka　前
@@ -96,7 +141,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/399105/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260820T014246Z
+DTSTAMP:20260821T014757Z
 DTSTART;TZID=Asia/Tokyo:20261017T100000
 DTEND;TZID=Asia/Tokyo:20261017T160000
 SUMMARY:10/17 【展示/ステージ】オープンソースカンファレ
@@ -163,7 +208,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/399103/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260820T014246Z
+DTSTAMP:20260821T014757Z
 DTSTART;TZID=Asia/Tokyo:20260723T170454
 DTEND;TZID=Asia/Tokyo:20260723T180454
 SUMMARY:10/2-3 Open Source Conference 2026 Online/Fall
@@ -287,7 +332,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/400939/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260820T014246Z
+DTSTAMP:20260821T014757Z
 DTSTART;TZID=Asia/Tokyo:20260912T181500
 DTEND;TZID=Asia/Tokyo:20260912T201500
 SUMMARY:9/12 OSC広島 懇親会
@@ -334,7 +379,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/399098/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260820T014246Z
+DTSTAMP:20260821T014757Z
 DTSTART;TZID=Asia/Tokyo:20260912T100000
 DTEND;TZID=Asia/Tokyo:20260912T180000
 SUMMARY:9/12 オープンソースカンファレンス2026 Hiroshima
@@ -398,7 +443,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/396808/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260820T014246Z
+DTSTAMP:20260821T014757Z
 DTSTART;TZID=Asia/Tokyo:20260829T100000
 DTEND;TZID=Asia/Tokyo:20260829T174500
 SUMMARY:Open Developers Conference 2026
@@ -437,7 +482,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/398160/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260820T014246Z
+DTSTAMP:20260821T014757Z
 DTSTART;TZID=Asia/Tokyo:20260829T181500
 DTEND;TZID=Asia/Tokyo:20260829T201500
 SUMMARY:8/29 ODC2026 懇親会
@@ -476,7 +521,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/396163/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260820T014246Z
+DTSTAMP:20260821T014757Z
 DTSTART;TZID=Asia/Tokyo:20260626T200000
 DTEND;TZID=Asia/Tokyo:20260626T223000
 SUMMARY:6/26 OSC2026北海道 関係者前夜祭
@@ -502,52 +547,6 @@ DESCRIPTION:開催日時: 2026/06/26 20:00 ～ 22:30<br />開催場所: 北
  s://ospn.connpass.com/event/396163/?utm_campaign=series_events&utm_source=
  feed&utm_medium=atom
 URL:https://ospn.connpass.com/event/396163/?utm_campaign=series_events&utm_
- source=feed&utm_medium=atom
-END:VEVENT
-BEGIN:VEVENT
-UID:https://ospn.connpass.com/event/394555/?utm_campaign=series_events&utm_
- source=feed&utm_medium=atom
-DTSTAMP:20260820T014246Z
-DTSTART;TZID=Asia/Tokyo:20260627T083000
-DTEND;TZID=Asia/Tokyo:20260627T180000
-SUMMARY:6/27 OSC 2026 Hokkaido 当日スタッフ募集
-DESCRIPTION:開催日時: 2026/06/27 08:30 ～ 18:00<br />開催場所: 北
- 海道札幌市白石区東札幌5条1丁目1-1<br /><br /><h1>概要</h1>
- \n<p><a href="https://ospn.connpass.com/event/388639/" rel="nofollow">オ
- ープンソースカンファレンス2026 Hokkaido</a> の当日スタ
- ッフを募集いたします！ “当日スタッフ" とは、イベ
- ントの始まりから終了まで、会場運営のお手伝いをし
- ていただく方々のことです。毎年多数のセミナーが開
- 催され、イベントの成功には当日スタッフの皆さんの
- 力が必要不可欠です。</p>\n<p>こちらの<a href="https://docs.g
- oogle.com/document/d/143iiIUZ3DKhnxGr75JaPBwDkhd94HTYR_lAbQ8gWDbI/edit?usp
- =sharing" rel="nofollow">オープンソースカンファレンス2026 Ho
- kkaido 行動規範</a>をお読みいただいた上で、スタッフ業
- 務に興味をお持ちの方、少しだけでもお手伝いしても
- 良いという方の参加をお待ちしております。もちろん
- 、聴講を希望されるセミナーには参加できるよう調整
- した上で、お手伝いをお願いいたします。</p>\n<p>ご不
- 明な点などありましたら、本ページ内の<a href="https://osp
- n.connpass.com/event/394555/inquiry/" rel="nofollow">イベントへのお
- 問い合わせ</a>からお問い合わせください。</p>\n<h1>お手
- 伝いいただきたい内容</h1>\n<p><strong>当日は朝8時に会場
- に現地集合となります。</strong></p>\n<ul>\n<li><strong>会場
- 設営・撤収</strong>: 展示会場や閉会式会場などの設営・
- 撤収時にご活躍いただける方。</li>\n<li><strong>受付</stron
- g>: 来場された方々への名札の配布などのお手伝いをし
- てくださる方。</li>\n<li><strong>各セミナーの補助</strong>:
-  各セミナー会場での運営補助をしてくださる方。</li>\n
- </ul>\n<h1>自己紹介と簡単な事前説明会について</h1>\n<p>
- 当日スタッフとしてご協力いただける方を対象に、オ
- ンラインでの自己紹介と簡単な説明会を予定しており
- ます。\n<strong>06/17(水) または 06/18(木) 21時より、Zoomに
- て開催</strong>しますので、ご参加をお願いいたします
- 。詳細な参加方法は、お申込みいただいた方に締切後
- にconnpass経由にて別途ご連絡いたします。</p>\n<p>皆様の
- ご参加を心よりお待ちしております！</p>\n\nhttps://ospn.co
- nnpass.com/event/394555/?utm_campaign=series_events&utm_source=feed&utm_me
- dium=atom
-URL:https://ospn.connpass.com/event/394555/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
 END:VEVENT
 END:VCALENDAR
