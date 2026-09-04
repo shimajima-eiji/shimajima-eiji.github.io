@@ -17,7 +17,7 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/405290/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260903T040721Z
+DTSTAMP:20260904T041400Z
 DTSTART;TZID=Asia/Tokyo:20261122T183000
 DTEND;TZID=Asia/Tokyo:20261122T203000
 SUMMARY:2026/11/22 OSC2026 Yamaguchi 懇親会
@@ -54,7 +54,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/398565/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260903T040721Z
+DTSTAMP:20260904T041400Z
 DTSTART;TZID=Asia/Tokyo:20261122T104500
 DTEND;TZID=Asia/Tokyo:20261122T170000
 SUMMARY:2026/11/22 Open Source Conference 2026 Yamaguchi
@@ -443,7 +443,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/403624/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260903T040721Z
+DTSTAMP:20260904T041400Z
 DTSTART;TZID=Asia/Tokyo:20261017T173000
 DTEND;TZID=Asia/Tokyo:20261017T193000
 SUMMARY:10/17 OSC東京Fall（浅草） 懇親会
@@ -488,7 +488,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/398562/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260903T040721Z
+DTSTAMP:20260904T041400Z
 DTSTART;TZID=Asia/Tokyo:20261121T103000
 DTEND;TZID=Asia/Tokyo:20261121T170000
 SUMMARY:11/21 Open Source Conference 2026 Nagaoka
@@ -547,7 +547,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/403736/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260903T040721Z
+DTSTAMP:20260904T041400Z
 DTSTART;TZID=Asia/Tokyo:20261120T180000
 DTEND;TZID=Asia/Tokyo:20261120T200000
 SUMMARY:11/20 オープンソースカンファレンス2026 Nagaoka　前
@@ -567,7 +567,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/399105/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260903T040721Z
+DTSTAMP:20260904T041400Z
 DTSTART;TZID=Asia/Tokyo:20261017T100000
 DTEND;TZID=Asia/Tokyo:20261017T160000
 SUMMARY:10/17 【展示/ステージ】オープンソースカンファレ
@@ -639,7 +639,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/399103/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260903T040721Z
+DTSTAMP:20260904T041400Z
 DTSTART;TZID=Asia/Tokyo:20260723T170454
 DTEND;TZID=Asia/Tokyo:20260723T180454
 SUMMARY:10/2-3 Open Source Conference 2026 Online/Fall
@@ -767,7 +767,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/400939/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260903T040721Z
+DTSTAMP:20260904T041400Z
 DTSTART;TZID=Asia/Tokyo:20260912T181500
 DTEND;TZID=Asia/Tokyo:20260912T201500
 SUMMARY:9/12 OSC広島 懇親会
@@ -776,45 +776,45 @@ DESCRIPTION:開催日時: 2026/09/12 18:15 ～ 20:15<br />開催場所: 広
  島 終了後に懇親会を開催します！</h2>\n<p>出展者、講演
  者、来場者の皆さんで楽しんでいただける懇親会です
  。お気軽にご参加ください。  </p>\n<p>※ お店の都合な
- どから、2026年9月10日には人数を確定する予定です。追
- 加での参加などは、本ページの「イベントへの問い合
- わせ」、出展関係者などは OSPN Slack &gt\; #hiroshima チャネ
- ルでご相談ください。</p>\n<h3>ご案内（必ずお読みくだ
- さい）</h3>\n<ul>\n<li>参加される方は事前申込をお願いし
- ます。</li>\n<li>お支払いは<strong>現金のみ可能</strong>で
- す（キャッシュレス決済は対応していません）。</li>\n<
- li>当日15:30までにOSC受付にてお支払いください。</li>\n<l
- i>都合がつかなくなった方は、速やかにキャンセルをお
- 願いします。</li>\n</ul>\n<h2>会場</h2>\n<ul>\n<li>ぶあいそ博
- 多 本通り店</li>\n</ul>\n<p><br></p>\n<h2>会費</h2>\n<ul>\n<li>一
- 般 学生サポート付き 5\,000 円（税込、領収書出ます）  
- </li>\n<li>一般 4\,000円（税込、領収書出ます）</li>\n<li>学
- 生 1\,000円（税込）\n  ※ 支払いの際、学生証を提示し
- てください。（社会人学生は一般参加になります）<br>\
- n  ※ 学生サポートは当日の学生スタッフの参加分のサ
- ポート、今後の開催の学生参加分にも活用させていた
- だきます。  </li>\n</ul>\n<h2>内容</h2>\n<p>食べ放題 + 2時間
- 飲み放題（生ビール付き）</p>\n<p><br></p>\n<h2>支払場所</h
- 2>\n<ul>\n<li>OSC受付にて「15:30」までにお支払いください
- 。参加証をお渡しします。</li>\n<li>なるべくお釣りがで
- ないようにお願いいたします。</li>\n<li>懇親会会場では
- 支払受付できません。</li>\n</ul>\n<h2>OSC広島のイベント
- 参加登録もお願いします</h2>\n<p>OSC広島(connpass)<br>\n<a hre
- f="https://ospn.connpass.com/event/399098/" rel="nofollow">https://ospn.co
- nnpass.com/event/399098/</a>\n<br>\n展示ブース一覧<br>\n<a href="ht
- tps://event.ospn.jp/osc2026-hiroshima/exhibit" rel="nofollow">https://even
- t.ospn.jp/osc2026-hiroshima/exhibit</a> <br>\nセミナータイムテー
- ブル<br>\n<a href="https://event.ospn.jp/osc2026-hiroshima/session/day1"
-  rel="nofollow">https://event.ospn.jp/osc2026-hiroshima/session/day1</a></
- p>\n\nhttps://ospn.connpass.com/event/400939/?utm_campaign=series_events&u
- tm_source=feed&utm_medium=atom
+ どから、2026年9月10日には人数を確定する予定です。9/9 
+ 20:00以降に、追加で参加希望は、本ページの「イベント
+ への問い合わせ」、出展関係者などは OSPN Slack &gt\; #hiro
+ shima チャネルでご相談ください。</p>\n<h3>ご案内（必ず
+ お読みください）</h3>\n<ul>\n<li>参加される方は事前申込
+ をお願いします。</li>\n<li>お支払いは<strong>現金のみ可
+ 能</strong>です（キャッシュレス決済は対応していませ
+ ん）。</li>\n<li>当日15:30までにOSC受付にてお支払いくだ
+ さい。</li>\n<li>都合がつかなくなった方は、速やかにキ
+ ャンセルをお願いします。</li>\n</ul>\n<h2>会場</h2>\n<ul>\n<
+ li>ぶあいそ博多 本通り店</li>\n</ul>\n<p><br></p>\n<h2>会費</h
+ 2>\n<ul>\n<li>一般 学生サポート付き 5\,000 円（税込、領収
+ 書出ます）  </li>\n<li>一般 4\,000円（税込、領収書出ます
+ ）</li>\n<li>学生 1\,000円（税込）\n  ※ 支払いの際、学生
+ 証を提示してください。（社会人学生は一般参加にな
+ ります）<br>\n  ※ 学生サポートは当日の学生スタッフ
+ の参加分のサポート、今後の開催の学生参加分にも活
+ 用させていただきます。  </li>\n</ul>\n<h2>内容</h2>\n<p>食
+ べ放題 + 2時間飲み放題（生ビール付き）</p>\n<p><br></p>\n
+ <h2>支払場所</h2>\n<ul>\n<li>OSC受付にて「15:30」までにお支
+ 払いください。参加証をお渡しします。</li>\n<li>なるべ
+ くお釣りがでないようにお願いいたします。</li>\n<li>懇
+ 親会会場では支払受付できません。</li>\n</ul>\n<h2>OSC広
+ 島のイベント参加登録もお願いします</h2>\n<p>OSC広島(con
+ npass)<br>\n<a href="https://ospn.connpass.com/event/399098/" rel="nofollo
+ w">https://ospn.connpass.com/event/399098/</a>\n<br>\n展示ブース一
+ 覧<br>\n<a href="https://event.ospn.jp/osc2026-hiroshima/exhibit" rel="no
+ follow">https://event.ospn.jp/osc2026-hiroshima/exhibit</a> <br>\nセミ
+ ナータイムテーブル<br>\n<a href="https://event.ospn.jp/osc2026-hi
+ roshima/session/day1" rel="nofollow">https://event.ospn.jp/osc2026-hiroshi
+ ma/session/day1</a></p>\n\nhttps://ospn.connpass.com/event/400939/?utm_cam
+ paign=series_events&utm_source=feed&utm_medium=atom
 URL:https://ospn.connpass.com/event/400939/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
 END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/399098/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260903T040721Z
+DTSTAMP:20260904T041400Z
 DTSTART;TZID=Asia/Tokyo:20260912T100000
 DTEND;TZID=Asia/Tokyo:20260912T180000
 SUMMARY:9/12 オープンソースカンファレンス2026 Hiroshima
@@ -878,7 +878,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/396808/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260903T040721Z
+DTSTAMP:20260904T041400Z
 DTSTART;TZID=Asia/Tokyo:20260829T100000
 DTEND;TZID=Asia/Tokyo:20260829T174500
 SUMMARY:Open Developers Conference 2026
