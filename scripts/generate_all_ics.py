@@ -277,23 +277,39 @@ def fetch_api(subdomain: str, api_key: str, months_ahead: int = 6, count: int = 
         ("order", "2"),  # 開催日時順
     ]
     params += [("ym", ym) for ym in _ym_window(months_ahead)]
-    url = f"{CONNPASS_API_URL}?{urllib.parse.urlencode(params)}"
-
-    req = urllib.request.Request(url, method="GET")
-    req.add_header("X-API-Key", api_key)
-    req.add_header("User-Agent", USER_AGENT)
-    req.add_header("Accept", "application/json")
-
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        data = json.loads(resp.read().decode("utf-8"))
-
     events: List[CalEvent] = []
-    for e in data.get("events", []) or []:
-        try:
-            events.append(event_from_api(e))
-        except Exception:  # noqa: BLE001 — 不正な1件はスキップ
-            continue
-    return events
+    seen: set[str] = set()
+    start = 1
+    # Bound requests; never silently publish a truncated API result.
+    for _ in range(100):
+        url = f"{CONNPASS_API_URL}?{urllib.parse.urlencode(params + [('start', str(start))])}"
+        req = urllib.request.Request(url, method="GET")
+        req.add_header("X-API-Key", api_key)
+        req.add_header("User-Agent", USER_AGENT)
+        req.add_header("Accept", "application/json")
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+        rows = data.get("events") or []
+        returned = int(data.get("results_returned", len(rows)))
+        available = int(data.get("results_available", start - 1 + len(rows)))
+        if int(data.get("results_start", start)) != start or returned != len(rows):
+            raise ValueError("connpass pagination metadata mismatch")
+        if not rows:
+            if start <= available:
+                raise ValueError("connpass pagination made no progress")
+            return events
+        for row in rows:
+            try:
+                event = event_from_api(row)
+            except (ValueError, TypeError, AttributeError):
+                continue
+            if event.uid not in seen:
+                seen.add(event.uid)
+                events.append(event)
+        start += returned
+        if start > available:
+            return events
+    raise ValueError("connpass pagination exceeded 100 pages")
 
 
 # ---------------------------------------------------------------------------

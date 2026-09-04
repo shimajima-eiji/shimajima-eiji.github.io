@@ -21,6 +21,7 @@ import sys
 from datetime import datetime
 from html.parser import HTMLParser
 from zoneinfo import ZoneInfo
+from urllib.parse import urlsplit, unquote
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(ROOT, "docs")
@@ -51,8 +52,11 @@ class _Counter(HTMLParser):
         super().__init__(convert_charrefs=True)
         self.starts: dict[str, int] = {}
         self.ends: dict[str, int] = {}
+        self.links: list[str] = []
 
     def handle_starttag(self, tag, attrs):
+        if tag == "a":
+            self.links.extend(value for key, value in attrs if key == "href" and value)
         if tag in _TRACKED:
             self.starts[tag] = self.starts.get(tag, 0) + 1
 
@@ -77,6 +81,16 @@ def check_html(path: str) -> None:
         s, e = c.starts.get(tag, 0), c.ends.get(tag, 0)
         if s != e:
             local.append(f"{name}: <{tag}> の開閉数が不一致 (open={s}, close={e})")
+
+    for href in c.links:
+        parsed = urlsplit(href)
+        if parsed.scheme or parsed.netloc or not parsed.path:
+            continue
+        target = os.path.join(DOCS if parsed.path.startswith("/") else os.path.dirname(path), unquote(parsed.path).lstrip("/"))
+        if os.path.isdir(target):
+            target = os.path.join(target, "index.html")
+        if not os.path.isfile(target):
+            local.append(f"{name}: リンク先がありません: {href}")
 
     low = html.lower()
     for must in ("<!doctype html", "<title>", "</html>", "</body>"):
@@ -218,6 +232,32 @@ def selftest_issues() -> None:
 # エントリポイント
 # ---------------------------------------------------------------------------
 
+def selftest_pagination() -> None:
+    from io import BytesIO
+    from unittest.mock import patch
+    mod = _load("generate_all_ics", "generate_all_ics.py")
+    rows = [{"event_id": n, "title": str(n), "event_url": f"https://example.com/{n}", "started_at": "2026-09-05T10:00:00+09:00"} for n in range(3)]
+    pages = [
+        {"events": rows[:2], "results_start": 1, "results_returned": 2, "results_available": 3},
+        {"events": rows[2:], "results_start": 3, "results_returned": 1, "results_available": 3},
+    ]
+    try:
+        with patch.object(mod.urllib.request, "urlopen", side_effect=[BytesIO(json.dumps(page).encode()) for page in pages]) as request:
+            assert len(mod.fetch_api("test", "fixture", count=2)) == 3
+            assert "start=3" in request.call_args_list[1].args[0].full_url
+        bad = {"events": [], "results_start": 1, "results_returned": 0, "results_available": 3}
+        with patch.object(mod.urllib.request, "urlopen", return_value=BytesIO(json.dumps(bad).encode())):
+            try:
+                mod.fetch_api("test", "fixture")
+            except ValueError:
+                pass
+            else:
+                raise AssertionError("incomplete result accepted")
+        ok("selftest connpass pagination: next page and stalled response")
+    except Exception as exc:
+        err(f"selftest connpass pagination: {exc}")
+
+
 def main() -> int:
     # 各種別で「期待ファイルが 0 件」なら無音 PASS させず FAIL にする。
     # docs/ を丸ごと削除する事故コミットや、生成ジョブが何も出力しなかったケースを
@@ -226,6 +266,7 @@ def main() -> int:
     html_paths = sorted(
         glob.glob(os.path.join(DOCS, "*.html"))
         + glob.glob(os.path.join(DOCS, "calendar", "*.html"))
+        + glob.glob(os.path.join(DOCS, "games", "*.html"))
     )
     if not html_paths:
         err("docs/*.html が 1 件もない（サイト本体が消えている可能性）")
@@ -255,6 +296,7 @@ def main() -> int:
     print("== 自己テスト ==")
     selftest_connpass()
     selftest_issues()
+    selftest_pagination()
 
     print("---")
     if errors:
