@@ -4,6 +4,7 @@ GitHub Pages のルート。`docs/` を公開している。
 
 - 公開ページ: https://shimajima-eiji.github.io/
   - トップ … 執筆者プロフィール + 著作導線
+  - `/games/` … ゲーム入口（Chess Room）
   - `/calendar/` … カレンダー購読 (ICS) 一覧
   - `/calendar/apps.html` … AI で作ったミニアプリ集
 
@@ -48,3 +49,7 @@ python scripts/validate.py             # 静的検査 + 自己テスト（CI と
 
 CI（`ci.yml`）は PR と `main` 以外への push で `validate.py` を実行する。
 スケジュールジョブが失敗すると `ci-failure` ラベルの Issue が自動で起票される。
+
+## Chess Room
+
+ソースは `games/chess-room/`。公開入口は `/games/`、実行環境は Cloudflare Workers + D1。開発・検証手順とデータの説明は [ゲームのREADME](games/chess-room/README.md) を参照。
