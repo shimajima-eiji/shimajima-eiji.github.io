@@ -1,7 +1,6 @@
 {
   "$schema": "../node_modules/wrangler/config-schema.json",
   "name": "nomuraya-games",
-  "account_id": "b7c850847e8b19ce4f034620e417b145",
   "pages_build_output_dir": "./public",
   "compatibility_date": "2026-09-04",
   "services": [{"binding": "GAME", "service": "nomuraya-chess-room"}]
