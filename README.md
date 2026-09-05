@@ -52,4 +52,4 @@ CI（`ci.yml`）は PR と `main` 以外への push で `validate.py` を実行�
 
 ## Chess Room
 
-ソースは `games/chess-room/`。公開入口は `/games/`、実行環境は Cloudflare Workers + D1。開発・検証手順とデータの説明は [ゲームのREADME](games/chess-room/README.md) を参照。
+公開入口は `/games/`、実行環境は Cloudflare Workers + D1。アプリケーションのコードは非公開リポジトリで管理し、このリポジトリには作品紹介と公開ゲームへのリンクを置きます。
