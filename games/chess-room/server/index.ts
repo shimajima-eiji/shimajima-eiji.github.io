@@ -20,7 +20,7 @@ async function current(request:Request,env:Env){
  return env.DB.prepare('SELECT p.id, p.login_hash FROM sessions s JOIN players p ON p.id=s.player_id WHERE s.id=? AND s.expires_at>?').bind(await hash(value),Date.now()).first<{id:string;login_hash:string|null}>();
 }
 async function profile(env:Env,id:string,registered:boolean,variant:string){
- const rows=await env.DB.prepare('SELECT * FROM games WHERE player_id=? AND variant=? AND updated_at>? ORDER BY updated_at DESC LIMIT 50').bind(id,variant,Date.now()-RETENTION).all<GameRow>();
+ const rows=await env.DB.prepare('SELECT * FROM games WHERE player_id=? AND variant=? AND (archive_policy=1 OR updated_at>?) ORDER BY updated_at DESC LIMIT 50').bind(id,variant,Date.now()-RETENTION).all<GameRow>();
  const latest=rows.results[0];
  return {enabled:true,registered,model:compileLearning(rows.results),latest:latest?{id:latest.id,mode:latest.mode,moves:JSON.parse(latest.moves),revision:latest.revision,result:latest.result}:null};
 }
@@ -44,7 +44,7 @@ export default {
    const rateKey=await hash((request.headers.get('CF-Connecting-IP')??'local')+new Date().toISOString().slice(0,10));
    if(!(await env.API_LIMITER.limit({key:rateKey})).success)throw new ApiError(429,'操作が集中しています。少し待ってください。');
    const path=variant==="dai"?url.pathname.replace("/api/dai/","/api/"):url.pathname;
-   if(path==='/api/health')return json({ok:true,version:'0.3.0'});
+   if(path==='/api/health')return json({ok:true,version:'0.4.0'});
    if(path.startsWith('/api/account')||path==='/api/session'){
     if(!(await env.AUTH_LIMITER.limit({key:rateKey})).success)throw new ApiError(429,'ログイン操作が多すぎます。1分後にお試しください。');
    }
@@ -74,20 +74,20 @@ export default {
     await env.DB.prepare('DELETE FROM players WHERE id=?').bind(user.id).run();return json({ok:true},200,{'Set-Cookie':cookie(request,'',0)});
    }
    if(path==='/api/games'&&request.method==='POST'){
-    const body=await readBody(request);if(!['computer','local'].includes(String(body.mode)))throw new ApiError(400,'対戦モードが不正です。');
+    const body=await readBody(request);if(body.archiveConsent!=='archive-v1')throw new ApiError(428,'画面を再読み込みし、新しい棋譜の保存方針を確認してください。');if(!['computer','local'].includes(String(body.mode)))throw new ApiError(400,'対戦モードが不正です。');
     await env.DB.batch([
-     env.DB.prepare('DELETE FROM games WHERE id IN (SELECT id FROM games WHERE updated_at<? LIMIT 50)').bind(Date.now()-RETENTION),
+     env.DB.prepare('DELETE FROM games WHERE id IN (SELECT id FROM games WHERE archive_policy=0 AND updated_at<? LIMIT 50)').bind(Date.now()-RETENTION),
      env.DB.prepare('DELETE FROM sessions WHERE id IN (SELECT id FROM sessions WHERE expires_at<? LIMIT 100)').bind(Date.now())
     ]);
-    const count=await env.DB.prepare('SELECT COUNT(*) AS n FROM games WHERE player_id=? AND created_at>?').bind(user.id,Date.now()-DAY).first<{n:number}>();if((count?.n??0)>=100)throw new ApiError(429,'今日の保存上限（100対局）に達しました。記録なしで遊べます。');
-    const id=crypto.randomUUID();await env.DB.prepare('INSERT INTO games(id,player_id,variant,mode,created_at,updated_at) VALUES(?,?,?,?,?,?)').bind(id,user.id,variant,body.mode,Date.now(),Date.now()).run();return json({id,revision:0});
+    const count=await env.DB.prepare('SELECT COUNT(*) AS n FROM games WHERE player_id=? AND created_at>?').bind(user.id,Date.now()-DAY).first<{n:number}>();if((count?.n??0)>=100)throw new ApiError(429,'今日の保存上限（100対局）に達しました。保存できるようになってから再開してください。');
+    const id=crypto.randomUUID();await env.DB.prepare('INSERT INTO games(id,player_id,variant,mode,created_at,updated_at,archive_policy,archive_key) VALUES(?,?,?,?,?,?,?,?)').bind(id,user.id,variant,body.mode,Date.now(),Date.now(),body.archiveConsent==='archive-v1'?1:0,crypto.randomUUID()).run();return json({id,revision:0});
    }
    const match=path.match(/^\/api\/games\/([a-f0-9-]{36})$/);
    if(match&&request.method==='PUT'){
     const old=await env.DB.prepare('SELECT * FROM games WHERE id=? AND player_id=? AND variant=?').bind(match[1],user.id,variant).first<GameRow>();if(!old)throw new ApiError(404,'対局がありません。');
-    const body=await readBody(request);if(!Number.isInteger(body.revision)||body.revision!==old.revision)throw new ApiError(409,'別の端末で対局が進みました。「続きを再開」で最新の盤面を開いてください。');
+    const body=await readBody(request);if(body.archiveConsent!=='archive-v1')throw new ApiError(428,'画面を再読み込みし、新しい棋譜の保存方針を確認してください。');if(!Number.isInteger(body.revision)||body.revision!==old.revision)throw new ApiError(409,'別の端末で対局が進みました。「続きを再開」で最新の盤面を開いてください。');
     let state;try{state=variant==="dai"?replayDai(body.moves):replay(body.moves);}catch{throw new ApiError(400,'合法な棋譜ではありません。');}
-    const result=await env.DB.prepare('UPDATE games SET moves=?,observations=?,revision=revision+1,result=?,updated_at=? WHERE id=? AND player_id=? AND revision=?').bind(JSON.stringify(state.moves),JSON.stringify(state.observations),state.result,Date.now(),old.id,user.id,old.revision).run();
+    const result=await env.DB.prepare('UPDATE games SET moves=?,observations=?,revision=revision+1,result=?,updated_at=?,archive_policy=CASE WHEN ? THEN 1 ELSE archive_policy END,archive_key=COALESCE(archive_key,?) WHERE id=? AND player_id=? AND revision=?').bind(JSON.stringify(state.moves),JSON.stringify(state.observations),state.result,Date.now(),body.archiveConsent==='archive-v1'?1:0,crypto.randomUUID(),old.id,user.id,old.revision).run();
     if(!result.meta.changes)throw new ApiError(409,'別の端末の更新と重なりました。最新の盤面を再開してください。');
     return json({revision:old.revision+1,...await profile(env,user.id,!!user.login_hash,variant)});
    }

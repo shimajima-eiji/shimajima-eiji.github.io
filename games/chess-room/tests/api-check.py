@@ -6,6 +6,7 @@ import sys,json,http.cookiejar,urllib.request,urllib.error
 origin=sys.argv[1] if len(sys.argv)>1 else 'http://localhost:8787'
 def client(): return urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
 def call(c,path,method='GET',body=None,expected=200,request_origin=None):
+    if isinstance(body,dict) and ('mode' in body or 'moves' in body):body={**body,'archiveConsent':'archive-v1'}
     headers={'User-Agent':'ChessRoom-Verification/0.2','Origin':request_origin or origin,'Content-Type':'application/json'}
     req=urllib.request.Request(origin+'/api/'+path,method=method,headers=headers,data=json.dumps(body).encode() if body is not None else None)
     try: response=c.open(req,timeout=30)

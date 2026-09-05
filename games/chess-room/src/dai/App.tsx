@@ -24,7 +24,7 @@ export default function App(){
  }
  const commitRef=useRef(commit);commitRef.current=commit;
  useEffect(()=>{
-  if(!busy)return;setThinking(true);
+  if(!busy||!recording.ready)return;setThinking(true);
   const worker=new Worker(new URL('./ai.worker.ts',import.meta.url),{type:'module'});
   let done=false;
   const fallback=()=>{if(done)return;done=true;worker.terminate();setThinking(false);const legal=allMoves(state)[0];if(legal){commitRef.current(legal);setNotice('思考を簡易応手へ切り替えました。');}};
@@ -33,9 +33,9 @@ export default function App(){
   worker.onerror=fallback;
   worker.postMessage({id:state.ply,state,model:modelRef.current});
   return()=>{done=true;clearTimeout(timer);worker.terminate();};
- },[state,busy]);
+ },[state,busy,recording.ready]);
  function click(square:number){
-  if(busy||state.winner!==null||recording.working)return;
+  if(!recording.ready||busy||state.winner!==null)return;
   const choices=available.filter(m=>m.path.at(-1)===square);
   if(choices.length){
    // Empty intermediate squares have no effect; keep distinct captures and promotion choices.
@@ -47,7 +47,7 @@ export default function App(){
  }
  function reset(){setStates([initialState()]);setHistory([]);setSelected(null);setOptions([]);setGameKey(k=>k+1);setNotice('');}
  function undo(){if(!history.length)return;const n=mode==='computer'&&state.turn===0?2:1;setStates(ss=>ss.slice(0,Math.max(1,ss.length-n)));setHistory(h=>h.slice(0,Math.max(0,h.length-n)));setSelected(null);setOptions([]);setNotice('');}
- const actionRef=useRef((m:Move)=>{if(modeRef.current==='computer'&&current.current.turn===1)throw Error('コンピューターの手番です。');apply(current.current,m);commitRef.current(m);});
+ const actionRef=useRef<(m:Move)=>void>(()=>{});actionRef.current=(m:Move)=>{if(!recording.ready)throw Error('保存完了後に指してください。');if(modeRef.current==='computer'&&current.current.turn===1)throw Error('コンピューターの手番です。');apply(current.current,m);commitRef.current(m);};
  useEffect(()=>{
   const context=(document as Document&{modelContext?:{registerTool:(tool:unknown,options:{signal:AbortSignal})=>unknown}}).modelContext;if(!context)return;
   const lifecycle=new AbortController();
@@ -70,12 +70,12 @@ export default function App(){
  <div className="board-buttons"><button onClick={()=>setFlipped(v=>!v)}>盤面を反転</button><button onClick={()=>setZoom(v=>!v)}>{zoom?'全体表示':'駒を拡大'}</button></div><p className="board-caption">駒を選ぶと移動先が光ります。拡大時は盤面を横にスクロールできます。</p>
  </section><aside className="dai-sidebar"><div role="status" aria-live="polite" className="turn-status">{state.winner!==null?`${sideName(state.winner)}の勝ち`:busy?(thinking?'コンピューターが思考中…':'コンピューターの手番'):`${sideName(state.turn)}の手番`}</div><p className="notice" aria-live="polite">{notice||'先手から交互に指します。取った駒を打つルールはありません。'}</p>
  <section className="piece-guide"><h2>{activePiece?`${pieceName(activePiece)}の動き`:'駒の動きがわからなくても。'}</h2><p>{activePiece?specs[effective(activePiece)].hint:'自分の駒を押すと、ここに動きと成り先が表示されます。まずは歩兵か仲人を前へ。'}</p>{activePiece&&!activePiece.promoted&&specs[activePiece.kind].to&&<p className="promotion-note">成り → {specs[specs[activePiece.kind].to!].name}</p>}{activePiece&&specs[effective(activePiece)].lion&&<p>着地点を選び、必要なら経路を選択。居喰い・パスは元のマスをもう一度押します。</p>}</section>
- <label className="mode">対戦相手<select aria-label="対戦相手" value={mode} disabled={recording.working} onChange={e=>{setMode(e.target.value);reset();}}><option value="computer">コンピューター（入門）</option><option value="local">この画面で2人対戦</option></select></label><div className="controls"><button onClick={undo} disabled={!history.length||recording.working}>待った</button><button onClick={reset} disabled={recording.working}>新しい対局</button></div>
+ <label className="mode">対戦相手<select aria-label="対戦相手" value={mode} disabled={!recording.ready} onChange={e=>{setMode(e.target.value);reset();}}><option value="computer">コンピューター（入門）</option><option value="local">この画面で2人対戦</option></select></label><div className="controls"><button onClick={undo} disabled={!history.length||!recording.ready}>待った</button><button onClick={reset} disabled={!recording.ready}>新しい対局</button></div>
  <section className="move-history"><h2>棋譜 <small>{history.length}手</small></h2>{history.length?<ol>{history.map((move,i)=><li key={i}>{notation(states[i],move)}</li>)}</ol>:<p>最初の一手をどうぞ。</p>}</section>
  <details><summary>取った駒</summary><p>先手：{captured(0)}</p><p>後手：{captured(1)}</p><p>持ち駒にはなりません。</p></details>
  {recording.panel}
  <details className="rules"><summary>採用ルールと資料</summary><p>15×15盤・各65枚。成りは一度だけ。敵側の奥5段に入る手、または成り区域に出入りする駒取りで任意に成れます。不成の後は、駒取りまたは区域を出て再進入するまで成れません。最奥段でも強制成りは行いません。</p><p>獅子は二段移動・二枚取り・居喰い・跳躍が可能。中将棋の「獅子同士の取り合い制限」は採用しません。飛鷲・角鷹にも前方の限定的な二段移動があります。</p><p>本アプリの裁定（dai-v1）：相手の王将・玉将・太子をすべて取ると勝ち。動ける手がなくなった側も負けです。王手の放置は指せます。裸玉だけでの自動勝利は採用しません。同じ盤面・手番への反復は禁止（王手例外なし）。史料に差のある反復・裸玉・最奥段での再成りは、この裁定に固定しています。</p><p>コンピューターは入門用です。本人の保存棋譜にある同じ局面の手を応手の評価に反映します。自己対戦や他人の棋譜は使いません。</p><p><a href="https://drericsilverman.com/2020/04/13/dai-shogi-part-i-how-to-play/" target="_blank" rel="noreferrer">Eric Silvermanによる解説</a> / <a href="https://en.wikipedia.org/wiki/Dai_shogi" target="_blank" rel="noreferrer">駒の動き・配置の照合資料</a></p></details>
  </aside></div>
  {!!options.length&&<dialog className="route-dialog" ref={node=>{if(node&&!node.open)node.showModal();}} onCancel={()=>setOptions([])} aria-labelledby="route-title"><h2 id="route-title">指し方を選ぶ</h2><p>経路・取る駒・成りを確認してください。</p><div>{options.map(m=><button key={moveKey(m)} onClick={()=>commit(m)}>{pathLabel(m)}</button>)}</div><button className="cancel" onClick={()=>setOptions([])}>戻る</button></dialog>}
- </main>;
+ {recording.gate}</main>;
 }

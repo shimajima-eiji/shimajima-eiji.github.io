@@ -3,6 +3,7 @@ import sys,json,http.cookiejar,urllib.request,urllib.error
 origin=sys.argv[1] if len(sys.argv)>1 else 'http://localhost:8787'
 def client():return urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
 def call(c,path,method='GET',body=None,expected=200):
+ if isinstance(body,dict) and ('mode' in body or 'moves' in body):body={**body,'archiveConsent':'archive-v1'}
  req=urllib.request.Request(origin+'/api/'+path,method=method,headers={'User-Agent':'DaiShogi-Verification/0.3','Origin':origin,'Content-Type':'application/json'},data=None if body is None else json.dumps(body).encode())
  try:r=c.open(req,timeout=30)
  except urllib.error.HTTPError as e:r=e
