@@ -92,6 +92,6 @@ export default {
     return json({revision:old.revision+1,...await profile(env,user.id,!!user.login_hash,variant)});
    }
    throw new ApiError(404,'見つかりません。');
-  }catch(error){return json({error:error instanceof ApiError?error.message:'保存できませんでした。盤面はそのまま遊べます。'},error instanceof ApiError?error.status:503);}
+  }catch(error){return json({error:error instanceof ApiError?error.message:'保存できませんでした。盤面を閉じず、保存して対局を再開してください。'},error instanceof ApiError?error.status:503);}
  }
 } satisfies ExportedHandler<Env>;
