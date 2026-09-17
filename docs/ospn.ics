@@ -17,44 +17,44 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/405290/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260916T043454Z
+DTSTAMP:20260917T043933Z
 DTSTART;TZID=Asia/Tokyo:20261122T183000
 DTEND;TZID=Asia/Tokyo:20261122T203000
 SUMMARY:2026/11/22 OSC2026 Yamaguchi 懇親会
-DESCRIPTION:開催日時: 2026/11/22 18:30 ～ 20:30<br />開催場所: 未
- 定<br /><br /><h2>OSC 2026 Yamaguchi 終了後に懇親会を行いたい
- です！</h2>\n<p>参加される方は事前申込をお願いします
- 。<br>\n<strong>※予約なし突然参加は難しいです。参加さ
- れる方は必ず事前申込をお願いします。 </strong><br>\n<str
- ong>※登録後に参加できなくなった場合は、速やかにキ
- ャンセル処理をお願いします。</strong></p>\n<h2>場所</h2>\n
- <ul>\n<li>未定だが宇部新川あたり</li>\n</ul>\n<h3>集合時間 
- <strong>考え中</strong></h3>\n<ul>\n<li><strong>2026/11/22 日曜日 18
- :30 -</strong></li>\n</ul>\n<h3>会費 <strong>考え中</strong></h3>\n<u
- l>\n<li>おじさん/おねえさん 5\,000円（500 円学生さんへ補
- 填）</li>\n<li>学生 1\,000 円</li>\n</ul>\n<p>支払いは現地</p>\
- n<h3>コース内容</h3>\n<ul>\n<li>未定</li>\n</ul>\n<h2>スポンサ
- ―</h2>\n<ul>\n<li><a href="https://www.udc-synchro.co.jp/company/company
- -information/" rel="nofollow">株式会社SYNCHRO CSCC</a> 様</li>\n<li><
- a href="https://4qualia.co.jp/company/" rel="nofollow">株式会社フォ
- ー・クオリア</a> 様</li>\n<li><a href="https://prtimes.jp/main/html
- /rd/p/000000002.000156001.html" rel="nofollow">CoWorker 株式会社</a> 
- 様</li>\n<li><a href="https://tokiwa-k.sakura.ne.jp/" rel="nofollow">一
- 般社団法人 常盤（ときわ）工業会（山口大学工学部・
- 情報学部同窓会）</a></li>\n</ul>\n<h2>機材提供・設置・設
- 定スポンサ―</h2>\n<ul>\n<li><a href="https://www.stellalink.co.jp/"
-  rel="nofollow">株式会社ステラリンク</a> 様</li>\n</ul>\n<h1>OS
- C 2026 in Yamaguchi の登録もお願いします</h1>\n<p><a href="https
- ://connpass.com/event/398565/" rel="nofollow">2026/11/22 Open Source Confe
- rence 2026 Yamaguchi</a></p>\n\nhttps://ospn.connpass.com/event/405290/?ut
- m_campaign=series_events&utm_source=feed&utm_medium=atom
+DESCRIPTION:開催日時: 2026/11/22 18:30 ～ 20:30<br />開催場所: 宇
+ 部新川駅<br /><br /><h2>OSC 2026 Yamaguchi 終了後に懇親会を行
+ いたいです！</h2>\n<p>参加される方は事前申込をお願い
+ します。<br>\n<strong>※予約なし突然参加は難しいです。
+ 参加される方は必ず事前申込をお願いします。 </strong><
+ br>\n<strong>※登録後に参加できなくなった場合は、速や
+ かにキャンセル処理をお願いします。</strong></p>\n<h2>場
+ 所</h2>\n<ul>\n<li>未定だが宇部新川あたり</li>\n</ul>\n<h3>集
+ 合時間 <strong>考え中</strong></h3>\n<ul>\n<li><strong>2026/11/22 
+ 日曜日 18:30 -</strong></li>\n</ul>\n<h3>会費 <strong>考え中</stro
+ ng></h3>\n<ul>\n<li>おじさん/おねえさん 5\,000円（500 円学生
+ さんへ補填）</li>\n<li>学生 1\,000 円</li>\n</ul>\n<p>支払い
+ は現地</p>\n<h3>コース内容</h3>\n<ul>\n<li>未定</li>\n</ul>\n<h2
+ >スポンサ―</h2>\n<ul>\n<li><a href="https://www.udc-synchro.co.jp/co
+ mpany/company-information/" rel="nofollow">株式会社SYNCHRO CSCC</a> 
+ 様</li>\n<li><a href="https://4qualia.co.jp/company/" rel="nofollow">株
+ 式会社フォー・クオリア</a> 様</li>\n<li><a href="https://prtim
+ es.jp/main/html/rd/p/000000002.000156001.html" rel="nofollow">CoWorker 株
+ 式会社</a> 様</li>\n<li><a href="https://tokiwa-k.sakura.ne.jp/" rel="
+ nofollow">一般社団法人 常盤（ときわ）工業会（山口大学
+ 工学部・情報学部同窓会）</a></li>\n</ul>\n<h2>機材提供・
+ 設置・設定スポンサ―</h2>\n<ul>\n<li><a href="https://www.stella
+ link.co.jp/" rel="nofollow">株式会社ステラリンク</a> 様</li>\n<
+ /ul>\n<h1>OSC 2026 in Yamaguchi の登録もお願いします</h1>\n<p><a
+  href="https://connpass.com/event/398565/" rel="nofollow">2026/11/22 Open 
+ Source Conference 2026 Yamaguchi</a></p>\n\nhttps://ospn.connpass.com/even
+ t/405290/?utm_campaign=series_events&utm_source=feed&utm_medium=atom
 URL:https://ospn.connpass.com/event/405290/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
 END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/398565/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260916T043454Z
+DTSTAMP:20260917T043933Z
 DTSTART;TZID=Asia/Tokyo:20261122T104500
 DTEND;TZID=Asia/Tokyo:20261122T170000
 SUMMARY:2026/11/22 Open Source Conference 2026 Yamaguchi
@@ -461,7 +461,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/403624/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260916T043454Z
+DTSTAMP:20260917T043933Z
 DTSTART;TZID=Asia/Tokyo:20261017T173000
 DTEND;TZID=Asia/Tokyo:20261017T193000
 SUMMARY:10/17 OSC東京Fall（浅草） 懇親会
@@ -506,7 +506,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/398562/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260916T043454Z
+DTSTAMP:20260917T043933Z
 DTSTART;TZID=Asia/Tokyo:20261121T103000
 DTEND;TZID=Asia/Tokyo:20261121T170000
 SUMMARY:11/21 Open Source Conference 2026 Nagaoka
@@ -565,7 +565,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/403736/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260916T043454Z
+DTSTAMP:20260917T043933Z
 DTSTART;TZID=Asia/Tokyo:20261120T180000
 DTEND;TZID=Asia/Tokyo:20261120T200000
 SUMMARY:11/20 オープンソースカンファレンス2026 Nagaoka　前
@@ -585,7 +585,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/399105/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260916T043454Z
+DTSTAMP:20260917T043933Z
 DTSTART;TZID=Asia/Tokyo:20261017T100000
 DTEND;TZID=Asia/Tokyo:20261017T160000
 SUMMARY:10/17 【展示/ステージ】オープンソースカンファレ
@@ -657,7 +657,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/399103/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260916T043454Z
+DTSTAMP:20260917T043933Z
 DTSTART;TZID=Asia/Tokyo:20260723T170454
 DTEND;TZID=Asia/Tokyo:20260723T180454
 SUMMARY:10/2-3 Open Source Conference 2026 Online/Fall
@@ -785,7 +785,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/400939/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260916T043454Z
+DTSTAMP:20260917T043933Z
 DTSTART;TZID=Asia/Tokyo:20260912T181500
 DTEND;TZID=Asia/Tokyo:20260912T201500
 SUMMARY:9/12 OSC広島 懇親会
@@ -832,7 +832,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/399098/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260916T043454Z
+DTSTAMP:20260917T043933Z
 DTSTART;TZID=Asia/Tokyo:20260912T100000
 DTEND;TZID=Asia/Tokyo:20260912T180000
 SUMMARY:9/12 オープンソースカンファレンス2026 Hiroshima
@@ -892,7 +892,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/396808/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260916T043454Z
+DTSTAMP:20260917T043933Z
 DTSTART;TZID=Asia/Tokyo:20260829T100000
 DTEND;TZID=Asia/Tokyo:20260829T174500
 SUMMARY:Open Developers Conference 2026
