@@ -17,7 +17,7 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/405290/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260925T043946Z
+DTSTAMP:20260926T044228Z
 DTSTART;TZID=Asia/Tokyo:20261122T183000
 DTEND;TZID=Asia/Tokyo:20261122T203000
 SUMMARY:2026/11/22 OSC2026 Yamaguchi 懇親会
@@ -54,7 +54,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/398565/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260925T043946Z
+DTSTAMP:20260926T044228Z
 DTSTART;TZID=Asia/Tokyo:20261122T104500
 DTEND;TZID=Asia/Tokyo:20261122T170000
 SUMMARY:2026/11/22 Open Source Conference 2026 Yamaguchi
@@ -467,7 +467,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/403624/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260925T043946Z
+DTSTAMP:20260926T044228Z
 DTSTART;TZID=Asia/Tokyo:20261017T173000
 DTEND;TZID=Asia/Tokyo:20261017T193000
 SUMMARY:10/17 OSC東京Fall（浅草） 懇親会
@@ -512,7 +512,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/398562/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260925T043946Z
+DTSTAMP:20260926T044228Z
 DTSTART;TZID=Asia/Tokyo:20261121T103000
 DTEND;TZID=Asia/Tokyo:20261121T170000
 SUMMARY:11/21 Open Source Conference 2026 Nagaoka
@@ -571,7 +571,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/403736/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260925T043946Z
+DTSTAMP:20260926T044228Z
 DTSTART;TZID=Asia/Tokyo:20261120T180000
 DTEND;TZID=Asia/Tokyo:20261120T200000
 SUMMARY:11/20 オープンソースカンファレンス2026 Nagaoka　前
@@ -591,7 +591,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/399105/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260925T043946Z
+DTSTAMP:20260926T044228Z
 DTSTART;TZID=Asia/Tokyo:20261017T100000
 DTEND;TZID=Asia/Tokyo:20261017T160000
 SUMMARY:10/17 【展示/ステージ】オープンソースカンファレ
@@ -605,66 +605,73 @@ DESCRIPTION:開催日時: 2026/10/17 10:00 ～ 16:00<br />開催場所: 東
  をYouTube Liveで配信します。会場の雰囲気もお届けする
  予定です。<br>\n<b>配信URL</b><br>\n後日掲載します</p>\n<p><
  b>YouTubeチャンネルはこちら</b><br>\n<a href="https://www.youtube
- .com/c/OSPNjp" rel="nofollow">https://www.youtube.com/c/OSPNjp</a></p>\n<t
- able>\n<thead>\n<tr>\n<th>時間</th>\n<th>テーマ</th>\n</tr>\n</thead>
- \n<tbody>\n<tr>\n<td>00:00-00:00</td>\n<td></td>\n</tr>\n<tr>\n<td>00:00-0
- 0:00</td>\n<td></td>\n</tr>\n<tr>\n<td>00:00-00:00</td>\n<td></td>\n</tr>\
- n</tbody>\n</table>\n<table>\n<thead>\n<tr>\n<th>ライトニングトー
- ク エントリー（発表順不同）</th>\n</tr>\n</thead>\n<tbody>\n<
- tr>\n<td>---</td>\n</tr>\n<tr>\n<td>---</td>\n</tr>\n<tr>\n<td>---</td>\n<
- /tr>\n<tr>\n<td>---</td>\n</tr>\n</tbody>\n</table>\n<h1>OSC2026 Tokyo/Fal
- l (展示とステージ企画）開催のご案内</h1>\n<p>オープン
- ソースカンファレンス2026 Tokyo/Fallは、現地開催でブー
- ス展示とステージ企画の開催です。<br>\n会場は、 浅草
- の東京都立産業貿易センター 台東館です。<br></p>\n<p>※
- セミナーは10/2-3開催の【<a href="https://event.ospn.jp/osc2026-on
- line-fall/" rel="nofollow">OSCオンラインFall</a>】で行います。
- </p>\n<h2>開催概要</h2>\n<p><b>日時</b><br>\n10月17日(土) 10:00-1
- 6:00<br></p>\n<p><b>会場</b><br>\n 東京都立産業貿易センター 
- 台東館 6F<br>\n<a href="https://www.sanbo.metro.tokyo.lg.jp/taito/acces
- s/" rel="nofollow">https://www.sanbo.metro.tokyo.lg.jp/taito/access/</a></
- p>\n<p><b>OSC2026 Tokyo/Fall 公式サイト</b><br>\n<a href="https://eve
- nt.ospn.jp/osc2026-fall/" rel="nofollow">https://event.ospn.jp/osc2026-fal
- l/</a></p>\n<p><b>開催形式</b><br>\nリアル会場での展示ブー
- ス、デモ、体験コーナー、ステージ企画</p>\n<h1>展示ブ
- ース一覧（各ブースの展示内容）</h1>\n<p><a href="https://ev
- ent.ospn.jp/osc2026-fall/exhibit" rel="nofollow">https://event.ospn.jp/osc
- 2026-fall/exhibit</a></p>\n<h1>展示ブースマップ (PDF)</h1>\n<p><a 
- href="https://event.ospn.jp/files/booth_layout/26fall.pdf" rel="nofollow">
- https://event.ospn.jp/files/booth_layout/26fall.pdf</a></p>\n<h1>懇親会
- のご案内</h1>\n<p>当日イベント終了後に、懇親会を企画
- しました。<br>\nご参加は、以下のconnpassページからお申
- し込みが必要です。<br>\n（定員がありますのでお早め
- にお申し込みください）<br>\n<a href="https://ospn.connpass.com/
- event/403624/" rel="nofollow">https://ospn.connpass.com/event/403624/</a><
- /p>\n<h1>属性アンケートご協力のお願い</h1>\n<p>connpassご
- 登録時に、年代、職種、お住まいの地域、OSC参加歴、
- 参加目的、参加コメントなど簡単なアンケートへのご
- 入力をお願いしています。集計結果はイベント開催後
- にスポンサー、出展者にし提供するとともに、イベン
- トの運営に役立てています。</p>\n<h1>スポンサーのオン
- ラインちらしページ</h1>\n<p><a href="https://event.ospn.jp/osc202
- 6-fall/article/flyers" rel="nofollow">https://event.ospn.jp/osc2026-fall/a
- rticle/flyers</a></p>\n<h1>10/2(金)-3(土)はオンラインセミナー
- 「OSC2026 オンライン/Fall」にご参加ください</h1>\n<p>セミ
- ナー聴講はZoomとYouTube Liveからご参加いただけます。お
- 楽しみに！<br>\n<b>OSC2026 オンライン/Fall ウェブサイト</b
- ><br>\n<a href="https://event.ospn.jp/osc2026-online-fall/" rel="nofollow"
- >https://event.ospn.jp/osc2026-online-fall/</a></p>\n<p><b>参加登録(co
- nnpass)</b><br>\n<a href="https://ospn.connpass.com/event/399103/" rel="no
- follow">https://ospn.connpass.com/event/399103/</a></p>\n<h1>感染予防
- 対策について</h1>\n<ul>\n<li>マスク着用は任意です。（ス
- タッフ、出展者のマスク着用も任意となっています）<b
- r></li>\n<li>当日の体調がすぐれない方のご参加はご遠慮
- ください<br></li>\n</ul>\n\nhttps://ospn.connpass.com/event/399105/?ut
- m_campaign=series_events&utm_source=feed&utm_medium=atom
+ .com/c/OSPNjp" rel="nofollow">https://www.youtube.com/c/OSPNjp</a></p>\n<p
+ >仮プログラム<br></p>\n<table>\n<thead>\n<tr>\n<th>時間</th>\n<th>
+ テーマ</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>11:00-12:00</td>\n<td>
+ 技術書書こうぜ（仮）</td>\n</tr>\n<tr>\n<td>12:00-12:45</td>\n<t
+ d>"エンジニア・アウトプット力を鍛える"</td>\n</tr>\n<tr>\
+ n<td>13:00-13:45</td>\n<td>学生LT</td>\n</tr>\n<tr>\n<td>14:00-14:45</td
+ >\n<td>OSS鳥瞰図</td>\n</tr>\n<tr>\n<td>15:00-16:00</td>\n<td>LT</td>\n
+ </tr>\n</tbody>\n</table>\n<table>\n<thead>\n<tr>\n<th>学生ライトニ
+ ングトーク エントリー（発表順不同）</th>\n</tr>\n</thead>
+ \n<tbody>\n<tr>\n<td>---</td>\n</tr>\n<tr>\n<td>---</td>\n</tr>\n<tr>\n<td
+ >---</td>\n</tr>\n<tr>\n<td>---</td>\n</tr>\n</tbody>\n</table>\n<table>\n
+ <thead>\n<tr>\n<th>ライトニングトーク エントリー（発表順
+ 不同）</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>---</td>\n</tr>\n<tr>\
+ n<td>---</td>\n</tr>\n<tr>\n<td>---</td>\n</tr>\n<tr>\n<td>---</td>\n</tr>
+ \n</tbody>\n</table>\n<h1>OSC2026 Tokyo/Fall (展示とステージ企画
+ ）開催のご案内</h1>\n<p>オープンソースカンファレンス2
+ 026 Tokyo/Fallは、現地開催でブース展示とステージ企画の
+ 開催です。<br>\n会場は、 浅草の東京都立産業貿易セン
+ ター 台東館です。<br></p>\n<p>※セミナーは10/2-3開催の【
+ <a href="https://event.ospn.jp/osc2026-online-fall/" rel="nofollow">OSCオ
+ ンラインFall</a>】で行います。</p>\n<h2>開催概要</h2>\n<p><
+ b>日時</b><br>\n10月17日(土) 10:00-16:00<br></p>\n<p><b>会場</b><br
+ >\n 東京都立産業貿易センター 台東館 6F<br>\n<a href="https:
+ //www.sanbo.metro.tokyo.lg.jp/taito/access/" rel="nofollow">https://www.sa
+ nbo.metro.tokyo.lg.jp/taito/access/</a></p>\n<p><b>OSC2026 Tokyo/Fall 公
+ 式サイト</b><br>\n<a href="https://event.ospn.jp/osc2026-fall/" rel="n
+ ofollow">https://event.ospn.jp/osc2026-fall/</a></p>\n<p><b>開催形式</
+ b><br>\nリアル会場での展示ブース、デモ、体験コーナー
+ 、ステージ企画</p>\n<h1>展示ブース一覧（各ブースの展
+ 示内容）</h1>\n<p><a href="https://event.ospn.jp/osc2026-fall/exhibit"
+  rel="nofollow">https://event.ospn.jp/osc2026-fall/exhibit</a></p>\n<h1>
+ 展示ブースマップ (PDF)</h1>\n<p><a href="https://event.ospn.jp/fil
+ es/booth_layout/26fall.pdf" rel="nofollow">https://event.ospn.jp/files/boo
+ th_layout/26fall.pdf</a></p>\n<h1>懇親会のご案内</h1>\n<p>当日イ
+ ベント終了後に、懇親会を企画しました。<br>\nご参加
+ は、以下のconnpassページからお申し込みが必要です。<br
+ >\n（定員がありますのでお早めにお申し込みください
+ ）<br>\n<a href="https://ospn.connpass.com/event/403624/" rel="nofollow">
+ https://ospn.connpass.com/event/403624/</a></p>\n<h1>属性アンケート
+ ご協力のお願い</h1>\n<p>connpassご登録時に、年代、職種
+ 、お住まいの地域、OSC参加歴、参加目的、参加コメン
+ トなど簡単なアンケートへのご入力をお願いしていま
+ す。集計結果はイベント開催後にスポンサー、出展者
+ にし提供するとともに、イベントの運営に役立ててい
+ ます。</p>\n<h1>スポンサーのオンラインちらしページ</h1
+ >\n<p><a href="https://event.ospn.jp/osc2026-fall/article/flyers" rel="nof
+ ollow">https://event.ospn.jp/osc2026-fall/article/flyers</a></p>\n<h1>10/2
+ (金)-3(土)はオンラインセミナー「OSC2026 オンライン/Fall
+ 」にご参加ください</h1>\n<p>セミナー聴講はZoomとYouTube L
+ iveからご参加いただけます。お楽しみに！<br>\n<b>OSC2026 
+ オンライン/Fall ウェブサイト</b><br>\n<a href="https://event.os
+ pn.jp/osc2026-online-fall/" rel="nofollow">https://event.ospn.jp/osc2026-o
+ nline-fall/</a></p>\n<p><b>参加登録(connpass)</b><br>\n<a href="https:
+ //ospn.connpass.com/event/399103/" rel="nofollow">https://ospn.connpass.co
+ m/event/399103/</a></p>\n<h1>感染予防対策について</h1>\n<ul>\n<l
+ i>マスク着用は任意です。（スタッフ、出展者のマスク
+ 着用も任意となっています）<br></li>\n<li>当日の体調が
+ すぐれない方のご参加はご遠慮ください<br></li>\n</ul>\n\n
+ https://ospn.connpass.com/event/399105/?utm_campaign=series_events&utm_sou
+ rce=feed&utm_medium=atom
 URL:https://ospn.connpass.com/event/399105/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
 END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/399103/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260925T043946Z
+DTSTAMP:20260926T044228Z
 DTSTART;TZID=Asia/Tokyo:20260723T170454
 DTEND;TZID=Asia/Tokyo:20260723T180454
 SUMMARY:10/2-3 Open Source Conference 2026 Online/Fall
@@ -792,7 +799,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/400939/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260925T043946Z
+DTSTAMP:20260926T044228Z
 DTSTART;TZID=Asia/Tokyo:20260912T181500
 DTEND;TZID=Asia/Tokyo:20260912T201500
 SUMMARY:9/12 OSC広島 懇親会
@@ -839,7 +846,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/399098/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260925T043946Z
+DTSTAMP:20260926T044228Z
 DTSTART;TZID=Asia/Tokyo:20260912T100000
 DTEND;TZID=Asia/Tokyo:20260912T180000
 SUMMARY:9/12 オープンソースカンファレンス2026 Hiroshima
@@ -899,7 +906,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/396808/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20260925T043946Z
+DTSTAMP:20260926T044228Z
 DTSTART;TZID=Asia/Tokyo:20260829T100000
 DTEND;TZID=Asia/Tokyo:20260829T174500
 SUMMARY:Open Developers Conference 2026
