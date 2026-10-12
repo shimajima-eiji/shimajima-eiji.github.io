@@ -17,7 +17,7 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/407897/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261011T052954Z
+DTSTAMP:20261012T054016Z
 DTSTART;TZID=Asia/Tokyo:20261212T100000
 DTEND;TZID=Asia/Tokyo:20261212T180000
 SUMMARY:12/12 オープンソースカンファレンス2026 Fukuoka
@@ -76,7 +76,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/406506/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261011T052954Z
+DTSTAMP:20261012T054016Z
 DTSTART;TZID=Asia/Tokyo:20261205T100000
 DTEND;TZID=Asia/Tokyo:20261205T170000
 SUMMARY:12/5 Open Source Conference 2026 Okinawa
@@ -126,7 +126,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/405290/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261011T052954Z
+DTSTAMP:20261012T054016Z
 DTSTART;TZID=Asia/Tokyo:20261122T183000
 DTEND;TZID=Asia/Tokyo:20261122T203000
 SUMMARY:2026/11/22 OSC2026 Yamaguchi 懇親会
@@ -163,7 +163,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/398565/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261011T052954Z
+DTSTAMP:20261012T054016Z
 DTSTART;TZID=Asia/Tokyo:20261122T104500
 DTEND;TZID=Asia/Tokyo:20261122T170000
 SUMMARY:2026/11/22 Open Source Conference 2026 Yamaguchi
@@ -197,8 +197,8 @@ DESCRIPTION:開催日時: 2026/11/22 10:45 ～ 17:00<br />開催場所: 山
  ました。OSC Yamaguchi からも寄稿しています。</p>\n<ul>\n<li
  ><a href="https://www.amazon.co.jp/dp/4798072753" rel="nofollow">日本の
  オープンソースを育てた OSC / OSC クロニクル</a></li>\n</ul
- >\n<h2>開催概要</h2>\n<h3>日時</h3>\n<p>2026年11月22日(日) 10:45
-  - 17:00</p>\n<ul>\n<li>入場無料</li>\n</ul>\n<h2>懇親会 <a href="h
+ >\n<h2>開催概要</h2>\n<h3>日時</h3>\n<p>2026年11月22日(日) 10:40
+  - 17:10</p>\n<ul>\n<li>入場無料</li>\n</ul>\n<h2>懇親会 <a href="h
  ttps://connpass.com/event/405290/" rel="nofollow">いきなり来ないで
  ください! 登録をお願いします</a></h2>\n<ul>\n<li>登録をお
  願いします<ul>\n<li>準備中</li>\n</ul>\n</li>\n<li>場所<ul>\n<li
@@ -224,364 +224,491 @@ DESCRIPTION:開催日時: 2026/11/22 10:45 ～ 17:00<br />開催場所: 山
  <h3>セミナー 10:45-17:00</h3>\n<h4>登壇者（敬称略）</h4>\n<ul>
  \n<li><a href="https://japansecuritysummit.org/category/special-edition/na
  kamura/" rel="nofollow">中村 健</a>（<a href="https://www.udc-synchro.
- co.jp/" rel="nofollow">株式会社 SYNCHRO</a> 取締役 CTO ）</li>\n<l
- i>山里 一輝（<a href="https://prtimes.jp/main/html/rd/p/000000002.000
- 156001.html" rel="nofollow">CoWorker 株式会社</a> 代表取締役）</
- li>\n<li>かい たくし（<a href="http://www.csse.yamaguchi-u.ac.jp/" r
- el="nofollow">山口大学工学部</a>）</li>\n<li>上野 聖海（<a hr
- ef="https://www.agr.u-ryukyu.ac.jp/department/sub-environment" rel="nofoll
- ow">琉球大学農学部亜熱帯農林環境科学科</a>） </li>\n<li>
- <a href="https://www.mydns.jp/" rel="nofollow">蕪木 岳志</a>（<a href
- ="https://www.ipa.go.jp/archive/jinzai/security-camp/2025/camp/next/profil
- e.html" rel="nofollow">セキュリティ・キャンプ2025 ネクスト
- 講師</a>）</li>\n<li><a href="https://www.nca.ac.jp/career-debut/interv
- iew/nict.html" rel="nofollow">横山 輝明</a>（<a href="https://yamaguc
- hi-henkaku.jp/" rel="nofollow">山口未来変革プロジェクトマネ
- ージャー</a>）</li>\n<li><a href="https://www.cloudsecurityalliance.j
- p/site/?page_id=40049" rel="nofollow">大出 雷太</a>（<a href="https:/
- /www.mizuho-fg.co.jp/company/governance/cybersecurity/index.html" rel="nof
- ollow">みずほフィナンシャルグループ　サイバーセキュ
- リティ統括部サイバーレスポンスチーム調査役</a>）</li
- >\n<li>井上 巧大 （<a href="https://www.tokuyama.ac.jp/index.html" re
- l="nofollow">徳山工業高等専門学校</a>）</li>\n<li>木村 遼太
-   （<a href="https://www.tokuyama.ac.jp/index.html" rel="nofollow">徳山
- 工業高等専門学校</a>）</li>\n<li>浜田 佳輝（<a href="https:/
- /www.yc-c.ac.jp/course/it-expert/create" rel="nofollow">山口コアカレ
- ッジ画像クリエイトコースチーフ</a>）</li>\n<li><a href="ht
- tps://nagato-lvc.com/member/yamada" rel="nofollow">山田 真希（長門
- 市地域おこし協力隊しごと創出支援事業担当）</a></li>\n
- <li>櫻井 敏明 （<a href="https://www.sora-sakurai.com/" rel="nofollow
- ">合同会社ＳＯＲＡサクライ代表</a>）</li>\n</ul>\n<p><stron
- g>追加募集中!</strong></p>\n<h4>進行状況サイト（準備中）<
- /h4>\n<h4>タイムテーブル（準備中）</h4>\n<table>\n<thead>\n<tr
- >\n<th>開始</th>\n<th style="text-align: left\;">終了</th>\n<th style=
- "text-align: left\;">希望尺（分）</th>\n<th style="text-align: left\
- ;">登壇</th>\n<th style="text-align: left\;">内容</th>\n<th style="tex
- t-align: left\;">登壇者</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>10:45
- </td>\n<td style="text-align: left\;">--:--</td>\n<td style="text-align: l
- eft\;">0</td>\n<td style="text-align: left\;">現地</td>\n<td style="text
- -align: left\;"></td>\n<td style="text-align: left\;"></td>\n</tr>\n</tbod
- y>\n</table>\n<p>（敬称略）</p>\n<h3>展示ブース 10:00ごろ-17:0
- 0</h3>\n<ul>\n<li><a href="https://www.mydns.jp/" rel="nofollow">蕪木 
- 岳志</a></li>\n<li>かいたくし（<a href="http://www.csse.yamaguchi-
- u.ac.jp/" rel="nofollow">山口大学工学部</a>）+ロボ研</li>\n</ul
- >\n<p>（敬称略）</p>\n<h1>登壇してみませんか?</h1>\n<p>OSC 
- ですから、</p>\n<ul>\n<li>オープンソースを使ってみた/作
- ってみた</li>\n<li>arduino など IoT 系使ってみた/作ってみ
- た</li>\n</ul>\n<p>... などなど、はもちろんのこと、山口
- 県近郊ネタもいってみましょう。</p>\n<h4>蟻の研究発表
- は今年もアリます</h4>\n<ul>\n<li>（2022 年）私にとっての
- アリ、これからのアリ</li>\n<li>（2023 年）これからのア
- リ研究の展望</li>\n<li>（2024 年）アリの種ごとの油脂に
- 対する嗜好性の違い</li>\n<li>（2025 年）蟻の油脂に対す
- る嗜好性の追加報告</li>\n<li>今年: 現地登壇です。乞う
- ご期待</li>\n</ul>\n<h4>過去の OSC Yamaguchi</h4>\n<p><a href="https
- ://ospn.connpass.com/event/255903/" rel="nofollow">2022</a> <a href="https
- ://ospn.connpass.com/event/300548/" rel="nofollow">2023</a> <a href="https
- ://ospn.connpass.com/event/328859/" rel="nofollow">2024</a> <a href="https
- ://ospn.connpass.com/event/367968/" rel="nofollow">2025</a></p>\n<h4>Slack
- </h4>\n<p><a href="https://bit.ly/ospn_slack" rel="nofollow">Slack</a> #ya
- maguchi でもお待ちしております。</p>\n<h2>どのくらいの
- 長さの発表にすればいいの?</h2>\n<p>10\, 20\, 30\, 45 分くら
- いで（要相談）</p>\n<h2>登壇するときの留意事項</h2>\n<ul
- >\n<li><strong>初めてでも OK、練習でいいんです。</strong></
- li>\n<li>本イベントのプログラムは録画されており、後
- 日 YouTube でアーカイブ公開されます</li>\n</ul>\n<h1>現地
- またはオンラインご参加方法</h1>\n<h2>現地参加</h2>\n<p><a
-  href="https://tokiwa-k.sakura.ne.jp/summary/#access" rel="nofollow">常
- 盤（ときわ）工業会館（山口大学工学部・情報学部同
- 窓会）</a></p>\n<ul>\n<li>なるべく宇部市営バス、タクシー
- でお越しください。</li>\n<li>来場者把握のため、connpass 
- での登録をお願いします。</li>\n<li><strong>飲食可能です
- が、ゴミはお持ち帰りください</strong></li>\n</ul>\n<h3>WiFi<
- /h3>\n<p>SSID: 開設予定 \nPass: 開設予定</p>\n<h3>公共交通機
- 関ご案内</h3>\n<p>なるべく公共交通機関をご利用くださ
- い。</p>\n<h4>山口宇部空港</h4>\n<ul>\n<li>宇部空港は <strong
- >運転手不足でタクシーがいないことが多くなりました<
- /strong><ul>\n<li>タクシー乗り場に電話番号は書いてあり
- ます、 <strong>S.RIDE 等は一切使えません</strong><ul>\n<li><st
- rong>待ち時間 10 分といわれても 30 分はみておいてくだ
- さい</strong></li>\n</ul>\n</li>\n</ul>\n</li>\n<li>宇部市営バス
- （宇部新川駅行）が待機しています<ul>\n<li>延着しても
- あわせてくれます</li>\n</ul>\n</li>\n<li>宇部線草江駅 徒歩
-  10 分</li>\n</ul>\n<h4>タクシー</h4>\n<ul>\n<li>宇部新川駅、
- 山口宇部空港からどちらも 1500 円程度<ul>\n<li>行き先「
- 常盤（ときわ）工業会館」。通じなかったら「工学部
- 正門」で。</li>\n</ul>\n</li>\n<li>宇部空港は <strong>運転手
- 不足でタクシーがいないことが多くなりました</strong><u
- l>\n<li>タクシー乗り場に電話番号は書いてあります、 <s
- trong>S.RIDE 等は一切使えません</strong><ul>\n<li><strong>待ち
- 時間 10 分といわれても 30 分はみておいてください</stro
- ng></li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n<h4>宇部線</h4>\n<ul>\n<li
- >\n<p>パスモ <strong>「使えません」</strong> </p>\n<ul>\n<li>新
- 山口駅もしくは宇部駅で紙の切符に切り替えてくださ
- い。<ul>\n<li>宇部駅はパスモが使えて、紙の切符に切り
- 替える精算機が設置されました。<ul>\n<li>インターフォ
- ン越しで遠隔ヘルプ可能なので聞いてみてください。</
- li>\n</ul>\n</li>\n<li>パスモで突破してしまい無人駅でおり
- ようとしても対処のしようがないです。かなり面倒く
- さいことになります。<ul>\n<li>宇部線に乗っちゃった場
- 合は、有人の宇部新川駅で降りていったん現金払いし
- 、手書きの証明をだしてもらい、パスモが使える駅で
- 入場記録を取り消します。</li>\n</ul>\n</li>\n</ul>\n</li>\n<li
- >宇部新川でパスモが使えないと dis る方がときどきい
- ますがそんなことしても何も解決しません。</li>\n</ul>\n
- </li>\n<li>\n<p>宇部線各駅から歩く場合、上り坂となりま
- す</p>\n<ul>\n<li>常盤駅（無人） 徒歩 40 分</li>\n<li>東新川
- 駅（無人） 徒歩 30 分、テニスコート側から出ると少し
- 距離が短くなる</li>\n<li>琴芝駅（無人） 徒歩 35 分</li>\n
- <li>宇部新川駅 （有人）徒歩 40 分</li>\n</ul>\n</li>\n</ul>\n<
- h4>宇部市営バス（2026/9 調査）</h4>\n<ul>\n<li>なんとパス
- モ <strong>「使えます」</strong></li>\n<li>\n<p>宇部新川発 33\
- , 34\, 75「工学部前」、36 は「高専グラウンド前」</p>\n<u
- l>\n<li>宇部新川はバス停前に宇部市営バス有人営業所が
- あります←わかんなかったらここで聞いてくれ</li>\n</ul
- >\n</li>\n<li>\n<p>もよりは「工学部前」です。ひとつ前の
- 「工学部通」で降りてしまうと登り坂を歩く羽目にな
- ります。あわてておりないで</p>\n</li>\n</ul>\n<p>来場 <a hr
- ef="https://ubebus.sakura.ne.jp/shuttlebus/timetable/pdf-b1/8.pdf" rel="no
- follow">宇部市営バス「めぐりーな」時刻表宇部空港 2 番
- のりば</a></p>\n<table>\n<thead>\n<tr>\n<th style="text-align: center\;
- ">山口宇部空港発</th>\n<th style="text-align: center\;">会場最
- 寄りバス停</th>\n<th style="text-align: center\;">番号</th>\n<th st
- yle="text-align: center\;">行き先</th>\n<th style="text-align: center\;
- ">経由</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style="text-align: cent
- er\;">9:52</td>\n<td style="text-align: center\;">★工学部前</td>\n<t
- d style="text-align: center\;">77 番</td>\n<td style="text-align: center\
- ;">めぐりーな</td>\n<td style="text-align: center\;">ときわ公園
- ・工学部</td>\n</tr>\n</tbody>\n</table>\n<p>★ 10:45 開始に間に
- 合います。<br>\nJAL291 HND 07:35 - UBJ 09:20<br>\nSFJ11 / MH(ANA)3811
-  HND 7:25 - UBJ 9:10<br></p>\n<p>来場（土日祝日ダイヤ）<a href=
- "https://ubebus.sakura.ne.jp/shuttlebus/timetable/busstop-timetable/pdf-b/
- 2.pdf" rel="nofollow">宇部市営バス時刻表宇部新川駅 3 番の
- りば</a></p>\n<table>\n<thead>\n<tr>\n<th style="text-align: center\;">
- 宇部新川駅発</th>\n<th style="text-align: center\;">会場最寄り
- バス停</th>\n<th style="text-align: center\;">番号</th>\n<th style="t
- ext-align: center\;">行き先</th>\n<th style="text-align: center\;">経
- 由</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style="text-align: center\;"
- >08:08</td>\n<td style="text-align: center\;">工学部前</td>\n<td style
- ="text-align: center\;">75 番</td>\n<td style="text-align: center\;">宇
- 部新川</td>\n<td style="text-align: center\;">開・荻原</td>\n</tr>\
- n<tr>\n<td style="text-align: center\;">08:14</td>\n<td style="text-align:
+ co.jp/" rel="nofollow">株式会社 SYNCHRO</a> 取締役 CTO ） （分
+ 野）長州サイバーセキュリティ スポンサー</li>\n<li>黒
+ 須 栄誉（<a href="https://4qualia.co.jp/" rel="nofollow">株式会社
+ フォー・クオリア</a>） 5分いただければ スポンサー</li
+ >\n<li>櫻井 敏明 （<a href="https://www.sora-sakurai.com/" rel="nofol
+ low">合同会社ＳＯＲＡサクライ代表</a>） （分野）ロー
+ カル LLM 立ち上げ支援会社 スポンサー</li>\n<li>山里 一
+ 輝（<a href="https://prtimes.jp/main/html/rd/p/000000002.000156001.html"
+  rel="nofollow">CoWorker 株式会社</a> 代表取締役） （分野）A
+ I デジタルフォレンジック会社</li>\n<li>かい たくし（<a 
+ href="http://www.csse.yamaguchi-u.ac.jp/" rel="nofollow">山口大学工
+ 学部 M1</a>）</li>\n<li>上野 聖海（<a href="https://www.agr.u-ryuk
+ yu.ac.jp/department/sub-environment" rel="nofollow">琉球大学農学部
+ 亜熱帯農林環境科学科 B4</a>） 蟻</li>\n<li><a href="https://ww
+ w.mydns.jp/" rel="nofollow">蕪木 岳志</a>（<a href="https://www.ipa.g
+ o.jp/archive/jinzai/security-camp/2025/camp/next/profile.html" rel="nofoll
+ ow">セキュリティ・キャンプ2025 ネクスト講師</a>）</li>\n
+ <li><a href="https://www.nca.ac.jp/career-debut/interview/nict.html" rel="
+ nofollow">横山 輝明</a>（<a href="https://yamaguchi-henkaku.jp/" rel=
+ "nofollow">山口未来変革プロジェクトマネージャー</a>）</
+ li>\n<li><a href="https://www.cloudsecurityalliance.jp/site/?page_id=40049
+ " rel="nofollow">大出 雷太</a>（<a href="https://www.mizuho-fg.co.jp/
+ company/governance/cybersecurity/index.html" rel="nofollow">みずほフ
+ ィナンシャルグループ サイバーセキュリティ統括部サ
+ イバーレスポンスチーム調査役</a>） みずほにおけるセ
+ キュリティ分野の CSR 活動について</li>\n<li>井上 巧大 
+ （<a href="https://www.tokuyama.ac.jp/index.html" rel="nofollow">徳山
+ 工業高等専門学校1年</a>） eduroam について</li>\n<li>木村 
+ 遼太  （<a href="https://www.tokuyama.ac.jp/index.html" rel="nofollow">
+ 徳山工業高等専門学校2年</a>） 自宅サーバについて</li>
+ \n<li>浜田 佳輝（<a href="https://www.yc-c.ac.jp/course/it-expert/cre
+ ate" rel="nofollow">山口コアカレッジ画像クリエイトコース
+ チーフ</a>） Web標準で作る立体サイト</li>\n<li><a href="http
+ s://nagato-lvc.com/member/yamada" rel="nofollow">山田 真希（長門市
+ 地域おこし協力隊しごと創出支援事業担当）</a> 長門に
+ 移住してIT何でも屋になった、東京生まれのSIerの話</li>
+ \n<li>内田 保雄（<a href="https://www.miyasankei-u.ac.jp/kyouin-intro
+ duce/uchida/" rel="nofollow">宮崎産業経営大学教授</a>）（仮
+ 題）GASによる学習ゲームWebアプリの試作</li>\n<li>MiDUki（
+ <a href="https://qiita.com/MiDUki00/items/ab3c34f02f83ddc23d12" rel="nofol
+ low">九州大学芸術工学部未定研（NULL研）</a>）学生アニ
+ メーション制作企画によるオープンソースパイプライ
+ ン管理バックエンドフレームワークShellArcを構築した話
+ </li>\n<li>神代 春花（<a href="http://www.csse.yamaguchi-u.ac.jp/" re
+ l="nofollow">山口大学工学部 M2</a>）VRChatワールド制作 〜
+ 構想から公開まで〜</li>\n<li>大川 貴久(<a href="https://wwp.s
+ hizuoka.ac.jp/its/" rel="nofollow">静岡大学 情報学部 ITソルー
+ ション室</a>) 未定（白浜シンポジウム危機管理コンテ
+ スト）</li>\n</ul>\n<h4>進行状況サイト（準備中）</h4>\n<h4>
+ タイムテーブル（計画中）（敬称略）</h4>\n<table>\n<thead>
+ \n<tr>\n<th style="text-align: right\;">開始</th>\n<th style="text-align
+ : right\;">終了</th>\n<th style="text-align: right\;">時間</th>\n<th>
+ 分野</th>\n<th>内容・仮題</th>\n<th>登壇者</th>\n</tr>\n</thead>
+ \n<tbody>\n<tr>\n<td style="text-align: right\;">10:40</td>\n<td style="te
+ xt-align: right\;">10:45</td>\n<td style="text-align: right\;">5分</td>\n
+ <td>開会</td>\n<td>OSC 山口 2026 ようこそ／諸連絡</td>\n<td>
+ 山本 貴司（OSC 山口）</td>\n</tr>\n<tr>\n<td style="text-align: ri
+ ght\;">10:45</td>\n<td style="text-align: right\;">10:55</td>\n<td style="
+ text-align: right\;">10分</td>\n<td>スポンサー・セキュリティ<
+ /td>\n<td>長州サイバーセキュリティ</td>\n<td>中村 健（株
+ 式会社 SYNCHRO 取締役 CTO）</td>\n</tr>\n<tr>\n<td style="text-alig
+ n: right\;">10:55</td>\n<td style="text-align: right\;">11:10</td>\n<td st
+ yle="text-align: right\;">15分</td>\n<td>サイバーセキュリティ</
+ td>\n<td>みずほにおけるセキュリティ分野の CSR 活動につ
+ いて</td>\n<td>大出 雷太（みずほフィナンシャルグルー
+ プ）</td>\n</tr>\n<tr>\n<td style="text-align: right\;">11:10</td>\n<td 
+ style="text-align: right\;">11:25</td>\n<td style="text-align: right\;">15
+ 分</td>\n<td>サイバーセキュリティ</td>\n<td>白浜シンポジ
+ ウム危機管理コンテスト関連（仮）</td>\n<td>大川 貴久
+ （静岡大学 情報学部 ITソルーション室）</td>\n</tr>\n<tr>\
+ n<td style="text-align: right\;">11:25</td>\n<td style="text-align: right\
+ ;">11:40</td>\n<td style="text-align: right\;">15分</td>\n<td>サイバ
+ ーセキュリティ</td>\n<td>セキュリティ・キャンプ／イン
+ ターネット運用関連（題名未定）</td>\n<td>蕪木 岳志（<a
+  href="http://MyDNS.JP" rel="nofollow">MyDNS.JP</a>）</td>\n</tr>\n<tr>\n
+ <td style="text-align: right\;">11:40</td>\n<td style="text-align: right\;
+ ">12:50</td>\n<td style="text-align: right\;">70分</td>\n<td>休憩</td>\
+ n<td><strong>昼休み</strong></td>\n<td></td>\n</tr>\n<tr>\n<td style="t
+ ext-align: right\;">12:50</td>\n<td style="text-align: right\;">13:10</td>
+ \n<td style="text-align: right\;">20分</td>\n<td>地域・キャリア</t
+ d>\n<td>長門に移住してIT何でも屋になった、東京生まれ
+ のSIerの話</td>\n<td>山田 真希（長門市地域おこし協力隊
+ ）</td>\n</tr>\n<tr>\n<td style="text-align: right\;">13:10</td>\n<td sty
+ le="text-align: right\;">13:25</td>\n<td style="text-align: right\;">15分
+ </td>\n<td>スポンサー・AI</td>\n<td>ローカル LLM 立ち上げ支
+ 援について（仮）</td>\n<td>櫻井 敏明（合同会社ＳＯＲ
+ Ａサクライ代表）</td>\n</tr>\n<tr>\n<td style="text-align: right\;
+ ">13:25</td>\n<td style="text-align: right\;">13:55</td>\n<td style="text-
+ align: right\;">30分</td>\n<td>AI・セキュリティ</td>\n<td>AIデジ
+ タルフォレンジックの取組（仮）</td>\n<td>山里 一輝（Co
+ Worker株式会社 代表取締役）</td>\n</tr>\n<tr>\n<td style="text-a
+ lign: right\;">13:55</td>\n<td style="text-align: right\;">14:05</td>\n<td
+  style="text-align: right\;">10分</td>\n<td>休憩</td>\n<td><strong>休
+ 憩・入れ替え</strong></td>\n<td></td>\n</tr>\n<tr>\n<td style="text-
+ align: right\;">14:05</td>\n<td style="text-align: right\;">14:15</td>\n<t
+ d style="text-align: right\;">10分</td>\n<td>山口未来変革</td>\n<td
+ >山口未来変革プロジェクト紹介</td>\n<td>横山 輝明（山
+ 口未来変革プロジェクトマネージャー）</td>\n</tr>\n<tr>\n
+ <td style="text-align: right\;">14:15</td>\n<td style="text-align: right\;
+ ">14:25</td>\n<td style="text-align: right\;">10分</td>\n<td>山口未来
+ 変革・学生</td>\n<td>学生発表①</td>\n<td>発表者調整中</td
+ >\n</tr>\n<tr>\n<td style="text-align: right\;">14:25</td>\n<td style="tex
+ t-align: right\;">14:35</td>\n<td style="text-align: right\;">10分</td>\n
+ <td>山口未来変革・学生</td>\n<td>学生発表②</td>\n<td>発表
+ 者調整中</td>\n</tr>\n<tr>\n<td style="text-align: right\;">14:35</td>
+ \n<td style="text-align: right\;">14:45</td>\n<td style="text-align: right
+ \;">10分</td>\n<td>山口未来変革・学生</td>\n<td>学生発表③<
+ /td>\n<td>発表者調整中</td>\n</tr>\n<tr>\n<td style="text-align: rig
+ ht\;">14:45</td>\n<td style="text-align: right\;">14:55</td>\n<td style="t
+ ext-align: right\;">10分</td>\n<td>山口未来変革・学生</td>\n<td>
+ 学生発表④</td>\n<td>発表者調整中</td>\n</tr>\n<tr>\n<td style=
+ "text-align: right\;">14:55</td>\n<td style="text-align: right\;">15:05</t
+ d>\n<td style="text-align: right\;">10分</td>\n<td>山口未来変革</td
+ >\n<td>全体講評・質疑応答</td>\n<td>横山 輝明ほか</td>\n</t
+ r>\n<tr>\n<td style="text-align: right\;">15:05</td>\n<td style="text-alig
+ n: right\;">15:15</td>\n<td style="text-align: right\;">10分</td>\n<td>
+ 休憩</td>\n<td><strong>休憩・学生発表準備・入れ替え</stron
+ g></td>\n<td></td>\n</tr>\n<tr>\n<td style="text-align: right\;">15:15</td
+ >\n<td style="text-align: right\;">15:20</td>\n<td style="text-align: righ
+ t\;">5分</td>\n<td>スポンサー</td>\n<td>スポンサー挨拶</td>\n
+ <td>黒須 栄誉（株式会社フォー・クオリア）</td>\n</tr>\n<
+ tr>\n<td style="text-align: right\;">15:20</td>\n<td style="text-align: ri
+ ght\;">15:30</td>\n<td style="text-align: right\;">10分</td>\n<td>学生
+ ・若手</td>\n<td>eduroamについて</td>\n<td>井上 巧大（徳山
+ 工業高等専門学校1年）</td>\n</tr>\n<tr>\n<td style="text-align: 
+ right\;">15:30</td>\n<td style="text-align: right\;">15:40</td>\n<td style
+ ="text-align: right\;">10分</td>\n<td>学生・若手</td>\n<td>自宅サ
+ ーバについて</td>\n<td>木村 遼太（徳山工業高等専門学
+ 校2年）</td>\n</tr>\n<tr>\n<td style="text-align: right\;">15:40</td>\n
+ <td style="text-align: right\;">15:50</td>\n<td style="text-align: right\;
+ ">10分</td>\n<td>学生・若手</td>\n<td>題名未定</td>\n<td>かい 
+ たくし（山口大学工学部 M1）</td>\n</tr>\n<tr>\n<td style="text
+ -align: right\;">15:50</td>\n<td style="text-align: right\;">16:00</td>\n<
+ td style="text-align: right\;">10分</td>\n<td>学生・若手</td>\n<td>V
+ RChatワールド制作 ～構想から公開まで～</td>\n<td>神代 
+ 春花（山口大学工学部 M2）</td>\n</tr>\n<tr>\n<td style="text-al
+ ign: right\;">16:00</td>\n<td style="text-align: right\;">16:15</td>\n<td 
+ style="text-align: right\;">15分</td>\n<td>学生・若手</td>\n<td>学
+ 生アニメーション制作企画によるオープンソースパイ
+ プライン管理バックエンドフレームワーク「ShellArc」を
+ 構築した話</td>\n<td>MiDUki（九州大学芸術工学部 未定研
+ ／NULL研）</td>\n</tr>\n<tr>\n<td style="text-align: right\;">16:15</td
+ >\n<td style="text-align: right\;">16:25</td>\n<td style="text-align: righ
+ t\;">10分</td>\n<td>Web・表現</td>\n<td>Web標準で作る立体サイ
+ ト</td>\n<td>浜田 佳輝（山口コアカレッジ）</td>\n</tr>\n<tr
+ >\n<td style="text-align: right\;">16:25</td>\n<td style="text-align: righ
+ t\;">16:40</td>\n<td style="text-align: right\;">15分</td>\n<td>教育・
+ Web</td>\n<td>GASによる学習ゲームWebアプリの試作</td>\n<td>
+ 内田 保雄（宮崎産業経営大学教授）</td>\n</tr>\n<tr>\n<td s
+ tyle="text-align: right\;">16:40</td>\n<td style="text-align: right\;">17:
+ 00</td>\n<td style="text-align: right\;">20分</td>\n<td>特別研究発
+ 表</td>\n<td>蟻の研究（正式題名調整中）</td>\n<td>上野 聖
+ 海（琉球大学農学部 B4）</td>\n</tr>\n<tr>\n<td style="text-align
+ : right\;">17:00</td>\n<td style="text-align: right\;">17:10</td>\n<td sty
+ le="text-align: right\;">10分</td>\n<td>閉会</td>\n<td>閉会挨拶・
+ 連絡事項・集合写真撮影</td>\n<td>OSC 山口実行委員会・
+ 登壇者・参加者</td>\n</tr>\n</tbody>\n</table>\n<p>（敬称略）<
+ /p>\n<h3>展示ブース 10:00ごろ-17:00</h3>\n<ul>\n<li><a href="https:
+ //www.mydns.jp/" rel="nofollow">蕪木 岳志</a></li>\n<li>かいたく
+ し（<a href="http://www.csse.yamaguchi-u.ac.jp/" rel="nofollow">山口
+ 大学工学部</a>）+ロボ研</li>\n<li>大川 貴久(<a href="https://
+ wwp.shizuoka.ac.jp/its/" rel="nofollow">静岡大学 情報学部 ITソル
+ ーション室</a>) </li>\n<li>櫻井 敏明 （<a href="https://www.sora
+ -sakurai.com/" rel="nofollow">合同会社ＳＯＲＡサクライ代表</
+ a>）</li>\n<li>田中 聡至（<a href="https://en-jp.wantedly.com/id/alt
+ 9800" rel="nofollow">地理空間情報技術者/フリーランス</a>）
+ </li>\n<li>蛯原 純（<a href="http://www.re.soum.co.jp/~jun/OSC2025yama
+ guchi.pdf" rel="nofollow">日本NetBSDユーザーグループ</a>）</li>
+ \n</ul>\n<p>（敬称略）</p>\n<h1>登壇してみませんか?　（202
+ 6/10/12 締め切りましたモームリ）</h1>\n<p>OSC ですから、<
+ /p>\n<ul>\n<li>オープンソースを使ってみた/作ってみた</li
+ >\n<li>arduino など IoT 系使ってみた/作ってみた</li>\n</ul>\n
+ <p>... などなど、はもちろんのこと、山口県近郊ネタも
+ いってみましょう。</p>\n<h4>蟻の研究発表は今年もアリ
+ ます</h4>\n<ul>\n<li>（2022 年）私にとってのアリ、これか
+ らのアリ</li>\n<li>（2023 年）これからのアリ研究の展望<
+ /li>\n<li>（2024 年）アリの種ごとの油脂に対する嗜好性
+ の違い</li>\n<li>（2025 年）蟻の油脂に対する嗜好性の追
+ 加報告</li>\n<li>今年: 現地登壇です。乞うご期待</li>\n</u
+ l>\n<h4>過去の OSC Yamaguchi</h4>\n<p><a href="https://ospn.connpass.co
+ m/event/255903/" rel="nofollow">2022</a> <a href="https://ospn.connpass.co
+ m/event/300548/" rel="nofollow">2023</a> <a href="https://ospn.connpass.co
+ m/event/328859/" rel="nofollow">2024</a> <a href="https://ospn.connpass.co
+ m/event/367968/" rel="nofollow">2025</a></p>\n<h4>Slack</h4>\n<p><a href="
+ https://bit.ly/ospn_slack" rel="nofollow">Slack</a> #yamaguchi でもお
+ 待ちしております。</p>\n<h2>どのくらいの長さの発表に
+ すればいいの?</h2>\n<p>10\, 20\, 30\, 45 分くらいで（要相談
+ ）</p>\n<h2>登壇するときの留意事項</h2>\n<ul>\n<li><strong>初
+ めてでも OK、練習でいいんです。</strong></li>\n<li>本イベ
+ ントのプログラムは録画されており、後日 YouTube でア
+ ーカイブ公開されます</li>\n</ul>\n<h1>現地またはオンラ
+ インご参加方法</h1>\n<h2>現地参加</h2>\n<p><a href="https://tok
+ iwa-k.sakura.ne.jp/summary/#access" rel="nofollow">常盤（ときわ）
+ 工業会館（山口大学工学部・情報学部同窓会）</a></p>\n<
+ ul>\n<li>なるべく宇部市営バス、タクシーでお越しくだ
+ さい。</li>\n<li>来場者把握のため、connpass での登録をお
+ 願いします。</li>\n<li><strong>飲食可能ですが、ゴミはお
+ 持ち帰りください</strong></li>\n</ul>\n<h3>WiFi</h3>\n<p>SSID: 開
+ 設予定 \nPass: 開設予定</p>\n<h3>公共交通機関ご案内</h3>\n
+ <p>なるべく公共交通機関をご利用ください。</p>\n<h4>山
+ 口宇部空港</h4>\n<ul>\n<li>宇部空港は <strong>運転手不足で
+ タクシーがいないことが多くなりました</strong><ul>\n<li>
+ タクシー乗り場に電話番号は書いてあります、 <strong>S.
+ RIDE 等は一切使えません</strong><ul>\n<li><strong>待ち時間 10
+  分といわれても 30 分はみておいてください</strong></li>\
+ n</ul>\n</li>\n</ul>\n</li>\n<li>宇部市営バス（宇部新川駅行
+ ）が待機しています<ul>\n<li>延着してもあわせてくれま
+ す</li>\n</ul>\n</li>\n<li>宇部線草江駅 徒歩 10 分</li>\n</ul>\n
+ <h4>タクシー</h4>\n<ul>\n<li>宇部新川駅、山口宇部空港か
+ らどちらも 1500 円程度<ul>\n<li>行き先「常盤（ときわ）
+ 工業会館」。通じなかったら「工学部正門」で。</li>\n<
+ /ul>\n</li>\n<li>宇部空港は <strong>運転手不足でタクシーが
+ いないことが多くなりました</strong><ul>\n<li>タクシー乗
+ り場に電話番号は書いてあります、 <strong>S.RIDE 等は一
+ 切使えません</strong><ul>\n<li><strong>待ち時間 10 分といわ
+ れても 30 分はみておいてください</strong></li>\n</ul>\n</li>
+ \n</ul>\n</li>\n</ul>\n<h4>宇部線</h4>\n<ul>\n<li>\n<p>パスモ <stron
+ g>「使えません」</strong> </p>\n<ul>\n<li>新山口駅もしくは
+ 宇部駅で紙の切符に切り替えてください。<ul>\n<li>宇部
+ 駅はパスモが使えて、紙の切符に切り替える精算機が
+ 設置されました。<ul>\n<li>インターフォン越しで遠隔ヘ
+ ルプ可能なので聞いてみてください。</li>\n</ul>\n</li>\n<l
+ i>パスモで突破してしまい無人駅でおりようとしても対
+ 処のしようがないです。かなり面倒くさいことになり
+ ます。<ul>\n<li>宇部線に乗っちゃった場合は、有人の宇
+ 部新川駅で降りていったん現金払いし、手書きの証明
+ をだしてもらい、パスモが使える駅で入場記録を取り
+ 消します。</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>宇部新川でパ
+ スモが使えないと dis る方がときどきいますがそんなこ
+ としても何も解決しません。</li>\n</ul>\n</li>\n<li>\n<p>宇
+ 部線各駅から歩く場合、上り坂となります</p>\n<ul>\n<li>
+ 常盤駅（無人） 徒歩 40 分</li>\n<li>東新川駅（無人） 徒
+ 歩 30 分、テニスコート側から出ると少し距離が短くな
+ る</li>\n<li>琴芝駅（無人） 徒歩 35 分</li>\n<li>宇部新川
+ 駅 （有人）徒歩 40 分</li>\n</ul>\n</li>\n</ul>\n<h4>宇部市営
+ バス（2026/9 調査）</h4>\n<ul>\n<li>なんとパスモ <strong>「
+ 使えます」</strong></li>\n<li>\n<p>宇部新川発 33\, 34\, 75「工
+ 学部前」、36 は「高専グラウンド前」</p>\n<ul>\n<li>宇部
+ 新川はバス停前に宇部市営バス有人営業所があります
+ ←わかんなかったらここで聞いてくれ</li>\n</ul>\n</li>\n<l
+ i>\n<p>もよりは「工学部前」です。ひとつ前の「工学部
+ 通」で降りてしまうと登り坂を歩く羽目になります。
+ あわてておりないで</p>\n</li>\n</ul>\n<p>来場 <a href="https://
+ ubebus.sakura.ne.jp/shuttlebus/timetable/pdf-b1/8.pdf" rel="nofollow">宇
+ 部市営バス「めぐりーな」時刻表宇部空港 2 番のりば</
+ a></p>\n<table>\n<thead>\n<tr>\n<th style="text-align: center\;">山口宇
+ 部空港発</th>\n<th style="text-align: center\;">会場最寄りバス
+ 停</th>\n<th style="text-align: center\;">番号</th>\n<th style="text-al
+ ign: center\;">行き先</th>\n<th style="text-align: center\;">経由</th
+ >\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style="text-align: center\;">9:52</
+ td>\n<td style="text-align: center\;">★工学部前</td>\n<td style="tex
+ t-align: center\;">77 番</td>\n<td style="text-align: center\;">めぐり
+ ーな</td>\n<td style="text-align: center\;">ときわ公園・工学部<
+ /td>\n</tr>\n</tbody>\n</table>\n<p>★ 10:45 開始に間に合います
+ 。<br>\nJAL291 HND 07:35 - UBJ 09:20<br>\nSFJ11 / MH(ANA)3811 HND 7:25 - 
+ UBJ 9:10<br></p>\n<p>来場（土日祝日ダイヤ）<a href="https://ube
+ bus.sakura.ne.jp/shuttlebus/timetable/busstop-timetable/pdf-b/2.pdf" rel="
+ nofollow">宇部市営バス時刻表宇部新川駅 3 番のりば</a></p
+ >\n<table>\n<thead>\n<tr>\n<th style="text-align: center\;">宇部新川
+ 駅発</th>\n<th style="text-align: center\;">会場最寄りバス停</th
+ >\n<th style="text-align: center\;">番号</th>\n<th style="text-align: ce
+ nter\;">行き先</th>\n<th style="text-align: center\;">経由</th>\n</tr
+ >\n</thead>\n<tbody>\n<tr>\n<td style="text-align: center\;">08:08</td>\n<
+ td style="text-align: center\;">工学部前</td>\n<td style="text-align: 
+ center\;">75 番</td>\n<td style="text-align: center\;">宇部新川</td>\
+ n<td style="text-align: center\;">開・荻原</td>\n</tr>\n<tr>\n<td styl
+ e="text-align: center\;">08:14</td>\n<td style="text-align: center\;">工
+ 学部前</td>\n<td style="text-align: center\;">33 番</td>\n<td style="t
+ ext-align: center\;">交通局</td>\n<td style="text-align: center\;">開<
+ /td>\n</tr>\n<tr>\n<td style="text-align: center\;">09:02</td>\n<td style=
+ "text-align: center\;">工学部前</td>\n<td style="text-align: center\;"
+ >75 番</td>\n<td style="text-align: center\;">宇部新川</td>\n<td styl
+ e="text-align: center\;">開・荻原</td>\n</tr>\n<tr>\n<td style="text-a
+ lign: center\;">10:12</td>\n<td style="text-align: center\;">★高専グ
+ ラウンド前</td>\n<td style="text-align: center\;">36 番</td>\n<td st
+ yle="text-align: center\;">交通局</td>\n<td style="text-align: center\;
+ ">東新川駅前</td>\n</tr>\n<tr>\n<td style="text-align: center\;">10:3
+ 8</td>\n<td style="text-align: center\;">工学部前</td>\n<td style="tex
+ t-align: center\;">33 番</td>\n<td style="text-align: center\;">交通局
+ </td>\n<td style="text-align: center\;">開</td>\n</tr>\n<tr>\n<td style="
+ text-align: center\;">11:17</td>\n<td style="text-align: center\;">工学
+ 部前</td>\n<td style="text-align: center\;">75 番</td>\n<td style="text
+ -align: center\;">宇部新川</td>\n<td style="text-align: center\;">開
+ ・荻原</td>\n</tr>\n<tr>\n<td style="text-align: center\;">12:17</td>\n
+ <td style="text-align: center\;">高専グラウンド前</td>\n<td style=
+ "text-align: center\;">36 番</td>\n<td style="text-align: center\;">交
+ 通局</td>\n<td style="text-align: center\;">東新川駅前</td>\n</tr>\
+ n<tr>\n<td style="text-align: center\;">13:12</td>\n<td style="text-align:
   center\;">工学部前</td>\n<td style="text-align: center\;">33 番</td>
- \n<td style="text-align: center\;">交通局</td>\n<td style="text-align: 
- center\;">開</td>\n</tr>\n<tr>\n<td style="text-align: center\;">09:02</t
- d>\n<td style="text-align: center\;">工学部前</td>\n<td style="text-al
- ign: center\;">75 番</td>\n<td style="text-align: center\;">宇部新川<
- /td>\n<td style="text-align: center\;">開・荻原</td>\n</tr>\n<tr>\n<td
-  style="text-align: center\;">10:12</td>\n<td style="text-align: center\;"
- >★高専グラウンド前</td>\n<td style="text-align: center\;">36 番
- </td>\n<td style="text-align: center\;">交通局</td>\n<td style="text-al
- ign: center\;">東新川駅前</td>\n</tr>\n<tr>\n<td style="text-align: c
- enter\;">10:38</td>\n<td style="text-align: center\;">工学部前</td>\n<
- td style="text-align: center\;">33 番</td>\n<td style="text-align: center
- \;">交通局</td>\n<td style="text-align: center\;">開</td>\n</tr>\n<tr>
- \n<td style="text-align: center\;">11:17</td>\n<td style="text-align: cent
- er\;">工学部前</td>\n<td style="text-align: center\;">75 番</td>\n<td
-  style="text-align: center\;">宇部新川</td>\n<td style="text-align: ce
- nter\;">開・荻原</td>\n</tr>\n<tr>\n<td style="text-align: center\;">1
- 2:17</td>\n<td style="text-align: center\;">高専グラウンド前</td>\
- n<td style="text-align: center\;">36 番</td>\n<td style="text-align: cent
- er\;">交通局</td>\n<td style="text-align: center\;">東新川駅前</td
- >\n</tr>\n<tr>\n<td style="text-align: center\;">13:12</td>\n<td style="te
- xt-align: center\;">工学部前</td>\n<td style="text-align: center\;">33
-  番</td>\n<td style="text-align: center\;">ひらき台</td>\n<td style="
- text-align: center\;">開</td>\n</tr>\n<tr>\n<td style="text-align: center
- \;">13:47</td>\n<td style="text-align: center\;">工学部前</td>\n<td st
- yle="text-align: center\;">34 番</td>\n<td style="text-align: center\;">
- 交通局</td>\n<td style="text-align: center\;">開</td>\n</tr>\n<tr>\n<t
- d style="text-align: center\;">14:25</td>\n<td style="text-align: center\;
- ">工学部前</td>\n<td style="text-align: center\;">75 番</td>\n<td sty
- le="text-align: center\;">宇部新川</td>\n<td style="text-align: center
- \;">開・荻原</td>\n</tr>\n<tr>\n<td style="text-align: center\;">15:07
+ \n<td style="text-align: center\;">ひらき台</td>\n<td style="text-alig
+ n: center\;">開</td>\n</tr>\n<tr>\n<td style="text-align: center\;">13:47
  </td>\n<td style="text-align: center\;">工学部前</td>\n<td style="text
  -align: center\;">34 番</td>\n<td style="text-align: center\;">交通局<
  /td>\n<td style="text-align: center\;">開</td>\n</tr>\n<tr>\n<td style="t
- ext-align: center\;">15:47</td>\n<td style="text-align: center\;">高専
- グラウンド前</td>\n<td style="text-align: center\;">36 番</td>\n<td
-  style="text-align: center\;">交通局</td>\n<td style="text-align: cente
- r\;">東新川駅前</td>\n</tr>\n<tr>\n<td style="text-align: center\;">1
- 6:12</td>\n<td style="text-align: center\;">工学部前</td>\n<td style="
- text-align: center\;">75 番</td>\n<td style="text-align: center\;">宇部
- 新川</td>\n<td style="text-align: center\;">開・荻原</td>\n</tr>\n<t
- r>\n<td style="text-align: center\;">16:50</td>\n<td style="text-align: ce
- nter\;">工学部前</td>\n<td style="text-align: center\;">33 番</td>\n<
- td style="text-align: center\;">ひらき台</td>\n<td style="text-align: 
- center\;">開</td>\n</tr>\n</tbody>\n</table>\n<p>★ 10:45 開始に間
- に合います。<br></p>\n<p>お帰り（日祝日ダイヤ） <a href="
- https://ubebus.sakura.ne.jp/shuttlebus/timetable/busstop-timetable/pdf-b/9
- 2.pdf" rel="nofollow">宇部市営バス時刻表工学部前 2 番のり
- ば</a></p>\n<table>\n<thead>\n<tr>\n<th style="text-align: center\;">工
- 学部前発</th>\n<th style="text-align: center\;">番号</th>\n<th style
- ="text-align: center\;">行き先</th>\n<th style="text-align: center\;">
- 経由</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style="text-align: center
- \;">14:08</td>\n<td style="text-align: center\;">73 番</td>\n<td style="t
+ ext-align: center\;">14:25</td>\n<td style="text-align: center\;">工学
+ 部前</td>\n<td style="text-align: center\;">75 番</td>\n<td style="text
+ -align: center\;">宇部新川</td>\n<td style="text-align: center\;">開
+ ・荻原</td>\n</tr>\n<tr>\n<td style="text-align: center\;">15:07</td>\n
+ <td style="text-align: center\;">工学部前</td>\n<td style="text-align:
+  center\;">34 番</td>\n<td style="text-align: center\;">交通局</td>\n<
+ td style="text-align: center\;">開</td>\n</tr>\n<tr>\n<td style="text-ali
+ gn: center\;">15:47</td>\n<td style="text-align: center\;">高専グラウ
+ ンド前</td>\n<td style="text-align: center\;">36 番</td>\n<td style="t
+ ext-align: center\;">交通局</td>\n<td style="text-align: center\;">東
+ 新川駅前</td>\n</tr>\n<tr>\n<td style="text-align: center\;">16:12</td
+ >\n<td style="text-align: center\;">工学部前</td>\n<td style="text-ali
+ gn: center\;">75 番</td>\n<td style="text-align: center\;">宇部新川</
+ td>\n<td style="text-align: center\;">開・荻原</td>\n</tr>\n<tr>\n<td 
+ style="text-align: center\;">16:50</td>\n<td style="text-align: center\;">
+ 工学部前</td>\n<td style="text-align: center\;">33 番</td>\n<td style
+ ="text-align: center\;">ひらき台</td>\n<td style="text-align: center\;
+ ">開</td>\n</tr>\n</tbody>\n</table>\n<p>★ 10:45 開始に間に合い
+ ます。<br></p>\n<p>お帰り（日祝日ダイヤ） <a href="https://u
+ bebus.sakura.ne.jp/shuttlebus/timetable/busstop-timetable/pdf-b/92.pdf" re
+ l="nofollow">宇部市営バス時刻表工学部前 2 番のりば</a></p
+ >\n<table>\n<thead>\n<tr>\n<th style="text-align: center\;">工学部前
+ 発</th>\n<th style="text-align: center\;">番号</th>\n<th style="text-al
+ ign: center\;">行き先</th>\n<th style="text-align: center\;">経由</th
+ >\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style="text-align: center\;">14:08<
+ /td>\n<td style="text-align: center\;">73 番</td>\n<td style="text-align:
+  center\;">宇部新川</td>\n<td style="text-align: center\;">大学病
+ 院前</td>\n</tr>\n<tr>\n<td style="text-align: center\;">14:52</td>\n<td
+  style="text-align: center\;">34 番</td>\n<td style="text-align: center\;
+ ">宇部新川</td>\n<td style="text-align: center\;">参宮通</td>\n</tr
+ >\n<tr>\n<td style="text-align: center\;">15:01</td>\n<td style="text-alig
+ n: center\;">76 番</td>\n<td style="text-align: center\;">宇部新川</t
+ d>\n<td style="text-align: center\;">参宮通</td>\n</tr>\n<tr>\n<td styl
+ e="text-align: center\;">16:08</td>\n<td style="text-align: center\;">73 
+ 番</td>\n<td style="text-align: center\;">宇部新川</td>\n<td style="t
+ ext-align: center\;">大学病院前</td>\n</tr>\n<tr>\n<td style="text-al
+ ign: center\;">16:41</td>\n<td style="text-align: center\;">76 番</td>\n<
+ td style="text-align: center\;">宇部新川</td>\n<td style="text-align: 
+ center\;">大学病院前</td>\n</tr>\n<tr>\n<td style="text-align: center
+ \;">17:21</td>\n<td style="text-align: center\;">33 番</td>\n<td style="t
  ext-align: center\;">宇部新川</td>\n<td style="text-align: center\;">
- 大学病院前</td>\n</tr>\n<tr>\n<td style="text-align: center\;">14:52<
- /td>\n<td style="text-align: center\;">34 番</td>\n<td style="text-align:
-  center\;">宇部新川</td>\n<td style="text-align: center\;">参宮通</
- td>\n</tr>\n<tr>\n<td style="text-align: center\;">15:01</td>\n<td style="
- text-align: center\;">76 番</td>\n<td style="text-align: center\;">宇部
- 新川</td>\n<td style="text-align: center\;">参宮通</td>\n</tr>\n<tr>\
- n<td style="text-align: center\;">16:08</td>\n<td style="text-align: cente
- r\;">73 番</td>\n<td style="text-align: center\;">宇部新川</td>\n<td 
- style="text-align: center\;">大学病院前</td>\n</tr>\n<tr>\n<td style=
- "text-align: center\;">16:41</td>\n<td style="text-align: center\;">76 番
- </td>\n<td style="text-align: center\;">宇部新川</td>\n<td style="text
- -align: center\;">大学病院前</td>\n</tr>\n<tr>\n<td style="text-align
- : center\;">17:21</td>\n<td style="text-align: center\;">33 番</td>\n<td 
- style="text-align: center\;">宇部新川</td>\n<td style="text-align: cen
- ter\;">参宮通</td>\n</tr>\n<tr>\n<td style="text-align: center\;">18:17
- </td>\n<td style="text-align: center\;">76 番</td>\n<td style="text-align
- : center\;">宇部新川</td>\n<td style="text-align: center\;">参宮通<
- /td>\n</tr>\n<tr>\n<td style="text-align: center\;">18:35</td>\n<td style=
- "text-align: center\;">33 番</td>\n<td style="text-align: center\;">宇
- 部新川</td>\n<td style="text-align: center\;">参宮通</td>\n</tr>\n</
- tbody>\n</table>\n<h4>JR　利用例（2026/11/22）</h4>\n<p><a href="htt
- ps://www.jorudan.co.jp/norikae/cgi/nori.cgi?eki1=%E5%B2%A9%E5%9B%BD&amp\;e
- ki2=%E9%AB%98%E5%B0%82%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%89%E5%89%8D%E3%80%
- 94%E5%AE%87%E9%83%A8%E5%B8%82%E5%96%B6%E3%83%90%E3%82%B9%E3%80%95&amp\;via
- _on=-1&amp\;eki3=&amp\;eki4=&amp\;eki5=&amp\;eki6=&amp\;Dyy=2026&amp\;Dmm=
- 11&amp\;Ddd=22&amp\;Dhh=10&amp\;Dmn1=5&amp\;Dmn2=0&amp\;Cway=1&amp\;Cfp=1&
- amp\;Czu=2&amp\;C7=1&amp\;C2=0&amp\;C3=0&amp\;C1=0&amp\;cartaxy=1&amp\;bik
- eshare=1&amp\;sort=rec&amp\;C4=5&amp\;C5=0&amp\;C6=2&amp\;S=%E6%A4%9C%E7%B
- 4%A2&amp\;Cmap1=&amp\;rf=nr&amp\;pg=0&amp\;eok1=R-&amp\;eok2=B-&amp\;eok3=
- &amp\;eok4=&amp\;eok5=&amp\;eok6=&amp\;Csg=1" rel="nofollow">■岩国</a>
- <br>\n｜ 　［ＪＲ］山陽本線(下関行)   116.7km<br>\n｜ 　06:
- 42-09:22［160分］<br>\n｜ 　2\,310円<br>\n◇宇部     ［乗換3
- 分+待ち19分］<br>\n｜ 　［ＪＲ］宇部線(新山口行)   6.1km
- <br>\n｜ 　09:44-09:55［11分］<br>\n｜ 　 ↓ <br>\n◇宇部新川
- /宇部新川駅    3番のりば発 ［乗換4分+待ち13分］<br>\n｜
-  　［バス］[宇部市営バス]東新川線(36 交通局行)<br>\n｜
-  　10:12-10:27［15分］<br>\n｜ 　260円<br>\n■高専グランド
- 前  </p>\n<p><a href="https://www.jorudan.co.jp/norikae/cgi/nori.cgi?eki1
- =%E4%B8%8B%E9%96%A2&amp\;eki2=%E9%AB%98%E5%B0%82%E3%82%B0%E3%83%A9%E3%83%B
- 3%E3%83%89%E5%89%8D%E3%80%94%E5%AE%87%E9%83%A8%E5%B8%82%E5%96%B6%E3%83%90%
- E3%82%B9%E3%80%95&amp\;via_on=-1&amp\;eki3=&amp\;eki4=&amp\;eki5=&amp\;eki
- 6=&amp\;Dyy=2026&amp\;Dmm=11&amp\;Ddd=22&amp\;Dhh=10&amp\;Dmn1=5&amp\;Dmn2
- =0&amp\;Cway=1&amp\;Cfp=1&amp\;Czu=2&amp\;C7=1&amp\;C2=0&amp\;C3=0&amp\;C1
- =0&amp\;cartaxy=1&amp\;bikeshare=1&amp\;sort=rec&amp\;C4=5&amp\;C5=0&amp\;
- C6=2&amp\;S=%E6%A4%9C%E7%B4%A2&amp\;Cmap1=&amp\;rf=nr&amp\;pg=0&amp\;eok1=
- R-&amp\;eok2=B-&amp\;eok3=&amp\;eok4=&amp\;eok5=&amp\;eok6=&amp\;Csg=1" re
- l="nofollow">■下関</a><br>\n｜ 　［ＪＲ］山陽本線(岩国行)
-    43.6km<br>\n｜ 　08:51-09:35［44分]<br>\n｜ 　860円<br>\n◇宇
- 部     ［乗換3分+待ち6分］<br>\n｜ 　［ＪＲ］宇部線(新
- 山口行)   6.1km<br>\n｜ 　09:44-09:55［11分］<br>\n｜ 　 ↓<br>
- \n◇宇部新川/宇部新川駅    3番のりば発 ［乗換4分+待ち
- 13分］<br>\n｜ 　［バス］[宇部市営バス]東新川線(36 交
- 通局行) <br>\n｜ 　10:12-10:27［15分］<br>\n｜ 　260円<br>\n■
- 高専グランド前<br></p>\n<h4>航空機利用例（2026/11/22）</h4>
- \n<p>会場まで徒歩 40　分程度、歩けないことはない。た
- だし上り坂です<br>\n<strong>ロンギヌスの槍経由は徒歩 1 
- 時間程度 + 鑑賞時間を見込んでください</strong></p>\n<div 
- align="center">\n<img src="https://contents-tourism.com/wp-content/themes/
- ubeeva2026renew/assets/img/top_kv01.jpg" width="800">\n</div>\n\n<h5>JAL29
- 1</h5>\n<p><a href="https://www.jorudan.co.jp/norikae/cgi/nori.cgi?eki1=%E
- 7%BE%BD%E7%94%B0%E7%A9%BA%E6%B8%AF%E7%AC%AC%EF%BC%91%E3%83%BB%E7%AC%AC%EF%
- BC%92%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB&amp\;eki2=%E5%B1%B1%E5%
- 8F%A3%E5%AE%87%E9%83%A8%E7%A9%BA%E6%B8%AF&amp\;via_on=1&amp\;eki3=&amp\;ek
- i4=&amp\;eki5=&amp\;eki6=&amp\;Dyy=2026&amp\;Dmm=11&amp\;Ddd=22&amp\;Dhh=5
- &amp\;Dmn1=5&amp\;Dmn2=0&amp\;Cway=0&amp\;Cfp=1&amp\;Czu=2&amp\;C7=1&amp\;
- C2=0&amp\;C3=0&amp\;C1=0&amp\;cartaxy=1&amp\;bikeshare=1&amp\;sort=rec&amp
- \;C4=5&amp\;C5=0&amp\;C6=2&amp\;S=%E6%A4%9C%E7%B4%A2&amp\;Cmap1=&amp\;rf=n
- r&amp\;pg=0&amp\;eok1=R-&amp\;eok2=R-&amp\;eok3=&amp\;eok4=&amp\;eok5=&amp
- \;eok6=&amp\;Csg=1" rel="nofollow">■羽田空港</a><br>\n｜ 　［飛
- 行機］JAL291便   821.0km <br>\n｜ 　07:35-09:20［105分］　※通
- 常 85 分程度、羽田の状況による<br>\n｜ 　56\,680円（ フ
- レックス ）<br>\n■山口宇部空港<br></p>\n<p>■<a href="https:
- //www.jorudan.co.jp/norikae/cgi/nori.cgi?eki1=%E5%B1%B1%E5%8F%A3%E5%AE%87%
- E9%83%A8%E7%A9%BA%E6%B8%AF%E3%80%94%E5%AE%87%E9%83%A8%E5%B8%82%E5%96%B6%E3
- %83%90%E3%82%B9%E3%80%95&amp\;eki2=%E5%B7%A5%E5%AD%A6%E9%83%A8%E5%89%8D%EF
- %BC%88%E5%B1%B1%E5%8F%A3%E5%A4%A7%EF%BC%89%E3%80%94%E5%AE%87%E9%83%A8%E5%B
- 8%82%E5%96%B6%E3%83%90%E3%82%B9%E3%80%95&amp\;via_on=-1&amp\;eki3=&amp\;ek
- i4=&amp\;eki5=&amp\;eki6=&amp\;Dyy=2026&amp\;Dmm=11&amp\;Ddd=22&amp\;Dhh=9
- &amp\;Dmn1=5&amp\;Dmn2=1&amp\;Cway=0&amp\;Cfp=1&amp\;Czu=2&amp\;C7=1&amp\;
- C2=0&amp\;C3=0&amp\;C1=0&amp\;cartaxy=1&amp\;bikeshare=1&amp\;sort=rec&amp
- \;C4=5&amp\;C5=0&amp\;C6=2&amp\;S=%E6%A4%9C%E7%B4%A2&amp\;Cmap1=&amp\;rf=n
- r&amp\;pg=0&amp\;eok1=B-&amp\;eok2=B-&amp\;eok3=&amp\;eok4=&amp\;eok5=&amp
- \;eok6=&amp\;Csg=1" rel="nofollow">山口宇部空港 2番のりば発 77 
- 番</a><br>\n｜ 　［バス］[宇部市営バス]めぐりーな<br>\n
- ｜ 　09:52-10:08［16分］<br>\n｜ 　280円<br>\n■工学部前（
- 山口大）</p>\n<h5>SFJ11 / MH(ANA)3811</h5>\n<p>■<a href="https://www
- .jorudan.co.jp/norikae/cgi/nori.cgi?eki1=%E7%BE%BD%E7%94%B0%E7%A9%BA%E6%B8
- %AF%E7%AC%AC%EF%BC%91%E3%83%BB%E7%AC%AC%EF%BC%92%E3%82%BF%E3%83%BC%E3%83%9
- F%E3%83%8A%E3%83%AB&amp\;eki2=%E5%B1%B1%E5%8F%A3%E5%AE%87%E9%83%A8%E7%A9%B
- A%E6%B8%AF&amp\;via_on=1&amp\;eki3=&amp\;eki4=&amp\;eki5=&amp\;eki6=&amp\;
- Dyy=2026&amp\;Dmm=11&amp\;Ddd=22&amp\;Dhh=5&amp\;Dmn1=5&amp\;Dmn2=0&amp\;C
- way=0&amp\;Cfp=1&amp\;Czu=2&amp\;C7=1&amp\;C2=0&amp\;C3=0&amp\;C1=0&amp\;c
- artaxy=1&amp\;bikeshare=1&amp\;sort=rec&amp\;C4=5&amp\;C5=0&amp\;C6=2&amp\
- ;S=%E6%A4%9C%E7%B4%A2&amp\;Cmap1=&amp\;rf=nr&amp\;pg=0&amp\;eok1=R-&amp\;e
- ok2=R-&amp\;eok3=&amp\;eok4=&amp\;eok5=&amp\;eok6=&amp\;Csg=1" rel="nofoll
- ow">羽田空港</a><br>\n｜ 　［飛行機］SFJ11便   821.0km<br>\n
- ｜ 　7:25-9:10[105分］ ※通常 85 分程度、羽田の状況によ
- る<br>\n｜ 　64\,380円（ 片道（最高） ）<br>\n■山口宇部
- 空港<br></p>\n<p>■<a href="https://www.jorudan.co.jp/norikae/cgi/nori.
- cgi?eki1=%E5%B1%B1%E5%8F%A3%E5%AE%87%E9%83%A8%E7%A9%BA%E6%B8%AF%E3%80%94%E
- 5%AE%87%E9%83%A8%E5%B8%82%E5%96%B6%E3%83%90%E3%82%B9%E3%80%95&amp\;eki2=%E
- 5%B7%A5%E5%AD%A6%E9%83%A8%E5%89%8D%EF%BC%88%E5%B1%B1%E5%8F%A3%E5%A4%A7%EF%
- BC%89%E3%80%94%E5%AE%87%E9%83%A8%E5%B8%82%E5%96%B6%E3%83%90%E3%82%B9%E3%80
- %95&amp\;via_on=-1&amp\;eki3=&amp\;eki4=&amp\;eki5=&amp\;eki6=&amp\;Dyy=20
- 26&amp\;Dmm=11&amp\;Ddd=22&amp\;Dhh=9&amp\;Dmn1=5&amp\;Dmn2=1&amp\;Cway=0&
- amp\;Cfp=1&amp\;Czu=2&amp\;C7=1&amp\;C2=0&amp\;C3=0&amp\;C1=0&amp\;cartaxy
- =1&amp\;bikeshare=1&amp\;sort=rec&amp\;C4=5&amp\;C5=0&amp\;C6=2&amp\;S=%E6
- %A4%9C%E7%B4%A2&amp\;Cmap1=&amp\;rf=nr&amp\;pg=0&amp\;eok1=B-&amp\;eok2=B-
- &amp\;eok3=&amp\;eok4=&amp\;eok5=&amp\;eok6=&amp\;Csg=1" rel="nofollow">
- 山口宇部空港 2番のりば発 77 番</a><br>\n｜ 　［バス］[
- 宇部市営バス]めぐりーな<br>\n｜ 　09:52-10:08［16分］<br>\
- n｜ 　280円<br>\n■工学部前（山口大）</p>\n<h3>めし</h3>\n<
- ul>\n<li><del><a href="https://tabelog.com/yamaguchi/A3504/A350401/3501007
- 8/dtlmap/" rel="nofollow">山口大学 生活協同組合 工学部食堂<
- /a></del>  ※日曜なのでしまってます</li>\n<li><a href="https:/
- /www.tripadvisor.jp/ShowUserReviews-g298141-d7414787-r323577105-Sankyu_Ram
- entokiwa-Ube_Yamaguchi_Prefecture_Chugoku.html" rel="nofollow">三久ラ
- ーメン 常盤店</a> 期待通りのものが期待通りにでてき
- ます、昼時は 1 時間待ち、常盤工業会館から 10 分程度
- 歩く</li>\n<li><a href="https://tabelog.com/yamaguchi/A3504/A350401/3501
- 3699/dtlmap/" rel="nofollow">ラーメン腹ペコ 山大工学部前店</
- a> 店名と経営者が代わりまたまた二郎インスパイア系
- で復活、常盤工業会館から 5 分程度歩く</li>\n<li><a href="
- https://www.areamarker.com/lawson/info/289242" rel="nofollow">ローソン
- 山口大学工学部前</a> 正門前、常盤工業会館横</li>\n<li><
- a href="https://www.areamarker.com/lawson/info/378023" rel="nofollow">ロ
- ーソン山大工学部東門</a> 東門前、山口大学工学部構内
- 、常盤工業会館から 5 分程度歩く（工学部がここまで
- 踏み切るとは...）</li>\n</ul>\n<h2>オンライン（Zoom）</h2>\n
- <ul>\n<li>Zoomミーティングを利用して参加していただきま
- す。</li>\n<li>当ページ（connpass）にて、下記締め切りま
- でにお申し込みいただいた方に、connpass のシステムを
- 通じたメッセージ送信にて、参加用のURLをお送りしま
- す。<ul>\n<li>それ以降にお申し込みの方は「参加者への
- 情報」からご確認いただけます。</li>\n</ul>\n</li>\n<li>Zoom
- 参加にはZoomアカウントが必要<ul>\n<li>荒らし防止のため
- 、Zoomでご参加の場合、Zoomアカウントでログインした上
- でミーティングに参加する必要があります。</li>\n</ul>\n
- </li>\n<li>Zoomアカウントをお持ちでない方は、YouTube Live
- 配信でのご参加をお願いします。それかZoomアカウント
- の作成してください（無料）。</li>\n<li>視聴 URL は開催
- まぢかになりましたら connpass 中の「参加者への情報」
- に掲載します。</li>\n</ul>\n<p>※同日の他のイベントとの
- 重複で登録ができない場合は、個別にご案内しますの
- でお問い合わせにてご連絡ください。<br>\n※YouTube Live
- でのライブ配信もあります!\n配信チャンネル→ <a href="h
- ttps://www.youtube.com/c/OSPNjp" rel="nofollow">OSPN.jp</a> </p>\n<h2>オ
- ンライン（YouTube）</h2>\n<ul>\n<li>YouTube Liveの<a href="https://
- www.youtube.com/c/OSPNjp" rel="nofollow">チャンネル登録</a>をお
- 願いします！</li>\n<li>Zoomを使用できない方は、YouTube Liv
- eでの同時配信からご覧いただけます。</li>\n<li>当日、 <
- a href="https://www.youtube.com/c/OSPNjp" rel="nofollow">OSPN.jp</a> チ
- ャンネルにアクセスしていただければ、ライブ中継が
- ご覧になれます。</li>\n</ul>\n<p>あらかじめチャンネル登
- 録しておいていただくよう、お願いします。\n過去のOSC
- オンラインセミナー動画を配信中です！</p>\n\nhttps://ospn
- .connpass.com/event/398565/?utm_campaign=series_events&utm_source=feed&utm
- _medium=atom
+ 参宮通</td>\n</tr>\n<tr>\n<td style="text-align: center\;">18:17</td>\n
+ <td style="text-align: center\;">76 番</td>\n<td style="text-align: cente
+ r\;">宇部新川</td>\n<td style="text-align: center\;">参宮通</td>\n<
+ /tr>\n<tr>\n<td style="text-align: center\;">18:35</td>\n<td style="text-a
+ lign: center\;">33 番</td>\n<td style="text-align: center\;">宇部新川
+ </td>\n<td style="text-align: center\;">参宮通</td>\n</tr>\n</tbody>\n<
+ /table>\n<h4>JR　利用例（2026/11/22）</h4>\n<p><a href="https://www.
+ jorudan.co.jp/norikae/cgi/nori.cgi?eki1=%E5%B2%A9%E5%9B%BD&amp\;eki2=%E9%A
+ B%98%E5%B0%82%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%89%E5%89%8D%E3%80%94%E5%AE%
+ 87%E9%83%A8%E5%B8%82%E5%96%B6%E3%83%90%E3%82%B9%E3%80%95&amp\;via_on=-1&am
+ p\;eki3=&amp\;eki4=&amp\;eki5=&amp\;eki6=&amp\;Dyy=2026&amp\;Dmm=11&amp\;D
+ dd=22&amp\;Dhh=10&amp\;Dmn1=5&amp\;Dmn2=0&amp\;Cway=1&amp\;Cfp=1&amp\;Czu=
+ 2&amp\;C7=1&amp\;C2=0&amp\;C3=0&amp\;C1=0&amp\;cartaxy=1&amp\;bikeshare=1&
+ amp\;sort=rec&amp\;C4=5&amp\;C5=0&amp\;C6=2&amp\;S=%E6%A4%9C%E7%B4%A2&amp\
+ ;Cmap1=&amp\;rf=nr&amp\;pg=0&amp\;eok1=R-&amp\;eok2=B-&amp\;eok3=&amp\;eok
+ 4=&amp\;eok5=&amp\;eok6=&amp\;Csg=1" rel="nofollow">■岩国</a><br>\n｜
+  　［ＪＲ］山陽本線(下関行)   116.7km<br>\n｜ 　06:42-09:22
+ ［160分］<br>\n｜ 　2\,310円<br>\n◇宇部     ［乗換3分+待ち
+ 19分］<br>\n｜ 　［ＪＲ］宇部線(新山口行)   6.1km<br>\n｜ 
+ 　09:44-09:55［11分］<br>\n｜ 　 ↓ <br>\n◇宇部新川/宇部新
+ 川駅    3番のりば発 ［乗換4分+待ち13分］<br>\n｜ 　［バ
+ ス］[宇部市営バス]東新川線(36 交通局行)<br>\n｜ 　10:12-
+ 10:27［15分］<br>\n｜ 　260円<br>\n■高専グランド前  </p>\n<
+ p><a href="https://www.jorudan.co.jp/norikae/cgi/nori.cgi?eki1=%E4%B8%8B%E
+ 9%96%A2&amp\;eki2=%E9%AB%98%E5%B0%82%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%89%E
+ 5%89%8D%E3%80%94%E5%AE%87%E9%83%A8%E5%B8%82%E5%96%B6%E3%83%90%E3%82%B9%E3%
+ 80%95&amp\;via_on=-1&amp\;eki3=&amp\;eki4=&amp\;eki5=&amp\;eki6=&amp\;Dyy=
+ 2026&amp\;Dmm=11&amp\;Ddd=22&amp\;Dhh=10&amp\;Dmn1=5&amp\;Dmn2=0&amp\;Cway
+ =1&amp\;Cfp=1&amp\;Czu=2&amp\;C7=1&amp\;C2=0&amp\;C3=0&amp\;C1=0&amp\;cart
+ axy=1&amp\;bikeshare=1&amp\;sort=rec&amp\;C4=5&amp\;C5=0&amp\;C6=2&amp\;S=
+ %E6%A4%9C%E7%B4%A2&amp\;Cmap1=&amp\;rf=nr&amp\;pg=0&amp\;eok1=R-&amp\;eok2
+ =B-&amp\;eok3=&amp\;eok4=&amp\;eok5=&amp\;eok6=&amp\;Csg=1" rel="nofollow"
+ >■下関</a><br>\n｜ 　［ＪＲ］山陽本線(岩国行)   43.6km<br
+ >\n｜ 　08:51-09:35［44分]<br>\n｜ 　860円<br>\n◇宇部     ［
+ 乗換3分+待ち6分］<br>\n｜ 　［ＪＲ］宇部線(新山口行)  
+  6.1km<br>\n｜ 　09:44-09:55［11分］<br>\n｜ 　 ↓<br>\n◇宇部
+ 新川/宇部新川駅    3番のりば発 ［乗換4分+待ち13分］<br
+ >\n｜ 　［バス］[宇部市営バス]東新川線(36 交通局行) <b
+ r>\n｜ 　10:12-10:27［15分］<br>\n｜ 　260円<br>\n■高専グラ
+ ンド前<br></p>\n<h4>航空機利用例（2026/11/22）</h4>\n<p>会場
+ まで徒歩 40　分程度、歩けないことはない。ただし上
+ り坂です<br>\n<strong>ロンギヌスの槍経由は徒歩 1 時間程
+ 度 + 鑑賞時間を見込んでください</strong></p>\n<div align="ce
+ nter">\n<img src="https://contents-tourism.com/wp-content/themes/ubeeva202
+ 6renew/assets/img/top_kv01.jpg" width="800">\n</div>\n\n<h5>JAL291</h5>\n<
+ p><a href="https://www.jorudan.co.jp/norikae/cgi/nori.cgi?eki1=%E7%BE%BD%E
+ 7%94%B0%E7%A9%BA%E6%B8%AF%E7%AC%AC%EF%BC%91%E3%83%BB%E7%AC%AC%EF%BC%92%E3%
+ 82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB&amp\;eki2=%E5%B1%B1%E5%8F%A3%E5%
+ AE%87%E9%83%A8%E7%A9%BA%E6%B8%AF&amp\;via_on=1&amp\;eki3=&amp\;eki4=&amp\;
+ eki5=&amp\;eki6=&amp\;Dyy=2026&amp\;Dmm=11&amp\;Ddd=22&amp\;Dhh=5&amp\;Dmn
+ 1=5&amp\;Dmn2=0&amp\;Cway=0&amp\;Cfp=1&amp\;Czu=2&amp\;C7=1&amp\;C2=0&amp\
+ ;C3=0&amp\;C1=0&amp\;cartaxy=1&amp\;bikeshare=1&amp\;sort=rec&amp\;C4=5&am
+ p\;C5=0&amp\;C6=2&amp\;S=%E6%A4%9C%E7%B4%A2&amp\;Cmap1=&amp\;rf=nr&amp\;pg
+ =0&amp\;eok1=R-&amp\;eok2=R-&amp\;eok3=&amp\;eok4=&amp\;eok5=&amp\;eok6=&a
+ mp\;Csg=1" rel="nofollow">■羽田空港</a><br>\n｜ 　［飛行機］J
+ AL291便   821.0km <br>\n｜ 　07:35-09:20［105分］　※通常 85 分
+ 程度、羽田の状況による<br>\n｜ 　56\,680円（ フレック
+ ス ）<br>\n■山口宇部空港<br></p>\n<p>■<a href="https://www.jor
+ udan.co.jp/norikae/cgi/nori.cgi?eki1=%E5%B1%B1%E5%8F%A3%E5%AE%87%E9%83%A8%
+ E7%A9%BA%E6%B8%AF%E3%80%94%E5%AE%87%E9%83%A8%E5%B8%82%E5%96%B6%E3%83%90%E3
+ %82%B9%E3%80%95&amp\;eki2=%E5%B7%A5%E5%AD%A6%E9%83%A8%E5%89%8D%EF%BC%88%E5
+ %B1%B1%E5%8F%A3%E5%A4%A7%EF%BC%89%E3%80%94%E5%AE%87%E9%83%A8%E5%B8%82%E5%9
+ 6%B6%E3%83%90%E3%82%B9%E3%80%95&amp\;via_on=-1&amp\;eki3=&amp\;eki4=&amp\;
+ eki5=&amp\;eki6=&amp\;Dyy=2026&amp\;Dmm=11&amp\;Ddd=22&amp\;Dhh=9&amp\;Dmn
+ 1=5&amp\;Dmn2=1&amp\;Cway=0&amp\;Cfp=1&amp\;Czu=2&amp\;C7=1&amp\;C2=0&amp\
+ ;C3=0&amp\;C1=0&amp\;cartaxy=1&amp\;bikeshare=1&amp\;sort=rec&amp\;C4=5&am
+ p\;C5=0&amp\;C6=2&amp\;S=%E6%A4%9C%E7%B4%A2&amp\;Cmap1=&amp\;rf=nr&amp\;pg
+ =0&amp\;eok1=B-&amp\;eok2=B-&amp\;eok3=&amp\;eok4=&amp\;eok5=&amp\;eok6=&a
+ mp\;Csg=1" rel="nofollow">山口宇部空港 2番のりば発 77 番</a><b
+ r>\n｜ 　［バス］[宇部市営バス]めぐりーな<br>\n｜ 　09:
+ 52-10:08［16分］<br>\n｜ 　280円<br>\n■工学部前（山口大）
+ </p>\n<h5>SFJ11 / MH(ANA)3811</h5>\n<p>■<a href="https://www.jorudan.co.
+ jp/norikae/cgi/nori.cgi?eki1=%E7%BE%BD%E7%94%B0%E7%A9%BA%E6%B8%AF%E7%AC%AC
+ %EF%BC%91%E3%83%BB%E7%AC%AC%EF%BC%92%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E
+ 3%83%AB&amp\;eki2=%E5%B1%B1%E5%8F%A3%E5%AE%87%E9%83%A8%E7%A9%BA%E6%B8%AF&a
+ mp\;via_on=1&amp\;eki3=&amp\;eki4=&amp\;eki5=&amp\;eki6=&amp\;Dyy=2026&amp
+ \;Dmm=11&amp\;Ddd=22&amp\;Dhh=5&amp\;Dmn1=5&amp\;Dmn2=0&amp\;Cway=0&amp\;C
+ fp=1&amp\;Czu=2&amp\;C7=1&amp\;C2=0&amp\;C3=0&amp\;C1=0&amp\;cartaxy=1&amp
+ \;bikeshare=1&amp\;sort=rec&amp\;C4=5&amp\;C5=0&amp\;C6=2&amp\;S=%E6%A4%9C
+ %E7%B4%A2&amp\;Cmap1=&amp\;rf=nr&amp\;pg=0&amp\;eok1=R-&amp\;eok2=R-&amp\;
+ eok3=&amp\;eok4=&amp\;eok5=&amp\;eok6=&amp\;Csg=1" rel="nofollow">羽田
+ 空港</a><br>\n｜ 　［飛行機］SFJ11便   821.0km<br>\n｜ 　7:25-
+ 9:10[105分］ ※通常 85 分程度、羽田の状況による<br>\n｜ 
+ 　64\,380円（ 片道（最高） ）<br>\n■山口宇部空港<br></p>
+ \n<p>■<a href="https://www.jorudan.co.jp/norikae/cgi/nori.cgi?eki1=%E5%B
+ 1%B1%E5%8F%A3%E5%AE%87%E9%83%A8%E7%A9%BA%E6%B8%AF%E3%80%94%E5%AE%87%E9%83%
+ A8%E5%B8%82%E5%96%B6%E3%83%90%E3%82%B9%E3%80%95&amp\;eki2=%E5%B7%A5%E5%AD%
+ A6%E9%83%A8%E5%89%8D%EF%BC%88%E5%B1%B1%E5%8F%A3%E5%A4%A7%EF%BC%89%E3%80%94
+ %E5%AE%87%E9%83%A8%E5%B8%82%E5%96%B6%E3%83%90%E3%82%B9%E3%80%95&amp\;via_o
+ n=-1&amp\;eki3=&amp\;eki4=&amp\;eki5=&amp\;eki6=&amp\;Dyy=2026&amp\;Dmm=11
+ &amp\;Ddd=22&amp\;Dhh=9&amp\;Dmn1=5&amp\;Dmn2=1&amp\;Cway=0&amp\;Cfp=1&amp
+ \;Czu=2&amp\;C7=1&amp\;C2=0&amp\;C3=0&amp\;C1=0&amp\;cartaxy=1&amp\;bikesh
+ are=1&amp\;sort=rec&amp\;C4=5&amp\;C5=0&amp\;C6=2&amp\;S=%E6%A4%9C%E7%B4%A
+ 2&amp\;Cmap1=&amp\;rf=nr&amp\;pg=0&amp\;eok1=B-&amp\;eok2=B-&amp\;eok3=&am
+ p\;eok4=&amp\;eok5=&amp\;eok6=&amp\;Csg=1" rel="nofollow">山口宇部空
+ 港 2番のりば発 77 番</a><br>\n｜ 　［バス］[宇部市営バ
+ ス]めぐりーな<br>\n｜ 　09:52-10:08［16分］<br>\n｜ 　280円<
+ br>\n■工学部前（山口大）</p>\n<h3>めし</h3>\n<ul>\n<li><del><
+ a href="https://tabelog.com/yamaguchi/A3504/A350401/35010078/dtlmap/" rel=
+ "nofollow">山口大学 生活協同組合 工学部食堂</a></del>  ※
+ 日曜なのでしまってます</li>\n<li><a href="https://www.tripadvis
+ or.jp/ShowUserReviews-g298141-d7414787-r323577105-Sankyu_Ramentokiwa-Ube_Y
+ amaguchi_Prefecture_Chugoku.html" rel="nofollow">三久ラーメン 常盤
+ 店</a> 期待通りのものが期待通りにでてきます、昼時は
+  1 時間待ち、常盤工業会館から 10 分程度歩く</li>\n<li><a
+  href="https://tabelog.com/yamaguchi/A3504/A350401/35013699/dtlmap/" rel="
+ nofollow">ラーメン腹ペコ 山大工学部前店</a> 店名と経営
+ 者が代わりまたまた二郎インスパイア系で復活、常盤
+ 工業会館から 5 分程度歩く</li>\n<li><a href="https://www.areama
+ rker.com/lawson/info/289242" rel="nofollow">ローソン山口大学工学
+ 部前</a> 正門前、常盤工業会館横</li>\n<li><a href="https://ww
+ w.areamarker.com/lawson/info/378023" rel="nofollow">ローソン山大工
+ 学部東門</a> 東門前、山口大学工学部構内、常盤工業会
+ 館から 5 分程度歩く（工学部がここまで踏み切るとは..
+ .）</li>\n</ul>\n<h2>オンライン（Zoom）</h2>\n<ul>\n<li>Zoomミー
+ ティングを利用して参加していただきます。</li>\n<li>当
+ ページ（connpass）にて、下記締め切りまでにお申し込み
+ いただいた方に、connpass のシステムを通じたメッセー
+ ジ送信にて、参加用のURLをお送りします。<ul>\n<li>それ
+ 以降にお申し込みの方は「参加者への情報」からご確
+ 認いただけます。</li>\n</ul>\n</li>\n<li>Zoom参加にはZoomア
+ カウントが必要<ul>\n<li>荒らし防止のため、Zoomでご参加
+ の場合、Zoomアカウントでログインした上でミーティン
+ グに参加する必要があります。</li>\n</ul>\n</li>\n<li>Zoomア
+ カウントをお持ちでない方は、YouTube Live配信でのご参
+ 加をお願いします。それかZoomアカウントの作成してく
+ ださい（無料）。</li>\n<li>視聴 URL は開催まぢかになり
+ ましたら connpass 中の「参加者への情報」に掲載します
+ 。</li>\n</ul>\n<p>※同日の他のイベントとの重複で登録が
+ できない場合は、個別にご案内しますのでお問い合わ
+ せにてご連絡ください。<br>\n※YouTube Liveでのライブ配
+ 信もあります!\n配信チャンネル→ <a href="https://www.youtube
+ .com/c/OSPNjp" rel="nofollow">OSPN.jp</a> </p>\n<h2>オンライン（YouT
+ ube）</h2>\n<ul>\n<li>YouTube Liveの<a href="https://www.youtube.com/c/O
+ SPNjp" rel="nofollow">チャンネル登録</a>をお願いします！</l
+ i>\n<li>Zoomを使用できない方は、YouTube Liveでの同時配信
+ からご覧いただけます。</li>\n<li>当日、 <a href="https://www
+ .youtube.com/c/OSPNjp" rel="nofollow">OSPN.jp</a> チャンネルにアク
+ セスしていただければ、ライブ中継がご覧になれます
+ 。</li>\n</ul>\n<p>あらかじめチャンネル登録しておいてい
+ ただくよう、お願いします。\n過去のOSCオンラインセミ
+ ナー動画を配信中です！</p>\n\nhttps://ospn.connpass.com/event/3
+ 98565/?utm_campaign=series_events&utm_source=feed&utm_medium=atom
 URL:https://ospn.connpass.com/event/398565/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
 END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/403624/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261011T052954Z
+DTSTAMP:20261012T054016Z
 DTSTART;TZID=Asia/Tokyo:20261017T173000
 DTEND;TZID=Asia/Tokyo:20261017T193000
 SUMMARY:10/17 OSC東京Fall（浅草） 懇親会
@@ -626,7 +753,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/398562/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261011T052954Z
+DTSTAMP:20261012T054016Z
 DTSTART;TZID=Asia/Tokyo:20261121T103000
 DTEND;TZID=Asia/Tokyo:20261121T170000
 SUMMARY:11/21 Open Source Conference 2026 Nagaoka
@@ -685,7 +812,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/403736/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261011T052954Z
+DTSTAMP:20261012T054016Z
 DTSTART;TZID=Asia/Tokyo:20261120T180000
 DTEND;TZID=Asia/Tokyo:20261120T200000
 SUMMARY:11/20 オープンソースカンファレンス2026 Nagaoka　前
@@ -705,7 +832,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/399105/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261011T052954Z
+DTSTAMP:20261012T054016Z
 DTSTART;TZID=Asia/Tokyo:20261017T100000
 DTEND;TZID=Asia/Tokyo:20261017T160000
 SUMMARY:10/17 【展示/ステージ】オープンソースカンファレ
@@ -794,7 +921,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/399103/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261011T052954Z
+DTSTAMP:20261012T054016Z
 DTSTART;TZID=Asia/Tokyo:20260723T170454
 DTEND;TZID=Asia/Tokyo:20260723T180454
 SUMMARY:10/2-3 Open Source Conference 2026 Online/Fall
@@ -926,7 +1053,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/400939/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261011T052954Z
+DTSTAMP:20261012T054016Z
 DTSTART;TZID=Asia/Tokyo:20260912T181500
 DTEND;TZID=Asia/Tokyo:20260912T201500
 SUMMARY:9/12 OSC広島 懇親会
