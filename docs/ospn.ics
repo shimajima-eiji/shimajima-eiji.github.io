@@ -17,7 +17,7 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/412239/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261112T065608Z
+DTSTAMP:20261113T061916Z
 DTSTART;TZID=Asia/Tokyo:20270130T100000
 DTEND;TZID=Asia/Tokyo:20270130T180000
 SUMMARY:1/30 オープンソースカンファレンス2027 Osaka
@@ -78,7 +78,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/412354/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261112T065608Z
+DTSTAMP:20261113T061916Z
 DTSTART;TZID=Asia/Tokyo:20270130T183000
 DTEND;TZID=Asia/Tokyo:20270130T203000
 SUMMARY:1/30 OSC大阪 懇親会
@@ -116,7 +116,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/407899/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261112T065608Z
+DTSTAMP:20261113T061916Z
 DTSTART;TZID=Asia/Tokyo:20261212T180000
 DTEND;TZID=Asia/Tokyo:20261212T200000
 SUMMARY:12/12 OSC福岡 懇親会
@@ -164,7 +164,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/407897/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261112T065608Z
+DTSTAMP:20261113T061916Z
 DTSTART;TZID=Asia/Tokyo:20261212T100000
 DTEND;TZID=Asia/Tokyo:20261212T180000
 SUMMARY:12/12 オープンソースカンファレンス2026 Fukuoka
@@ -224,7 +224,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/406506/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261112T065608Z
+DTSTAMP:20261113T061916Z
 DTSTART;TZID=Asia/Tokyo:20261205T100000
 DTEND;TZID=Asia/Tokyo:20261205T170000
 SUMMARY:12/5 Open Source Conference 2026 Okinawa
@@ -309,7 +309,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/405290/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261112T065608Z
+DTSTAMP:20261113T061916Z
 DTSTART;TZID=Asia/Tokyo:20261122T190000
 DTEND;TZID=Asia/Tokyo:20261122T220000
 SUMMARY:2026/11/22 OSC2026 Yamaguchi 懇親会
@@ -356,7 +356,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/398565/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261112T065608Z
+DTSTAMP:20261113T061916Z
 DTSTART;TZID=Asia/Tokyo:20261122T104500
 DTEND;TZID=Asia/Tokyo:20261122T170000
 SUMMARY:2026/11/22 Open Source Conference 2026 Yamaguchi
@@ -928,7 +928,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/403624/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261112T065608Z
+DTSTAMP:20261113T061916Z
 DTSTART;TZID=Asia/Tokyo:20261017T173000
 DTEND;TZID=Asia/Tokyo:20261017T193000
 SUMMARY:10/17 OSC東京Fall（浅草） 懇親会
@@ -978,7 +978,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/398562/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261112T065608Z
+DTSTAMP:20261113T061916Z
 DTSTART;TZID=Asia/Tokyo:20261121T103000
 DTEND;TZID=Asia/Tokyo:20261121T170000
 SUMMARY:11/21 Open Source Conference 2026 Nagaoka
@@ -1000,7 +1000,7 @@ DESCRIPTION:開催日時: 2026/11/21 10:30 ～ 17:00<br />開催場所: 新
  ください。<br>\n・マスク着用は個人の判断にお任せし
  ます<br></p>\n<h1>開催概要</h1>\n<p>日程：2026年11月21日(土) 
  <br>\n　　　・展示：10:30-17:00<br>\n　　　・セミナー　13:
- 30-17:00<br>\n※プログラムによって開催時間が変更になる
+ 00-17:00<br>\n※プログラムによって開催時間が変更になる
  場合があります。<br>\n<br>\n会場：米百俵プレイス ミラ
  イエ長岡　4F\,5F　ミライエステップ及びスタジオAB<br>\n
  〒940-0062 新潟県長岡市大手通2丁目3番地10<br>\n会場への
@@ -1048,7 +1048,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/403736/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261112T065608Z
+DTSTAMP:20261113T061916Z
 DTSTART;TZID=Asia/Tokyo:20261120T180000
 DTEND;TZID=Asia/Tokyo:20261120T200000
 SUMMARY:11/20 オープンソースカンファレンス2026 Nagaoka　前
