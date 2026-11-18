@@ -17,7 +17,7 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/412239/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261117T074028Z
+DTSTAMP:20261118T070306Z
 DTSTART;TZID=Asia/Tokyo:20270130T100000
 DTEND;TZID=Asia/Tokyo:20270130T180000
 SUMMARY:1/30 オープンソースカンファレンス2027 Osaka
@@ -78,7 +78,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/412354/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261117T074028Z
+DTSTAMP:20261118T070306Z
 DTSTART;TZID=Asia/Tokyo:20270130T183000
 DTEND;TZID=Asia/Tokyo:20270130T203000
 SUMMARY:1/30 OSC大阪 懇親会
@@ -116,7 +116,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/407899/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261117T074028Z
+DTSTAMP:20261118T070306Z
 DTSTART;TZID=Asia/Tokyo:20261212T180000
 DTEND;TZID=Asia/Tokyo:20261212T200000
 SUMMARY:12/12 OSC福岡 懇親会
@@ -166,7 +166,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/407897/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261117T074028Z
+DTSTAMP:20261118T070306Z
 DTSTART;TZID=Asia/Tokyo:20261212T100000
 DTEND;TZID=Asia/Tokyo:20261212T180000
 SUMMARY:12/12 オープンソースカンファレンス2026 Fukuoka
@@ -226,7 +226,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/406506/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261117T074028Z
+DTSTAMP:20261118T070306Z
 DTSTART;TZID=Asia/Tokyo:20261205T100000
 DTEND;TZID=Asia/Tokyo:20261205T170000
 SUMMARY:12/5 Open Source Conference 2026 Okinawa
@@ -313,7 +313,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/405290/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261117T074028Z
+DTSTAMP:20261118T070306Z
 DTSTART;TZID=Asia/Tokyo:20261122T190000
 DTEND;TZID=Asia/Tokyo:20261122T220000
 SUMMARY:2026/11/22 OSC2026 Yamaguchi 懇親会
@@ -362,7 +362,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/398565/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261117T074028Z
+DTSTAMP:20261118T070306Z
 DTSTART;TZID=Asia/Tokyo:20261122T104500
 DTEND;TZID=Asia/Tokyo:20261122T170000
 SUMMARY:2026/11/22 Open Source Conference 2026 Yamaguchi
@@ -934,7 +934,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/403624/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261117T074028Z
+DTSTAMP:20261118T070306Z
 DTSTART;TZID=Asia/Tokyo:20261017T173000
 DTEND;TZID=Asia/Tokyo:20261017T193000
 SUMMARY:10/17 OSC東京Fall（浅草） 懇親会
@@ -984,7 +984,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/398562/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261117T074028Z
+DTSTAMP:20261118T070306Z
 DTSTART;TZID=Asia/Tokyo:20261121T103000
 DTEND;TZID=Asia/Tokyo:20261121T170000
 SUMMARY:11/21 Open Source Conference 2026 Nagaoka
@@ -1017,25 +1017,25 @@ DESCRIPTION:開催日時: 2026/11/21 10:30 ～ 17:00<br />開催場所: 新
  による展示<br>\n・セミナー - オープンソースの最新情
  報を提供<br>\n<br>\n主催：オープンソースカンファレン
  ス実行委員会<br>\n<br>\n企画運営：株式会社びぎねっと<b
- r>\n<br></p>\n<h1>セミナー発表者、ブース出展申し込み【
- 募集終了】</h1>\n<p>セミナーの発表およびブース出展の
- 申込は<a href="https://forms.gle/tGCWB5mMed5fWVjQ8" rel="nofollow">申
- し込みフォーム</a>からお願いします。<br>\nセミナー（1
- 5分）およびライトニングトーク（5分）での発表希望の
- 方は、それぞれの枠で参加お申し込みください。<br>\n
- 別途、OSC Nagaoka 事務局より詳細をご案内いたします。<b
- r>\n締切は 10/31(土)です<br></p>\n<p><br>\n発表希望の方はあ
- わせてSlackの方にもご参加ください。当日に関する連絡
- 事項等はSlackにて行います。</p>\n<p>OSPN Slack<br>\n<a href="ht
- tps://bit.ly/ospn_slack" rel="nofollow">https://bit.ly/ospn_slack</a>　
- （チャンネル→ #niigata）</p>\n<h1>タイムテーブル</h1>\n<h2
- >13:05～13:10</h2>\n<h4>開会挨拶</h4>\n<h2>13:10～13:25</h2>\n<h4>
- 雪国長岡の道路と消雪パイプを支えるIoT監視</h4>\n<p>新
- 潟オープンソース協会 / 神田　英一朗</p>\n<h2>13:25～13:40
- </h2>\n<h4>ソフトウェアとハードウェアを組み合わせて安
- 全に"鍵"を管理をしよう！</h4>\n<p>NTT オープンソースソ
- フトウェアセンタ / 中山 翔太</p>\n<h2>13:40～13:55</h2>\n<h4>
- (最近)変わってるMySQL</h4>\n<p>日本MySQLユーザ会(MyNA) / 坂
+ r></p>\n<h1>セミナー発表者、ブース出展申し込み【募集
+ 終了】</h1>\n<p>セミナーの発表およびブース出展の申込
+ は<a href="https://forms.gle/tGCWB5mMed5fWVjQ8" rel="nofollow">申し込
+ みフォーム</a>からお願いします。<br>\nセミナー（15分
+ ）およびライトニングトーク（5分）での発表希望の方
+ は、それぞれの枠で参加お申し込みください。<br>\n別
+ 途、OSC Nagaoka 事務局より詳細をご案内いたします。<br>\
+ n締切は 10/31(土)です<br></p>\n<p><br>\n発表希望の方はあわ
+ せてSlackの方にもご参加ください。当日に関する連絡事
+ 項等はSlackにて行います。</p>\n<p>OSPN Slack<br>\n<a href="https
+ ://bit.ly/ospn_slack" rel="nofollow">https://bit.ly/ospn_slack</a>　（
+ チャンネル→ #niigata）</p>\n<h1>タイムテーブル</h1>\n<h2>13
+ :05～13:10</h2>\n<h4>開会挨拶</h4>\n<h2>13:10～13:25</h2>\n<h4>雪
+ 国長岡の道路と消雪パイプを支えるIoT監視</h4>\n<p>新潟
+ オープンソース協会 / 神田　英一朗</p>\n<h2>13:25～13:40</h
+ 2>\n<h4>ソフトウェアとハードウェアを組み合わせて安全
+ に"鍵"を管理をしよう！</h4>\n<p>NTT オープンソースソフ
+ トウェアセンタ / 中山 翔太</p>\n<h2>13:40～13:55</h2>\n<h4>(
+ 最近)変わってるMySQL</h4>\n<p>日本MySQLユーザ会(MyNA) / 坂
  井 恵</p>\n<h2>13:55～14:10</h2>\n<h4>空間を「撮る」時代へ 
  ― 3Dキャプチャと3DGS入門</h4>\n<p>3DGS・デジタルツイン
  研究会（仮称） / 坂井 恵</p>\n<h2>14:10〜14:40</h2>\n<h4>休憩
@@ -1065,21 +1065,22 @@ DESCRIPTION:開催日時: 2026/11/21 10:30 ～ 17:00<br />開催場所: 新
  Group (EBUG)<br></li>\n<li>3DGS・デジタルツイン研究会（仮称
  ）<br></li>\n<li>日本MySQLユーザ会(MyNA)<br></li>\n<li>日本AlmaLi
  nuxユーザー会/サイバートラスト株式会社<br></li>\n<li>TECH
- ☆TECH<br>\n<br></li>\n</ul>\n<h1>懇親会（18:00〜20:30）<br></h1>\n
- <p>ミライエ長岡　5F　スタジオAB<br>\n申込は以下のURLか
- らお願いします。\n<a href="https://connpass.com/event/403738/" rel
- ="nofollow">https://connpass.com/event/403738/</a></p>\n<h1>参加者荷
- 物事前送付先<br></h1>\n<p>株式会社KCS<br>\n940-2145　新潟県
- 長岡市青葉台3-19-2<br>\nTEL:0258-47-4861<br>\n※１１月１９日
- 木曜必着</p>\n\nhttps://ospn.connpass.com/event/398562/?utm_campaign=s
- eries_events&utm_source=feed&utm_medium=atom
+ ☆TECH<br></li>\n<li>OPNsense研究同好会<br>\n<br></li>\n</ul>\n<h1>
+ 懇親会（18:00〜20:30）<br></h1>\n<p>ミライエ長岡　5F　スタ
+ ジオAB<br>\n申込は以下のURLからお願いします。\n<a href="h
+ ttps://connpass.com/event/403738/" rel="nofollow">https://connpass.com/eve
+ nt/403738/</a></p>\n<h1>参加者荷物事前送付先<br></h1>\n<p>株式
+ 会社KCS<br>\n940-2145　新潟県長岡市青葉台3-19-2<br>\nTEL:0258-
+ 47-4861<br>\n※１１月１９日木曜必着</p>\n\nhttps://ospn.connpas
+ s.com/event/398562/?utm_campaign=series_events&utm_source=feed&utm_medium=
+ atom
 URL:https://ospn.connpass.com/event/398562/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
 END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/403736/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261117T074028Z
+DTSTAMP:20261118T070306Z
 DTSTART;TZID=Asia/Tokyo:20261120T180000
 DTEND;TZID=Asia/Tokyo:20261120T200000
 SUMMARY:11/20 オープンソースカンファレンス2026 Nagaoka　前
