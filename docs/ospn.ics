@@ -17,7 +17,7 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/413782/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261120T065541Z
+DTSTAMP:20261121T065054Z
 DTSTART;TZID=Asia/Tokyo:20261204T180000
 DTEND;TZID=Asia/Tokyo:20261204T210000
 SUMMARY:12/4 OSC2026沖縄 前夜祭
@@ -50,7 +50,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/412239/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261120T065541Z
+DTSTAMP:20261121T065054Z
 DTSTART;TZID=Asia/Tokyo:20270130T100000
 DTEND;TZID=Asia/Tokyo:20270130T180000
 SUMMARY:1/30 オープンソースカンファレンス2027 Osaka
@@ -111,7 +111,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/412354/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261120T065541Z
+DTSTAMP:20261121T065054Z
 DTSTART;TZID=Asia/Tokyo:20270130T183000
 DTEND;TZID=Asia/Tokyo:20270130T203000
 SUMMARY:1/30 OSC大阪 懇親会
@@ -149,7 +149,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/407899/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261120T065541Z
+DTSTAMP:20261121T065054Z
 DTSTART;TZID=Asia/Tokyo:20261212T180000
 DTEND;TZID=Asia/Tokyo:20261212T200000
 SUMMARY:12/12 OSC福岡 懇親会
@@ -199,7 +199,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/407897/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261120T065541Z
+DTSTAMP:20261121T065054Z
 DTSTART;TZID=Asia/Tokyo:20261212T100000
 DTEND;TZID=Asia/Tokyo:20261212T180000
 SUMMARY:12/12 オープンソースカンファレンス2026 Fukuoka
@@ -259,7 +259,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/406506/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261120T065541Z
+DTSTAMP:20261121T065054Z
 DTSTART;TZID=Asia/Tokyo:20261205T100000
 DTEND;TZID=Asia/Tokyo:20261205T170000
 SUMMARY:12/5 Open Source Conference 2026 Okinawa
@@ -353,7 +353,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/405290/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261120T065541Z
+DTSTAMP:20261121T065054Z
 DTSTART;TZID=Asia/Tokyo:20261122T190000
 DTEND;TZID=Asia/Tokyo:20261122T220000
 SUMMARY:2026/11/22 OSC2026 Yamaguchi 懇親会
@@ -399,7 +399,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/398565/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261120T065541Z
+DTSTAMP:20261121T065054Z
 DTSTART;TZID=Asia/Tokyo:20261122T104500
 DTEND;TZID=Asia/Tokyo:20261122T170000
 SUMMARY:2026/11/22 Open Source Conference 2026 Yamaguchi
@@ -671,192 +671,194 @@ DESCRIPTION:開催日時: 2026/11/22 10:45 ～ 17:00<br />開催場所: 山
  来場者把握のため、connpass での登録をお願いします。</
  li>\n<li><strong>飲食可能ですが、ゴミはお持ち帰りくださ
  い</strong></li>\n</ul>\n<h3>WiFi</h3>\n<p>SSID: 開設予定 \nPass: 開
- 設予定</p>\n<h3>公共交通機関ご案内</h3>\n<p>なるべく公共
- 交通機関をご利用ください。</p>\n<h4>山口宇部空港</h4>\n
- <ul>\n<li>宇部空港は <strong>運転手不足でタクシーがいな
- いことが多くなりました</strong><ul>\n<li>タクシー乗り場
- に電話番号は書いてあります、 <strong>S.RIDE 等は一切使
- えません</strong><ul>\n<li><strong>待ち時間 10 分といわれて
- も 30 分はみておいてください</strong></li>\n</ul>\n</li>\n</ul
- >\n</li>\n<li>宇部市営バス（宇部新川駅行）が待機してい
- ます<ul>\n<li>延着してもあわせてくれます</li>\n</ul>\n</li>
- \n<li>宇部線草江駅 徒歩 10 分</li>\n</ul>\n<h4>タクシー</h4>\
- n<ul>\n<li>宇部新川駅、山口宇部空港からどちらも 1500 円
- 程度<ul>\n<li>行き先「常盤（ときわ）工業会館」。通じ
- なかったら「工学部正門」で。</li>\n</ul>\n</li>\n<li>宇部
- 空港は <strong>運転手不足でタクシーがいないことが多
- くなりました</strong><ul>\n<li>タクシー乗り場に電話番号
- は書いてあります、 <strong>S.RIDE 等は一切使えません</st
- rong><ul>\n<li><strong>待ち時間 10 分といわれても 30 分はみ
- ておいてください</strong></li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\
- n<h4>宇部線</h4>\n<ul>\n<li>\n<p>パスモ <strong>「使えません
- 」</strong> </p>\n<ul>\n<li>新山口駅もしくは宇部駅で紙の切
- 符に切り替えてください。<ul>\n<li>宇部駅はパスモが使
- えて、紙の切符に切り替える精算機が設置されました
- 。<ul>\n<li>インターフォン越しで遠隔ヘルプ可能なので
- 聞いてみてください。</li>\n</ul>\n</li>\n<li>パスモで突破
- してしまい無人駅でおりようとしても対処のしようが
- ないです。かなり面倒くさいことになります。<ul>\n<li>
- 宇部線に乗っちゃった場合は、有人の宇部新川駅で降
- りていったん現金払いし、手書きの証明をだしてもら
- い、パスモが使える駅で入場記録を取り消します。</li>
- \n</ul>\n</li>\n</ul>\n</li>\n<li>宇部新川でパスモが使えない
- と dis る方がときどきいますがそんなことしても何も解
- 決しません。</li>\n</ul>\n</li>\n<li>\n<p>宇部線各駅から歩
- く場合、上り坂となります</p>\n<ul>\n<li>常盤駅（無人） 
- 徒歩 40 分</li>\n<li>東新川駅（無人） 徒歩 30 分、テニス
- コート側から出ると少し距離が短くなる</li>\n<li>琴芝駅
- （無人） 徒歩 35 分</li>\n<li>宇部新川駅 （有人）徒歩 40
-  分</li>\n</ul>\n</li>\n</ul>\n<h4>宇部市営バス（2026/9 調査）<
- /h4>\n<ul>\n<li>なんとパスモ <strong>「使えます」</strong></li
- >\n<li>\n<p>宇部新川発 33\, 34\, 75「工学部前」、36 は「高
- 専グラウンド前」</p>\n<ul>\n<li>宇部新川はバス停前に宇
- 部市営バス有人営業所があります←わかんなかったら
- ここで聞いてくれ</li>\n</ul>\n</li>\n<li>\n<p>もよりは「工
- 学部前」です。ひとつ前の「工学部通」で降りてしま
- うと登り坂を歩く羽目になります。あわてておりない
- で</p>\n</li>\n</ul>\n<p>来場 <a href="https://ubebus.sakura.ne.jp/shut
- tlebus/timetable/pdf-b1/8.pdf" rel="nofollow">宇部市営バス「めぐ
- りーな」時刻表宇部空港 2 番のりば</a></p>\n<table>\n<thead>
- \n<tr>\n<th style="text-align: center\;">山口宇部空港発</th>\n<th s
- tyle="text-align: center\;">会場最寄りバス停</th>\n<th style="text
- -align: center\;">番号</th>\n<th style="text-align: center\;">行き先<
- /th>\n<th style="text-align: center\;">経由</th>\n</tr>\n</thead>\n<tbod
- y>\n<tr>\n<td style="text-align: center\;">9:52</td>\n<td style="text-alig
- n: center\;">★工学部前</td>\n<td style="text-align: center\;">77 番
- </td>\n<td style="text-align: center\;">めぐりーな</td>\n<td style="t
- ext-align: center\;">ときわ公園・工学部</td>\n</tr>\n</tbody>\n</
- table>\n<p>★ 10:45 開始に間に合います。<br>\nJAL291 HND 07:35 
- - UBJ 09:20<br>\nSFJ11 / MH(ANA)3811 HND 7:25 - UBJ 9:10<br></p>\n<p>来
- 場（土日祝日ダイヤ）<a href="https://ubebus.sakura.ne.jp/shuttle
- bus/timetable/busstop-timetable/pdf-b/2.pdf" rel="nofollow">宇部市営
- バス時刻表宇部新川駅 3 番のりば</a></p>\n<table>\n<thead>\n<
- tr>\n<th style="text-align: center\;">宇部新川駅発</th>\n<th style="
- text-align: center\;">会場最寄りバス停</th>\n<th style="text-align
- : center\;">番号</th>\n<th style="text-align: center\;">行き先</th>\n
- <th style="text-align: center\;">経由</th>\n</tr>\n</thead>\n<tbody>\n<t
- r>\n<td style="text-align: center\;">08:08</td>\n<td style="text-align: ce
- nter\;">工学部前</td>\n<td style="text-align: center\;">75 番</td>\n<
- td style="text-align: center\;">宇部新川</td>\n<td style="text-align: 
- center\;">開・荻原</td>\n</tr>\n<tr>\n<td style="text-align: center\;"
- >08:14</td>\n<td style="text-align: center\;">工学部前</td>\n<td style
- ="text-align: center\;">33 番</td>\n<td style="text-align: center\;">交
- 通局</td>\n<td style="text-align: center\;">開</td>\n</tr>\n<tr>\n<td s
- tyle="text-align: center\;">09:02</td>\n<td style="text-align: center\;">
+ 設予定</p>\n<p>eduroam および cityroamを設置します。事前に
+ 設定するとスムーズにご利用いただけます。</p>\n<h3>公
+ 共交通機関ご案内</h3>\n<p>なるべく公共交通機関をご利
+ 用ください。</p>\n<h4>山口宇部空港</h4>\n<ul>\n<li>宇部空
+ 港は <strong>運転手不足でタクシーがいないことが多く
+ なりました</strong><ul>\n<li>タクシー乗り場に電話番号は
+ 書いてあります、 <strong>S.RIDE 等は一切使えません</stron
+ g><ul>\n<li><strong>待ち時間 10 分といわれても 30 分はみて
+ おいてください</strong></li>\n</ul>\n</li>\n</ul>\n</li>\n<li>宇
+ 部市営バス（宇部新川駅行）が待機しています<ul>\n<li>
+ 延着してもあわせてくれます</li>\n</ul>\n</li>\n<li>宇部線
+ 草江駅 徒歩 10 分</li>\n</ul>\n<h4>タクシー</h4>\n<ul>\n<li>宇
+ 部新川駅、山口宇部空港からどちらも 1500 円程度<ul>\n<l
+ i>行き先「常盤（ときわ）工業会館」。通じなかったら
+ 「工学部正門」で。</li>\n</ul>\n</li>\n<li>宇部空港は <stron
+ g>運転手不足でタクシーがいないことが多くなりました
+ </strong><ul>\n<li>タクシー乗り場に電話番号は書いてあり
+ ます、 <strong>S.RIDE 等は一切使えません</strong><ul>\n<li><st
+ rong>待ち時間 10 分といわれても 30 分はみておいてくだ
+ さい</strong></li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n<h4>宇部線</h4
+ >\n<ul>\n<li>\n<p>パスモ <strong>「使えません」</strong> </p>\n<
+ ul>\n<li>新山口駅もしくは宇部駅で紙の切符に切り替え
+ てください。<ul>\n<li>宇部駅はパスモが使えて、紙の切
+ 符に切り替える精算機が設置されました。<ul>\n<li>イン
+ ターフォン越しで遠隔ヘルプ可能なので聞いてみてく
+ ださい。</li>\n</ul>\n</li>\n<li>パスモで突破してしまい無
+ 人駅でおりようとしても対処のしようがないです。か
+ なり面倒くさいことになります。<ul>\n<li>宇部線に乗っ
+ ちゃった場合は、有人の宇部新川駅で降りていったん
+ 現金払いし、手書きの証明をだしてもらい、パスモが
+ 使える駅で入場記録を取り消します。</li>\n</ul>\n</li>\n</
+ ul>\n</li>\n<li>宇部新川でパスモが使えないと dis る方が
+ ときどきいますがそんなことしても何も解決しません
+ 。</li>\n</ul>\n</li>\n<li>\n<p>宇部線各駅から歩く場合、上
+ り坂となります</p>\n<ul>\n<li>常盤駅（無人） 徒歩 40 分</
+ li>\n<li>東新川駅（無人） 徒歩 30 分、テニスコート側か
+ ら出ると少し距離が短くなる</li>\n<li>琴芝駅（無人） 
+ 徒歩 35 分</li>\n<li>宇部新川駅 （有人）徒歩 40 分</li>\n</
+ ul>\n</li>\n</ul>\n<h4>宇部市営バス（2026/9 調査）</h4>\n<ul>\n<
+ li>なんとパスモ <strong>「使えます」</strong></li>\n<li>\n<p>
+ 宇部新川発 33\, 34\, 75「工学部前」、36 は「高専グラウ
+ ンド前」</p>\n<ul>\n<li>宇部新川はバス停前に宇部市営バ
+ ス有人営業所があります←わかんなかったらここで聞
+ いてくれ</li>\n</ul>\n</li>\n<li>\n<p>もよりは「工学部前」
+ です。ひとつ前の「工学部通」で降りてしまうと登り
+ 坂を歩く羽目になります。あわてておりないで</p>\n</li>
+ \n</ul>\n<p>来場 <a href="https://ubebus.sakura.ne.jp/shuttlebus/timetab
+ le/pdf-b1/8.pdf" rel="nofollow">宇部市営バス「めぐりーな」時
+ 刻表宇部空港 2 番のりば</a></p>\n<table>\n<thead>\n<tr>\n<th sty
+ le="text-align: center\;">山口宇部空港発</th>\n<th style="text-alig
+ n: center\;">会場最寄りバス停</th>\n<th style="text-align: center\
+ ;">番号</th>\n<th style="text-align: center\;">行き先</th>\n<th style
+ ="text-align: center\;">経由</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td s
+ tyle="text-align: center\;">9:52</td>\n<td style="text-align: center\;">
+ ★工学部前</td>\n<td style="text-align: center\;">77 番</td>\n<td st
+ yle="text-align: center\;">めぐりーな</td>\n<td style="text-align: ce
+ nter\;">ときわ公園・工学部</td>\n</tr>\n</tbody>\n</table>\n<p>
+ ★ 10:45 開始に間に合います。<br>\nJAL291 HND 07:35 - UBJ 09:20
+ <br>\nSFJ11 / MH(ANA)3811 HND 7:25 - UBJ 9:10<br></p>\n<p>来場（土日
+ 祝日ダイヤ）<a href="https://ubebus.sakura.ne.jp/shuttlebus/timetabl
+ e/busstop-timetable/pdf-b/2.pdf" rel="nofollow">宇部市営バス時刻
+ 表宇部新川駅 3 番のりば</a></p>\n<table>\n<thead>\n<tr>\n<th sty
+ le="text-align: center\;">宇部新川駅発</th>\n<th style="text-align: 
+ center\;">会場最寄りバス停</th>\n<th style="text-align: center\;">
+ 番号</th>\n<th style="text-align: center\;">行き先</th>\n<th style="t
+ ext-align: center\;">経由</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td styl
+ e="text-align: center\;">08:08</td>\n<td style="text-align: center\;">工
+ 学部前</td>\n<td style="text-align: center\;">75 番</td>\n<td style="t
+ ext-align: center\;">宇部新川</td>\n<td style="text-align: center\;">
+ 開・荻原</td>\n</tr>\n<tr>\n<td style="text-align: center\;">08:14</td
+ >\n<td style="text-align: center\;">工学部前</td>\n<td style="text-ali
+ gn: center\;">33 番</td>\n<td style="text-align: center\;">交通局</td>
+ \n<td style="text-align: center\;">開</td>\n</tr>\n<tr>\n<td style="text-
+ align: center\;">09:02</td>\n<td style="text-align: center\;">工学部前
+ </td>\n<td style="text-align: center\;">75 番</td>\n<td style="text-align
+ : center\;">宇部新川</td>\n<td style="text-align: center\;">開・荻
+ 原</td>\n</tr>\n<tr>\n<td style="text-align: center\;">10:12</td>\n<td st
+ yle="text-align: center\;">★高専グラウンド前</td>\n<td style="te
+ xt-align: center\;">36 番</td>\n<td style="text-align: center\;">交通
+ 局</td>\n<td style="text-align: center\;">東新川駅前</td>\n</tr>\n<t
+ r>\n<td style="text-align: center\;">10:38</td>\n<td style="text-align: ce
+ nter\;">工学部前</td>\n<td style="text-align: center\;">33 番</td>\n<
+ td style="text-align: center\;">交通局</td>\n<td style="text-align: cen
+ ter\;">開</td>\n</tr>\n<tr>\n<td style="text-align: center\;">11:17</td>\
+ n<td style="text-align: center\;">工学部前</td>\n<td style="text-align
+ : center\;">75 番</td>\n<td style="text-align: center\;">宇部新川</td
+ >\n<td style="text-align: center\;">開・荻原</td>\n</tr>\n<tr>\n<td st
+ yle="text-align: center\;">12:17</td>\n<td style="text-align: center\;">
+ 高専グラウンド前</td>\n<td style="text-align: center\;">36 番</td
+ >\n<td style="text-align: center\;">交通局</td>\n<td style="text-align:
+  center\;">東新川駅前</td>\n</tr>\n<tr>\n<td style="text-align: cente
+ r\;">13:12</td>\n<td style="text-align: center\;">工学部前</td>\n<td s
+ tyle="text-align: center\;">33 番</td>\n<td style="text-align: center\;">
+ ひらき台</td>\n<td style="text-align: center\;">開</td>\n</tr>\n<tr>\
+ n<td style="text-align: center\;">13:47</td>\n<td style="text-align: cente
+ r\;">工学部前</td>\n<td style="text-align: center\;">34 番</td>\n<td 
+ style="text-align: center\;">交通局</td>\n<td style="text-align: center
+ \;">開</td>\n</tr>\n<tr>\n<td style="text-align: center\;">14:25</td>\n<t
+ d style="text-align: center\;">工学部前</td>\n<td style="text-align: c
+ enter\;">75 番</td>\n<td style="text-align: center\;">宇部新川</td>\n
+ <td style="text-align: center\;">開・荻原</td>\n</tr>\n<tr>\n<td style
+ ="text-align: center\;">15:07</td>\n<td style="text-align: center\;">工
+ 学部前</td>\n<td style="text-align: center\;">34 番</td>\n<td style="t
+ ext-align: center\;">交通局</td>\n<td style="text-align: center\;">開<
+ /td>\n</tr>\n<tr>\n<td style="text-align: center\;">15:47</td>\n<td style=
+ "text-align: center\;">高専グラウンド前</td>\n<td style="text-alig
+ n: center\;">36 番</td>\n<td style="text-align: center\;">交通局</td>\
+ n<td style="text-align: center\;">東新川駅前</td>\n</tr>\n<tr>\n<td s
+ tyle="text-align: center\;">16:12</td>\n<td style="text-align: center\;">
  工学部前</td>\n<td style="text-align: center\;">75 番</td>\n<td style
  ="text-align: center\;">宇部新川</td>\n<td style="text-align: center\;
- ">開・荻原</td>\n</tr>\n<tr>\n<td style="text-align: center\;">10:12</
- td>\n<td style="text-align: center\;">★高専グラウンド前</td>\n<t
- d style="text-align: center\;">36 番</td>\n<td style="text-align: center\
- ;">交通局</td>\n<td style="text-align: center\;">東新川駅前</td>\n
- </tr>\n<tr>\n<td style="text-align: center\;">10:38</td>\n<td style="text-
- align: center\;">工学部前</td>\n<td style="text-align: center\;">33 
- 番</td>\n<td style="text-align: center\;">交通局</td>\n<td style="text
- -align: center\;">開</td>\n</tr>\n<tr>\n<td style="text-align: center\;">
- 11:17</td>\n<td style="text-align: center\;">工学部前</td>\n<td style=
- "text-align: center\;">75 番</td>\n<td style="text-align: center\;">宇
- 部新川</td>\n<td style="text-align: center\;">開・荻原</td>\n</tr>\
- n<tr>\n<td style="text-align: center\;">12:17</td>\n<td style="text-align:
-  center\;">高専グラウンド前</td>\n<td style="text-align: center\;"
- >36 番</td>\n<td style="text-align: center\;">交通局</td>\n<td style="
- text-align: center\;">東新川駅前</td>\n</tr>\n<tr>\n<td style="text-a
- lign: center\;">13:12</td>\n<td style="text-align: center\;">工学部前<
- /td>\n<td style="text-align: center\;">33 番</td>\n<td style="text-align:
-  center\;">ひらき台</td>\n<td style="text-align: center\;">開</td>\n<
- /tr>\n<tr>\n<td style="text-align: center\;">13:47</td>\n<td style="text-a
- lign: center\;">工学部前</td>\n<td style="text-align: center\;">34 番
- </td>\n<td style="text-align: center\;">交通局</td>\n<td style="text-al
- ign: center\;">開</td>\n</tr>\n<tr>\n<td style="text-align: center\;">14:
- 25</td>\n<td style="text-align: center\;">工学部前</td>\n<td style="te
- xt-align: center\;">75 番</td>\n<td style="text-align: center\;">宇部
- 新川</td>\n<td style="text-align: center\;">開・荻原</td>\n</tr>\n<t
- r>\n<td style="text-align: center\;">15:07</td>\n<td style="text-align: ce
- nter\;">工学部前</td>\n<td style="text-align: center\;">34 番</td>\n<
- td style="text-align: center\;">交通局</td>\n<td style="text-align: cen
- ter\;">開</td>\n</tr>\n<tr>\n<td style="text-align: center\;">15:47</td>\
- n<td style="text-align: center\;">高専グラウンド前</td>\n<td style
- ="text-align: center\;">36 番</td>\n<td style="text-align: center\;">交
- 通局</td>\n<td style="text-align: center\;">東新川駅前</td>\n</tr>\
- n<tr>\n<td style="text-align: center\;">16:12</td>\n<td style="text-align:
-  center\;">工学部前</td>\n<td style="text-align: center\;">75 番</td>
+ ">開・荻原</td>\n</tr>\n<tr>\n<td style="text-align: center\;">16:50</
+ td>\n<td style="text-align: center\;">工学部前</td>\n<td style="text-a
+ lign: center\;">33 番</td>\n<td style="text-align: center\;">ひらき台
+ </td>\n<td style="text-align: center\;">開</td>\n</tr>\n</tbody>\n</table
+ >\n<p>★ 10:45 開始に間に合います。<br></p>\n<p>お帰り（日
+ 祝日ダイヤ） <a href="https://ubebus.sakura.ne.jp/shuttlebus/timetab
+ le/busstop-timetable/pdf-b/92.pdf" rel="nofollow">宇部市営バス時刻
+ 表工学部前 2 番のりば</a></p>\n<table>\n<thead>\n<tr>\n<th style=
+ "text-align: center\;">工学部前発</th>\n<th style="text-align: center
+ \;">番号</th>\n<th style="text-align: center\;">行き先</th>\n<th styl
+ e="text-align: center\;">経由</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td 
+ style="text-align: center\;">14:08</td>\n<td style="text-align: center\;">
+ 73 番</td>\n<td style="text-align: center\;">宇部新川</td>\n<td style
+ ="text-align: center\;">大学病院前</td>\n</tr>\n<tr>\n<td style="text
+ -align: center\;">14:52</td>\n<td style="text-align: center\;">34 番</td>
  \n<td style="text-align: center\;">宇部新川</td>\n<td style="text-alig
- n: center\;">開・荻原</td>\n</tr>\n<tr>\n<td style="text-align: center
- \;">16:50</td>\n<td style="text-align: center\;">工学部前</td>\n<td st
- yle="text-align: center\;">33 番</td>\n<td style="text-align: center\;">
- ひらき台</td>\n<td style="text-align: center\;">開</td>\n</tr>\n</tbo
- dy>\n</table>\n<p>★ 10:45 開始に間に合います。<br></p>\n<p>お
- 帰り（日祝日ダイヤ） <a href="https://ubebus.sakura.ne.jp/shuttl
- ebus/timetable/busstop-timetable/pdf-b/92.pdf" rel="nofollow">宇部市営
- バス時刻表工学部前 2 番のりば</a></p>\n<table>\n<thead>\n<tr>
- \n<th style="text-align: center\;">工学部前発</th>\n<th style="text-a
- lign: center\;">番号</th>\n<th style="text-align: center\;">行き先</t
- h>\n<th style="text-align: center\;">経由</th>\n</tr>\n</thead>\n<tbody>
- \n<tr>\n<td style="text-align: center\;">14:08</td>\n<td style="text-align
- : center\;">73 番</td>\n<td style="text-align: center\;">宇部新川</td
- >\n<td style="text-align: center\;">大学病院前</td>\n</tr>\n<tr>\n<td
-  style="text-align: center\;">14:52</td>\n<td style="text-align: center\;"
- >34 番</td>\n<td style="text-align: center\;">宇部新川</td>\n<td styl
- e="text-align: center\;">参宮通</td>\n</tr>\n<tr>\n<td style="text-alig
- n: center\;">15:01</td>\n<td style="text-align: center\;">76 番</td>\n<td
-  style="text-align: center\;">宇部新川</td>\n<td style="text-align: ce
- nter\;">参宮通</td>\n</tr>\n<tr>\n<td style="text-align: center\;">16:0
- 8</td>\n<td style="text-align: center\;">73 番</td>\n<td style="text-alig
- n: center\;">宇部新川</td>\n<td style="text-align: center\;">大学病
- 院前</td>\n</tr>\n<tr>\n<td style="text-align: center\;">16:41</td>\n<td
-  style="text-align: center\;">76 番</td>\n<td style="text-align: center\;
+ n: center\;">参宮通</td>\n</tr>\n<tr>\n<td style="text-align: center\;"
+ >15:01</td>\n<td style="text-align: center\;">76 番</td>\n<td style="text
+ -align: center\;">宇部新川</td>\n<td style="text-align: center\;">参
+ 宮通</td>\n</tr>\n<tr>\n<td style="text-align: center\;">16:08</td>\n<td
+  style="text-align: center\;">73 番</td>\n<td style="text-align: center\;
  ">宇部新川</td>\n<td style="text-align: center\;">大学病院前</td>
- \n</tr>\n<tr>\n<td style="text-align: center\;">17:21</td>\n<td style="tex
- t-align: center\;">33 番</td>\n<td style="text-align: center\;">宇部新
- 川</td>\n<td style="text-align: center\;">参宮通</td>\n</tr>\n<tr>\n<t
- d style="text-align: center\;">18:17</td>\n<td style="text-align: center\;
- ">76 番</td>\n<td style="text-align: center\;">宇部新川</td>\n<td sty
- le="text-align: center\;">参宮通</td>\n</tr>\n<tr>\n<td style="text-ali
- gn: center\;">18:35</td>\n<td style="text-align: center\;">33 番</td>\n<t
- d style="text-align: center\;">宇部新川</td>\n<td style="text-align: c
- enter\;">参宮通</td>\n</tr>\n</tbody>\n</table>\n<h4>JR　利用例（2
- 026/11/22）</h4>\n<p>来場</p>\n<p>■<a href="https://www.jorudan.co.jp
- /norikae/cgi/nori.cgi?eki1=%E5%B2%A9%E5%9B%BD&amp\;eki2=%E9%AB%98%E5%B0%82
- %E3%82%B0%E3%83%A9%E3%83%B3%E3%83%89%E5%89%8D%E3%80%94%E5%AE%87%E9%83%A8%E
- 5%B8%82%E5%96%B6%E3%83%90%E3%82%B9%E3%80%95&amp\;via_on=-1&amp\;eki3=&amp\
- ;eki4=&amp\;eki5=&amp\;eki6=&amp\;Dyy=2026&amp\;Dmm=11&amp\;Ddd=22&amp\;Dh
- h=10&amp\;Dmn1=5&amp\;Dmn2=0&amp\;Cway=1&amp\;Cfp=1&amp\;Czu=2&amp\;C7=1&a
- mp\;C2=0&amp\;C3=0&amp\;C1=0&amp\;cartaxy=1&amp\;bikeshare=1&amp\;sort=rec
- &amp\;C4=5&amp\;C5=0&amp\;C6=2&amp\;S=%E6%A4%9C%E7%B4%A2&amp\;Cmap1=&amp\;
- rf=nr&amp\;pg=0&amp\;eok1=R-&amp\;eok2=B-&amp\;eok3=&amp\;eok4=&amp\;eok5=
- &amp\;eok6=&amp\;Csg=1" rel="nofollow">岩国</a><br>\n｜ 　［ＪＲ］
- 山陽本線(下関行)   116.7km<br>\n｜ 　06:42-09:22［160分］<br>\
- n｜ 　2\,310円<br>\n◇宇部     ［乗換3分+待ち19分］<br>\n｜
-  　［ＪＲ］宇部線(新山口行)   6.1km<br>\n｜ 　09:44-09:55［
- 11分］<br>\n｜ 　 ↓ <br>\n◇宇部新川/宇部新川駅    3番の
- りば発 ［乗換4分+待ち13分］<br>\n｜ 　［バス］[宇部市
- 営バス]東新川線(36 交通局行)<br>\n｜ 　10:12-10:27［15分］
- <br>\n｜ 　260円<br>\n■高専グランド前  </p>\n<p>■<a href="ht
- tps://www.jorudan.co.jp/norikae/cgi/nori.cgi?eki1=%E4%B8%8B%E9%96%A2&amp\;
- eki2=%E9%AB%98%E5%B0%82%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%89%E5%89%8D%E3%80
- %94%E5%AE%87%E9%83%A8%E5%B8%82%E5%96%B6%E3%83%90%E3%82%B9%E3%80%95&amp\;vi
- a_on=-1&amp\;eki3=&amp\;eki4=&amp\;eki5=&amp\;eki6=&amp\;Dyy=2026&amp\;Dmm
- =11&amp\;Ddd=22&amp\;Dhh=10&amp\;Dmn1=5&amp\;Dmn2=0&amp\;Cway=1&amp\;Cfp=1
- &amp\;Czu=2&amp\;C7=1&amp\;C2=0&amp\;C3=0&amp\;C1=0&amp\;cartaxy=1&amp\;bi
- keshare=1&amp\;sort=rec&amp\;C4=5&amp\;C5=0&amp\;C6=2&amp\;S=%E6%A4%9C%E7%
- B4%A2&amp\;Cmap1=&amp\;rf=nr&amp\;pg=0&amp\;eok1=R-&amp\;eok2=B-&amp\;eok3
- =&amp\;eok4=&amp\;eok5=&amp\;eok6=&amp\;Csg=1" rel="nofollow">下関</a><b
- r>\n｜ 　［ＪＲ］山陽本線(岩国行)   43.6km<br>\n｜ 　08:51-
- 09:35［44分]<br>\n｜ 　860円<br>\n◇宇部     ［乗換3分+待ち6
- 分］<br>\n｜ 　［ＪＲ］宇部線(新山口行)   6.1km<br>\n｜ 
- 　09:44-09:55［11分］<br>\n｜ 　 ↓<br>\n◇宇部新川/宇部新
- 川駅    3番のりば発 ［乗換4分+待ち13分］<br>\n｜ 　［バ
- ス］[宇部市営バス]東新川線(36 交通局行) <br>\n｜ 　10:12
- -10:27［15分］<br>\n｜ 　260円<br>\n■高専グランド前</p>\n<p
- >最終お帰り（新山口、防府、徳山、下松止まり）</p>\n<
- p>■<a href="https://www.jorudan.co.jp/norikae/cgi/nori.cgi?eki1=%E5%AE%8
- 7%E9%83%A8%E6%96%B0%E5%B7%9D&amp\;eki2=%E4%B8%8B%E6%9D%BE%EF%BC%88%E5%B1%B
- 1%E5%8F%A3%EF%BC%89&amp\;via_on=1&amp\;vstp=1&amp\;eki3=%E9%98%B2%E5%BA%9C
- &amp\;eki4=&amp\;eki5=&amp\;eki6=&amp\;Dyy=2026&amp\;Dmm=11&amp\;Ddd=4&amp
- \;Dhh=17&amp\;Dmn=39&amp\;Cway=3&amp\;Cfp=1&amp\;Czu=2&amp\;C7=1&amp\;C2=0
- &amp\;C3=0&amp\;C1=0&amp\;cartaxy=1&amp\;bikeshare=1&amp\;sort=rec&amp\;C4
- =5&amp\;C5=0&amp\;C6=2&amp\;S=%E6%A4%9C%E7%B4%A2&amp\;Cmap1=&amp\;rf=nr&am
- p\;pg=0&amp\;eok1=R-&amp\;eok2=R-&amp\;eok3=R-&amp\;eok4=&amp\;eok5=&amp\;
- eok6=&amp\;Csg=1" rel="nofollow">宇部新川</a><br>\n｜ 　［ＪＲ］
+ \n</tr>\n<tr>\n<td style="text-align: center\;">16:41</td>\n<td style="tex
+ t-align: center\;">76 番</td>\n<td style="text-align: center\;">宇部新
+ 川</td>\n<td style="text-align: center\;">大学病院前</td>\n</tr>\n<t
+ r>\n<td style="text-align: center\;">17:21</td>\n<td style="text-align: ce
+ nter\;">33 番</td>\n<td style="text-align: center\;">宇部新川</td>\n<
+ td style="text-align: center\;">参宮通</td>\n</tr>\n<tr>\n<td style="te
+ xt-align: center\;">18:17</td>\n<td style="text-align: center\;">76 番</t
+ d>\n<td style="text-align: center\;">宇部新川</td>\n<td style="text-al
+ ign: center\;">参宮通</td>\n</tr>\n<tr>\n<td style="text-align: center\
+ ;">18:35</td>\n<td style="text-align: center\;">33 番</td>\n<td style="te
+ xt-align: center\;">宇部新川</td>\n<td style="text-align: center\;">
+ 参宮通</td>\n</tr>\n</tbody>\n</table>\n<h4>JR　利用例（2026/11/22
+ ）</h4>\n<p>来場</p>\n<p>■<a href="https://www.jorudan.co.jp/norikae/
+ cgi/nori.cgi?eki1=%E5%B2%A9%E5%9B%BD&amp\;eki2=%E9%AB%98%E5%B0%82%E3%82%B0
+ %E3%83%A9%E3%83%B3%E3%83%89%E5%89%8D%E3%80%94%E5%AE%87%E9%83%A8%E5%B8%82%E
+ 5%96%B6%E3%83%90%E3%82%B9%E3%80%95&amp\;via_on=-1&amp\;eki3=&amp\;eki4=&am
+ p\;eki5=&amp\;eki6=&amp\;Dyy=2026&amp\;Dmm=11&amp\;Ddd=22&amp\;Dhh=10&amp\
+ ;Dmn1=5&amp\;Dmn2=0&amp\;Cway=1&amp\;Cfp=1&amp\;Czu=2&amp\;C7=1&amp\;C2=0&
+ amp\;C3=0&amp\;C1=0&amp\;cartaxy=1&amp\;bikeshare=1&amp\;sort=rec&amp\;C4=
+ 5&amp\;C5=0&amp\;C6=2&amp\;S=%E6%A4%9C%E7%B4%A2&amp\;Cmap1=&amp\;rf=nr&amp
+ \;pg=0&amp\;eok1=R-&amp\;eok2=B-&amp\;eok3=&amp\;eok4=&amp\;eok5=&amp\;eok
+ 6=&amp\;Csg=1" rel="nofollow">岩国</a><br>\n｜ 　［ＪＲ］山陽本
+ 線(下関行)   116.7km<br>\n｜ 　06:42-09:22［160分］<br>\n｜ 　2
+ \,310円<br>\n◇宇部     ［乗換3分+待ち19分］<br>\n｜ 　［
+ ＪＲ］宇部線(新山口行)   6.1km<br>\n｜ 　09:44-09:55［11分
+ ］<br>\n｜ 　 ↓ <br>\n◇宇部新川/宇部新川駅    3番のり
+ ば発 ［乗換4分+待ち13分］<br>\n｜ 　［バス］[宇部市営
+ バス]東新川線(36 交通局行)<br>\n｜ 　10:12-10:27［15分］<br
+ >\n｜ 　260円<br>\n■高専グランド前  </p>\n<p>■<a href="https
+ ://www.jorudan.co.jp/norikae/cgi/nori.cgi?eki1=%E4%B8%8B%E9%96%A2&amp\;eki
+ 2=%E9%AB%98%E5%B0%82%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%89%E5%89%8D%E3%80%94
+ %E5%AE%87%E9%83%A8%E5%B8%82%E5%96%B6%E3%83%90%E3%82%B9%E3%80%95&amp\;via_o
+ n=-1&amp\;eki3=&amp\;eki4=&amp\;eki5=&amp\;eki6=&amp\;Dyy=2026&amp\;Dmm=11
+ &amp\;Ddd=22&amp\;Dhh=10&amp\;Dmn1=5&amp\;Dmn2=0&amp\;Cway=1&amp\;Cfp=1&am
+ p\;Czu=2&amp\;C7=1&amp\;C2=0&amp\;C3=0&amp\;C1=0&amp\;cartaxy=1&amp\;bikes
+ hare=1&amp\;sort=rec&amp\;C4=5&amp\;C5=0&amp\;C6=2&amp\;S=%E6%A4%9C%E7%B4%
+ A2&amp\;Cmap1=&amp\;rf=nr&amp\;pg=0&amp\;eok1=R-&amp\;eok2=B-&amp\;eok3=&a
+ mp\;eok4=&amp\;eok5=&amp\;eok6=&amp\;Csg=1" rel="nofollow">下関</a><br>\
+ n｜ 　［ＪＲ］山陽本線(岩国行)   43.6km<br>\n｜ 　08:51-09:
+ 35［44分]<br>\n｜ 　860円<br>\n◇宇部     ［乗換3分+待ち6分
+ ］<br>\n｜ 　［ＪＲ］宇部線(新山口行)   6.1km<br>\n｜ 　09
+ :44-09:55［11分］<br>\n｜ 　 ↓<br>\n◇宇部新川/宇部新川駅
+     3番のりば発 ［乗換4分+待ち13分］<br>\n｜ 　［バス］
+ [宇部市営バス]東新川線(36 交通局行) <br>\n｜ 　10:12-10:27
+ ［15分］<br>\n｜ 　260円<br>\n■高専グランド前</p>\n<p>最
+ 終お帰り（新山口、防府、徳山、下松止まり）</p>\n<p>
+ ■<a href="https://www.jorudan.co.jp/norikae/cgi/nori.cgi?eki1=%E5%AE%87%
+ E9%83%A8%E6%96%B0%E5%B7%9D&amp\;eki2=%E4%B8%8B%E6%9D%BE%EF%BC%88%E5%B1%B1%
+ E5%8F%A3%EF%BC%89&amp\;via_on=1&amp\;vstp=1&amp\;eki3=%E9%98%B2%E5%BA%9C&a
+ mp\;eki4=&amp\;eki5=&amp\;eki6=&amp\;Dyy=2026&amp\;Dmm=11&amp\;Ddd=4&amp\;
+ Dhh=17&amp\;Dmn=39&amp\;Cway=3&amp\;Cfp=1&amp\;Czu=2&amp\;C7=1&amp\;C2=0&a
+ mp\;C3=0&amp\;C1=0&amp\;cartaxy=1&amp\;bikeshare=1&amp\;sort=rec&amp\;C4=5
+ &amp\;C5=0&amp\;C6=2&amp\;S=%E6%A4%9C%E7%B4%A2&amp\;Cmap1=&amp\;rf=nr&amp\
+ ;pg=0&amp\;eok1=R-&amp\;eok2=R-&amp\;eok3=R-&amp\;eok4=&amp\;eok5=&amp\;eo
+ k6=&amp\;Csg=1" rel="nofollow">宇部新川</a><br>\n｜ 　［ＪＲ］
  宇部線(宇部行)   6.1km<br>\n｜ 　21:50-22:01［11分］<br>\n｜ 
  　1\,520円<br>\n◇宇部     ［乗換3分+待ち14分］<br>\n｜ 　
  ［ＪＲ］山陽本線(下松行)   43.1km<br>\n｜ 　22:18-23:02［44
@@ -978,7 +980,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/403624/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261120T065541Z
+DTSTAMP:20261121T065054Z
 DTSTART;TZID=Asia/Tokyo:20261017T173000
 DTEND;TZID=Asia/Tokyo:20261017T193000
 SUMMARY:10/17 OSC東京Fall（浅草） 懇親会
@@ -1028,12 +1030,17 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/398562/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261120T065541Z
+DTSTAMP:20261121T065054Z
 DTSTART;TZID=Asia/Tokyo:20261121T103000
 DTEND;TZID=Asia/Tokyo:20261121T170000
 SUMMARY:11/21 Open Source Conference 2026 Nagaoka
 DESCRIPTION:開催日時: 2026/11/21 10:30 ～ 17:00<br />開催場所: 新
- 潟県長岡市大手通2丁目3番地10<br /><br /><h1>OSC2026 Nagaokaを
+ 潟県長岡市大手通2丁目3番地10<br /><br /><h1>会場のご案内
+ </h1>\n<p>展示会場は5Fの奥になります。エレベーター、
+ エスカレーターで5Fに来た後、奥の方にスタジオABがあ
+ ります。</p>\n<p>午後からはセミナーが開始になります
+ 。4Fに受付を設置しますので、エレベーター、エスカレ
+ ーターで4Fまでお越しください。</p>\n<h1>OSC2026 Nagaokaを
  開催します！</h1>\n<p>オープンソースカンファレンスは
  全国各地で開催されている、オープンソースおよび地
  域コミュニティの文化祭です。セミナーおよびブース
@@ -1109,15 +1116,15 @@ DESCRIPTION:開催日時: 2026/11/21 10:30 ～ 17:00<br />開催場所: 新
  Group (EBUG)<br></li>\n<li>3DGS・デジタルツイン研究会（仮称
  ）<br></li>\n<li>日本MySQLユーザ会(MyNA)<br></li>\n<li>日本AlmaLi
  nuxユーザー会/サイバートラスト株式会社<br></li>\n<li>TECH
- ☆TECH<br></li>\n<li>OPNsense研究同好会<br>\n<br></li>\n</ul>\n<h1>
- 懇親会（18:00〜20:30）<br></h1>\n<p>ミライエ長岡　5F　スタ
- ジオAB<br>\n申込は以下のURLからお願いします。\n<a href="h
- ttps://connpass.com/event/403738/" rel="nofollow">https://connpass.com/eve
- nt/403738/</a></p>\n<h1>参加者荷物事前送付先<br></h1>\n<p>株式
- 会社KCS<br>\n940-2145　新潟県長岡市青葉台3-19-2<br>\nTEL:0258-
- 47-4861<br>\n※１１月１９日木曜必着</p>\n\nhttps://ospn.connpas
- s.com/event/398562/?utm_campaign=series_events&utm_source=feed&utm_medium=
- atom
+ ☆TECH<br></li>\n<li>OPNsense研究同好会<br></li>\n<li>baserCMSユー
+ ザー会<br></li>\n</ul>\n<p><br></p>\n<h1>懇親会（18:00〜20:30）<b
+ r></h1>\n<p>ミライエ長岡　5F　スタジオAB<br>\n申込は以下
+ のURLからお願いします。\n<a href="https://connpass.com/event/403
+ 738/" rel="nofollow">https://connpass.com/event/403738/</a></p>\n<h1>参
+ 加者荷物事前送付先<br></h1>\n<p>株式会社KCS<br>\n940-2145　
+ 新潟県長岡市青葉台3-19-2<br>\nTEL:0258-47-4861<br>\n※１１月
+ １９日木曜必着</p>\n\nhttps://ospn.connpass.com/event/398562/?utm_c
+ ampaign=series_events&utm_source=feed&utm_medium=atom
 URL:https://ospn.connpass.com/event/398562/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
 END:VEVENT
