@@ -17,7 +17,7 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/413782/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261124T093753Z
+DTSTAMP:20261125T080941Z
 DTSTART;TZID=Asia/Tokyo:20261204T180000
 DTEND;TZID=Asia/Tokyo:20261204T210000
 SUMMARY:12/4 OSC2026沖縄 前夜祭
@@ -50,7 +50,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/412239/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261124T093753Z
+DTSTAMP:20261125T080941Z
 DTSTART;TZID=Asia/Tokyo:20270130T100000
 DTEND;TZID=Asia/Tokyo:20270130T180000
 SUMMARY:1/30 オープンソースカンファレンス2027 Osaka
@@ -111,7 +111,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/412354/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261124T093753Z
+DTSTAMP:20261125T080941Z
 DTSTART;TZID=Asia/Tokyo:20270130T183000
 DTEND;TZID=Asia/Tokyo:20270130T203000
 SUMMARY:1/30 OSC大阪 懇親会
@@ -149,7 +149,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/407899/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261124T093753Z
+DTSTAMP:20261125T080941Z
 DTSTART;TZID=Asia/Tokyo:20261212T180000
 DTEND;TZID=Asia/Tokyo:20261212T200000
 SUMMARY:12/12 OSC福岡 懇親会
@@ -199,7 +199,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/407897/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261124T093753Z
+DTSTAMP:20261125T080941Z
 DTSTART;TZID=Asia/Tokyo:20261212T100000
 DTEND;TZID=Asia/Tokyo:20261212T180000
 SUMMARY:12/12 オープンソースカンファレンス2026 Fukuoka
@@ -259,110 +259,125 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/406506/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261124T093753Z
+DTSTAMP:20261125T080941Z
 DTSTART;TZID=Asia/Tokyo:20261205T100000
 DTEND;TZID=Asia/Tokyo:20261205T170000
 SUMMARY:12/5 Open Source Conference 2026 Okinawa
 DESCRIPTION:開催日時: 2026/12/05 10:00 ～ 17:00<br />開催場所: 沖
  縄県那覇市旭町116−37(沖縄県市町村自治会館)<br /><br /><
- h1>前夜祭もやります</h1>\n<p>「オープンソースカンファ
- レンス2026 Okinawa」の開催は12月5日(土)ですが、前日の12
- 月5日(金)の夜、前夜祭を行います。</p>\n<p>会場は、昨
- 年の開催で会場提供でお世話になったさくらインター
- ネットさんの「SAKURA innobase Okinawa」です。</p>\n<p>飲んだ
- り食べたりしつつ、あれこれお話したり、即興LTで楽し
- みましょう。</p>\n<p><a href="https://ospn.connpass.com/event/413782
- /" rel="nofollow">https://ospn.connpass.com/event/413782/</a></p>\n<h1>OSC
- 2026 Okinawaを開催します！</h1>\n<p>オープンソースカンフ
- ァレンスは全国各地で開催されている、オープンソー
- スおよび地域コミュニティの文化祭です。セミナーお
- よびブース展示で日頃の活動について発表、情報交換
- を行う集まりです。</p>\n<p>※オンライン配信は検討中
- です。アーカイブは行う予定です。</p>\n<p>皆様、是非
- ご参加ください。<br></p>\n<h2>感染症予防対策へのご協力
- のお願い</h2>\n<p><br>\n・当日の体温が37.5度以上の方は入
- 場ができません。<br>\n・感染疑い（発熱、喉痛、咳な
- ど）がある場合、体調がすぐれない場合のご参加は、
- ご遠慮ください。<br>\n・マスク着用は個人の判断にお
- 任せします<br></p>\n<h1>開催概要</h1>\n<p>日程：2026年12月5
- 日(土) 10:00-17:00（9:30開場）<br>\n※プログラムによって
- 開催時間が変更になる場合があります。<br>\n<br>\n会場
- ：沖縄県市町村自治会館 （OSC受付：4F）<br>\n〒900-0029 
- 沖縄県那覇市旭町116−37<br>\n会場へのアクセスは<a href="
- https://okinawa-jichikaikan.com/?page_id=136" rel="nofollow">こちら</a>
- を参照して下さい．<br>\n<br>\n費用：無料<br>\n懇親会：
- 一般 5000円（予定）・学生 1000円</p>\n<p>内容：OSC、OSPNに
- 関する各地域の最新情報の情報共有<br>\n・展示 - オー
- プンソースコミュニティ、企業・団体による展示<br>\n<b
- r>\n主催：オープンソースカンファレンス実行委員会<br>
- \n<br>\n企画運営：株式会社びぎねっと<br>\n<br></p>\n<h1>セ
- ミナー発表者、ブース出展申し込み【募集中】</h1>\n<p>
- セミナーの発表およびブース出展の申込は、後述のSlack
- にご参加の上、沖縄チャンネル（#okinawa）にてご確認く
- ださい。<br>\nセミナー（15分）およびライトニングトー
- ク（5分）での発表希望の方も同様にお願いいたします
- 。<br>\n締切は 11/10(月)です<br></p>\n<p>OSPN Slack<br>\n<a href="h
- ttps://bit.ly/ospn_slack" rel="nofollow">https://bit.ly/ospn_slack</a>　
- （チャンネル→ #okinawa）</p>\n<p><br></p>\n<h3>セミナー発表
- 予定（申し込み順）</h3>\n<p>どこかのタイミングで、各
- セミナーのスケジュールを決定します。</p>\n<table>\n<thea
- d>\n<tr>\n<th>時間</th>\n<th>出展者</th>\n<th>タイトル</th>\n<th>
- 講師</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>11:00</td>\n<td>日本仮
- 想化技術株式会社</td>\n<td>脱VMware！Linux KVMで始める仮想
- 化環境構築超入門</td>\n<td>宮原 徹</td>\n</tr>\n<tr>\n<td>11:15
- </td>\n<td>日本PostgreSQLユーザー会</td>\n<td>pgvectorとCitusで
- 作るマルチモーダルRAG</td>\n<td>三谷 篤</td>\n</tr>\n<tr>\n<td
- >11:30</td>\n<td>Future Versatile Group/<a href="http://MyDNS.JP" rel="nof
- ollow">MyDNS.JP</a></td>\n<td>生成AIでシステム開発の話</td>\n<t
- d>T.Kabu</td>\n</tr>\n<tr>\n<td>11:45</td>\n<td>ランチタイム（11:45
- -13:00）</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>13:00</td>\n<td>OSC
-  山口</td>\n<td>OSC 山口収支報告</td>\n<td>山本 貴司</td>\n</t
- r>\n<tr>\n<td>13:15</td>\n<td>日本電気株式会社</td>\n<td>コント
- リビューターへの道、練習から実践へのステップ ― Kub
- ernetes Upstream Training Japanの挑戦</td>\n<td>武藤 周</td>\n</tr>\
- n<tr>\n<td>13:30</td>\n<td>日本NetBSDユーザーグループ</td>\n<td>
- NetBSDのご紹介</td>\n<td>蛯原 純</td>\n</tr>\n<tr>\n<td>13:45</td>\
- n<td>サイバートラスト株式会社</td>\n<td>AlmaLinux 目白押し
- 情報</td>\n<td>池田 宗広</td>\n</tr>\n<tr>\n<td>14:00</td>\n<td>オ
- ープンソースソフトウェア協会</td>\n<td>調整中</td>\n<td>
- 調整中</td>\n</tr>\n<tr>\n<td>14:15</td>\n<td>宮崎産業経営大学<
- /td>\n<td>ゼミでAI会社を構築する学習コンテンツの試作</
- td>\n<td>内田 保雄</td>\n</tr>\n<tr>\n<td>14:30</td>\n<td>あっきぃ
- </td>\n<td>ラズパイの話かOSPN.jpのWebの話か</td>\n<td>あっき
- ぃ</td>\n</tr>\n<tr>\n<td>14:45</td>\n<td>休憩</td>\n<td></td>\n<td></t
- d>\n</tr>\n<tr>\n<td>15:00</td>\n<td>琉球大学 知能情報コース</t
- d>\n<td>大学の一学科における情報システムの自主更新 
- ～OSSでつくる教育・研究基盤～</td>\n<td>調整中</td>\n</tr>
- \n<tr>\n<td>15:15</td>\n<td>琉球大学</td>\n<td>アリの油脂に対
- する嗜好性の系統的な探索</td>\n<td>上野 聖海</td>\n</tr>\n
- <tr>\n<td>15:30</td>\n<td>さくらインターネット</td>\n<td>OSSとE
- VPN/VXLANでつくるクラウドネットワーク 〜ネットワーク
- スイートの設計と未来〜</td>\n<td>河野 竜也</td>\n</tr>\n<tr
- >\n<td>15:45</td>\n<td>休憩</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td
- >16:00</td>\n<td>ライトニングトーク・閉会</td>\n<td></td>\n<td
- ></td>\n</tr>\n<tr>\n<td>17:00</td>\n<td>退出</td>\n<td></td>\n<td></td>
- \n</tr>\n</tbody>\n</table>\n<h3>展示ブース一覧（申し込み順
- ）<br></h3>\n<ul>\n<li>日本仮想化技術株式会社</li>\n<li>オー
- プンソースソフトウェア協会</li>\n<li>日本PostgreSQLユー
- ザー会</li>\n<li>さくらインターネット</li>\n<li>琉球大学<
- /li>\n<li>Future Versatile Group/<a href="http://MyDNS.JP" rel="nofollow">
- MyDNS.JP</a></li>\n<li>日本NetBSDユーザーグループ</li>\n<li>あ
- っきぃ</li>\n<li>琉球大学知能情報コース</li>\n</ul>\n<h1>懇
- 親会（19:00～）<br></h1>\n<p>終了後、19時より懇親会を開
- 催します。</p>\n<p>申込・詳細<br>\n調整中</p>\n<h1>参加者
- 荷物事前送付先</h1>\n<p>日時：12月4日(金)「14:00～16:00」
- 指定<br>\n住所：〒900-0029<br>\n　　　那覇市旭町116-37 自
- 治会館（4階：第4会議室）<br>\n宛名：OSC沖縄（出展する
- 団体名）<br>\n電話：098-862-8181<br></p>\n\nhttps://ospn.connpass.c
- om/event/406506/?utm_campaign=series_events&utm_source=feed&utm_medium=ato
- m
+ h1>懇親会枠調整用に上限設定しました</h1>\n<p>懇親会会
+ 場を予約しました。現在のところ、20名で予約したので
+ 、11月24日(火) 21時の段階で申し込みを入れている方は
+ 確定です。</p>\n<p>以後はお店側との人数交渉＆キャン
+ セル待ちとなりますが、お申し込み可能です。</p>\n<h1>
+ 前夜祭もやります</h1>\n<p>「オープンソースカンファレ
+ ンス2026 Okinawa」の開催は12月5日(土)ですが、前日の12月5
+ 日(金)の夜、前夜祭を行います。</p>\n<p>会場は、昨年の
+ 開催で会場提供でお世話になったさくらインターネッ
+ トさんの「SAKURA innobase Okinawa」です。</p>\n<p>飲んだり食
+ べたりしつつ、あれこれお話したり、即興LTで楽しみま
+ しょう。</p>\n<p><a href="https://ospn.connpass.com/event/413782/" rel
+ ="nofollow">https://ospn.connpass.com/event/413782/</a></p>\n<h1>OSC2026 O
+ kinawaを開催します！</h1>\n<p>オープンソースカンファレ
+ ンスは全国各地で開催されている、オープンソースお
+ よび地域コミュニティの文化祭です。セミナーおよび
+ ブース展示で日頃の活動について発表、情報交換を行
+ う集まりです。</p>\n<p>※オンライン配信は検討中です
+ 。アーカイブは行う予定です。</p>\n<p>皆様、是非ご参
+ 加ください。<br></p>\n<h2>感染症予防対策へのご協力のお
+ 願い</h2>\n<p><br>\n・当日の体温が37.5度以上の方は入場が
+ できません。<br>\n・感染疑い（発熱、喉痛、咳など）
+ がある場合、体調がすぐれない場合のご参加は、ご遠
+ 慮ください。<br>\n・マスク着用は個人の判断にお任せ
+ します<br></p>\n<h1>開催概要</h1>\n<p>日程：2026年12月5日(土
+ ) 10:00-17:00（9:30開場）<br>\n※プログラムによって開催時
+ 間が変更になる場合があります。<br>\n<br>\n会場：沖縄
+ 県市町村自治会館 （OSC受付：4F）<br>\n〒900-0029 沖縄県
+ 那覇市旭町116−37<br>\n会場へのアクセスは<a href="https://o
+ kinawa-jichikaikan.com/?page_id=136" rel="nofollow">こちら</a>を参照
+ して下さい．<br>\n<br>\n費用：無料<br>\n懇親会：一般 5000
+ 円（予定）・学生 1000円</p>\n<p>内容：OSC、OSPNに関する
+ 各地域の最新情報の情報共有<br>\n・展示 - オープンソ
+ ースコミュニティ、企業・団体による展示<br>\n<br>\n主
+ 催：オープンソースカンファレンス実行委員会<br>\n<br>\
+ n企画運営：株式会社びぎねっと<br>\n<br></p>\n<h1>セミナ
+ ー発表者、ブース出展申し込み【募集中】</h1>\n<p>セミ
+ ナーの発表およびブース出展の申込は、後述のSlackにご
+ 参加の上、沖縄チャンネル（#okinawa）にてご確認くださ
+ い。<br>\nセミナー（15分）およびライトニングトーク（
+ 5分）での発表希望の方も同様にお願いいたします。<br>
+ \n締切は 11/10(月)です<br></p>\n<p>OSPN Slack<br>\n<a href="https://
+ bit.ly/ospn_slack" rel="nofollow">https://bit.ly/ospn_slack</a>　（チ
+ ャンネル→ #okinawa）</p>\n<p><br></p>\n<h3>セミナー発表予定
+ （申し込み順）</h3>\n<p>どこかのタイミングで、各セミ
+ ナーのスケジュールを決定します。</p>\n<table>\n<thead>\n<t
+ r>\n<th>時間</th>\n<th>出展者</th>\n<th>タイトル</th>\n<th>講師
+ </th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>11:00</td>\n<td>日本仮想化
+ 技術株式会社</td>\n<td>脱VMware！Linux KVMで始める仮想化環
+ 境構築超入門</td>\n<td>宮原 徹</td>\n</tr>\n<tr>\n<td>11:15</td>\
+ n<td>日本PostgreSQLユーザー会</td>\n<td>pgvectorとCitusで作る
+ マルチモーダルRAG</td>\n<td>三谷 篤</td>\n</tr>\n<tr>\n<td>11:30
+ </td>\n<td>Future Versatile Group/<a href="http://MyDNS.JP" rel="nofollow"
+ >MyDNS.JP</a></td>\n<td>生成AIでシステム開発の話</td>\n<td>T.Ka
+ bu</td>\n</tr>\n<tr>\n<td>11:45</td>\n<td>ランチタイム（11:45-13:00
+ ）</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>13:00</td>\n<td>OSC 山
+ 口</td>\n<td>OSC 山口収支報告</td>\n<td>山本 貴司</td>\n</tr>\n
+ <tr>\n<td>13:15</td>\n<td>日本電気株式会社</td>\n<td>コントリ
+ ビューターへの道、練習から実践へのステップ ― Kubern
+ etes Upstream Training Japanの挑戦</td>\n<td>武藤 周</td>\n</tr>\n<t
+ r>\n<td>13:30</td>\n<td>日本NetBSDユーザーグループ</td>\n<td>Net
+ BSDのご紹介</td>\n<td>蛯原 純</td>\n</tr>\n<tr>\n<td>13:45</td>\n<t
+ d>サイバートラスト株式会社</td>\n<td>AlmaLinux 目白押し情
+ 報</td>\n<td>池田 宗広</td>\n</tr>\n<tr>\n<td>14:00</td>\n<td>オー
+ プンソースソフトウェア協会</td>\n<td>調整中</td>\n<td>調
+ 整中</td>\n</tr>\n<tr>\n<td>14:15</td>\n<td>宮崎産業経営大学</td
+ >\n<td>ゼミでAI会社を構築する学習コンテンツの試作</td>
+ \n<td>内田 保雄</td>\n</tr>\n<tr>\n<td>14:30</td>\n<td>あっきぃ</t
+ d>\n<td>ラズパイの話かOSPN.jpのWebの話か</td>\n<td>あっきぃ
+ </td>\n</tr>\n<tr>\n<td>14:45</td>\n<td>休憩</td>\n<td></td>\n<td></td>\
+ n</tr>\n<tr>\n<td>15:00</td>\n<td>琉球大学 知能情報コース</td>\
+ n<td>大学の一学科における情報システムの自主更新 ～OS
+ Sでつくる教育・研究基盤～</td>\n<td>調整中</td>\n</tr>\n<tr
+ >\n<td>15:15</td>\n<td>琉球大学</td>\n<td>アリの油脂に対する
+ 嗜好性の系統的な探索</td>\n<td>上野 聖海</td>\n</tr>\n<tr>\n
+ <td>15:30</td>\n<td>さくらインターネット</td>\n<td>OSSとEVPN/VX
+ LANでつくるクラウドネットワーク 〜ネットワークスイ
+ ートの設計と未来〜</td>\n<td>河野 竜也</td>\n</tr>\n<tr>\n<td
+ >15:45</td>\n<td>休憩</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>16:00
+ </td>\n<td>ライトニングトーク・閉会</td>\n<td></td>\n<td></td>
+ \n</tr>\n<tr>\n<td>17:00</td>\n<td>退出</td>\n<td></td>\n<td></td>\n</tr
+ >\n</tbody>\n</table>\n<h3>展示ブース一覧（申し込み順）<br><
+ /h3>\n<ul>\n<li>日本仮想化技術株式会社</li>\n<li>オープン
+ ソースソフトウェア協会</li>\n<li>日本PostgreSQLユーザー
+ 会</li>\n<li>さくらインターネット</li>\n<li>琉球大学</li>\n
+ <li>Future Versatile Group/<a href="http://MyDNS.JP" rel="nofollow">MyDNS.
+ JP</a></li>\n<li>日本NetBSDユーザーグループ</li>\n<li>あっき
+ ぃ</li>\n<li>琉球大学知能情報コース</li>\n</ul>\n<h1>懇親会
+ （19:00～）<br></h1>\n<p>終了後、19時より懇親会を開催し
+ ます。</p>\n<p>申込・詳細<br>\n会場：琉球酒場 ま～さん
+ の家<br>\n沖縄県那覇市松尾1-3-1 B1F<br>\n<a href="https://tabelo
+ g.com/okinawa/A4701/A470101/47020197/" rel="nofollow">https://tabelog.com/
+ okinawa/A4701/A470101/47020197/</a></p>\n<p>コース：【2時間飲放
+ 付】沖縄の贅沢を堪能♪【琉球贅沢コース】アグー豚
+ しゃぶしゃぶ/島刺し5種5000円 <br>\n<a href="https://tabelog.com
+ /okinawa/A4701/A470101/47020197/party/303270856&lt\;br>" rel="nofollow">ht
+ tps://tabelog.com/okinawa/A4701/A470101/47020197/party/303270856<br></a>\n
+ 会費：一般 5000円・学生 1000円<br>\n学生さん差額分のカ
+ ンパをお願いします。</p>\n<h1>参加者荷物事前送付先</h1
+ >\n<p>日時：12月4日(金)「14:00～16:00」指定<br>\n住所：〒90
+ 0-0029<br>\n　　　那覇市旭町116-37 自治会館（4階：第4会
+ 議室）<br>\n宛名：OSC沖縄（出展する団体名）<br>\n電話
+ ：098-862-8181<br></p>\n<p>バッテリーは中に入れないように
+ してください。船便扱いになって指定までに届かない
+ 恐れがあります。</p>\n\nhttps://ospn.connpass.com/event/406506/?ut
+ m_campaign=series_events&utm_source=feed&utm_medium=atom
 URL:https://ospn.connpass.com/event/406506/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
 END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/405290/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261124T093753Z
+DTSTAMP:20261125T080941Z
 DTSTART;TZID=Asia/Tokyo:20261122T190000
 DTEND;TZID=Asia/Tokyo:20261122T220000
 SUMMARY:2026/11/22 OSC2026 Yamaguchi 懇親会
@@ -408,7 +423,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/398565/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261124T093753Z
+DTSTAMP:20261125T080941Z
 DTSTART;TZID=Asia/Tokyo:20261122T104500
 DTEND;TZID=Asia/Tokyo:20261122T170000
 SUMMARY:2026/11/22 Open Source Conference 2026 Yamaguchi
@@ -990,7 +1005,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/403624/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261124T093753Z
+DTSTAMP:20261125T080941Z
 DTSTART;TZID=Asia/Tokyo:20261017T173000
 DTEND;TZID=Asia/Tokyo:20261017T193000
 SUMMARY:10/17 OSC東京Fall（浅草） 懇親会
@@ -1040,7 +1055,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:https://ospn.connpass.com/event/398562/?utm_campaign=series_events&utm_
  source=feed&utm_medium=atom
-DTSTAMP:20261124T093753Z
+DTSTAMP:20261125T080941Z
 DTSTART;TZID=Asia/Tokyo:20261121T103000
 DTEND;TZID=Asia/Tokyo:20261121T170000
 SUMMARY:11/21 Open Source Conference 2026 Nagaoka
